@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Imports fonts from Adobe TypeKit -->
+    <link rel="stylesheet" href="https://use.typekit.net/iom3qgz.css">
+
+    <!-- Imports stylesheet -->
+    <link rel="stylesheet" type="text/css" href="test-theme.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="current" href="#section-1">SHAPES &<br> TEXTURES</a></li>
+            <li><a href="#section-2">FACES</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="section-1">
+            <img class="project-thumbnail" src="imgs/procedural-textures.png">
+            <p class="project-title">Shapes & Textures</p>
+            <p class="project-subtitle">Procedurally-Generated Graphics</p>
+        </section>
+        <section id="section-2">
+            <img class="project-thumbnail" src="imgs/faces-all.png">
+            <p class="project-title">Generative Faces</p>
+            <p class="project-subtitle">Hardware Prototyping | Procedurally-Generated Graphics</p>
+        </section>
+    </main>
+
+    <footer>
+        &copy;2018 Footer
+    </footer>
+
+</body>
+<script>
+    let mainNavLinks = document.querySelectorAll("nav ul li a");
+    let mainSections = document.querySelectorAll("main section");
+
+    let lastId;
+    let cur = [];
+
+    window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY * 1.25;
+
+        mainNavLinks.forEach(link => {
+            let section = document.querySelector(link.hash);
+
+            if (
+                section.offsetTop <= fromTop &&
+                section.offsetTop + section.offsetHeight > fromTop
+            ) {
+                link.classList.add("current");
+            } else {
+                link.classList.remove("current");
+            }
+        });
+    });
+</script>
+
+</html>
