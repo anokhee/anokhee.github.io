@@ -2,81 +2,107 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anokhee Jandhyala | Portfolio</title>
     <!-- Imports fonts from Adobe TypeKit -->
     <link rel="stylesheet" href="https://use.typekit.net/iom3qgz.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
-    <!-- Custom CSS theme -->
-    <link rel="stylesheet" type="text/css" href="theme.css">
+    <!-- Imports stylesheet -->
+    <link rel="stylesheet" type="text/css" href="test-theme2.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Anokhee Jandhyala</h1>
-        <div class="row main">
-            <div class="col-12">
-                <h6>Graphics & Software Projects</h6>
-                <div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="imgs/procedural-textures.png">
-                        </div>
-                        <div class="col-md-6">
-                            <h5 class="project-name">Shapes & Textures</h5>
-                            <p class="type-of-project">Procedurally-Generated Graphics</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="imgs/faces-all.png">
-                        </div>
-                        <div class="col-md-6">
-                            <h5 class="project-name">Generative Landscapes</h5>
-                            <p class="type-of-project">Procedurally-Generated Graphics</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="imgs/faces-rbp.png">
-                        </div>
-                        <div class="col-md-6">
-                            <h5 class="project-name">Raspberry Pi Face Generator</h5>
-                            <p class="type-of-project">Hardware Prototyping | Procedurally-Generated Graphics</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a class="current" href="#section-1">01. Tiny Landscapes</a></li>
+                <li><a href="#section-2">02. Beautiful Faces</a></li>
+                <li><a href="#section-3">03. Shapes & Textures</a></li>
+                <li><a href="#section-4">04. Visual Synthesizer</a></li>
+                <li><a href="#section-5">05. Internship at Rigor</a></li>
+            </ul>
+        </nav>
+    </div>
 
-            <div class="col-12">
-                <h6>Other Work</h6>
-                <div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="imgs/rigor.png">
-                        </div>
-                        <div class="col-md-6">
-                            <h5 class="project-name">Internship at Rigor</h5>
-                            <p class="type-of-project">Software / UX Engineering</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-            integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous">
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous">
-        </script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
-            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous">
-        </script>
+    <main>
+        <section id="section-1">
+            <div>
+                <img class="project-thumbnail" src="imgs/landscapes.png">
+                <h5 class="project-title">Tiny Landscapes</h5>
+                <p class="project-type">Procedurally-Generated Web Graphics</p>
+                <p class="project-description">An endless variety of tiny, mountainous landscapes and starry skies
+                    generated with about 160 lines of
+                    code. </p>
+                <a class="button" href="https://anokhee.github.io/lofi-landscapes">View Live Demo</a>
+            </div>
+        </section>
+        <section id="section-2">
+            <div>
+                <img class="project-thumbnail" src="imgs/faces-all.png">
+                <h5 class="project-title">Beautiful Faces</h5>
+                <p class="project-type">Procedurally-Generated Web Graphics</p>
+                <p class="project-description">In the vein of video game character generators, this program allows users
+                    to generate unique faces in the browser and export them to SVG.</p>
+                <a class="button" href="https://anokhee.github.io/visual-synthesizer/web-demo/">View Live Demo</a>
+            </div>
+        </section>
+        <section id="section-3">
+            <div>
+                <img class="project-thumbnail" src="imgs/procedural-textures.png">
+                <p class="project-title">Shapes & Textures</p>
+                <p class="project-type">Procedurally-Generated Graphics</p>
+                <p class="project-description">Combining principles of computer programming and graphic design to
+                    achieve interesting (and practical) results. </p>
+                <a class="button" href="https://anokhee.github.io/i-love-shapes">View More</a>
+            </div>
+        </section>
+        <section id="section-4">
+            <div>
+                <img class="project-thumbnail" src="imgs/visual-synthesizer/visual-synthesizer-icon.png">
+                <p class="project-title">Visual Synthesizer</p>
+                <p class="project-type">Hardware Prototyping || Computer Graphics</p>
+                <p class="project-description">Exploring the potential for visual arts and expression in an
+                    arguably logic-oriented world of computing and robotics.</p>
+                <a class="button" href="./visual-synthesizer.html">View More</a>
+            </div>
+        </section>
+        <section id="section-5">
+            <div>
+                <img class="project-thumbnail" src="imgs/rigor/rigor-icon.png">
+                <p class="project-title">Internship at Rigor</p>
+                <p class="project-type">Software/UX Engineering Case Study</p>
+                <p class="project-description"></p>
+                <a class="button" href="./rigor.html">View Case Study</a>
+            </div>
+        </section>
+    </main>
 </body>
+<script>
+    let mainNavLinks = document.querySelectorAll("nav ul li a");
+    let mainSections = document.querySelectorAll("main section");
+
+    let lastId;
+    let cur = [];
+
+    window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY * 1.25;
+
+        mainNavLinks.forEach(link => {
+            let section = document.querySelector(link.hash);
+
+            if (
+                section.offsetTop <= fromTop &&
+                section.offsetTop + section.offsetHeight > fromTop
+            ) {
+                link.classList.add("current");
+            } else {
+                link.classList.remove("current");
+            }
+        });
+    });
+</script>
+
+</html>

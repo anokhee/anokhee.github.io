@@ -14,31 +14,31 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a class="current" href="#section-1">SHAPES &<br> TEXTURES</a></li>
-            <li><a href="#section-2">FACES</a></li>
-        </ul>
-    </nav>
+    <div class="vertical-align">
+        <nav>
+            <ul>
+                <li><a class="current" href="#section-1">Shapes & Textures</a></li>
+                <li><a href="#section-2">Generative Faces</a></li>
+                <li><a href="#section-3">Visual Synthesizer</a></li>
+                <li><a href="#section-4">Internship at Rigor</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <main>
+
+    <main id="main">
         <section id="section-1">
             <img class="project-thumbnail" src="imgs/procedural-textures.png">
-            <p class="project-title">Shapes & Textures</p>
-            <p class="project-subtitle">Procedurally-Generated Graphics</p>
         </section>
         <section id="section-2">
             <img class="project-thumbnail" src="imgs/faces-all.png">
-            <p class="project-title">Generative Faces</p>
-            <p class="project-subtitle">Hardware Prototyping | Procedurally-Generated Graphics</p>
+        </section>
+        <section id="section-3">
+            <img class="project-thumbnail" src="imgs/raspberrypi.png">
         </section>
     </main>
-
-    <footer>
-        &copy;2018 Footer
-    </footer>
-
 </body>
+
 <script>
     let mainNavLinks = document.querySelectorAll("nav ul li a");
     let mainSections = document.querySelectorAll("main section");
@@ -47,7 +47,8 @@
     let cur = [];
 
     window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY * 1.25;
+        let fromTop = window.scrollY * 1.5
+        ;
 
         mainNavLinks.forEach(link => {
             let section = document.querySelector(link.hash);

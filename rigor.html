@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anokhee Jandhyala | Internship @ Rigor</title>
+    <!-- Imports fonts from Adobe TypeKit -->
+    <link rel="stylesheet" href="https://use.typekit.net/iom3qgz.css">
+
+    <!-- Imports stylesheet -->
+    <link rel="stylesheet" type="text/css" href="test-theme2.css">
+</head>
+
+<body class="rigor">
+    <header>
+        <h1>Internship at Rigor</h1>
+        <img class="hero-img" src="imgs/rigor/rigor-hero-icon.png">
+        <table class="role-table">
+            <tr>
+                <td class="bold">Role</td>
+                <td>Full Stack Software Engineering Intern</td>
+            </tr>
+            <tr>
+                <td class="bold">Skills</td>
+                <td>Web Development, UI/UX Engineering, Research, Prototyping with Adobe XD, ReactJS, D3.js</td>
+            </tr>
+            <tr>
+                <td class="bold">Location</td>
+                <td>Atlanta, GA</td>
+            </tr>
+            <tr>
+                <td class="bold">Timeframe</td>
+                <td>February 2019 - May 2019</td>
+            </tr>
+        </table>
+    </header>
+    <div class="sticky-sidebar">
+        <nav>
+            <ul>
+                <li><a class="current" href="#section-1">Context</a></li>
+                <li><a href="#section-2">Analytics Redesign</a></li>
+                <li><a href="#section-3">Understanding the Users</a></li>
+                <li><a href="#section-4">Designing a Solution</a></li>
+                <li><a href="#section-5">Implementing the Design</a></li>
+                <li><a href="#section-6">Conclusion</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <main>
+        <section id="section-1">
+            <div>
+                <br>
+                <h2>Context</h2>
+                <h4 class="subheading">Disclaimer</h4>
+                <p>This is an independent case study. The thoughts expressed here are my own and not representative of
+                    Rigor.</p>
+
+                <div class="two-col">
+                    <div class="col" style="padding-right: 20px; width: 35%">
+                        <h4 class="subheading">About Rigor & My Role</h4>
+                        <p>Rigor is a small SaaS company located in Atlanta, Georgia providing users with powerful tools
+                            to
+                            optimize and monitor their website's performance. With Rigor, users can access metrics
+                            related to
+                            user experience, APIs, and uptime and can benchmark their site's performance against
+                            industry
+                            leaders to diagnose and repair technical issues or answer business questions.</p>
+                    </div>
+                    <div class="col" style="width: 65%">
+                        <img src="imgs/rigor/rigor-responsibilities.png">
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <section id="section-2">
+            <div>
+                <h1>Analytics Redesign</h1>
+                <div class="two-col">
+                    <div class="col" style="width: 35%; ">
+                        <h4 class="subheading">Project Overview</h4>
+                        <p>During the concluding week of my internship, I was given the opportunity to take on a
+                            creative solo
+                            task
+                            outlined as follows:
+                    </div>
+                    <div class="col" style="width: 65%;">
+                        <p class="block-quote">"Find an area of the Rigor app that could be added to or improved
+                            upon,
+                            then
+                            design and develop a functional prototype of a solution."</p>
+                    </div>
+                </div>
+
+                <p>The goal was not to deliver a production-ready new feature, but to spark discussion about user needs
+                    while accounting for how modern web design paradigms can be applied to the existing app.
+                </p>
+
+
+                <div class="two-col">
+                    <div class="col" style="width: 100%; padding-right: 25px;">
+                        <h4 class="subheading">Research Phase</h4><br>
+                        Eventually, because of my own concerns about it and a few mentions in Rigor's technical
+                        support
+                        Slack channel, I decided to go with a redesign of the analytics chart below. The chart
+                        appears
+                        on the Results page of one of Rigor's most popular features and displays information about
+                        various
+                        performance metrics based on the user's custom configuration, then compares each metric with
+                        its
+                        results from
+                        the previous run.
+                    </div>
+                </div>
+
+                <div class="col" style="width: 100%;">
+                    <img src="imgs/rigor/rigor-before-redesign.png"></div>
+
+
+
+
+                <br><br>
+                <h4 class="subheading">Identifying Pain Points</h4>
+                <p>My first step was to identify the major pain points of the chart I was redesigning. Without enough
+                    time to conduct user interviews, I relied on my supervisor, coworkers, information gleaned
+                    from product tickets in JIRA, and my own
+                    experiences for insight about possible user frustrations.
+                    <br><br>
+                    Knowing that the prototype would be programmed into the existing React application, I figured that
+                    the most
+                    intuitive way to plan this project was to break the current chart down into its most basic
+                    components while proposing guiding questions along the way.
+                </p>
+                <br><br>
+                <img src="imgs/rigor/rigor-pain-points.png">
+                <p>By doing this, I gathered the building blocks needed to organize and re-organize the flow of
+                    information or sketch out modules for future iterations, as well as some tangible pain points to
+                    work with.
+                </p>
+                <img src="imgs/rigor/rigor-identified-pain-points.png">
+            </div>
+        </section>
+        <section id="section-3">
+            <div>
+                <h1>Understanding the Users</h1>
+                <h4 class="subheading">User Personas</h4>
+                <p>With information gathered throughout the semester from cross-departmental meetings, customer support
+                    tickets, and discussions with my supervisor, I synthesized a few personas that reflect Rigor's
+                    primary
+                    user base.
+                    <br><br>
+                    These personas are based around age, level of experience with technology, role, and personality,
+                    with a
+                    few hypothetical questions to guide the design process.
+                </p>
+                <img src="imgs/rigor/rigor-user-personas.png">
+                <h4 class="subheading">Additional Observations</h4>
+                <ul>
+                    <li>
+                        Rigor's users are, in general, more technical than the average person
+                    </li>
+                    <li>Ideally, users should not have to spend a lot of time in the Rigor app unless they are
+                        investigating
+                        an issue or configuring settings
+                    </li>
+                    <li>
+                        Configurations should need to be modified as little as possible
+                    </li>
+                    <li>The redesign is based on a desktop-only feature, so mobile-friendliness is not a factor to
+                        consider
+                        (yet)
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="section-4">
+            <div>
+                <h1>Designing a Solution</h1>
+                <p><span class="bold">Note: </span>The color choices and design aesthetic is based around Rigor's
+                    established style guide.</p>
+                <h4 class="subheading">Low-fidelity Mockups</h4>
+                <br>
+                <img src="imgs/rigor/rigor-low-fidelity-mockup.png">
+                <h4 class="subheading">Charts that Answer Questions</h4>
+                <p>Because of the time constraint, I ended up using a simple bar chart to represent the data in both the
+                    mockup and final presentation. However, it would have been worthwhile to spend more time researching
+                    how visualizations can be used to answer questions, rather than exist for their own sake.
+                </p>
+                <img src="imgs/rigor/rigor-charts-that-answer-questions.png">
+            </div>
+        </section>
+        <section id="section-5">
+            <div>
+                <h1>Implementing the Design</h1>
+                <img src="imgs/rigor/rigor-final-result.png">
+                <h4 class="subheading">
+                    Programming with React and D3.js
+                </h4>
+                <p>D3 and React manipulate the DOM differently, which meant I had to brute-force some (arguably) icky
+                    code to build the interactivity and styling of the charts. With more time, I would have researched
+                    alternative libraries or methods of integrating the two libraries. From my understanding, this is a
+                    common problem with many solutions.
+                </p>
+                <h4 class="subheading">Normalizing Data</h4>
+                <p>At the beginning, I had some difficulty visualizing the data in a way that was immediately
+                    meaningful. The data is all displayed in wildly incompatible units like bytes, seconds, and counts,
+                    so what might be the ideal file count would almost certainly be an impossible byte size, and would
+                    not be helpful if displayed on the same graph. After speaking with my supervisor, he suggested that
+                    the data might be more meaningful to users if it was converted into percentiles based on Amazon Web
+                    Services' Alexa Top Sites data.
+                    <br><br>
+                    To break down the percentile ranks from the 0th - 99th, we configured AWS to generate a JSON file
+                    with discrete data formatted as below:
+                </p>
+                <br>
+                <img src="imgs/rigor/rigor-alexa-data.png">
+                <p>Now that I had the data in percentile ranks, I quickly encountered another issue: I would have to
+                    convert up to 3,860 unique values into individual percentiles. To accomplish this, I wrote an
+                    algorithm that normalized those values and mapped them to a D3 chart.
+                </p>
+            </div>
+        </section>
+        <section id="section-6">
+            <div>
+                <h1>Final Thoughts</h1>
+                <p>Working on a multidisciplinary project within a limited timeframe was interesting because it
+                    demonstrated
+                    the immediate importance of careful planning, research, and teamwork in software development.
+                    <br><br>
+                    With more time, I would:</p>
+
+                <ul>
+                    <li>Experiment with ways to effectively display data visualizations on mobile devices
+                    </li>
+                    <li>Conduct user interviews and testing to gain additional insights into pain points for future
+                        iterations
+                    </li>
+                    <li>Beautify the lefthand information panel with graphics and animations to provide feedback and
+                        bring joy to users
+                    </li>
+                    <li>Research additional methods of effective storytelling with data
+                    </li>
+                </ul>
+
+                <p>When designing data analytics reports and visualizations, I learned that it’s important to remember
+                    that
+                    even the most experienced users of your application don’t have as clear an understanding of the data
+                    as
+                    you do as an engineer. While bar charts, pie charts, and line graphs are well-known forms of data
+                    visualization, extra care must be put in to ensure that they don't simply exist as an eye-catching
+                    design component, but to tell meaningful stories about the data.
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    let mainNavLinks = document.querySelectorAll("nav ul li a");
+    let mainSections = document.querySelectorAll("main section");
+
+    let lastId;
+    let cur = [];
+
+    window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY * 1;
+
+        mainNavLinks.forEach(link => {
+            let section = document.querySelector(link.hash);
+
+            if (
+                section.offsetTop <= fromTop &&
+                section.offsetTop + section.offsetHeight > fromTop
+            ) {
+                link.classList.add("current");
+            } else {
+                link.classList.remove("current");
+            }
+        });
+    });
+</script>
+
+</html>

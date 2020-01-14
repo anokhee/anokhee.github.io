@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anokhee Jandhyala | Visual Synthesizer</title>
+    <!-- Imports fonts from Adobe TypeKit -->
+    <link rel="stylesheet" href="https://use.typekit.net/iom3qgz.css">
+
+
+    <!-- Imports stylesheet -->
+    <link rel="stylesheet" type="text/css" href="test-theme2.css">
+</head>
+
+<body class="rigor" style="background-color: #fffffa">
+    <header>
+        <img class="hero-img" src="imgs/visual-synthesizer/visual-synthesizer-hero-img.png">
+        <div class="hero-info">
+            <h2 class="project-title">Visual Synthesizer</h2>
+            <h3 class="project-type">Hardware Prototyping // Computer Graphics</h3>
+            <table>
+            </table>
+        </div>
+        <br>
+    </header>
+    <div class="sticky-sidebar">
+        <nav>
+            <ul>
+                <li><a class="current" href="#section-1">What is this?</a></li>
+                <li><a href="#section-2">Design Process</a></li>
+                <li><a href="#section-3">Sketches</a></li>
+                <li><a href="#section-4">Video Demo</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <main>
+        <section id="section-1">
+            <div>
+                <div class="two-col">
+                    <div class="col" style="padding-right: 35px; width: 35%;">
+                        <p>
+                            <h2>What is this?</h2>
+                            Within a 2-week period and without prior experience with DIY robotics or the
+                            Processing programming language, I challenged myself to design and develop a Visual
+                            Synthesizer.
+                        </p>
+                    </div>
+                    <div class="col" style="width: 65%;">
+                        <img style="width: 100%;" src="imgs/faces-rbp.png">
+                        <span class="img-caption">Fig 01. Hardware Input Device</span>
+                    </div>
+                </div>
+                <br>
+
+                <div class="two-col">
+                    <div class="col" style="padding-right: 35px; width: 35%;">
+                        <h4 class="subheading">Background</h4>
+                        <p>
+                            As I explore the possibilities of coding as a creative
+                            medium, I find myself coming back to the things that brought me joy during my childhood. The
+                            hardware aspect of this
+                            project
+                            draws from the function and aesthetic of old MIDI synthesizers while the software is
+                            inspired by video game character generators.
+                            <br><br>
+                            Like a MIDI synthesizer does with sound samples, the Visual Synthesizer allows users to
+                            twist
+                            knobs
+                            and push buttons to manipulate the geometric proportions of a default face to
+                            generate a variety of new and unique faces. <br>
+                        </p>
+                    </div>
+                    <div class="col" style="width: 65%;">
+                        <img style="width: 100%;" src="imgs/faces-all-v1.png">
+                        <span class="img-caption">Fig 02. Software Output Examples</span>
+                    </div>
+                </div>
+        </section>
+
+        <section id="section-2">
+            <div>
+                <div class="two-col">
+                    <div class="col" style="width: 35%; padding-right: 35px;">
+                        <h1>Design Process</h1>
+                        <p>Because much of this project was outside the scope of my existing knowledge and experience at
+                            the
+                            time, I worried that my idea was a little too ambitious. However, I resolved that anything
+                            was
+                            possible with rational planning and help from the Internet.</p>
+                    </div>
+                </div>
+
+                <div class="two-col">
+                    <div class="col" style="width: 100%; padding-right: 35px;">
+                        <h4 class="subheading">Rational Planning</h4>
+                        <p>I first created a list of things I knew how to do and a list of things I didn’t know how to
+                            do.
+                            From there, I was able to break the project down into some fairly un-intimidating
+                            milestones:
+                        </p>
+                    </div>
+                </div>
+
+                <div class="two-col">
+                    <div class="col" style="width: 100%; padding-right: 35px;">
+                        <h4 class="subheading">Help from the Internet</h4>
+                        <p>// Open source community
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-3">
+            <div>
+                <div class="two-col">
+                    <h1>Initial Sketches</h1>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-4">
+            <div>
+                <div class="two-col">
+                    <h1>A Relaxing Video Demo</h1>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Coded with love, Anokhee
+    </footer>
+</body>
+<script>
+    let mainNavLinks = document.querySelectorAll("nav ul li a");
+    let mainSections = document.querySelectorAll("main section");
+
+    let lastId;
+    let cur = [];
+
+    window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY * 1.25;
+
+        mainNavLinks.forEach(link => {
+            let section = document.querySelector(link.hash);
+
+            if (
+                section.offsetTop <= fromTop &&
+                section.offsetTop + section.offsetHeight > fromTop
+            ) {
+                link.classList.add("current");
+            } else {
+                link.classList.remove("current");
+            }
+        });
+    });
+</script>
+
+</html>
