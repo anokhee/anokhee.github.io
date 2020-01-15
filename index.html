@@ -14,14 +14,17 @@
 </head>
 
 <body>
+    <header class="top-nav">
+        <a href="#home">SITE UNDER CONSTRUCTION RIGHT NOW....</a>
+    </header>
     <div class="nav-container">
         <nav>
             <ul>
                 <li><a class="current" href="#section-1">01. About Me</a></li>
-                <li><a href="#section-2">03. Beautiful Faces</a></li>
-                <li><a href="#section-3">04. Shapes & Textures</a></li>
-                <li><a href="#section-4">05. Visual Synthesizer</a></li>
-                <li><a href="#section-5">06. Internship at Rigor</a></li>
+                <li><a href="#section-2">02. Beautiful Faces</a></li>
+                <li><a href="#section-3">03. Shapes & Textures</a></li>
+                <li><a href="#section-4">04. Visual Synthesizer</a></li>
+                <li><a href="#section-5">05. Internship at Rigor</a></li>
             </ul>
         </nav>
     </div>
@@ -37,7 +40,7 @@
                     <br><br>
                     I use my interest in web development and graphics programming to leverage my abilities as a
                     designer.
-                    For me, knowing that something is possible with code can inspire new and unusual design
+                    I find knowing that something is possible with code can inspire new and interesting design
                     solutions.
                     <br><br>
                     Some personal facts about me:<br>
@@ -60,7 +63,7 @@
                 <a class="button" href="https://anokhee.github.io/visual-synthesizer/web-demo/">View Live Demo</a>
             </div>
         </section>
-        <section id="section-4">
+        <section id="section-3">
             <div>
                 <img class="project-thumbnail" src="imgs/procedural-textures.png">
                 <p class="project-title">Shapes & Textures</p>
@@ -70,7 +73,7 @@
                 <a class="button" href="https://anokhee.github.io/i-love-shapes">View More</a>
             </div>
         </section>
-        <section id="section-5">
+        <section id="section-4">
             <div>
                 <img class="project-thumbnail" src="imgs/visual-synthesizer/visual-synthesizer-icon.png">
                 <p class="project-title">Visual Synthesizer</p>
@@ -80,7 +83,7 @@
                 <a class="button" href="./visual-synthesizer.html">View More</a>
             </div>
         </section>
-        <section id="section-6">
+        <section id="section-5">
             <div>
                 <img class="project-thumbnail" src="imgs/rigor/rigor-icon.png">
                 <p class="project-title">Internship at Rigor</p>
@@ -92,6 +95,7 @@
     </main>
 </body>
 <script>
+    let body = document.querySelector("body");
     let mainNavLinks = document.querySelectorAll("nav ul li a");
     let mainSections = document.querySelectorAll("main section");
 
