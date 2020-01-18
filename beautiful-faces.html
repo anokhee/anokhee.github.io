@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anokhee Jandhyala | Beautiful Faces</title>
+    <!-- Imports fonts from Adobe TypeKit -->
+    <link rel="stylesheet" href="https://use.typekit.net/iom3qgz.css">
+
+
+    <!-- Imports stylesheet -->
+    <link rel="stylesheet" type="text/css" href="test-theme2.css">
+</head>
+
+<body class="rigor" style="background-color: #fffffa">
+    <header class="top-nav">
+        <a href="#home">Anokhee Jandhyala</a>
+    </header>
+    <div class="sticky-sidebar">
+        <nav>
+            <ul>
+                <li><a class="current" href="#section-1">Overview</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <main>
+        <section id="section-1">
+            <div>
+                <header>
+                    <img class="hero-img" style="background: #ededed" src="imgs/beautiful-faces/faces-banner.png">
+                    <div class="hero-info">
+                        <h2 class="project-title">Beautiful Faces</h2>
+                        <h3 class="project-type">Computer Graphics, Graphic Design</h3>
+                    </div>
+                    <br><br>
+                </header>
+
+                <div class="two-col" style="margin: 0 auto; width: 70%;">
+                    <div class="col" style="margin: 0 auto; text-align: center;">
+                        <h2 class="heading">For the inexperienced, learning how to use a tool like Adobe Illustrator can
+                            be an uphill battle.</h2>
+                        <p style="font-size: 17px; line-height: 1.45em;">
+                            Beautiful Faces aims to simplify the process of creating vector graphics for designers
+                            and non-designers alike. It exploits the programmable nature of SVG by allowing users to
+                            easily create and export custom vector faces from the browser.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="two-col">
+                    <div class="col" style="width: 95%; margin: 0 auto;">
+                        <img src="imgs/beautiful-faces/faces-grainy.png">
+                        <p class="img-caption">Fig 01. Four Beautiful Faces after being downloaded as SVGs and edited
+                            further in Adobe Illustrator.</p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="two-col" style="width: 100%;">
+                    <div class="col" style="width: 35%; padding-right: 35px;">
+                        <h4 class="subheading">Using the Software</h4>
+                        <p>
+                            Using sliders, users can tweak
+                            the proportions of a default face to their liking.
+                        </p>
+                    </div>
+                    <div class="col" style="width: 75%">
+                        <img src="imgs/beautiful-faces/creation-process.gif">
+                    </div>
+                </div>
+                <br>
+
+                <div class="two-col" style="width: 100%;">
+                    <div class="col" style="width: 35%; padding-right: 35px;">
+                        <h4 class="subheading">Exporting to SVG</h4>
+                        <p>
+                            The saved image can be saved as an SVG or PNG. If
+                            the image is saved as an .svg and opened in a vector graphics editor like Adobe Illustrator
+                            or Inkscape, all the vector paths will be retained and fully editable.
+                        </p>
+                    </div>
+                    <div class="col" style="width: 75%">
+                        <img src="imgs/beautiful-faces/editing-in-illustrator.gif">
+                    </div>
+                </div>
+                <br>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Coded with love, Anokhee
+    </footer>
+</body>
+<script>
+    let mainNavLinks = document.querySelectorAll("nav ul li a");
+    let mainSections = document.querySelectorAll("main section");
+
+    let lastId;
+    let cur = [];
+
+    window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY * 1.25;
+
+        mainNavLinks.forEach(link => {
+            let section = document.querySelector(link.hash);
+
+            if (
+                section.offsetTop <= fromTop &&
+                section.offsetTop + section.offsetHeight > fromTop
+            ) {
+                link.classList.add("current");
+            } else {
+                link.classList.remove("current");
+            }
+        });
+    });
+</script>
+
+</html>

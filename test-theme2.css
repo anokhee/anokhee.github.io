@@ -1,9 +1,8 @@
 body {
-    background-color: #fffffc;
     color: #373737;
     display: grid;
-    font-family: roboto, serif;
-    font-size: 16px;
+    font-family: din-2014, sans-serif;
+    font-size: 18px;
     font-weight: 300;
     grid-template-columns: 1fr 2fr;
     height: 100%;
@@ -21,15 +20,14 @@ html {
 header,
 footer {
     font-weight: 600;
-    grid-column: 1 / 3;xw
+    grid-column: 1 / 3;
     top: 0;
     width: 100%;
     z-index: 999;
 }
 
-footer {
-    padding-top: 5%;
-    padding: 2%;
+h3 {
+    margin-bottom: 0px;
 }
 
 img {
@@ -38,7 +36,6 @@ img {
 
 main {
     margin: 0 auto;
-    margin-top: -60px;
     width: 65%;
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(3rem);
@@ -47,7 +44,7 @@ main {
 
 nav {
     display: flex;
-    font-family: roboto-condensed, sans-serif;
+    font-family: din-2014-narrow, sans-serif;
     white-space: nowrap;
     width: 100%;
     height: 100vh;
@@ -63,7 +60,7 @@ nav ul li a {
     align-items: center;
     color: #dcdcdc;
     display: flex;
-    font-size: 20px;
+    font-size: 22px;
     justify-content: center;
     padding-bottom: 10px;
     text-align: center;
@@ -79,7 +76,7 @@ nav ul li a.current {
     animation-timing-function: ease-in-out;
     color: #131313;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 24px;
     transition: .5s;
 }
 
@@ -143,19 +140,19 @@ table td {
 }
 
 .img-caption {
-    font-family: roboto, sans-serif;
     color: #acacac;
     font-size: 15px;
 }
 
 .my-name {
     font-size: 45px;
-    font-family: roboto-condensed, sans-serif;
+    font-family: din-2014-narrow, sans-serif;
     font-weight: 600;
+    text-shadow: -5px 3px peachpuff;   
 }
 
 .rigor {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.55em;
     width: 100vw;
 }
@@ -178,7 +175,7 @@ table td {
 }
 
 .rigor {
-    grid-template-columns: 1fr 4fr !important;
+    grid-template-columns: 1fr 3fr !important;
 }
 
 .sticky-sidebar {
@@ -188,23 +185,24 @@ table td {
 
 .sticky-sidebar ul li a {
     justify-content: left;
-    padding-bottom: 2.5px;
+    padding-bottom: 5px;
     text-align: left;
-    font-size: 18px;
+    font-size: 20
+    px;
 }
 
 .sticky-sidebar ul li a.current {
     animation-name: none;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .subheading {
-    color: #9b9b9b;
-    font-size: 14px;
+    color: #888;
+    font-size: 16px;
     margin-top: 20px;
     margin-bottom: 0px;
     text-transform: uppercase;
-    letter-spacing: .085em;
+    letter-spacing: .04em;
 }
 
 .two-col {
@@ -218,7 +216,7 @@ table td {
     background: #131313;
     border: none;
     color: #fff;
-    font-family: roboto-condensed, sans-serif;
+    font-family: din-2014-narrow, sans-serif;
     font-size: 16px;
     font-weight: 600;
     padding: 10px;
@@ -261,12 +259,12 @@ table td {
 }
 
 .project-title {
-    font-family: roboto-condensed, sans-serif;
+    font-family: din-2014-narrow, sans-serif;
     font-size: 25px;
     font-weight: 600;
-    letter-spacing: .025em;
+    letter-spacing: .015em;
     margin: 0px;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
     margin-top: 20px;
 }
 
@@ -347,7 +345,7 @@ table td {
     .two-col .heading {
         width: 80%;
         margin: 0 auto;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
     }
 
     .two-col img {
@@ -366,12 +364,13 @@ table td {
 
     .two-col .subheading {
         margin: 0 auto;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         width: 80%;
     }
 
     main {
         width: 85%;
+        margin-top: -50px;
     }
 
     section {
@@ -413,7 +412,7 @@ table td {
 
 .top-nav a {
     color: #333;
-    font-family: roboto-condensed;
-    font-size: 16px;
+    font-family: din-2014-narrow, sans-serif;
+    font-size: 18px;
     text-decoration: none;
 }
