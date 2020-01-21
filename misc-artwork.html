@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anokhee Jandhyala | Miscellaneous Artwork</title>
+    <!-- Imports fonts from Adobe TypeKit -->
+    <link rel="stylesheet" href="https://use.typekit.net/iom3qgz.css">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
+
+    <!-- Imports stylesheet -->
+    <link rel="stylesheet" type="text/css" href="test-theme2.css">
+</head>
+
+<body class="rigor" style="background-color: #fffffa">
+    <div class="sticky-sidebar">
+        <nav>
+            <ul>
+                <li><a class="current" href="#section-1">Digital Illustrations</a></li>
+                <li><a href="#section-2">Procedurally-Generated Patterns</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <main>
+        <section id="section-1">
+            <div>
+                <header>
+                    <img class="hero-img" src="imgs/illustrations-and-misc-artwork/illustrations-icon.png">
+                    <div class="hero-info">
+                        <h2 class="project-title">Illustrations & Other Artwork</h2>
+                        <h3 class="project-type">Various Mediums</h3>
+                    </div>
+                    <br><br>
+                </header>
+
+                <div class="two-col" style="margin: 0 auto; width: 100%;">
+                    <div class="col" style="margin: 0 auto; text-align: center">
+                        <h2 class="heading">Digital Illustrations</h2>
+                        <p style="font-size: 17px; line-height: 1.45em;">
+                            Drawings made using various graphics editing programs including Procreate, Photoshop, and
+                            Illustrator.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="two-col" style="align-items: flex-start; ">
+                    <div class="col" style="width: 50%; padding-right:2px; margin: 0 auto;">
+                        <img src="imgs/illustrations-and-misc-artwork/luna-moth-and-fern.png">
+                    </div>
+                    <div class="col" style="width: 50%; padding-left: 5px; margin: 0 auto;">
+                        <img src="imgs/illustrations-and-misc-artwork/year-in-review.png">
+                    </div>
+                </div>
+
+                <div class="two-col" style="align-items: flex-start;">
+                    <div class="col" style="width: 50%; margin: 0 auto; padding: 2px;">
+                        <img src="imgs/illustrations-and-misc-artwork/my-sweet-flowery-friend.png">
+                    </div>
+                    <div class="col" style="width: 50%; padding: 5px; margin: 0 auto;">
+                        <img src="imgs/illustrations-and-misc-artwork/gummy-dog.png">
+                    </div>
+                </div>
+                <br>
+            </div>
+</body>
+<script>
+    let mainNavLinks = document.querySelectorAll("nav ul li a");
+    let mainSections = document.querySelectorAll("main section");
+
+    let lastId;
+    let cur = [];
+
+    window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY * 1.25;
+
+        mainNavLinks.forEach(link => {
+            let section = document.querySelector(link.hash);
+
+            if (
+                section.offsetTop <= fromTop &&
+                section.offsetTop + section.offsetHeight > fromTop
+            ) {
+                link.classList.add("current");
+            } else {
+                link.classList.remove("current");
+            }
+        });
+    });
+</script>
+
+</html>
