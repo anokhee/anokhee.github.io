@@ -133,16 +133,17 @@ table td {
 .brand {
     font-weight: 400;
     margin: 0 auto;
-    padding: 20px;
+    margin-top: 10%;
+    padding: 30px;
     text-align: left;
-    
+
 }
 
 .brand-name {
     font-family: din-2014-narrow, sans-serif;
     font-weight: 600;
-    font-size: 30px;
-    line-height: .9em;
+    font-size: 25px;
+    padding-bottom: 10px;
 }
 
 .hero-img {
@@ -154,7 +155,7 @@ table td {
     width: 100%;
     margin: 0 auto;
     padding-bottom: 30px;
-    border-bottom: 1px solid #dfdfdf;
+    /* border-bottom: 1px solid #dfdfdf; */
 }
 
 .hero-info .project-title {
@@ -165,6 +166,14 @@ table td {
 .hero-info .project-type {
     font-size: 20px;
     padding-bottom: 5px;
+}
+
+.hero-info ul {
+    padding-left: 25px;
+}
+
+.hero-info ul li {
+    list-style-type: circle;
 }
 
 .my-name {
@@ -204,13 +213,14 @@ table td {
 }
 
 .sticky-sidebar {
-    background-color: #faf9f6;
+    /* background-color: #faf9f6; */
 }
 
 .sticky-sidebar nav {
     padding: 0px;
     margin-top: -92px;
 }
+
 .sticky-sidebar nav ul li a {
     font-family: din-2014, sans-serif;
     font-size: 18px;

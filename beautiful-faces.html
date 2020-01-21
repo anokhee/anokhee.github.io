@@ -19,7 +19,7 @@
 <body class="rigor" style="background-color: #fffffa">
     <div class="sticky-sidebar">
         <div class="brand" style="align-items: flex-start">
-            <h2 class="brand-name">Anokhee Jandhyala</h2>
+            <h2 class="brand-name">ANOKHEE JANDHYALA</h2>
         </div>
         <nav>
             <ul>
@@ -51,7 +51,7 @@
                             feel like an uphill battle.</h2>
                         <p style="font-size: 17px; line-height: 1.45em;">
                             Beautiful Faces exploits the programmable nature of SVG, allowing users to
-                            create and export custom graphics to SVG or PNG format from the comfort of their web
+                            draft and export custom vector graphics to SVG or PNG format from the comfort of their web
                             browser.
                         </p>
                     </div>
@@ -77,29 +77,40 @@
                     <div class="col" style="width: 35%; padding-right: 35px;">
                         <h4 class="subheading">How it Works</h4>
                         <h2 class="heading"> Using sliders, users can tweak
-                            the geometric proportions of a default face to their liking.</h2>
+                            the colors and geometric proportions of a face to their liking.</h2>
                         <p>
-                            The face is made up of several ellipses and Bezier curves plotted along dynamic vertex
+                            Using P5.js, a basic face is drawn to the browser. The face is comprised of several ellipses
+                            and Bezier curves plotted along dynamic vertex
                             points on the computational plane.
                         </p>
                     </div>
                     <div class="col" style="width: 75%">
-                        <img src="imgs/beautiful-faces/creation-process.gif">
+                        <figure>
+                            <img src="imgs/beautiful-faces/creation-process.gif">
+                            <figcaption><span class="bold">Fig 02.</span> A demonstration of the UI. Users can
+                                manipulate the sliders to dynamically change the positions of vertex points on the
+                                screen.</figcaption>
+                        </figure>
+
                     </div>
                 </div>
                 <br>
 
                 <div class="two-col" style="width: 100%;">
                     <div class="col" style="width: 35%; padding-right: 35px;">
-                        <h2 class="heading">Faces can be exported as an SVG or PNG file.</h2>
+                        <h2 class="heading">User creations can be exported as an SVG or PNG file.</h2>
                         <p>
                             If
                             the image is saved as an .svg and opened in a vector graphics editor like Illustrator
-                            or Inkscape, all the vector paths will be retained and fully editable.
+                            or Inkscape, all paths will be retained and fully editable.
                         </p>
                     </div>
                     <div class="col" style="width: 75%">
-                        <img src="imgs/beautiful-faces/editing-in-illustrator.gif">
+                        <figure>
+                                <img src="imgs/beautiful-faces/editing-in-illustrator.gif">
+                                <figcaption><span class="bold">Fig. 03</span> Visual of the exported SVG being modified in Adobe Illustrator.</figcaption>
+                        </figure>
+                       
                     </div>
                 </div>
             </div>
@@ -111,7 +122,7 @@
                         <h4 class="subheading">Exploring Use Cases</h4>
                         <h2 class="heading">In what other ways can this software be useful?</h2>
                         <p>
-                            Below are a few problem cases that Beautiful Faces can be implemented as a solution to.
+                            Aside from drafting vector graphics, Beautiful Faces can be used as a solution to UX-related issues. Below are two possible use cases:
                         </p>
                     </div>
                 </div>
@@ -134,7 +145,7 @@
                     <div class="col" style="width: 50%;">
                         <figure>
                             <img style="border: 1px solid #dedede" src="imgs/beautiful-faces/use-case-1-bad.png">
-                            <figcaption><span class="bold">Fig 04.</span> The grey, default Slack photo is not memorable
+                            <figcaption><span class="bold">Fig 04-a.</span> The grey, default Slack photo is not memorable
                                 and slightly
                                 ominous. Without a photo, other members of this Slack channel are likely to overlook or
                                 distrust
@@ -143,13 +154,12 @@
                         <br>
                         <figure>
                             <img style="border: 1px solid #dedede" src="imgs/beautiful-faces/use-case-1-better.png">
-                            <figcaption><span class="bold">Fig 05.</span> Although this picture is a cartoon, other
+                            <figcaption><span class="bold">Fig 04-b.</span> Although this picture is a cartoon, other
                                 members of the Slack channel are more likely to remember seeing me engage in discussions
                                 and less likely to distrust my message.</figcaption>
                         </figure>
                     </div>
                 </div>
-                <br>
                 <div class="two-col" style="align-items: flex-start;">
                     <div class="col" style="width: 50%; padding-right: 50px">
                         <h4 class="subheading">2) Creative Default Identicons</h4>
