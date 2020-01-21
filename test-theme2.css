@@ -130,6 +130,21 @@ table td {
     font-weight: 600;
 }
 
+.brand {
+    font-weight: 400;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+    
+}
+
+.brand-name {
+    font-family: din-2014-narrow, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: .9em;
+}
+
 .hero-img {
     width: 100%;
     margin: 0 auto;
@@ -191,6 +206,25 @@ table td {
 .sticky-sidebar {
     background-color: #faf9f6;
 }
+
+.sticky-sidebar nav {
+    padding: 0px;
+    margin-top: -92px;
+}
+.sticky-sidebar nav ul li a {
+    font-family: din-2014, sans-serif;
+    font-size: 18px;
+    justify-content: left;
+    padding: 0px;
+    padding-bottom: 2.5px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.sticky-sidebar nav ul li a.current {
+    animation: none;
+}
+
 
 .heading {
     font-size: 22px;
@@ -315,12 +349,13 @@ table td {
         width: 100%;
     }
 
-    .hero-info .project-title, .project-type {
-        padding-left: 10px;
-    }
-
     .hero-img {
         width: 100%
+    }
+
+    .rigor .hero-info .project-type,
+    .rigor .hero-info .project-title {
+        padding-left: 10px;
     }
 
     .rigor {
