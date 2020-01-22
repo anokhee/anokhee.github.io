@@ -11,6 +11,11 @@ body {
     width: 100%
 }
 
+a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
 figure {
     padding: 0px;
     margin: 0px;
@@ -70,6 +75,7 @@ nav ul {
 }
 
 nav ul li a {
+    font-weight: 400;
     align-items: center;
     color: #CDCCD0;
     display: flex;
@@ -130,25 +136,8 @@ table td {
     font-weight: 600;
 }
 
-.brand {
-    font-weight: 400;
-    margin: 0 auto;
-    margin-top: 10%;
-    padding: 30px;
-    text-align: left;
-
-}
-
-.brand-name {
-    font-family: din-2014-narrow, sans-serif;
-    font-weight: 600;
-    font-size: 25px;
-    padding-bottom: 10px;
-}
-
 .hero-img {
     width: 100%;
-    margin: 0 auto;
 }
 
 .hero-info {
@@ -212,18 +201,14 @@ table td {
     grid-template-columns: 1fr 4fr !important;
 }
 
-.sticky-sidebar {
-    /* background-color: #faf9f6; */
-}
-
 .sticky-sidebar nav {
     padding: 0px;
-    margin-top: -92px;
+    margin-top: -180px;
 }
 
-.sticky-sidebar nav ul li a {
+.sticky-sidebar nav ul li a, .brand .brand-name {
     font-family: din-2014, sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     justify-content: left;
     padding: 0px;
     padding-bottom: 2.5px;
@@ -233,6 +218,31 @@ table td {
 
 .sticky-sidebar nav ul li a.current {
     animation: none;
+}
+
+.brand {
+    width: 80%;
+}
+
+.brand .brand-name {
+    padding: 0px;
+    font-family: din-2014-narrow, sans-serif;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50%;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: .9em;
+    text-shadow: -6px 4px rgba(23, 18, 166, .15);
+    letter-spacing: .05em;
+}
+
+.brand .brand-name a {
+    color: #050426;
+}
+
+.brand .brand-name a:hover {
+    color: #140F8C;
 }
 
 
