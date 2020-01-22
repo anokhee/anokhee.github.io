@@ -8,7 +8,7 @@ body {
     height: 100%;
     line-height: 1.55em;
     margin: 0 auto;
-    width: 100%
+    width: 100%;
 }
 
 a {
@@ -54,17 +54,17 @@ img {
 }
 
 main {
-    margin: 0 auto;
-    width: 65%;
+    width: 70%;
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(3rem);
     scroll-snap-type: y mandatory;
+    margin: 0 auto;
 }
 
 nav {
     display: flex;
-    font-family: din-2014-narrow, sans-serif;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     height: 100vh;
     align-items: center;
     justify-content: center;
@@ -79,7 +79,7 @@ nav ul li a {
     align-items: center;
     color: #CDCCD0;
     display: flex;
-    font-size: 22px;
+    font-size: 18px;
     justify-content: center;
     padding-bottom: 10px;
     text-align: center;
