@@ -81,7 +81,7 @@ nav ul li a {
     display: flex;
     font-size: 18px;
     justify-content: center;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     text-align: center;
     text-decoration: none;
     width: 100%;
@@ -282,7 +282,7 @@ table td {
 }
 
 .button:hover {
-    background: rgb(147, 147, 13);
+    background: #140F8C;
 }
 
 .nav-container,
