@@ -2,6 +2,7 @@ a {
     font-weight: 800;
     text-decoration: none;
 }
+
 body {
     line-height: 1.5em;
 }
@@ -32,6 +33,7 @@ h6 {
     font-weight: 600;
     margin-bottom: 5px;
 }
+
 img {
     width: 100%;
 }
@@ -266,7 +268,7 @@ section {
     letter-spacing: .05em;
     margin-bottom: 5px;
     opacity: 25%;
-    text-transform: uppercase;   
+    text-transform: uppercase;
 }
 
 .superheading {
@@ -286,4 +288,30 @@ section {
     text-transform: uppercase;
     font-size: 18px;
 }
-    
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .row {
+        display: block;
+    }
+
+    .col {
+        width: 100% !important;
+    }
+
+    nav {
+        display: none;
+    }
+
+    section {
+        padding: 0px;
+    }
+
+    .grid-container {
+        display: block;
+        width: 100%;
+    }
+
+}
