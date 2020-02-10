@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anokhee Jandhyala</title>
+    <!-- Imports fonts from Adobe TypeKit -->
+    <link rel="stylesheet" href="https://use.typekit.net/iom3qgz.css">
+    <!-- Imports fonts from FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
+
+    <!-- Imports stylesheet -->
+    <link rel="stylesheet" type="text/css" href="theme.css">
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <div class="grid-container">
+        <nav>
+            <div class="navbar-brand">
+                <h1>Anokhee<br>Jandhyala</h1>
+                <h3>Designer & Developer</h3>
+            </div>
+            <ul class="main-nav">
+                <li><a href="./index.html">+ Projects</a></li>
+                <li><a href="./about-me.html">+ About Me</a></li>
+                <li><a href="#">+ Resume</a></li>
+            </ul>
+            <div class="link-to-social">
+                <a href="https://github.com/anokhee"><i class="fa fa-github"></i></a>
+                <a href="mailto:jandhyala.anokhee@gmail.com"><i class="fa fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/anokhee-jandhyala"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="about-me-container">
+                <h1>Hello, I'm Anokhee</h1><br>
+                <p>I'm an Atlanta-based <span class="bold">web developer </span>and <span class="bold">visual designer
+                    </span>trying to live my deprecated dream of being a
+                    Flash games developer vicariously through modern web technologies.
+                    <br><br>
+                    I use my interest in web development and graphics programming to leverage my abilities as a
+                    designer. Knowing that anything is possible with code inspires me to seek out creative solutions to
+                    design problems.
+                </p>
+                <ul style="list-style-type: disc; width: 90%; margin: 0 auto; margin-top: 25px;">
+                    <li>I get goosebumps whenever someone sings
+                    </li>
+                    <li>The <a
+                            href="https://www.rollingstone.com/culture/culture-news/the-flight-of-the-birdman-flappy-bird-creator-dong-nguyen-speaks-out-112457/"">Flappy Bird guy</a> is my hero</li>
+                    <li>I <a class=" pretty-link"
+                            href="mailto:josh.a.loftis@gmail.com?&subject=Inquiry about Anokhee's cat allergies&body=Did she really will them away?">willed
+                            away my cat allergies</a></li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    <footer>
+
+    </footer>
+
+</body>
+<script>
+    let mainNavLinks = document.querySelectorAll(" nav ul li a");
+    let mainSections = document.querySelectorAll("main
+    section "); let lastId; let cur=[]; window.addEventListener("
+    scroll ", event=> {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach(link => {
+        let section = document.querySelector(link.hash);
+
+        if (
+            section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop
+        ) {
+            link.classList.add("current");
+        } else {
+            link.classList.remove("current");
+        }
+    });
+    });
+</script>
+
+</html>

@@ -5,110 +5,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Anokhee Jandhyala | Portfolio</title>
+    <title>Anokhee Jandhyala</title>
     <!-- Imports fonts from Adobe TypeKit -->
     <link rel="stylesheet" href="https://use.typekit.net/iom3qgz.css">
+    <!-- Imports fonts from FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS Reset -->
     <link rel="stylesheet" type="text/css" href="reset.css">
 
     <!-- Imports stylesheet -->
-    <link rel="stylesheet" type="text/css" href="test-theme2.css">
+    <link rel="stylesheet" type="text/css" href="theme.css">
 </head>
 
-<body style="background: #fffffe">
-    <div class="nav-container">
+<body>
+    <header>
+    </header>
+
+    <div class="grid-container">
         <nav>
-            <ul>
-                <li><a class="current" href="#about-me">00. About Me</a></li>
-                <li><a href="#beautiful-faces">01. Beautiful Faces</a></li>
-                <li><a href="#visual-synthesizer">02. Visual Synthesizer</a></li>
-                <li><a href="#generative-landscapes">03. Generative Landscapes</a></li>
-                <li><a href="#misc-artwork">04. Illustrations & Other Artwork</a></li>
-                <li><a href="#rigor-internship">05. Internship at Rigor</a></li>
+            <div class="navbar-brand">
+                <h1>Anokhee<br>Jandhyala</h1>
+                <h3>Designer & Developer</h3>
+            </div>
+            <ul class="main-nav">
+                <li><a href="./index.html">+ Projects</a></li>
+                <li><a href="./about-me.html">+ About Me</a></li>
+                <li><a href="#">+ Resume</a></li>
             </ul>
+            <div class="link-to-social">
+                <a href="https://github.com/anokhee"><i class="fa fa-github"></i></a>
+                <a href="mailto:jandhyala.anokhee@gmail.com"><i class="fa fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/anokhee-jandhyala"><i class="fa fa-linkedin"></i></a>
+            </div>
         </nav>
+
+        <main>
+            <div class="projects-gallery">
+                <div class="row" style="align-items: flex-start;">
+                    <div class="individual-project-container">
+                        <div class="project-thumbnail" id="beautiful-faces" onclick="window.location.href = './beautiful-faces.html'">
+                        </div>
+                        <h2 class="project-title">
+                            Beautiful Faces
+                        </h2>
+                        <p class="project-description">
+                            In the vein of video game character generators, this program allows users to generate unique
+                            faces in the browser and export them to SVG.
+                        </p>
+                        <a href="./beautiful-faces.html" class="view-live-demo-link"><i class="fa fa-long-arrow-right"></i> View
+                            Project</a>
+                    </div>
+
+                    <div class="individual-project-container">
+                        <div class="project-thumbnail" id="tiny-landscapes" onclick="window.location.href = 'https://anokhee.github.io/lofi-landscapes'">
+                        </div>
+                        <h2 class="project-title">
+                            Lo-fi Landscapes
+                        </h2>
+                        <p class="project-description">
+                            A program written in ~160 lines of code. Generates a unique mountainous landscape upon each
+                            refresh of the page.
+                        </p>
+                        <a href="https://anokhee.github.io/lofi-landscapes" class="view-live-demo-link"><i class="fa fa-long-arrow-right"></i> View
+                            Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="row" style="align-items: flex-start;">
+                    <div class="individual-project-container">
+                        <div class="project-thumbnail" id="visual-synthesizer" onclick="window.location.href = './visual-synthesizer.html'">
+                        </div>
+                        <h2 class="project-title">
+                            Visual Synthesizer
+                        </h2>
+                        <p class="project-description">
+                            Exploring the potential for visual arts and expression in an arguably logic-oriented world
+                            of
+                            computing and robotics.
+                        </p>
+                        <a href="./visual-synthesizer.html" class="view-live-demo-link"><i class="fa fa-long-arrow-right"></i> View
+                            Project</a>
+                    </div>
+
+                    <div class="individual-project-container">
+                        <div class="project-thumbnail" id="internship-at-rigor" onclick="window.location.href = './rigor.html'">
+                        </div>
+                        <h2 class="project-title">
+                            Internship at Rigor
+                        </h2>
+                        <p class="project-description">
+                            Rethinking the way users interact with Rigor's data.
+                        </p>
+                        <a href="./rigor.html" class="view-live-demo-link"><i class="fa fa-long-arrow-right"></i> View
+                            Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 
 
-    <main>
-        <section id="about-me">
-            <p class="bold">
-                <div class="hero-info">
-                    <h1 class="my-name">Hi, I'm Anokhee</span>.
-                    </h1>
-                    I'm an Atlanta-based <span class="bold">web developer</span> and <span class="bold">visual
-                        designer</span> trying to live my deprecated dream of being a
-                    Flash games developer vicariously through modern web technologies.
-                    <br><br>
-                    I use my interest in web development and graphics programming to leverage my abilities as a
-                    designer. Knowing that anything is possible with code inspires me to seek out creative solutions to
-                    design problems.
-                    <br><br>
-                    Some personal facts about me:
-                    <ul>
-                        <li>I get goosebumps whenever someone sings</li>
-                        <li>The <a class="pretty-link" href="#">Flappy Bird guy</a> is my hero</li>
-                        <li>I <a class="pretty-link"
-                                href="mailto:josh.a.loftis@gmail.com?&subject=Inquiry about Anokhee's cat allergies&body=Did she really will them away?">willed
-                                away my cat allergies</a></li>
-                    </ul>
-                </div>
-            </p>
-        </section>
-        <section id="beautiful-faces">
-            <div>
-                <img class="project-thumbnail" src="imgs/beautiful-faces/faces-grainy.png">
-                <h5 class="project-title">Beautiful Faces</h5>
-                <h3 class="project-type">Procedurally-Generated Web Graphics, Graphic Design</h3>
-                <p class="project-description">In the vein of video game character generators, this program allows users
-                    to generate unique faces in the browser and export them to SVG. Note: This is a web-friendly port of
-                    <a class="pretty-link" href="visual-synthesizer.html">my Visual Synthesizer software.</a></p>
-                <a class="button" href="./beautiful-faces.html">View More</a>
-            </div>
-        </section>
-        <section id="visual-synthesizer">
-            <div>
-                <img class="project-thumbnail" src="imgs/visual-synthesizer/visual-synthesizer-icon.png">
-                <p class="project-title">Visual Synthesizer</p>
-                <p class="project-type">Hardware Prototyping, Computer Graphics</p>
-                <p class="project-description">Exploring the potential for visual arts and expression in an
-                    arguably logic-oriented world of computing and robotics.</p>
-                <a class="button" href="./visual-synthesizer.html">View More</a>
-            </div>
-        </section>
-        <section id="generative-landscapes">
-            <div>
-                <img class="project-thumbnail" src="imgs/landscapes.png">
-                <h5 class="project-title">Generative Landscapes</h5>
-                <h3 class="project-type">Procedurally-Generated Graphics</h3>
-                <p class="project-description">Generates unique mountainous landscapes and starry skies upon each refresh of the page.</p>
-                <a class="button" href="https://anokhee.github.io/lofi-landscapes">View Demo</a>
-            </div>
-        </section>
-        <section id="misc-artwork">
-            <div>
-                <img class="project-thumbnail" src="imgs/illustrations-and-misc-artwork/illustrations-icon.png">
-                <p class="project-title">Illustrations & Miscellaneous Artwork</p>
-                <p class="project-type">Various Mediums</p>
-                <p class="project-description"></p>
-                <a class="button" href="./misc-artwork.html">View Gallery</a>
-            </div>
-        </section>
-        <section id="rigor-internship">
-            <div>
-                <img class="project-thumbnail" src="imgs/rigor/rigor-icon.png">
-                <p class="project-title">Internship at Rigor</p>
-                <p class="project-type">Software/UX Engineering Case Study</p>
-                <p class="project-description"></p>
-                <a class="button" href="./rigor.html">View Case Study</a>
-            </div>
-        </section>
+    <footer>
 
-    </main>
+    </footer>
+
 </body>
 <script>
-    let body = document.querySelector("body");
     let mainNavLinks = document.querySelectorAll("nav ul li a");
     let mainSections = document.querySelectorAll("main section");
 
@@ -116,7 +119,7 @@
     let cur = [];
 
     window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY * 1.25;
+        let fromTop = window.scrollY;
 
         mainNavLinks.forEach(link => {
             let section = document.querySelector(link.hash);

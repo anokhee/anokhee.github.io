@@ -1,0 +1,289 @@
+a {
+    font-weight: 800;
+    text-decoration: none;
+}
+body {
+    line-height: 1.5em;
+}
+
+html {
+    color: #131313;
+    scroll-behavior: smooth;
+    font-family: din-2014, sans-serif;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+i:hover {
+    opacity: 30%;
+}
+
+footer,
+header {
+    background-color: #fff;
+    height: 35px;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+h6 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+img {
+    width: 100%;
+}
+
+figcaption {
+    font-size: 15px;
+    opacity: 75%;
+    padding: 10px;
+}
+
+footer {
+    bottom: 0;
+}
+
+header {
+    top: 0;
+}
+
+main {
+    padding-top: 50px;
+    padding-bottom: 10rem;
+    width: 85%;
+    margin: 0 auto;
+}
+
+nav {
+    margin: 0 auto;
+    white-space: nowrap;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 50px;
+    top: 40%;
+}
+
+/* Only stick if you can fit */
+@media (min-height: 300px) {
+
+    nav ul,
+    .navbar-brand,
+    .link-to-social {
+        position: sticky;
+    }
+}
+
+nav ul li a {
+    color: #131313;
+    display: block;
+    font-weight: 100;
+    opacity: 75%;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #aba001;
+}
+
+nav ul li a.current {
+    background: black;
+}
+
+section {
+    padding: 2rem;
+    margin: 0 0 2rem 0;
+}
+
+/* My own CSS classes */
+.about-me-container {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 10%;
+    height: 100vh;
+}
+
+.about-me-container h1 {
+    font-family: din-2014-narrow, sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.grid-container {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    width: 100%;
+}
+
+.link-to-social {
+    top: 90%;
+    color: #acacac;
+    font-size: 17px;
+    margin: 35px;
+    margin-top: 100px;
+}
+
+.link-to-social i {
+    padding-right: 10px;
+}
+
+.navbar-brand {
+    margin: 50px;
+    top: 90px;
+}
+
+.navbar-brand a {
+    text-decoration: none;
+}
+
+.navbar-brand a:visited {
+    color: #131313;
+}
+
+.navbar-brand a:hover {
+    color: blue;
+    opacity: 50%;
+}
+
+.navbar-brand h1 {
+    font-family: din-2014-narrow, sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.navbar-brand h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    opacity: 25%;
+}
+
+.individual-project-container {
+    display: block;
+    margin: 5px;
+    width: 500px;
+}
+
+.project-thumbnail {
+    width: 500px;
+    height: 400px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.project-thumbnail:hover {
+    opacity: 70%;
+}
+
+.project-title {
+    font-family: din-2014-narrow;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.project-description {
+    margin-bottom: 8px;
+    width: 95%;
+}
+
+.project-hero-container .project-title {
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.project-hero-container .project-type {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    opacity: 30%;
+}
+
+.row {
+    align-items: center;
+    display: flex;
+    padding-bottom: 40px;
+    width: 100%;
+}
+
+.smaller-paragraph {
+    font-size: 15px;
+    opacity: 75%;
+}
+
+.view-other-projects {
+    align-items: flex-start;
+}
+
+.col {
+    width: 100%;
+}
+
+.view-live-demo-link {
+    text-decoration: none;
+}
+
+#beautiful-faces {
+    background: url(./imgs/beautiful-faces/faces-icon.png);
+    background-size: 100% 100%;
+}
+
+#tiny-landscapes {
+    background: url(./imgs/landscapes.png);
+    background-size: 100% 100%;
+}
+
+#visual-synthesizer {
+    background: url(./imgs/visual-synthesizer/visual-synthesizer-icon.png);
+    background-size: 100% 100%;
+}
+
+#internship-at-rigor {
+    background: url(./imgs/rigor/rigor-icon.png);
+    background-size: 100% 100%;
+}
+
+
+.subheading {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: .05em;
+    margin-bottom: 5px;
+    opacity: 25%;
+    text-transform: uppercase;   
+}
+
+.superheading {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.heading {
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.15em;
+    margin-bottom: 15px;
+}
+
+.heading-alt {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+    
