@@ -7,6 +7,10 @@ body {
     line-height: 1.5em;
 }
 
+del li {
+    opacity: 10%;
+}
+
 html {
     color: #131313;
     scroll-behavior: smooth;
