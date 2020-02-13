@@ -261,6 +261,16 @@ section {
     background-size: 100% 100%;
 }
 
+#three-d-graphics {
+    background: url(./imgs/3d-graphics.png);
+    background-size: 100% 100%;
+}
+
+#illustrations {
+    background: url(./imgs/illustrations.png);
+    background-size: 100% 100%;
+}
+
 
 .subheading {
     font-size: 15px;
@@ -307,11 +317,15 @@ section {
 
     section {
         padding: 0px;
+        margin: 0px;
+        padding-bottom: 10%;
     }
 
-    .grid-container {
-        display: block;
-        width: 100%;
+    main {
+        display: flex;
+        margin: 0 auto;
+        padding: 0px;
+        margin: 0px;
     }
 
 }
