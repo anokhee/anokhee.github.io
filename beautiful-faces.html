@@ -33,7 +33,9 @@
             <ul class="main-nav">
                 <li><a href="./index.html">+ Projects</a></li>
                 <li><a href="./about-me.html">+ About Me</a></li>
-                <del><li>+ Resume</li></del>
+                <del>
+                    <li>+ Resume</li>
+                </del>
             </ul>
             <div class="link-to-social">
                 <a href="https://github.com/anokhee"><i class="fa fa-github"></i></a>
@@ -43,246 +45,254 @@
         </nav>
 
         <main>
-            <div class="projects-gallery">
 
-                <section>
-                    <div class="row" width="100%">
-                        <div class="project-hero-container">
-                            <img src="imgs/beautiful-faces/faces-banner.png">
-                            <h1 class="project-title">Beautiful Faces</h1>
-                            <h3 class="project-type">Computer Graphics, Graphic Design</h3>
-                            <a class="view-live-demo-link"
-                                href="https://anokhee.github.io/visual-synthesizer/web-demo"><i
-                                    class="fa fa-long-arrow-right"></i> View Live
-                                Demo</a>
-                        </div>
+            <section>
+                <div class="row" width="100%">
+                    <div class="project-hero-container">
+                        <img src="imgs/beautiful-faces/faces-banner.png">
+                        <h1 class="project-title">Beautiful Faces</h1>
+                        <h3 class="project-type">Computer Graphics, Graphic Design</h3>
+                        <a class="view-live-demo-link" href="https://anokhee.github.io/visual-synthesizer/web-demo"><i
+                                class="fa fa-long-arrow-right"></i> View Live
+                            Demo</a>
                     </div>
+                </div>
 
-                    <div class="row" style="width: 85%; margin: 0 auto;">
-                        <div style="text-align: center;">
-                            <div style="margin: 0 auto; width: 80%">
-                                <h5 class="subheading">Overview</h5>
-                                <h4 class="heading">
-                                    For many, learning how to use tools like Adobe Illustrator or Inkscape can feel like
-                                    an
-                                    uphill battle.
-                                </h4>
-                                <p>I developed Beautiful Faces to explore ways to exploit the programmable nature of
-                                    SVG. This web-friendly program allows users
-                                    to
-                                    draft and export custom vector graphics to SVG or PNG from the comfort of their web
-                                    browser without touching the pen tool.
-                                </p><br>
-                            </div>
-                            <figure>
-                                <img src="imgs/beautiful-faces/faces-grainy.png">
-
-                                <ficaption><span class="bold">Fig. 01</span> Four Beautiful Faces after being downloaded
-                                    as SVGs and given
-                                    textures in
-                                    Adobe Illustrator.
-                                </ficaption>
-                            </figure>
-
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <div class="row">
-                        <div class="col" style="width: 35%; margin-right: 50px;">
-                            <h5 class="subheading">Drafting Vectors</h5>
+                <div class="row" style="width: 85%; margin: 0 auto;">
+                    <div style="text-align: center;">
+                        <div style="margin: 0 auto; width: 80%">
+                            <h5 class="subheading">Overview</h5>
                             <h4 class="heading">
-                                Using sliders, users can tweak the colors and geometric proportions of a default face to
-                                their
-                                liking.
+                                For many, learning how to use tools like Adobe Illustrator or Inkscape can feel like
+                                an
+                                uphill battle.
                             </h4>
-                            <p>The face is drawn to the screen as a collection of Bezier curves and ellipses.
-                            </p>
-                        </div>
-                        <div class="col" style="width: 65%">
-                            <figure>
-                                <img src="imgs/beautiful-faces/creation-process.gif">
-                                <figcaption><span class="bold">Fig. 02</span> A demonstration of the UI. Users can
-                                    manipulate the sliders to
-                                    dynamically
-                                    change the positions of vertex points on the screen.
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col" style="width: 35%; margin-right: 50px;">
-                            <h4 class="heading">
-                                Creations can be exported as an SVG or PNG file.
-                            </h4>
-                            <p>If the image is saved as an .svg and opened in a vector graphics editor like Illustrator
-                                or
-                                Inkscape, all paths will be retained and fully editable.
+                            <p>Beautiful Faces was designed and developed to exploit the programmable nature of SVG by
+                                allowing users to
+                                easily draft and export custom vector graphics from the comfort of their web
+                                browser.
                             </p><br>
                         </div>
-                        <div class="col" style="width: 65%">
-                            <figure>
-                                <img src="imgs/beautiful-faces/editing-in-illustrator.gif">
-                                <figcaption><span class="bold">Fig. 03</span> Visual of the exported SVG being modified
-                                    in Adobe Illustrator.
-                                </figcaption>
-                            </figure>
-                        </div>
+                        <figure>
+                            <img src="imgs/beautiful-faces/faces-grainy.png">
+
+                            <ficaption><span class="bold">Fig. 01</span> Four faces drafted in Beautiful Faces, then
+                                exported to and
+                                textured in
+                                Adobe Illustrator.
+                            </ficaption>
+                        </figure>
+
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section>
-                    <div class="row" style="margin: 0 auto; width: 85%; text-align: center;">
-                        <div style="width: 100%;">
-                            <h5 class="subheading">Exploring Other Use Cases</h5>
-                            <h4 class="heading">
-                                Exploring further use cases in user experience.
-                            </h4>
-                        </div>
+            <section>
+                <div class="row">
+                    <div class="col" style="width: 35%; margin-right: 50px;">
+                        <h5 class="subheading">Drafting Vectors</h5>
+                        <h4 class="heading">
+                            Using sliders, users can tweak colors and geometric proportions of a vector face.
+                        </h4>
                     </div>
+                    <div class="col" style="width: 65%">
+                        <figure>
+                            <img src="imgs/beautiful-faces/creation-process.gif">
+                            <figcaption><span class="bold">Fig. 02</span> The UI is created with <a
+                                    href="https://github.com/dataarts/dat.gui">dat.GUI</a>.
 
-                    <div class="row" style="margin: 0 auto; width: 100%; text-align: left;">
-                        <div style="width: 100%;">
-                            <h5 class="subheading">Trustworthy Interactions Between Users</h5>
-                            <p>
-                                In community-based sites and applications, users are encouraged to upload a profile
-                                picture.
-                                Unfortunately, those who choose to use the provided default profile image can appear
-                                casual/non-participatory at best and creepy at worst.
-                            </p>
-                        </div>
+                            </figcaption>
+                        </figure>
                     </div>
+                </div>
 
-                    <div class="row" style="width: 90%; margin: 0 auto; align-items: flex-start;">
-                        <div style="width: 50%; margin: 10px;">
-                            <img style="border: 1px solid #ccc; margin-bottom: 10px;"
-                                src="imgs/beautiful-faces/use-case-1-bad.png">
-                            <h6>Immemorable at best, creepy at worst</h6>
-                            <p class="smaller-paragraph">
-                                The grey, default Slack photo is not memorable and slightly ominous. Without a photo,
-                                other
-                                members of this Slack channel are likely to overlook or distrust this message if they
-                                are unfamiliar with the sender.
-                            </p>
-                        </div>
-                        <div style="width: 50%; margin: 10px;">
-                            <img style="border: 1px solid #ccc; margin-bottom: 10px;"
-                                src="imgs/beautiful-faces/use-case-1-better.png">
-                            <h6>Impression of involvement</h6>
-                            <p class="smaller-paragraph">Although this picture is a cartoon, other members of the Slack
-                                channel are more likely to
-                                remember seeing me engage in discussions and less likely to distrust my message.
-                            </p>
-                        </div>
+                <div class="row">
+                    <div class="col" style="width: 35%; margin-right: 50px;">
+                        <h4 class="heading">
+                            The face is drawn to the screen as a collection of vertex points connecting
+                            Bezier curves and ellipses.
+                        </h4>
                     </div>
+                    <div class="col" style="width: 65%">
+                        <figure>
+                            <img src="imgs/beautiful-faces/bezier-control points.gif">
+                            <figcaption><span class="bold">Fig. 03</span> 4 vertex control points comprise the lower half of the face.
 
-                    <div class="row" style="margin: 0 auto; width: 100%; text-align: left;">
-                        <div style="width: 100%;">
-                            <p>
-                                Beautiful Faces can provide a quick solution for users who don't feel like uploading a
-                                photo
-                                of themselves to a site, but want to feel like a regular member of the community.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col" style="width: 35%">
-                            <h5 class="subheading">Inclusive default identicons</h5>
-                            <h5 class="heading">
-                                Most default profile images feature decidedly male silhouettes with
-                                caucasian-looking hairstyles and features.
-                            </h5>
-                            <p>While this may seem harmless enough, it
-                                reinforces the idea of the white male user as the default person, which can
-                                inadvertently
-                                alienate minority users.
-                            </p><br>
-                        </div>
-                        <div class="col" style="width: 65%;">
-                            <figure style="margin: 0 auto; width: 80%;">
-                                <img style="width: 100%;" src="imgs/beautiful-faces/use-case-2-identicons.png">
-                                <figcaption><span class="bold">Fig. 04</span> Default profile images (Source: Google
-                                    Images result for "default
-                                    profile picture")
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-
-
-                    <div class="row">
-                        <div class="col" style="width: 35%">
-                            <p class="heading">With a few lines of code, Beautiful Faces can be configured to generate
-                                thousands of
-                                on-brand
-                                images.
-                            </p>
-                            <p>
-                                The result can include faces that are more gender-neutral, inclusive, and
-                                lighthearted than the typical
-                                default
-                                profile picture.
-                                <br><br>
-                                As a bonus, SVG is highly performant and scalable, which has benefits from a software
-                                engineering perspective on the front end and back end.
-                            </p><br>
-                        </div>
-                        <div class="col" style="width: 65%;">
-                            <figure style="margin: 0 auto; width: 80%;">
-                                <img style="width: 100%;" src="imgs/beautiful-faces/all-the-faces.gif">
-                                <figcaption><span class="bold">Fig. 05</span> When the "randomize" function is applied
-                                    to the algorithm that
-                                    generates the default face, these are the results.
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-
-                </section>
-
-
-
-
-
-
-                <h3 class="heading heading-alt">View More Projects</h3>
-                <div class="row view-other-projects">
-                    <div class="individual-project-container">
-                        <div class="project-thumbnail" id="visual-synthesizer"  onclick="window.location.href = './visual-synthesizer.html'">
-                        </div>
-                        <h2 class="project-title">
-                            Visual Synthesizer
-                        </h2>
-                        <p class="project-description">
-                            Exploring the potential for visual arts and expression in an arguably logic-oriented
-                            world
-                            of
-                            computing and robotics.
-                        </p>
-                        <a href="./visual-synthesizer.html" class="view-live-demo-link"><i class="fa fa-long-arrow-right"></i> View
-                            Project</a>
-                    </div>
-
-                    <div class="individual-project-container">
-                        <div class="project-thumbnail" id="tiny-landscapes"  onclick="window.location.href = 'https://anokhee.github.io/lofi-landscapes'">
-                        </div>
-                        <h2 class="project-title">
-                            Tiny Landscapes
-                        </h2>
-                        <p class="project-description">
-                            A program written in ~160 lines of code. Generates a unique mountainous landscape upon
-                            each
-                            refresh of the page.
-                        </p>
-                        <a href="https://anokhee.github.io/lofi-landscapes" class="view-live-demo-link"><i class="fa fa-long-arrow-right"></i> View
-                            Case Study</a>
+                            </figcaption>
+                        </figure>
                     </div>
                 </div>
 
 
+                <div class="row">
+                    <div class="col" style="width: 35%; margin-right: 50px;">
+                        <h4 class="heading">
+                            Creations can be exported as a .svg file.
+                        </h4>
+                        <p>If the image is saved as an SVG and opened in a vector graphics editor like Illustrator
+                            or
+                            Inkscape, all paths will be retained and fully editable.
+                        </p><br>
+                    </div>
+                    <div class="col" style="width: 65%">
+                        <figure>
+                            <img src="imgs/beautiful-faces/editing-in-illustrator.gif">
+                            <figcaption><span class="bold">Fig. 04</span> The exported SVG modified
+                                in Adobe Illustrator.
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="row" style="margin: 0 auto; width: 85%; text-align: center;">
+                    <div style="width: 100%;">
+                        <h5 class="subheading">Exploring Other Use Cases</h5>
+                        <h4 class="heading">
+                            Exploring further use cases in user experience.
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="row" style="margin: 0 auto; width: 100%; text-align: left;">
+                    <div style="width: 100%;">
+                        <h5 class="subheading">1) Trustworthy Interactions Between Users</h5>
+                        <p>
+                            In community-based sites and applications, users are encouraged to upload a profile
+                            picture.
+                            Unfortunately, the provided default profile image can sometimes appear
+                            casual/non-participatory at best and creepy at worst. <br><br>In applications like
+                            Slack, where users may or may not know each other personally despite belonging to a common
+                            organization or community, Beautiful Faces can provide an easy solution for users who don't
+                            feel comfortable uploading a photo of themselves.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" style="width: 90%; margin: 0 auto; align-items: flex-start;">
+                    <div style="width: 50%; margin: 10px;">
+                        <img style="border: 1px solid #ccc; margin-bottom: 10px;"
+                            src="imgs/beautiful-faces/use-case-1-bad.png">
+                        <h6>Immemorable at best, creepy at worst</h6>
+                        <p class="smaller-paragraph">
+                            The grey, default Slack photo is not memorable and slightly ominous. Without a photo,
+                            other
+                            members of this Slack channel are likely to overlook or distrust this message if they
+                            are unfamiliar with my name.
+                        </p>
+                    </div>
+                    <div style="width: 50%; margin: 10px;">
+                        <img style="border: 1px solid #ccc; margin-bottom: 10px;"
+                            src="imgs/beautiful-faces/use-case-1-better.png">
+                        <h6>The impression of involvement</h6>
+                        <p class="smaller-paragraph">Although this picture is a cartoon, other members of the Slack
+                            channel are more likely to
+                            remember seeing me engage in discussions and less likely to distrust my message.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" style="margin: 0 auto; width: 100%; text-align: left;">
+                    <div style="width: 100%;">
+                        <p>
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col" style="width: 35%">
+                        <h5 class="subheading">2) Inclusive default identicons</h5>
+                        <h5 class="heading">
+                            Most default profile images feature decidedly male silhouettes with
+                            caucasian-looking hairstyles and features.
+                        </h5>
+                        <p>While this may seem harmless enough, it
+                            reinforces the idea of the white male user as the default person, which can
+                            inadvertently
+                            alienate minority users.
+                        </p><br>
+                    </div>
+                    <div class="col" style="width: 65%;">
+                        <figure style="margin: 0 auto; width: 80%;">
+                            <img style="width: 100%;" src="imgs/beautiful-faces/use-case-2-identicons.png">
+                            <figcaption><span class="bold">Fig. 05</span> Source: Google
+                                Images result for "default
+                                profile picture".
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col" style="width: 35%">
+                        <p class="heading">With a few lines of code, Beautiful Faces can be configured to procedurally
+                            generate
+                            thousands of
+                            on-brand
+                            images.
+                        </p>
+                        <p>
+                            The results are more gender-neutral, inclusive, and
+                            lighthearted than the typical
+                            default
+                            profile picture.
+                            <br><br>
+                            As a bonus, SVG is highly performant and scalable, which has benefits from a software
+                            engineering perspective on the front end and back end.
+                        </p><br>
+                    </div>
+                    <div class="col" style="width: 65%;">
+                        <figure style="margin: 0 auto; width: 80%;">
+                            <img style="width: 100%;" src="imgs/beautiful-faces/all-the-faces.gif">
+                            <figcaption><span class="bold">Fig. 06</span> Randomly-generated results.
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+            <h3 class="heading heading-alt">View More Projects</h3>
+            <div class="row view-other-projects">
+                <div class="individual-project-container">
+                    <div class="project-thumbnail" id="visual-synthesizer"
+                        onclick="window.location.href = './visual-synthesizer.html'">
+                    </div>
+                    <h2 class="project-title">
+                        Visual Synthesizer
+                    </h2>
+                    <p class="project-description">
+                        Exploring the potential for visual arts and expression in an arguably logic-oriented
+                        world
+                        of
+                        computing and robotics.
+                    </p>
+                    <a href="./visual-synthesizer.html" class="view-more-link"><i class="fa fa-long-arrow-right"></i>
+                        View
+                        Project</a>
+                </div>
+
+                <div class="individual-project-container">
+                    <div class="project-thumbnail" id="tiny-landscapes"
+                        onclick="window.location.href = 'https://anokhee.github.io/lofi-landscapes'">
+                    </div>
+                    <h2 class="project-title">
+                        Tiny Landscapes
+                    </h2>
+                    <p class="project-description">
+                        A program written in ~160 lines of code. Generates a unique mountainous landscape upon
+                        each
+                        refresh of the page.
+                    </p>
+                    <a href="https://anokhee.github.io/lofi-landscapes" class="view-more-link"><i
+                            class="fa fa-long-arrow-right"></i> View
+                        Case Study</a>
+                </div>
             </div>
         </main>
     </div>
