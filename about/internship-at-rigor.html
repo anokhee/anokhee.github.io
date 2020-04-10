@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anokhee Jandhyala | Internship at Rigor</title>
+    <link rel="stylesheet" href="https://use.typekit.net/kas2qtm.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <link rel="stylesheet" type="text/css" href="../index.css">
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <a class="active brand" href="../index.html">anokhee jandhyala</a>
+            <div class="float-right">
+                <!-- <a href="#contact">Projects</a>
+                <a href="#about">About</a></div> -->
+        </div>
+    </header>
+    <main>
+        <div class="column-container">
+            <div class="column" style="display: flex; align-items: center; padding-right: 55px;">
+                <div>
+                    <h1 class="project-type">UX, Software Engineering, Data Viz 2019</h1>
+                    <h1>Internship at Rigor</h1>
+                    <div style="height: 5px"></div>
+                    <p><span class="bold main-idea-paragraph">
+                            Reimagining analytics.
+                        </span></p>
+                    <p>The goal was not to deliver a production-ready new feature, but to spark discussion about user
+                        needs while accounting for how modern web design paradigms can be applied to the existing app.
+                    </p>
+                </div>
+            </div>
+            <div class="column">
+                <img style="width: 100%; margin: 0 auto;" src="../imgs/rigor-icon.png">
+            </div>
+        </div>
+
+        <div class="column-container">
+            <div class="column" style="width: 100%; padding-right: 75px;">
+                <h3>Background</h3>
+                <p class="main-idea-paragraph">About Rigor</p>
+                <p>Rigor is a small SaaS company located in Atlanta, Georgia providing users with powerful tools to
+                    optimize and monitor their website's performance. With Rigor, users can access metrics related
+                    to user experience, APIs, and uptime, benchmark their site's performance against industry
+                    leaders, and diagnose and repair technical issues or answer business questions.
+                </p><br>
+            </div>
+            <div class="column" style="width: 100%;">
+                <div class="column-full">
+                    <img src="../imgs/internship-at-rigor/skills-and-responsibilities.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="column-full">
+            <p class="main-idea-paragraph">A creative and open-ended solo project</p>
+            <p>During the concluding week of my internship, I was given the opportunity to pursue my design
+                interests via a 2-week solo project. At the end of the two weeks, I would present the idea to
+                the engineering team. My only instruction was to
+                find an area of the Rigor app that could be added to or improved upon, then design and develop a
+                functional prototype of a solution.<br><br>
+                The goal was not to deliver a production-ready new feature, but to spark discussion about user
+                needs while accounting for how modern web design paradigms can be applied to the existing app.
+            </p>
+        </div>
+
+        <div class="column-container">
+            <div class="column" style="padding-right: 5em;">
+                <h3>Analytics Redesign</h3>
+                <p>Because of my own concerns about it and a few mentions in Rigor’s technical support Slack channel, I
+                    decided
+                    to go with a redesign of this analytics chart.<br><br> The chart appears on the Results page of one
+                    of
+                    Rigor’s
+                    most popular features and displays information about various performance metrics based on the user’s
+                    custom
+                    configuration, then compares each metric with its results from the previous run.
+                </p>
+            </div>
+            <div class="column">
+                <img src="../imgs/internship-at-rigor/rigor-before-redesign.png" onClick="makeModal(this)">
+            </div>
+        </div>
+
+        <div class="column-container">
+            <div class="column" style="padding-right: 5em;">
+                <p class=" main-idea-paragraph">Identifying pain points.</p>
+                <p>My first step was to identify the major pain points of the chart I was redesigning. Due to the 2-week
+                    I wasn't able to conduct user interviews. Fortunately, I was able to rely on my supervisor,
+                    coworkers, information gleaned from
+                    product tickets in JIRA, and my own experiences for insight about possible user frustrations.
+                    <br><br>
+                    Understanding that the prototype would be programmed into the existing React application, I figured
+                    that
+                    the most intuitive way to plan this project was to break the current chart down into its most basic
+                    components while proposing guiding questions along the way.<br><br>
+                </p>
+            </div>
+            <div class="column">
+                <img src="../imgs/internship-at-rigor/rigor-pain-points.png" onClick="makeModal(this)">
+            </div>
+        </div>
+
+        <div class="column-full">
+            <p>By doing this, I was able to construct the building blocks required to organize (and iteratively
+                re-organize) the flow of information. I came up with a handful of painpoints that would serve as
+                milestones while designing and developing this project:
+                <ul>
+                    <li>The appearance of horizontal scrollbar when too many metrics are selected by the user</li>
+                    <li>Poor information hierarchy making it difficult for users to derive meaningful information
+                        from the page at a glance (and no way to prioritize metrics)</li>
+                    <li>Unnecessary UI components, like tooltips, flourishes, and links that clutter the page and
+                        distract from the "big picture"</li>
+                    <li>Crowded layout with small text that may be inaccessible to users with poor vision</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="column-full">
+            <p class="main-idea-paragraph">Understanding the users.</p>
+            <p>With information gathered throughout the semester from cross-departmental meetings, customer support
+                tickets, and discussions with my supervisor, I synthesized a few personas to reflect Rigor's
+                primary user base. These personas are based around age, level of experience with technology, role,
+                and personality, with a few hypothetical questions to guide the design process.
+            </p>
+
+            <img src="../imgs/internship-at-rigor/rigor-user-personas.png" onClick="makeModal(this)">
+
+            <p>Some generalizations I was able to make:
+                <ul>
+                    <li>Rigor's users are, in general, more technically-savvy than the average Internet user
+                    </li>
+                    <li>Ideally, users don't want to have to spend a lot of time in the Rigor app unless they are
+                        investigating an issue or configuring settings
+                    </li>
+                    <li>Configurations should require as little modification as possible
+                    </li>
+                    <li>The redesign is based on a desktop-only feature, so mobile-friendliness is not a factor to
+                        consider (yet)
+                    </li>
+                </ul><br>
+            </p>
+        </div>
+
+        <div class="column-full">
+            <p class="main-idea-paragraph">Low-fidelity Mockups</p><br>
+            <div class="column" style="width: 100%; margin: 0 auto;">
+                <div class="column-full">
+                    <img src="../imgs/internship-at-rigor/rigor-low-fidelity-mockup.png" onClick="makeModal(this)">
+                </div>
+            </div>
+        </div>
+
+        <p class="main-idea-paragraph">Charts that answer questions.</p>
+        <p>One of my favorite parts of this project was trying to figure out how charts can be used to answer
+            questions rather than exist for the sake of interactivity and visualization only. Because bar charts
+            are
+            widely known as some of the most
+            intuitive charts to use, I came up with a few business questions to
+            chart and represent the data in both the
+            mockup and final presentation.<br><br> With more time, it would have been worthwhile to spend more
+            time researching
+            how visualizations can be used to answer questions, rather than exist for their own sake.
+        </p><br>
+        <div class="column" style="width: 100%; margin: 0 auto;">
+            <div class="column-full">
+                <img src="../imgs/internship-at-rigor/rigor-charts-that-answer-questions.png" onClick="makeModal(this)">
+            </div>
+        </div>
+
+        <div class="column-full">
+            <p class="main-idea-paragraph">Protoype Implementation</p>
+            <p>D3 and React manipulate the DOM differently, which meant I had to brute-force some (arguably) icky code
+                to
+                build the interactivity and styling of the charts. With more time, I would have researched alternative
+                libraries or methods of integrating the two libraries. From my understanding, this is a common problem
+                with
+                many solutions.</p>
+        </div>
+        <div class="column-container">
+            <div class="column" style="padding-right: 5em;">
+                <p class="main-idea-paragraph">Challenge: Normalizing Data</p>
+                <p>At the beginning, I had some difficulty visualizing the data in a way that was immediately
+                    meaningful.
+                    The data is all displayed in wildly incompatible units like bytes, seconds, and counts, so what
+                    might be
+                    the ideal file count would almost certainly be an impossible byte size, and would not be helpful if
+                    displayed on the same graph.
+
+                    <br><br>After speaking with my supervisor, he suggested that the data might be
+                    more
+                    meaningful to users if it was converted into percentiles based on Amazon Web Services' Alexa Top
+                    Sites
+                    data.<br><br>
+                    To break down the percentile ranks from the 0th - 99th, we configured AWS to generate a JSON file
+                    with
+                    discrete data.<br><br>
+                    Now that I had the data in percentile ranks, I quickly encountered another issue: I would have to
+                    convert up to 3,860 unique values into individual percentiles. To accomplish this, I wrote an
+                    algorithm that normalized those values and mapped them to a D3 chart.
+                </p>
+            </div>
+            <div class="column">
+                <img src="../imgs/internship-at-rigor/rigor-alexa-data.png" onClick="makeModal(this)">
+                <br>
+            </div>
+        </div>
+
+        <div class="column-full">
+            <img src="../imgs/internship-at-rigor/rigor-final-result.png" onClick="makeModal(this)">
+        </div>
+    </main>
+</body>
+
+<script>
+    function makeModal(e) {
+        var modal = document.createElement("div");
+        modal.classList.add("modal");
+        var image = document.createElement("img");
+        image.src = e.src;
+        modal.appendChild(image);
+        modal.style.display = "block";
+        document.body.appendChild(modal);
+        modal.addEventListener("click", function () {
+            document.body.removeChild(modal);
+        });
+    }
+</script>
+
+</html>

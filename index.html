@@ -4,160 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Anokhee Jandhyala</title>
-    <!-- Imports fonts from Adobe TypeKit -->
-    <link rel="stylesheet" href="https://use.typekit.net/iom3qgz.css">
-    <!-- Imports fonts from FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- CSS Reset -->
+    <title>Anokhee Jandhyala | Mountain Palette Generator</title>
+    <link rel="stylesheet" href="https://use.typekit.net/kas2qtm.css">
     <link rel="stylesheet" type="text/css" href="reset.css">
-
-    <!-- Imports stylesheet -->
-    <link rel="stylesheet" type="text/css" href="theme.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
 <body>
     <header>
+        <div class="topnav">
+            <a class="active brand" href="#home">anokhee jandhyala</a>
+            <div class="float-right">
+                <!-- <a href="#contact">Projects</a>
+                <a href="#about">About Me</a></div> -->
+        </div>
     </header>
+    <main>
 
-    <div class="grid-container">
-        <nav>
-            <div class="navbar-brand">
-                <a href="./index.html">
-                    <h1>Anokhee<br>Jandhyala</h1>
-                </a>
-                <h3>Designer & Developer</h3>
-            </div>
-            <ul class="main-nav">
-                <li><a href="./index.html">+ Projects</a></li>
-                <li><a href="./about-me.html">+ About Me</a></li>
-                <del>
-                    <li>+ Resume</li>
-                </del>
-            </ul>
-            <div class="link-to-social">
-                <a href="https://github.com/anokhee"><i class="fa fa-github"></i></a>
-                <a href="mailto:jandhyala.anokhee@gmail.com"><i class="fa fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/anokhee-jandhyala"><i class="fa fa-linkedin"></i></a>
-            </div>
-        </nav>
-
-        <main>
-            <div class="projects-gallery">
-                <div class="row" style="align-items: flex-start;">
-                    <div class="individual-project-container">
-                        <div class="project-thumbnail" id="beautiful-faces"
-                            onclick="window.location.href = './beautiful-faces.html'">
-                        </div>
-                        <h2 class="project-title">
-                            Beautiful Faces
-                        </h2>
-                        <p class="project-description">
-                            In the vein of video game character generators, this program allows users to generate unique
-                            faces in the browser and export them to SVG.
-                        </p>
-                        <a href="./beautiful-faces.html" class="view-more-link"><i class="fa fa-long-arrow-right"></i>
-                            View
-                            Project</a>
-                    </div>
-
-                    <div class="individual-project-container">
-                        <div class="project-thumbnail" id="tiny-landscapes"
-                            onclick="window.location.href = 'https://anokhee.github.io/lofi-landscapes'">
-                        </div>
-                        <h2 class="project-title">
-                            Lo-fi Landscapes
-                        </h2>
-                        <p class="project-description">
-                            A program written in ~160 lines of code. Generates a unique mountainous landscape upon each
-                            refresh of the page.
-                        </p>
-                        <a href="https://anokhee.github.io/lofi-landscapes" class="view-more-link"><i
-                                class="fa fa-long-arrow-right"></i> View
-                            Live Demo</a>
-                    </div>
+        <div class="column-full" style="margin-top: 100px; width: 60%;">
+                <div style="margin-right: 10%">
+                    <h1>Hello, I'm Anokhee 🎉</h1>
+                    <div style="height: 10px;"></div>
+                    <p class="bold main-idea-paragraph">I'm a designer and developer
+                        exploring the intersection of art, design, and code.</p>
+                    <p style="width: 100%;">
+                        My main areas of interest include UX Design, Data Visualization, and generative
+                        graphics.
                 </div>
+        </div>
 
-                <div class="row" style="align-items: flex-start;">
-                    <div class="individual-project-container">
-                        <div class="project-thumbnail" id="visual-synthesizer"
-                            onclick="window.location.href = './visual-synthesizer.html'">
-                        </div>
-                        <h2 class="project-title">
-                            Visual Synthesizer
-                        </h2>
-                        <p class="project-description">
-                            Exploring the potential for visual arts and expression in an arguably logic-oriented world
-                            of
-                            computing and robotics.
-                        </p>
-                        <a href="./visual-synthesizer.html" class="view-more-link"><i
-                                class="fa fa-long-arrow-right"></i> View
-                            Project</a>
-                    </div>
-
-                    <div class="individual-project-container">
-                        <div class="project-thumbnail" id="internship-at-rigor"
-                            onclick="window.location.href = './rigor.html'">
-                        </div>
-                        <h2 class="project-title">
-                            Internship at Rigor
-                        </h2>
-                        <p class="project-description">
-                            Rethinking the way users interact with Rigor's data.
-                        </p>
-                        <a href="./rigor.html" class="view-more-link"><i class="fa fa-long-arrow-right"></i> View
-                            Case Study</a>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="individual-project-container">
-                        <div class="project-thumbnail-lg" id="misc-artwork"
-                            onclick="window.location.href = './misc-artwork.html'"></div>
-                        <h2 class="project-title">
-                            Miscellaneous Artwork
-                        </h2>
-                        <a href="./misc-artwork.html" class="view-more-link"><i
-                            class="fa fa-long-arrow-right"></i> View
-                        More</a>
-                    </div>
-                </div>
+        <div class="column-container gallery">
+            <div class="column" onClick="window.open('./about/mountain-palette-generator.html', '_self')">
+                <img style="background-color: #efefef" src="imgs/mountain-palettes-icon.png">
+                <p class="project-label"><span class="bold">Mountain Palettes Generator</span> (2020)</p>
             </div>
-        </main>
-    </div>
+            <div class="column" onClick="window.open('./about/vector-faces-tool.html', '_self')">
+                <img style="background-color: #efefef" src="imgs/faces-icon.png">
+                <p class="project-label"><span class="bold">Vector-Based Faces Tool</span> (2019)</p>
+            </div>
+        </div>
+        <div class="column-container gallery">
+            <div class="column" onClick="window.open('./about/internship-at-rigor.html', '_self')">
+                <img style="background-color: #efefef" src="imgs/rigor-icon.png">
+                <p class="project-label"><span class="bold">Rigor Analytics - Case Study</span> (2019)</p>
+            </div>
+            <!-- <div class="column">
+                <img style="background-color: #efefef" src="imgs/faces-icon.png">
+                <p class="project-label"><span class="bold">Vector-Based Faces Tool</span> (2019)</p>
+            </div> -->
+        </div>
+        <!-- <div class="column-container gallery">
+            <div class="column-full">
+                <img style="background-color: #efefef" src="iLearn Designs/hero-image.png">
+                <p class="project-label"><span class="bold">iLearn Landing Page - Case Study</span> (2016)</p>
+            </div>
+        </div> -->
+    </main>
 
-
-    <footer>
-
-    </footer>
-
-</body>
-<script>
-    let mainNavLinks = document.querySelectorAll("nav ul li a");
-    let mainSections = document.querySelectorAll("main section");
-
-    let lastId;
-    let cur = [];
-
-    window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
-
-        mainNavLinks.forEach(link => {
-            let section = document.querySelector(link.hash);
-
-            if (
-                section.offsetTop <= fromTop &&
-                section.offsetTop + section.offsetHeight > fromTop
-            ) {
-                link.classList.add("current");
-            } else {
-                link.classList.remove("current");
-            }
-        });
-    });
-</script>
+    <script>
+        function makeModal(e) {
+            var modal = document.createElement("div");
+            modal.classList.add("modal");
+            var image = document.createElement("img");
+            image.src = e.src;
+            modal.appendChild(image);
+            modal.style.display = "block";
+            document.body.appendChild(modal);
+            modal.addEventListener("click", function () {
+                document.body.removeChild(modal);
+            });
+        }
+    </script>
 
 </html>
