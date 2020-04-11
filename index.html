@@ -15,22 +15,22 @@
         <div class="topnav">
             <a class="active brand" href="#home">anokhee jandhyala</a>
             <div class="float-right">
-                <!-- <a href="#contact">Projects</a>
-                <a href="#about">About Me</a></div> -->
+                <a href="#contact">Projects</a>
+                <a href="#about">About Me</a></div>
         </div>
     </header>
     <main>
 
-        <div class="column-full" style="margin-top: 100px; width: 60%;">
-                <div style="margin-right: 10%">
-                    <h1>Hello, I'm Anokhee 🎉</h1>
-                    <div style="height: 10px;"></div>
-                    <p class="bold main-idea-paragraph">I'm a designer and developer
-                        exploring the intersection of art, design, and code.</p>
-                    <p style="width: 100%;">
-                        My main areas of interest include UX Design, Data Visualization, and generative
-                        graphics.
-                </div>
+        <div class="column-container seventy" style="margin-top: 50px; margin-bottom: 35px;">
+            <div class="column">
+                <h1>Hi, I'm Anokhee!</h1>
+                <div style="height: 10px;"></div>
+                <p class="bold main-idea-paragraph">I'm a designer and developer
+                    exploring the intersection of art, design, and code.</p>
+                <p style="width: 100%;">
+                    My main areas of interest include UX Design, Data Visualization, and generative
+                    graphics.
+            </div>
         </div>
 
         <div class="column-container gallery">
@@ -60,20 +60,20 @@
             </div>
         </div> -->
     </main>
-
-    <script>
-        function makeModal(e) {
-            var modal = document.createElement("div");
-            modal.classList.add("modal");
-            var image = document.createElement("img");
-            image.src = e.src;
-            modal.appendChild(image);
-            modal.style.display = "block";
-            document.body.appendChild(modal);
-            modal.addEventListener("click", function () {
-                document.body.removeChild(modal);
-            });
-        }
-    </script>
+</body>
+<script>
+    function makeModal(e) {
+        var modal = document.createElement("div");
+        modal.classList.add("modal");
+        var image = document.createElement("img");
+        image.src = e.src;
+        modal.appendChild(image);
+        modal.style.display = "block";
+        document.body.appendChild(modal);
+        modal.addEventListener("click", function () {
+            document.body.removeChild(modal);
+        });
+    }
+</script>
 
 </html>

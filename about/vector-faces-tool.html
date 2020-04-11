@@ -16,8 +16,8 @@
         <div class="topnav">
             <a class="active brand" href="../index.html">anokhee jandhyala</a>
             <div class="float-right">
-                <!-- <a href="">Projects</a> -->
-                <!-- <a href="#about">About</a></div> -->
+                <a href="">Projects</a>
+                <a href="#about">About</a></div>
         </div>
     </header>
     <main>
@@ -39,9 +39,11 @@
                 </div>
             </div>
             <div class="column">
-                <img style="width: 100%; margin: 0 auto;" src="../imgs/faces-icon.png">
+                <img class="project-icon" src="../imgs/faces-icon.png">
             </div>
         </div>
+
+        <div class="paragraph-spacer"></div>
 
         <div class="column-container">
             <div>
@@ -68,9 +70,19 @@
                     </p>
                 </div>
 
-                <div class="column-full">
-                    <img src="../imgs/vector-faces-tool/outlines.png" onClick="makeModal(this)">
+                <div class="column-container">
+                    <div class="column">
+                        <img src="../imgs/vector-faces-tool/outlines.png" style="padding-right: 2px;"
+                            onClick="makeModal(this)">
+                    </div>
+                    <div class="column">
+                        <img src="../imgs/vector-faces-tool/outlines-2.png" style="padding-left: 2px;"
+                            onClick="makeModal(this)">
+                    </div>
                 </div>
+
+
+                <div class="paragraph-spacer"></div>
 
                 <h3>Video Demo</h3>
                 <div style="padding:56.25% 0 0 0;position:relative;"><iframe
@@ -81,78 +93,90 @@
             </div>
         </div>
 
-        <h3>Sketches</h3>
-        <div class="column-container">
-            <div class="column">
-                <img src="../imgs/vector-faces-tool/sketch-1.png" style="padding-right: 2px;" onClick="makeModal(this)">
-            </div>
-            <div class="column">
-                <img src="../imgs/vector-faces-tool/sketch-2.png" style="padding-left: 2px;" onClick="makeModal(this)">
-            </div>
-        </div>
-
-        <div class="column-container">
-            <div class="column" style="display: flex; align-items: center;">
-                <div>
-                    <h1 class="project-type">Generating Shapes with p5.js</h1>
-                    <p style="width: 80%;"><span class="bold main-idea-paragraph">
-                            The face is drawn to the screen as a collection of vertex points connecting Bezier curves
-                            and ellipses.
-                        </span></p>
-                </div>
-            </div>
-            <div class="column">
-                <img style="width: 100%; margin: 0 auto;" src="../imgs/vector-faces-tool/bezier-control points.gif" onClick="makeModal(this)">
-            </div>
-        </div>
+        <div class="paragraph-spacer"></div>
 
         <div class="column-container">
             <div>
-                <div class="column" style="width: 100%;">
-                    <h3>Final Thoughts</h3>
-                    <p class="main-idea-paragraph">Inclusive default identicons.</p>
-                    <p>Most default profile images feature decidedly male silhouettes with caucasian-looking hairstyles
-                        and
-                        features.
-                        While this may seem inconsequential, it reinforces the idea of the white male user as the
-                        "default
-                        person", which can inadvertently alienate minority users.
+                <div class="column-container">
+                    <div class="column">
+                        <img src="../imgs/vector-faces-tool/sketch-1.png" style="padding-right: 2px;"
+                            onClick="makeModal(this)">
+                    </div>
+                    <div class="column">
+                        <img src="../imgs/vector-faces-tool/sketch-2.png" style="padding-left: 2px;"
+                            onClick="makeModal(this)">
+                    </div>
+                </div>
+                <div class="paragraph-spacer"></div>
+
+                <div class="column-container">
+                    <div class="column" style="display: flex; align-items: center;">
+                        <div>
+                            <h1 class="project-type">Generating Shapes with p5.js</h1>
+                            <p style="width: 80%;"><span class="bold main-idea-paragraph">
+                                    The face is drawn to the screen as a collection of vertex points connecting Bezier
+                                    curves
+                                    and ellipses.
+                                </span></p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img style="width: 100%; margin: 0 auto;"
+                            src="../imgs/vector-faces-tool/bezier-control points.gif" onClick="makeModal(this)">
+                    </div>
+                </div>
+                <div class="paragraph-spacer"></div>
+                <div>
+                    <div class="column" style="width: 100%;">
+                        <h3>Final Thoughts</h3>
+                        <p class="main-idea-paragraph">Inclusive default identicons.</p>
+                        <p>Most default profile images feature decidedly male silhouettes with caucasian-looking
+                            hairstyles
+                            and
+                            features.
+                            While this may seem inconsequential, it reinforces the idea of the white male user as the
+                            "default
+                            person", which can inadvertently alienate minority users.
+                            <br><br>
+                            When a randomize() function is applied to the algorithm generating these faces, the results
+                            are
+                            more gender-neutral, inclusive, and lighthearted than the typical default
+                            profile picture.</p><br>
+
+                    </div>
+                    <div class="column-full">
+                        <img src="../imgs/vector-faces-tool//faces-all.png" onClick="makeModal(this)">
+                    </div>
+                    <div class="paragraph-spacer"></div>
+                    <p class="main-idea-paragraph">Facilitating trustworthy interactions between users.</p>
+                    <p>In community-based sites and applications, users are encouraged to upload a profile
+                        picture before contributing to public forums or engaging with other members of the community.
+                        Unfortunately, the default profile image can sometimes appear casual/non-participatory
+                        at best and creepy at worst.<br><br>If a web-based vector editing software is built into an
+                        application as a "Customize
+                        Your Avatar" feature, it provides an easy solution
+                        for users who don't feel comfortable uploading a photo of themselves. Without having to search
+                        for an image to use as a profile picture, they can quickly create
+                        one that resembles themselves.
                         <br><br>
-                        When a randomize() function is applied to the algorithm generating these faces, the results are
-                        more gender-neutral, inclusive, and lighthearted than the typical default
-                        profile picture.</p><br>
+                    </p>
+                    <p class="main-idea-paragraph">SVG is superfast jellyfish.</p>
+                    <p>SVG is highly performant and scalable. This
+                        has benefits from a software engineering perspective on the front end and back end. <br><br>On
+                        the front
+                        end, SVG is useful because it is programmable with CSS and JavaScript and maintains perfect
+                        image
+                        quality at any resolution.
 
+                        On the back end, storing SVG is more efficient because SVG
+                        ~70% smaller than an identical PNG on average.
+                    </p><br>
                 </div>
-                <div class="column-full">
-                    <img src="../imgs/vector-faces-tool//faces-all.png" onClick="makeModal(this)">
+                <div class="paragraph-spacer"></div>
+                <div class="column-container">
+                    <h1>Thanks for reading!</p>
                 </div>
-                <p class="main-idea-paragraph">Facilitating trustworthy interactions between users.</p>
-                <p>In community-based sites and applications, users are encouraged to upload a profile
-                    picture before contributing to public forums or engaging with other members of the community.
-                    Unfortunately, the default profile image can sometimes appear casual/non-participatory
-                    at best and creepy at worst.<br><br>If a web-based vector editing software is built into an
-                    application as a "Customize
-                    Your Avatar" feature, it provides an easy solution
-                    for users who don't feel comfortable uploading a photo of themselves. Without having to search
-                    for an image to use as a profile picture, they can quickly create
-                    one that resembles themselves.
-                    <br><br>
-                </p>
-                <p class="main-idea-paragraph">SVG is superfast jellyfish.</p>
-                <p>SVG is highly performant and scalable. This
-                    has benefits from a software engineering perspective on the front end and back end. <br><br>On
-                    the front
-                    end, SVG is useful because it is programmable with CSS and JavaScript and maintains perfect
-                    image
-                    quality at any resolution.
-
-                    On the back end, storing SVG is more efficient because SVG
-                    ~70% smaller than an identical PNG on average.
-                </p><br>
             </div>
-        </div>
-        <div class="column-container">
-            <h1>Thanks for reading!</p>
         </div>
     </main>
 </body>

@@ -7,12 +7,22 @@ a {
     text-decoration: none;
 }
 
+.topnav a:hover, a:hover {
+    text-decoration: underline;
+    text-decoration-color: lawngreen;
+    transition-duration: 1s;
+}
+
 body {
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     color: #151515;
     font-family: 'Inter', sans-serif;
     font-size: 15px;
     font-weight: 200;
     line-height: 1.55em;
+    padding-bottom: 105px;
     position: relative;
 }
 
@@ -36,8 +46,9 @@ h3 {
 
 .project-label {
     width: 100%;
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
+    position: relative;
     padding-top: 15px;
     margin: 0 auto;
 }
@@ -52,15 +63,22 @@ h3 {
     text-transform: uppercase;
 }
 
+.seventy {
+    width: 100%;
+}
+
 
 
 .gallery .column {
-    padding: 2px;
+    transition-duration: .5s;
+    padding: 5px;
 }
 
-.gallery .column:hover,
-.gallery .column-full:hover {
-    opacity: 50%;
+.gallery .column img:hover,
+.gallery .column-full img:hover {
+    transform: translate(0px, -15px);
+    transition-duration: .5s;
+    opacity: 20%;
 }
 
 .bold {
@@ -82,6 +100,10 @@ img {
     width: 100%;
 }
 
+img:hover {
+    opacity: 75%;
+}
+
 ul {
     margin-top: 20px;
 }
@@ -94,8 +116,9 @@ ul li {
 }
 
 main {
-    margin-left: 15em;
-    margin-right: 15em;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1080px;
 }
 
 .main-idea-paragraph {
@@ -112,7 +135,6 @@ p {
 .column-full {
     margin: 0;
     padding: 0;
-    margin-bottom: 6em;
 }
 
 .column-container {
@@ -129,6 +151,10 @@ p {
 
 .column p {
     width: 100%;
+}
+
+.paragraph-spacer {
+    padding: 1.5em;
 }
 
 .div-with-colorful-bg {
@@ -163,12 +189,25 @@ p {
 
 .modal>img {
     display: flex;
-    position: absolute;
-    margin: 0 auto;
-    top: 5%;
-    margin: 0 auto;
-    width: 95%;
     left: 2.5%;
+    margin: 0 auto;
+    position: absolute;
+    top: 5%;
+    width: 95%;
+}
+
+.modal>img:hover {
+    opacity: 100%;
+}
+
+.project-icon {
+    margin: 0 auto;
+    width: 85%;
+}
+
+.project-icon:hover {
+    opacity: 100%;
+    cursor: auto;
 }
 
 .subheading {
@@ -181,13 +220,13 @@ p {
 }
 
 .topnav {
-    background: #fbfbfb;
-    border-bottom: 1px solid #e3cce4;
+    background: #fff;
+    /* border-bottom: 1px solid #e3cce4; */
     min-height: 60px;
-    padding-left: 12em;
-    padding-right: 12em;
+    padding-left: 20em;
+    padding-right: 20em;
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 35px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -247,10 +286,8 @@ footer {
     }
 
     main {
-        margin: 0px;
-        width: 100%;
-        padding-left: 30px;
-        padding-right: 30px;
+        margin: 0 auto;
+        width: 90%;
     }
 
     .column-container,
@@ -258,7 +295,7 @@ footer {
         flex-flow: column;
     }
 
-    .column {
+    .column-container .column {
         display: block;
         width: 100% !important;
     }
@@ -281,12 +318,6 @@ footer {
         padding: 0;
         padding: 20px;
     }
-
-
-    header,
-    footer {
-        min-height: 50px;
-    }
 }
 
 .float-right {
@@ -298,3 +329,14 @@ footer {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+
+/* Animations */
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
+} 
