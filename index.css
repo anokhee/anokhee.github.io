@@ -222,10 +222,9 @@ p {
 .topnav {
     background: #fff;
     /* border-bottom: 1px solid #e3cce4; */
-    min-height: 60px;
-    padding-left: 20em;
-    padding-right: 20em;
-    padding-bottom: 20px;
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-bottom: 35px;
     padding-top: 35px;
     position: fixed;
     top: 0;
