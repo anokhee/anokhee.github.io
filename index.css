@@ -62,15 +62,19 @@ h3 {
 
 
 .gallery .column {
-    transition-duration: .5s;
     padding: 5px;
+}
+
+.gallery .column-full img {
+    opacity: 100%;
+    transition-duration: .5s;
 }
 
 .gallery .column img:hover,
 .gallery .column-full img:hover {
     transform: translate(0px, -15px);
-    transition-duration: .5s;
     opacity: 20%;
+    transition-duration: .5s;
 }
 
 .bold {

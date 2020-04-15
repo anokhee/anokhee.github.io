@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anokhee Jandhyala | Flowers</title>
+    <link rel="stylesheet" href="https://use.typekit.net/kas2qtm.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Inter:wght@200;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <link rel="stylesheet" type="text/css" href="../index.css">
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <a class="active brand" href="../index.html">anokhee jandhyala</a>
+            <div class="float-right">
+                <a href="../index.html">Projects</a>
+                <!-- <a href="#about">About</a></div> -->
+        </div>
+    </header>
+
+    <div class="hero-img" style="margin-top: 60px;">
+        <img class="project-icon" src="../imgs/flowers/banner-img.png">
+    </div>
+    <br><br>
+    <main>
+        <div class="column-container">
+            <div style="display: flex; align-items: center;">
+                <div class="hero">
+                    <h3 class="project-type">Web Dev, Procedural Graphics, 2020</h3>
+                    <h1>Flowers</h1>
+                    <div style="height: 5px"></div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="column-container">
+            <div>
+                <div class="column-full">
+                    <h3>Background & Moodboard</h3>
+                    <p class="main-idea-paragraph">
+                        About iLearn and my role.
+                    </p>
+                    <p>
+                        The project is currently a work in progress that began during walks around my neighborhood.
+                        After a gloomy, rainy Atlanta winter
+                        followed by the loneliness of social distancing, the onset of spring 2020 feels especially
+                        beautiful. I want to emulate the beauty of spring with procedurally-generated flowers, based on
+                        randomized fractals.
+                        <br><br>
+                        I collected samples of various leaves, flowers, and small branches to moodboard with. Check back
+                        later for updates on this project :)
+                    </p>
+                </div>
+                <img src="../imgs/flowers/leaf-moodboard.png" onClick="makeModal()">
+            </div>
+        </div>
+        <div class="paragraph-spacer"></div>
+        <div class="column-container">
+            <h1>Thanks for reading!</p><br>
+        </div>
+    </main>
+</body>
+
+<script>
+    function makeModal(e) {
+        var modal = document.createElement("div");
+        modal.classList.add("modal");
+        var image = document.createElement("img");
+        image.src = e.src;
+        modal.appendChild(image);
+        modal.style.display = "block";
+        document.body.appendChild(modal);
+        modal.addEventListener("click", function () {
+            document.body.removeChild(modal);
+        });
+    }
+</script>
+
+</html>
