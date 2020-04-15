@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anokhee Jandhyala | iLearn Landing Page</title>
+    <link rel="stylesheet" href="https://use.typekit.net/kas2qtm.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Inter:wght@200;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../reset.css">
+    <link rel="stylesheet" type="text/css" href="../index.css">
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <a class="active brand" href="../index.html">anokhee jandhyala</a>
+            <div class="float-right">
+                <a href="#contact">Projects</a>
+                <a href="#about">About</a></div>
+        </div>
+    </header>
+
+    <div class="hero-img" style="margin-top: 60px;">
+        <img class="project-icon" src="../imgs/ilearn-landing-page/banner-img.png">
+    </div>
+    <br><br>
+    <main>
+        <div class="column-container">
+            <div style="display: flex; align-items: center;">
+                <div class="hero">
+                    <h3 class="project-type">UI Design, Marketing, 2016</h3>
+                    <h1>iLearn Landing Page</h1>
+                    <div style="height: 5px"></div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="column-container">
+            <div>
+                <div class="column-full">
+                    <h3>Context</h3>
+                    <p class="main-idea-paragraph">
+                        About iLearn and my role.
+                    </p>
+                    <p>
+                        iLearn is a mathematics e-learning solution for K-12, college, and at-home use, with the purpose
+                        of filling gaps in students’ knowledge of common core K-12 math.
+                        <br><br>
+                        My primary duties involved testing the product for quality assurance, but I was able to explore
+                        my design interests by contributing to marketing efforts in the updated landing page.
+
+                    </p><br>
+                    <p class="main-idea-paragraph">
+                        The impetus for a new landing page...
+                    </p>
+                    <p>
+                        Analytics reports reflected that most visitors to iLearn’s site spent an average of only a few
+                        seconds on the homepage before clicking away. We realized that this could mean a few things:
+                        <br>
+                        <ul>
+                            <li><span class="bold">1) iLearn’s homepage was not optimized for SEO</span> - iLearn was
+                                appearing in search results for products unrelated to math education and
+                                accidentally attracting clicks from users from the wrong target demographic.</li>
+                            <li><span class="bold">Users couldn’t find what they were looking for</span> - The current
+                                homepage was not accurately or succinctly conveying information about
+                                iLearn’s services. </li>
+
+                        </ul>
+                        <br>
+                        The new design featured updated copy and a cutesy look that complied with the overall look and
+                        feel of iLearn's application. I even drew some of the illustrations!
+                    </p>
+                    <div class="paragraph-spacer"></div>
+                    <h3>Low-Fidelity Mockups</h3>
+                    <p class="main-idea-paragraph">Updated copy that highlights only the important things.</p>
+                    <p>During the wireframing and prototyping process, my supervisor and I tried to develop an
+                        path of information that made sense. iLearn’s main users are K-12 and college math instructors,
+                        school administrators, and parents searching for an at-home solution for their children’s math
+                        educational needs. When writing the new copy, we tried to answer FAQs in decreasing order of
+                        importance.
+                    </p>
+                    <div class="column-container">
+                        <div class="column" style="padding: 2.5px;">
+                            <img src="../imgs/ilearn-landing-page/low-fi-mockup-1.png" onClick="makeModal(this)">
+                        </div>
+                        <div class="column" style="padding: 2.5px;">
+                            <img src="../imgs/ilearn-landing-page/low-fi-mockup-2.png" onClick="makeModal(this)">
+                        </div>
+                    </div>
+                    <div class="paragraph-spacer"></div>
+                    <h3>High Fidelity Mockup</h3>
+                    <img src="../imgs/ilearn-landing-page/high-fi-mockup.png" onClick="makeModal(this)">
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="paragraph-spacer"></div>
+        <div class="column-container">
+            <h1>Thanks for reading!</p><br>
+        </div>
+        </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    function makeModal(e) {
+        var modal = document.createElement("div");
+        modal.classList.add("modal");
+        var image = document.createElement("img");
+        image.src = e.src;
+        modal.appendChild(image);
+        modal.style.display = "block";
+        document.body.appendChild(modal);
+        modal.addEventListener("click", function () {
+            document.body.removeChild(modal);
+        });
+    }
+</script>
+
+</html>

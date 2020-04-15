@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anokhee Jandhyala | Generative Landscapes</title>
+    <title>Anokhee Jandhyala | Mountain Palettes Generator</title>
     <link rel="stylesheet" href="https://use.typekit.net/kas2qtm.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Inter:wght@200;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../reset.css">
     <link rel="stylesheet" type="text/css" href="../index.css">
 </head>
@@ -20,60 +21,97 @@
                 <a href="#about">About</a></div>
         </div>
     </header>
+
+    <div class="hero-img" style="margin-top: 60px;">
+        <img class="project-icon" src="../imgs/palette-generator/banner-img.png">
+    </div>
+    <br><br>
     <main>
         <div class="column-container">
-            <div class="column" style="display: flex; align-items: center;">
-                <div>
-                    <h1 class="project-type">Web Dev, Graphics, 2020</h1>
-                    <h1>Mountain Palette Generator</h1>
+            <div style="display: flex; align-items: center;">
+                <div class="hero">
+                    <h3 class="project-type">Web Dev, Graphics, 2020</h3>
+                    <h1>Mountain Palettes Generator</h1>
                     <div style="height: 5px"></div>
-                    <p><span class="bold main-idea-paragraph">
-                            A single stretch of a mountain range can feel worlds away from another nearby.
-                        </span></p>
-                    <p>
-                        I wanted to replicate the ethereality of mountainous skyscapes. Each
-                        image is algorithmically-generated, outputting
-                        unique mountains, skies, and color palettes each time the program runs.</p>
                     <button class="view-demo-btn"
                         onClick="window.open('https://anokhee.github.io/landscapes-palette-generator/', '_self')">View
                         Demo</button>
                 </div>
             </div>
-            <div class="column">
-                <img class="project-icon" src="../imgs/mountain-palettes-icon.png">
-                <div class="paragraph-spacer"></div>
-            </div>
         </div>
-
-        <div class="paragraph-spacer"></div>
-
+        <br><br>
         <div class="column-container">
             <div>
-                <div class="column" style="width: 90%">
-                    <h3>Background</h3>
-                    <p class="main-idea-paragraph">Imitating natural systems.</p>
-                    <p>By applying a <a href="https://flafla2.github.io/2014/08/09/perlinnoise.html">Perlin noise</a>
-                        function with
-                        varying levels of noise detail to the
-                        y-position of vector points across the x-axis I was able to achieve output resembling
-                        a mountain range fading into the distance.<br></p>
-                    <p>P5.js's built-in noise() function is powerful, but requires significant tweaking to
-                        achieve a desired look. I determined the "sweet spot" to base the mountains off to exist
-                        somewhere between
-                        images 4 and 7.</p>
-                </div>
                 <div class="column-full">
-                    <img src="../imgs/palette-generator/perlin-noise-examples@2x.png" onClick="makeModal(this)">
+                    <h3>Inspiration & Background</h3>
+                    <p class="main-idea-paragraph">
+                        Appalachian romanticism.
+                    </p>
+                    <p>
+                        In northern Georgia, bordering the Carolinas, the Blue Ridge mountains hug the horizon from
+                        almost every angle. In
+                        sparsely-populated small
+                        towns dotted by pastures, warehouses, and gas
+                        stations, the snug adjacency to these mountains can evoke a certain emotional affect. Depending
+                        on the time of day, weather, viewing angle, or even personal mood, the landscapes sometimes
+                        seem to shapeshift
+                        accordingly. Whether that leads to daydreams of an agrarian life in
+                        pre-colonial America or scenes from <span class="italics">Deliverance</span> is variable, but
+                        interesting.
+                        <br><br>
+                        <div class="column-full">
+                            <img style="padding: 2.5px;" src="../imgs/palette-generator/inspiration-1.png"
+                                onClick="makeModal(this)">
+                        </div>
+                        <div class="column-full">
+                            <img style="padding: 2.5px;" src="../imgs/palette-generator/inspiration-2.png"
+                                onClick="makeModal(this)">
+                    </p>
                 </div>
+
+
+                <br>
+                <div class="column-full">
+                    <p> I felt inclined to somehow artistically express this phenomenon. I've always loved
+                        subtle patterns in nature like those expressed by the unfurling of plants or drawn
+                        onto the delicate wings of moths. I figured that an interesting way to go about this project
+                        would be to simulate it with the quintessential patternmaker of today: code.<br><br>
+                        With the <a href="https://www.p5js.org/">P5.js library</a> and techniques from
+                        computational geometry, I was able to create an algorithm that generates a new image of a
+                        unique landscape
+                        each
+                        time it runs.</p><br>
+                    <p>
+                        <p class="main-idea-paragraph">The results.</p>
+                        <div class="column-container">
+                            <img src="../imgs/palette-generator/palettes-variety.png" onClick="makeModal(this)">
+                        </div><br>
+                        I was pleasantly surprised by the variety of images and 5-color palettes this program could
+                        generate. Although I never had an explicit purpose in mind when developing it,
+                        a few people reached out to me on Reddit to let me know that they were able to get some use from
+                        the palettes. Someone even suggested that I turn this into a wallpaper generator.<br><br>I
+                        don't think I will add much more to this project, but I've released the code under an MIT
+                        License on GitHub, so hopefully someone takes it and makes something fun with it.
+                    </p>
+                </div>
+
+
                 <div class="paragraph-spacer"></div>
+
                 <div class="column" style="width: 90%">
-                    <h3>Process</h3>
+                    <h3>Sketching, Ideating, and Simulating</h3>
                     <p class="main-idea-paragraph">Minimal, but impactful.</p>
-                    <p>The idea was to keep the scope of this project small. During the sketching and ideating phase, I
-                        determined the following features
-                        essential enough to include in the project without overshadowing its original scope:</p>
+                    <p>My main organizational goal was to keep the scope of this project small with output that would
+                        keep the user entertained for a while. Sometimes,
+                        even the simplest projects have potential to make an impact.
+
+                        <br><br>With simplicity in mind, while sketching
+                        and
+                        ideating, I
+                        determined the following features to be
+                        essential:</p>
                     <ul>
-                        <li>A mountain range generated by 1D Perlin Noise (included in P5.js)</li>
+                        <li>A mountain range generated by 1D Perlin Noise (a function included in P5.js)</li>
                         <li>Starry sky backgrounds</li>
                         <li>A single moon at various phases of the moon cycle</li>
                         <li>A 5-color or 3-color palette extracted from the image</li>
@@ -91,40 +129,47 @@
                             onClick="makeModal(this)">
                     </div>
                 </div>
+                <br><br><br>
+                <div class="column-full">
+                    <p class="main-idea-paragraph">Imitating natural systems -- or, the devil is in the noise details.
+                    </p>
+                    <p>By applying a <a href="https://flafla2.github.io/2014/08/09/perlinnoise.html">Perlin noise</a>
+                        function with
+                        varying levels of noise detail to vector coordinates across the x and y axes, I was able to
+                        achieve output resembling
+                        a mountain range fading into the distance.<br></p>
+                    <p>P5.js's built-in noise() function is powerful, but requires significant tweaking to
+                        achieve a desired look. I determined the "sweet spot" to base the mountains off to exist
+                        somewhere between
+                        images 4 and 7 (or 6 and 8 for mobile users).</p>
+                </div>
+                <div class="column-container">
+                    <div class="container">
+                        <img style="padding: 5px;" src="../imgs/palette-generator/perlin-noise-1.png"
+                            onClick="makeModal(this)">
+                    </div>
+                    <div class="container">
+                        <img style="padding: 5px;" src="../imgs/palette-generator/perlin-noise-2.png"
+                            onClick="makeModal(this)">
+                    </div>
+                </div>
                 <div class="paragraph-spacer"></div>
 
                 <div class="column" style="width: 90%">
-
                     <h3>Final Thoughts</h3>
-                    <p class="main-idea-paragraph">The devil is in the (noise) details.</p>
-                    <p>At one point, I considered scrapping this project altogether. No matter how much I tweaked the
-                        Perlin
-                        noise values, the output looked kind of
-                        unnatural to me. So, I experimented with other solutions. I tried adding
-                        small hills to the foreground, fractal trees, and even a flat
-                        horizon, but I found that the ideas that weren't ugly generally outgrew the scope. <br><br>
-                        Eventually, I
-                        figured out that a subtle yellowish
-                        gradient in between each mountain ridge added surprising depth to the images, while
-                        maintaining the simplicity defined in the project's original scope. </p>
-                    <br>
-                    <p class="main-idea-paragraph">Reaping more than you sow?</p>
-                    <p>As someone who loves painting and drawing, generative art poses a kind of
-                        philosophical question.<br><br>
-                        A single program that took under 3 days to write can produce infinitely more
-                        (unique) output than a graphic designer can create by hand over the course of several
-                        days.<br><br>
-                        Does generative art devalue handmade art or vice-versa? Are the two really comparable? IDK!
+                    <p class="main-idea-paragraph">Do you reap what you sow?</p>
+                    <p>I realized while creating this program that all the hours I spent trying to create mountains with
+                        the Pen tool in Adobe Illustrator could have been trimmed down had I known about something like
+                        this. It really made me think: Is a single procedurally-generated organic shape inherently less
+                        "valuable" than similar shapes drawn by hand in Illustrator (or something similar)?
+                        <br><br>What is the value of a program that can generate an infinite number of graphics compared
+                        to an actual graphic designer?
+                        <br><br>I don't know.
                     </p>
-                    <br>
-
                 </div>
                 <div class="paragraph-spacer"></div>
                 <div class="column-container">
                     <h1>Thanks for reading!</p><br>
-                        <div class="column-full">
-                            <img src="../imgs/palette-generator/palettes-all.png" onClick="makeModal(this)">
-                        </div>
                 </div>
             </div>
         </div>

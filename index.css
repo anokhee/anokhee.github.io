@@ -7,7 +7,8 @@ a {
     text-decoration: none;
 }
 
-.topnav a:hover, a:hover {
+.topnav a:hover,
+a:hover {
     text-decoration: underline;
     text-decoration-color: lawngreen;
     transition-duration: 1s;
@@ -17,11 +18,12 @@ body {
     animation: fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    color: #151515;
+    background-color: #FaFaf9;
+    color: #252525;
     font-family: 'Inter', sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 200;
-    line-height: 1.55em;
+    line-height: 1.6em;
     padding-bottom: 105px;
     position: relative;
 }
@@ -29,18 +31,18 @@ body {
 h1 {
     font-weight: bold;
     line-height: 1.1em;
-    font-size: 27px;
+    font-size: 30px;
     letter-spacing: -.015em;
     margin-top: 5px;
 }
 
 h3 {
-    color: #b1b1b1;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: .08em;
-    margin-bottom: 15px;
+    color: #bababa;
+    font-family: 'Inconsolata', monospace;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: .1em;
+    margin-bottom: 0px;
     text-transform: uppercase;
 }
 
@@ -51,16 +53,6 @@ h3 {
     position: relative;
     padding-top: 15px;
     margin: 0 auto;
-}
-
-.project-type {
-    color: #aaa;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: .1em;
-    margin-bottom: 15px;
-    text-transform: uppercase;
 }
 
 .seventy {
@@ -85,6 +77,10 @@ h3 {
     font-weight: 600;
 }
 
+.italics {
+    font-style: italic;
+}
+
 
 
 h4 {
@@ -98,6 +94,7 @@ img {
     display: flex;
     margin: 0 auto;
     width: 100%;
+    margin-top: 20px;
 }
 
 img:hover {
@@ -109,8 +106,9 @@ ul {
 }
 
 ul li {
+    font-size: 16px;
     list-style-type: disc;
-    margin-left: 2.5%;
+    margin-left: 5%;
     padding-bottom: 10px;
     width: 80%;
 }
@@ -118,17 +116,22 @@ ul li {
 main {
     margin: 0 auto;
     width: 80%;
-    max-width: 1080px;
+    max-width: 800px;
+}
+
+.home {
+    max-width: 1000px;
 }
 
 .main-idea-paragraph {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
 }
 
 p {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
 .column-container,
@@ -154,7 +157,7 @@ p {
 }
 
 .paragraph-spacer {
-    padding: 1.5em;
+    padding: 3em;
 }
 
 .div-with-colorful-bg {
@@ -202,7 +205,7 @@ p {
 
 .project-icon {
     margin: 0 auto;
-    width: 85%;
+    width: 100%;
 }
 
 .project-icon:hover {
@@ -220,12 +223,13 @@ p {
 }
 
 .topnav {
-    background: #fff;
-    /* border-bottom: 1px solid #e3cce4; */
+    background: #fefefe;
+    border-bottom: 1px solid #ededed;
     padding-left: 10em;
     padding-right: 10em;
-    padding-bottom: 35px;
-    padding-top: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
     position: fixed;
     top: 0;
     width: 100%;
@@ -270,7 +274,7 @@ p {
 header,
 footer {
     display: block;
-    height: 80px;
+    height: 0px;
 }
 
 @media all and (max-width: 800px) {
@@ -286,7 +290,7 @@ footer {
 
     main {
         margin: 0 auto;
-        width: 90%;
+        width: 95%;
     }
 
     .column-container,
@@ -331,11 +335,12 @@ footer {
 
 
 /* Animations */
-@keyframes fadeInAnimation { 
-    0% { 
-        opacity: 0; 
-    } 
-    100% { 
-        opacity: 1; 
-     } 
-} 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
