@@ -10,7 +10,7 @@ a {
 .topnav a:hover,
 a:hover {
     text-decoration: underline;
-    text-decoration-color: lawngreen;
+    text-decoration-color: #281ee9;
     transition-duration: 1s;
 }
 
@@ -326,6 +326,33 @@ footer {
         padding: 20px;
     }
 }
+
+.filter-container {
+    background: rgba(239, 239, 239, .5);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 50px;
+}
+
+.filter-container .filter-link-container {
+    width: 100px;
+    text-align: center;
+}
+
+.filter-container .filter-link-container a {
+    color: #281ee9;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-size: 15px;
+}
+
+
 
 .float-right {
     float: right;
