@@ -37,17 +37,18 @@ h1 {
 }
 
 h3 {
-    color: #bababa;
+    color: rgba(75, 107, 255, .75);
     font-family: 'Inconsolata', monospace;
-    font-size: 16px;
+    font-size: 15.5px;
     font-weight: 300;
-    letter-spacing: .1em;
-    margin-bottom: 0px;
+    letter-spacing: .12em;
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
 
 .project-label {
     width: 100%;
+    display: block;
     font-size: 15px;
     text-align: center;
     position: relative;
@@ -73,7 +74,7 @@ h3 {
 .gallery .column img:hover,
 .gallery .column-full img:hover {
     transform: translate(0px, -15px);
-    opacity: 20%;
+    opacity: 10%;
     transition-duration: .5s;
 }
 
@@ -120,11 +121,11 @@ ul li {
 main {
     margin: 0 auto;
     width: 80%;
-    max-width: 800px;
+    max-width: 840px;
 }
 
 .home {
-    max-width: 1000px;
+    max-width: 950px;
 }
 
 .main-idea-paragraph {
@@ -212,10 +213,28 @@ p {
     width: 100%;
 }
 
-.project-icon:hover {
+.project-icon:hover, .project-img:hover {
     opacity: 100%;
-    cursor: auto;
+    cursor: pointer;
 }
+
+
+/* .project-img {
+    position: relative;
+}
+
+.project-img:hover::before {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    content: attr(data-content);
+    color: #131313;
+    font-size: 40px;
+    font-weight: 600;
+} */
 
 .subheading {
     font-size: 15px;
@@ -228,7 +247,7 @@ p {
 
 .topnav {
     background: #fefefe;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid rgba(51, 82, 221, .15);
     padding-left: 10em;
     padding-right: 10em;
     padding-top: 20px;
@@ -328,11 +347,11 @@ footer {
 }
 
 .filter-container {
-    background: rgba(239, 239, 239, .5);
+    background: rgba(239, 239, 239, .4);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border-radius: 50px;
+    /* border-radius: 50px; */
     width: 100%;
     height: 40px;
     margin-bottom: 50px;
@@ -344,15 +363,13 @@ footer {
 }
 
 .filter-container .filter-link-container a {
-    color: #281ee9;
+    color: #3352dd;
     font-family: 'Inconsolata', monospace;
     font-weight: 100;
     text-transform: uppercase;
     letter-spacing: .05em;
     font-size: 15px;
 }
-
-
 
 .float-right {
     float: right;
