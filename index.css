@@ -37,23 +37,13 @@ h1 {
 }
 
 h3 {
-    color: rgba(75, 107, 255, .75);
+    color: rgba(75, 107, 255, 0.75);
     font-family: 'Inconsolata', monospace;
     font-size: 15.5px;
     font-weight: 300;
     letter-spacing: .12em;
     margin-bottom: 10px;
     text-transform: uppercase;
-}
-
-.project-label {
-    width: 100%;
-    display: block;
-    font-size: 15px;
-    text-align: center;
-    position: relative;
-    padding-top: 15px;
-    margin: 0 auto;
 }
 
 .seventy {
@@ -68,13 +58,6 @@ h3 {
 
 .gallery .column-full img {
     opacity: 100%;
-    transition-duration: .5s;
-}
-
-.gallery .column img:hover,
-.gallery .column-full img:hover {
-    transform: translate(0px, -15px);
-    opacity: 10%;
     transition-duration: .5s;
 }
 
@@ -213,30 +196,77 @@ p {
     width: 100%;
 }
 
-.project-icon:hover, .project-img:hover {
-    opacity: 100%;
-    cursor: pointer;
-}
-
-
-/* .project-img {
+.project-img {
     position: relative;
+    transition-duration: .5s;
 }
 
-.project-img:hover::before {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    content: attr(data-content);
-    color: #131313;
-    font-size: 40px;
-    font-weight: 600;
-} */
+.project-img:hover {
+    transform: translate(0px, -15px);
+    transition-duration: .5s;
+}
 
-.subheading {
+.project-img:hover .overlay {
+    opacity: 1;
+
+}
+
+.overlay {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: .75s ease;
+    width: 100%;
+}
+
+.project-description {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    width: 100%;
+    margin: 0 auto;
+    color: rgb(88, 117, 248);
+}
+
+.project-label {
+    text-align: center;
+    font-size: 2.25em;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.botanicals {
+    background-color: rgba(17, 17, 17, .95);
+    color: #EFEFEF;
+}
+
+.landscape-palettes {
+    background-color: rgba(239, 239, 239, .96);
+    color: #111;
+}
+
+.faces-tool,
+.ilearn-landing {
+    background-color: rgba(243, 232, 242);
+    color: #111;
+}
+
+.rigor-internship {
+    background-color: rgb(48, 22, 143);
+    color: #FEFEFE;
+}
+
+
+
+
+
+*/ .subheading {
     font-size: 15px;
     color: #ccc;
     font-family: 'Inter', sans-serif;
@@ -266,7 +296,7 @@ p {
 
 .topnav .brand {
     font-family: grad, serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     letter-spacing: -.025em;
 }
@@ -313,7 +343,7 @@ footer {
 
     main {
         margin: 0 auto;
-        width: 95%;
+        width: 90%;
     }
 
     .column-container,
@@ -379,6 +409,33 @@ footer {
     font-size: 14px;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+#hero-img-botanicals {
+    background-image: url("./imgs/flowers/banner-img.png");
+    width: auto;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#hero-img-landscape-palettes {
+    background-image: url("./imgs/palette-generator/banner-img.png");
+    width: auto;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#hero-img-vector-faces {
+    background-image: url("./imgs/vector-faces-tool/banner-img.png");
+    width: auto;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 

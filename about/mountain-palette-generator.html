@@ -22,8 +22,7 @@
             </div>
     </header>
 
-    <div class="hero-img" style="margin-top: 60px;">
-        <img class="project-icon" src="../imgs/palette-generator/banner-img.png">
+    <div id="hero-img-landscape-palettes" style="margin-top: 60px;">
     </div>
     <br><br>
     <main>
@@ -53,11 +52,8 @@
                         sparsely-populated small
                         towns dotted by pastures, warehouses, and gas
                         stations, the snug adjacency to these mountains can evoke a certain emotional affect.<br><br>
-                        Depending
-                        on the time of day, weather, viewing angle, or even personal mood, the landscapes sometimes
-                        seem to shapeshift
-                        accordingly. Whether that leads to daydreams of an agrarian life in
-                        pre-colonial America or scenes from <span class="italics">Deliverance</span> is variable, but
+                        Whether that leads to daydreams of an agrarian life in
+                        pre-colonial America or scenes from <span class="italics">Deliverance</span> varies, but is
                         interesting nonetheless.
                         <br><br>
                         <div class="column-full">
@@ -73,28 +69,31 @@
 
                 <br>
                 <div class="column-full">
-                    <p> As someone prone to romanticism, I really wanted to artistically express this shapeshifting
+                    <p> As someone prone to romanticism, I really wanted to artistically express my perception of the
+                        shapeshifting
                         nature of mountains. As a programmer, I figured that an interesting way to go about it
                         would be with code.<br><br>
-                        With the <a href="https://www.p5js.org/">P5.js library</a> and techniques from
-                        computational geometry, I was able to create an algorithm that generates a new image of a
+                        Using the <a href="https://www.p5js.org/">P5.js library</a> and techniques from
+                        computational geometry, I was able to create an algorithm that generates an image of a
                         unique landscape
                         each
                         time it runs. Although the program is technically simple and the functionality is minimal, I was
-                        pleasantly surprised by the variety of images and 5-color palettes it could
-                        generate. </p><br>
+                        pleasantly surprised by the variety of resulting images and 5-color palettes. </p><br>
                     <p>
                         <p class="main-idea-paragraph">The results.</p>
                         <div class="column-container">
                             <img src="../imgs/palette-generator/palettes-variety.png" onClick="makeModal(this)">
-                        </div><br>
-                        Although I never had an explicit purpose in mind when developing it,
-                        a few people reached out to me on Reddit to let me know that they were able to get some use from
-                        this project (from the color palettes, as inspiration, and for entertainment), which was really
-                        awesome. Someone even suggested that I turn this into a wallpaper generator.<br><br>As it
-                        stands, I think that this project is finished, but I've released the code under an MIT
-                        License on GitHub, so hopefully someone uses it to make something cool.
-                    </p>
+                        </div><br><br>
+                        <p class="main-idea-paragraph">A cool note.</p>
+                        <p>
+                            Although I never had an explicit purpose in mind when developing it,
+                            a few people reached out to me on Reddit to let me know that they were able to get some use
+                            from
+                            this project, which was really great. Someone even suggested that I turn this into a
+                            wallpaper generator.<br><br>As it
+                            stands, I think that this project is finished, but I've released the code under an MIT
+                            License on GitHub, so hopefully someone uses it to make something cool.
+                        </p>
                 </div>
 
 
@@ -103,11 +102,11 @@
                 <div class="column" style="width: 90%">
                     <h3>Sketching, Ideating, and Simulating</h3>
                     <p class="main-idea-paragraph">Minimal, but impactful.</p>
-                    <p>My main organizational goal was to keep the scope of this project small with output that would
-                        keep the user entertained for a while. Sometimes,
-                        even the simplest projects have potential to make an impact.
+                    <p>During planning, I aimed to keep the scope of this project as small as possible with output that
+                        varied enough to keep the user entertained for at least a little while. Sometimes, the
+                        simplest projects can have the greatest impact.
 
-                        <br><br>With simplicity in mind, while sketching
+                        <br><br>While sketching
                         and
                         ideating, I
                         determined the following features to be
@@ -147,8 +146,11 @@
                 </div>
                 <div class="column-container">
                     <div class="container">
+
                         <img style="padding: 5px;" src="../imgs/palette-generator/perlin-noise-1.png"
                             onClick="makeModal(this)">
+
+
                     </div>
                     <div class="container">
                         <img style="padding: 5px;" src="../imgs/palette-generator/perlin-noise-2.png"
@@ -160,9 +162,10 @@
                 <div class="column" style="width: 90%">
                     <h3>Final Thoughts</h3>
                     <p class="main-idea-paragraph">Do you reap what you sow?</p>
-                    <p>I realized while creating this program that all the hours I spent trying to create mountains with
-                        the Pen tool in Adobe Illustrator could have been trimmed down had I known about something like
-                        this. It really made me think: Is a single procedurally-generated organic shape inherently less
+                    <p>While developing this program, I realized that the hours I spent trying to create mountains with
+                        the Pen tool in Adobe Illustrator could have been trimmed down had I known about Perlin Noise a
+                        few years ago. It really made me think: Is a single procedurally-generated organic shape
+                        inherently less
                         "valuable" than similar shapes drawn by hand in Illustrator (or something similar)?
                         <br><br>What is the value of a program that can generate an infinite number of graphics compared
                         to an actual graphic designer?
