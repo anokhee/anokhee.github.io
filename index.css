@@ -333,8 +333,6 @@ footer {
 @media all and (max-width: 800px) {
     body {
         line-height: 1.55em;
-        margin-left: 10px;
-        margin-right: 10px;
     }
 
     img {
