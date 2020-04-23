@@ -86,7 +86,7 @@ img {
 }
 
 img:hover {
-    opacity: 75%;
+ 
 }
 
 ul {
@@ -372,6 +372,10 @@ footer {
         padding: 0;
         padding: 20px;
     }
+
+    .project-label {
+        font-size: 1.5em;
+    }
 }
 
 .filter-container {
@@ -379,25 +383,41 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    /* border-radius: 50px; */
     width: 100%;
     height: 40px;
     margin-bottom: 50px;
 }
 
 .filter-container .filter-link-container {
-    width: 100px;
+    width: 150px;
     text-align: center;
 }
 
-.filter-container .filter-link-container a {
+.filter-link-container {
+    border-radius: 15px;
     color: #3352dd;
+    cursor: pointer;
     font-family: 'Inconsolata', monospace;
     font-weight: 100;
     text-transform: uppercase;
     letter-spacing: .05em;
-    font-size: 15px;
+    font-size: 15px;   
 }
+
+.filter-link-container:hover {
+    opacity: .5;
+}
+
+.active {
+    background-color: #ededed;
+    font-weight: 800;
+    transition-duration: .5s;
+}
+
+.active:hover {
+    opacity: 1;
+}
+
 
 .float-right {
     float: right;

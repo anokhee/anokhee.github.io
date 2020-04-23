@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="topnav">
-            <a class="active brand" href="../index.html">anokhee jandhyala</a>
+            <a class="brand" href="../index.html">anokhee jandhyala</a>
             <div class="float-right">
                 <!-- <a href="../index.html">Projects</a> -->
                 <!-- <a href="#about">About</a></div> -->
@@ -35,8 +35,13 @@
                 </div>
             </div>
         </div>
+        <button onClick="window.open(`https://anokhee.github.io/botanicals/`)" class="view-demo-btn">View
+            Demo</button><br>
         <br><br>
         <div class="column-full">
+            <h3>Overview</h3>
+            <p class="main-idea-paragraph">Generating nonexistent flower varieties with code.</p>
+            <img src="../imgs/flowers/flowers-natural.png" onClick="makeModal(this)"><br><br>
             <h3>Background & Moodboard</h3>
             <p class="main-idea-paragraph">
                 The unusual onset of Spring 2020.
@@ -45,8 +50,6 @@
                 Note: This project is currently a work in progress! Continue reading to see how far I've come so far. If
                 you're interested, check back later for updates :)
 
-                <button onClick="window.open(`https://anokhee.github.io/botanicals/`)" class="view-demo-btn">View
-                    Demo</button><br>
 
                 In this project, I'm attempting to simulate 2D fictional plants with Lindenmayer Systems (L-Systems) and
                 random Bezier curves. Right now, I have some pretty interesting output that can be viewed in the <a
@@ -63,7 +66,7 @@
             <div class="column-full">
                 <h3>Process & Progress</h3>
                 <p class="main-idea-paragraph">
-                    Phase 1: Basic fractals.
+                    <span class="bold">Iteration #1:</span> Basic fractals.
                 </p>
                 <p>
 
@@ -72,7 +75,7 @@
             <img src="../imgs/flowers/version01-fractals.png" onClick="makeModal(this)">
             <div class="paragraph-spacer"></div>
             <p class="main-idea-paragraph">
-                Phase 2: Lindenmayer Systems.
+                <span class="bold">Iteration #2:</span> Lindenmayer Systems.
             </p>
             <p>
 
@@ -81,15 +84,31 @@
         <img src="../imgs/flowers/version02-lsystems.png" onClick="makeModal(this)">
         <div class="paragraph-spacer"></div>
         <p class="main-idea-paragraph">
-            Phase 4: Randomization
+            <span class="bold">Iteration #3:</span> Rudimentary flower generation.
         </p>
         <p>
-
         </p>
         </div>
-        <img src="../imgs/flowers-icon.png" onClick="makeModal(this)">
+        <img src="../imgs/flowers/version03-rudimentary-flowers.png" onClick="makeModal(this)">
+        </div>
+        <div class="column-container">
+            <div class="column">
+                <img src="../imgs/flowers/flower-editor.png">
+            </div>
+            <div style="padding-left: 25px" class="column">
+                <p  class="main-idea-paragraph">Flower editor mini-project.</p>
+            </div>
         </div>
         <div class="paragraph-spacer"></div>
+        <p class="main-idea-paragraph">
+            <span class="bold">Iteration #4:</span> Complex flowers.
+        </p>
+        <p>
+        </p>
+        </div>
+        <img src="../imgs/flowers/flowers-natural.png" onClick="makeModal(this)">
+        <img src="../imgs/flowers/flowers-unnatural.png" onClick="makeModal(this)">
+        </div>
         <div class="column-container">
             <h1>Thanks for reading!</p><br>
         </div>

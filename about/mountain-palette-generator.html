@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="topnav">
-            <a class="active brand" href="../index.html">anokhee jandhyala</a>
+            <a class="brand" href="../index.html">anokhee jandhyala</a>
             <div class="float-right">
                 <!-- <a href="../index.html">Projects</a> -->
                 <!-- <a href="#about">About</a></div> -->
@@ -42,12 +42,23 @@
         <div class="column-container">
             <div>
                 <div class="column-full">
+                    <h3>Overview</h3>
+                    <p class="main-idea-paragraph">About this project.</p>
+                    <p>This is a minimalist generative graphics program developed mostly with <a
+                            href="https://p5js.org">p5.js</a> (plus some HTML/CSS interfacing incorporated via the
+                        JavaScript DOM). It draws
+                        a unique landscape with an accompanying 5-color palette upon each page refresh. Feel free to play around with the demo
+                        or continue reading to learn more about the
+                        development process :)</p><br><br>
+                </div>
+                <img src="../imgs/palette-generator/palettes-with-colors.png" onClick="makeModal(this)"><br><br>
+                <div class="column-full">
                     <h3>Inspiration & Background</h3>
                     <p class="main-idea-paragraph">
                         Appalachian romanticism.
                     </p>
                     <p>
-                        In northern Georgia, bordering the Carolinas, the Blue Ridge mountains hug the horizon from
+                        In parts of Georgia bordering North Carolina, the Blue Ridge Mountains hug the horizon from
                         almost every conceivable angle. In
                         sparsely-populated small
                         towns dotted by pastures, warehouses, and gas
@@ -73,17 +84,14 @@
                         shapeshifting
                         nature of mountains. As a programmer, I figured that an interesting way to go about it
                         would be with code.<br><br>
-                        Using the <a href="https://www.p5js.org/">P5.js library</a> and techniques from
-                        computational geometry, I was able to create an algorithm that generates an image of a
-                        unique landscape
+                        With p5 and techniques from
+                        computational geometry, I was able to create an algorithm capable of generating an infinite
+                        number of unique landscapes
                         each
-                        time it runs. Although the program is technically simple and the functionality is minimal, I was
-                        pleasantly surprised by the variety of resulting images and 5-color palettes. </p><br>
+                        time it runs. The program's functionality is purposely minimal -- I wanted to focus most of my
+                        efforts on the variety and visual appeal of the output. </p><br>
                     <p>
-                        <p class="main-idea-paragraph">The results.</p>
-                        <div class="column-container">
-                            <img src="../imgs/palette-generator/palettes-variety.png" onClick="makeModal(this)">
-                        </div><br><br>
+                        <img src="../imgs/palette-generator/palettes-variety.png" onClick="makeModal(this)"><br>
                         <p class="main-idea-paragraph">A cool note.</p>
                         <p>
                             Although I never had an explicit purpose in mind when developing it,
