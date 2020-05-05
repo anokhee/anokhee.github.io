@@ -21,15 +21,14 @@
                 <!-- <a href="#about">About</a></div> -->
             </div>
     </header>
-    <br><br>
+    <div class="paragraph-spacer"></div>
     <main class="home">
         <br>
-        <div class="column-container seventy" style="margin-bottom: 35px;">
-        </div>
         <div class="filter-container">
             <div class="filter-link-container active" data-toggle="all">All</div>
             <div class="filter-link-container" data-toggle="ui-ux">UI/UX Design</div>
-            <div class="filter-link-container" data-toggle="art-code">Art + Code</div>
+            <div class="filter-link-container" data-toggle="art-code">Coding</div>
+            <div class="filter-link-container" data-toggle="misc">Misc</div>
         </div>
 
         <div class="gallery">
@@ -53,7 +52,7 @@
                     </div>
                 </div>
             </div>
-        
+
             <div class="column-full project-img all art-code"
                 onClick="window.open('./about/vector-faces-tool.html', '_self')">
                 <img style="background-color: #efefef" src="imgs/faces-icon.png">
@@ -64,8 +63,8 @@
                     </div>
                 </div>
             </div>
-         
-            <div class="column-full project-img all ui-ux"
+
+            <div class="column-full project-img all ui-ux art-code"
                 onClick="window.open('./about/internship-at-rigor.html', '_self')">
                 <img style="background-color: #efefef" src="imgs/rigor-icon.png">
                 <div class="overlay rigor-internship">
@@ -75,7 +74,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="column-full project-img all ui-ux"
                 onClick="window.open('./about/ilearn-landing-page.html', '_self')">
                 <img style="background-color: #efefef" src="imgs/ilearn-icon.png">
@@ -83,6 +82,26 @@
                     <div style="display: block;">
                         <p class="project-label">iLearn Landing Page</p>
                         <h3 class="project-description">Design Case Study</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column-full project-img all misc" onClick="window.open('./about/illustrations.html', '_self')">
+                <img style="background-color: #efefef" src="imgs/illustrations-icon.png">
+                <div class="overlay illustrations">
+                    <div style="display: block;">
+                        <p class="project-label">Illustrations</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column-full project-img all ui-ux art-code"
+                onClick="window.open('https://coles.kennesaw.edu/econopp/economicfreedomdividend/', '_self')">
+                <img style="background-color: #efefef" src="imgs/icat-icon.png">
+                <div class="overlay icat-ksu">
+                    <div style="display: block;">
+                        <p class="project-label">Economic Freedom Simulator</p>
+                        <h3 class="project-description">Undergraduate Research Assistantship</h3>
                     </div>
                 </div>
             </div>
@@ -120,16 +139,16 @@
 
             for (i of all) {
                 i.style.display = 'none';
-            }; 
+            };
 
             var filtered = document.getElementsByClassName(filterName);
             for (o of filtered) {
                 o.style.transitionDuration = '1s';
                 o.style.display = 'block';
-               
+
             };
         });
-        
+
     }
 </script>
 

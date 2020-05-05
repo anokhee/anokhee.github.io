@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anokhee Jandhyala | Vector-Based Faces Tool</title>
+    <title>Anokhee Jandhyala | Beautiful Faces</title>
     <link rel="stylesheet" href="https://use.typekit.net/kas2qtm.css">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Inter:wght@200;400;600&display=swap"
         rel="stylesheet">
@@ -30,7 +30,7 @@
             <div style="display: flex; align-items: center;">
                 <div class="hero">
                     <h3 class="project-type">Web Tools, Graphics, 2019</h3>
-                    <h1>Vector-Based Faces Tool</h1>
+                    <h1>Beautiful Faces</h1>
                     <div style="height: 5px"></div>
                     <button class="view-demo-btn"
                         onClick="window.open('https://anokhee.github.io/visual-synthesizer/web-demo/', '_self')">View
@@ -41,103 +41,93 @@
         <br><br>
         <div class="column-container">
             <div>
-                <div class="column-full">
-                    <h3>Background</h3>
-                    <p class="main-idea-paragraph">
-                        Drafting SVGs from the comfort of a web browser // A friendly alternative to the Pen tool.
-                    </p>
-                    <p>
-                        Beautiful Faces is an interactive web tool that allows users to edit a vector-based face and
-                        export it to the image software of their choice.
-                        <br><br>
-                        While I was teaching myself how to use Adobe Illustrator, I felt a lot of frustration drawing
-                        shapes with the Pen
-                        tool, especially when it came to curves.
-                        <br><br>
-                        I wanted to develop a web-based tool allowing users to quickly draft a symmetrical face, then
-                        export it to SVG to edit further in Illustrator or Inkscape. As it stands, this project is a
-                        barebones prototype, but I believe there is value in vector drafting software for non-designers,
-                        beginners, and anyone seeking a sense of flexibility and ownership over the open source graphics
-                        they use.
-                        <div class="column-full">
-                            <img style="padding: 2.5px;" src="../imgs/vector-faces-tool/outlines.png"
-                                onClick="makeModal(this)">
-                        </div>
-                    </p>
-                    <div class="paragraph-spacer"></div>
-                    <h3>Video Demo</h3>
-                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe
-                            src="https://player.vimeo.com/video/405584919?portrait=0"
-                            style="position:absolute;top:10px;left:0;width:100%;height:100%;" frameborder="0"
-                            allow="autoplay; fullscreen" allowfullscreen></iframe></div>
-                    <script src="https://player.vimeo.com/api/player.js"></script>
-                    <div class="paragraph-spacer"></div>
-                    <h3>Process</h3>
-                    <p class="main-idea-paragraph">The love and woe of Bezier curves.</p>
-                    <p>A face is drawn to the screen as a collection of vertex control points connecting Bezier curves.
-                        For those unfamiliar with plotting Bezier curves, the GIF below demonstrates where the control
-                        points lie on the plane and how they pull on a curve:
-                    </p>
-                    <img src="../imgs/vector-faces-tool/bezier-control points.gif" onClick="makeModal(this)"><br>
-                    <p> The code itself was fairly straightforward to write, as the major (and only)
-                        functionality of the program was to manipulate numberical values with sliders. The difficulty
-                        was in drawing Bezier curves to the screen, which required a thoughtful sketching
-                        process.</p>
-                    <div class="column-container">
-                        <div class="column">
-                            <img src="../imgs/vector-faces-tool/sketch-1.png" style="padding-right: 2px;"
-                                onClick="makeModal(this)">
-                        </div>
-                        <div class="column">
-                            <img src="../imgs/vector-faces-tool/sketch-2.png" style="padding-left: 2px;"
-                                onClick="makeModal(this)">
-                        </div>
+                <h3>Overview</h3>
+                <p class="main-idea-paragraph">Drafting SVGs from the comfort of a web browser.</p>
+                <p> Beautiful Faces is an interactive web tool that allows users to edit a vector-based face and
+                    export it to the image software of their choice.</p>
+                <img src="../imgs/vector-faces-tool/outlines.png">
+                <div class="paragraph-spacer"></div>
+                <h3>Background</h3>
+                <p class="main-idea-paragraph">
+                    A friendly alternative to the Pen tool.
+                </p>
+                <p>While teaching myself Adobe Illustrator, I struggled with using the Pen tool to draw curved shapes. I
+                    developed Beautiful Faces as a web-based tool allowing users to quickly draft a symmetrical face
+                    to either use as a quick profile picture or identicon or export to SVG to edit further in the
+                    graphics software of their choice.<br><br>
+                    As it stands, this project is a barebones prototype, but I believe there is value in vector editing
+                    software for non-designers, beginners, or anyone seeking a sense of flexibility and ownership over
+                    the open source graphics they use. </p>
+                <div class="paragraph-spacer"></div>
+                <h3>Video Demo</h3>
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe
+                        src="https://player.vimeo.com/video/405584919?portrait=0"
+                        style="position:absolute;top:10px;left:0;width:100%;height:100%;" frameborder="0"
+                        allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+                <div class="paragraph-spacer"></div>
+                <h3>Process</h3>
+                <p class="main-idea-paragraph">The love and woe of Bezier curves.</p>
+                <p>The code itself was fairly straightforward to write, as the major (and only)
+                    functionality of the program was to manipulate geometric proportions with sliders.<br><br>
+                    Each face is made up of a series of Bezier curves.
+                    Drawing Bezier curves to the screen was the most difficult part of this project, requiring a
+                    thoughtful sketching
+                    process. The GIF below demonstrates where each of
+                    the vertex control points like on the plane.
+                </p>
+                <img src="../imgs/vector-faces-tool/bezier-control points.gif" onClick="makeModal(this)"><br>
+                <div class="column-container">
+                    <div class="column">
+                        <img src="../imgs/vector-faces-tool/sketch-1.png" style="padding-right: 2px;"
+                            onClick="makeModal(this)">
                     </div>
-
-                    <div class="paragraph-spacer"></div>
-
-                    <div class="column" style="width: 90%">
-                        <h3>Final Thoughts</h3>
-                        <p class="main-idea-paragraph">Inclusive default identicons.</p>
-                        <p>Most default profile images feature decidedly male silhouettes with caucasian-looking
-                            hairstyles and features. While this may seem inconsequential, it reinforces the idea of the
-                            white male user as the "default person", which can (and usually does) unconsciously alienate
-                            minority users.
-
-                            <br><br>When randomization is applied to the algorithm generating these faces, the
-                            results are more gender-neutral, inclusive, and lighthearted than the typical default
-                            profile picture, which tends to look ominous.
-
-                        </p>
-                        <img src="../imgs/vector-faces-tool/faces-all.png" onClick="makeModal(this)"><br><br>
-                        <p class="main-idea-paragraph">Facilitating trustworthy interactions between users.</p>
-                        <p>
-                            In community-based sites and applications, users are encouraged to upload a profile picture
-                            before contributing to public forums or engaging with other members of the community.
-                            Unfortunately, the default profile image can sometimes appear casual/non-participatory at
-                            best and creepy at worst.
-                            <br><br>
-                            If a web-based vector editing software is built into an application as a "Customize Your
-                            Avatar" feature, it provides an easy solution for users who don't feel comfortable uploading
-                            a photo of themselves, and an even better solution for lazy users. Without having to search
-                            for an image to use as a profile picture,
-                            they can quickly create one that resembles themselves in-app.</p>
-                        <br><br>
-                        <p class="main-idea-paragraph">SVG = superfast jellyfish.</p>
-                        <p>
-                            SVG is highly performant and scalable. This has benefits from a software engineering
-                            perspective on the front end and back end.
-                            <br><br>
-                            On the front end, SVG is useful because it is programmable with CSS and JavaScript and
-                            maintains perfect image quality at any resolution. On the back end, storing SVG is more
-                            efficient because SVG ~70% smaller than an identical PNG on average.
+                    <div class="column">
+                        <img src="../imgs/vector-faces-tool/sketch-2.png" style="padding-left: 2px;"
+                            onClick="makeModal(this)">
                     </div>
                 </div>
+
                 <div class="paragraph-spacer"></div>
-                <div class="column-container">
-                    <h1>Thanks for reading!</p><br>
+
+                <div class="column" style="width: 90%">
+                    <h3>Final Thoughts</h3>
+                    <p class="main-idea-paragraph">Inclusive default identicons.</p>
+                    <p>Most default profile images feature decidedly male silhouettes with caucasian-looking
+                        hairstyles and features. While this may seem inconsequential, it reinforces the idea of the
+                        white male user as the "default person", which can (and usually does) unconsciously alienate
+                        minority users.
+
+                        <br><br>When randomization is applied to the algorithm generating these faces, the
+                        results are more gender-neutral, inclusive, and lighthearted than the typical default
+                        profile picture, which tends to look ominous.
+
+                    </p>
+                    <img src="../imgs/vector-faces-tool/faces-all.png" onClick="makeModal(this)"><br><br>
+                    <p class="main-idea-paragraph">Facilitating trustworthy interactions between users.</p>
+                    <p>
+                        In community-based sites and applications, users are encouraged to upload a profile picture
+                        before contributing to public forums or engaging with other members of the community.
+                        Unfortunately, the default profile image can sometimes appear casual/non-participatory at
+                        best and creepy at worst.
+                        <br><br>
+                        If a web-based vector editing software is built into an application as a "Customize Your
+                        Avatar" feature, it provides an easy solution for users who don't feel comfortable uploading
+                        a photo of themselves, and an even better solution for lazy users. Without having to search
+                        for an image to use as a profile picture,
+                        they can quickly create one that resembles themselves in-app.</p>
+                    <br><br>
+                    <p class="main-idea-paragraph">SVG = superfast jellyfish.</p>
+                    <p>
+                        SVG is highly performant and scalable. This has benefits from a software engineering
+                        perspective on the front end and back end.
+                        <br><br>
+                        On the front end, SVG is useful because it is programmable with CSS and JavaScript and
+                        maintains perfect image quality at any resolution. On the back end, storing SVG is more
+                        efficient because SVG ~70% smaller than an identical PNG on average.
                 </div>
             </div>
+            <div class="paragraph-spacer"></div>
         </div>
     </main>
 </body>

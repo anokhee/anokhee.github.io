@@ -18,10 +18,10 @@ body {
     animation: fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    background-color: #FaFaf9;
+    background-color: rgb(248, 248, 248);
     color: #252525;
     font-family: 'Inter', sans-serif;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 200;
     line-height: 1.6em;
     padding-bottom: 105px;
@@ -85,9 +85,7 @@ img {
     margin-top: 20px;
 }
 
-img:hover {
- 
-}
+img:hover {}
 
 ul {
     margin-top: 20px;
@@ -103,12 +101,12 @@ ul li {
 
 main {
     margin: 0 auto;
-    width: 80%;
-    max-width: 840px;
+    width: 100%;
+    max-width: 800px;
 }
 
 .home {
-    max-width: 950px;
+    max-width: 900px;
 }
 
 .main-idea-paragraph {
@@ -137,7 +135,6 @@ p {
 .column {
     display: block;
     width: 50%;
-    margin-top: 50px;
 }
 
 .column p {
@@ -262,11 +259,23 @@ p {
     color: #FEFEFE;
 }
 
+.icat-ksu {
+    background-color: hsl(202, 70%, 85%);
+    color: #111;
+}
+
+.illustrations {
+    background-color: #484563;
+    color: #EFEFEF;
+}
 
 
+.small-text {
+    font-size: 16px;
+}
 
 
-*/ .subheading {
+.subheading {
     font-size: 15px;
     color: #ccc;
     font-family: 'Inter', sans-serif;
@@ -401,7 +410,7 @@ footer {
     font-weight: 100;
     text-transform: uppercase;
     letter-spacing: .05em;
-    font-size: 15px;   
+    font-size: 15px;
 }
 
 .filter-link-container:hover {
