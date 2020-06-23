@@ -5,173 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anokhee Jandhyala | Portfolio</title>
-    <link rel="stylesheet" href="https://use.typekit.net/kas2qtm.css">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Inter:wght@200;400;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="reset.css">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/gumshoe/dist/gumshoe.polyfills.min.js"></script>
+    <script src="assets/siema.min.js"></script>
+    <link rel="stylesheet" href="assets/reset.css">
+    <link rel="stylesheet" href="theme.css">
 </head>
 
 <body>
-    <header>
-        <div class="topnav">
-            <a class="brand" href="./index.html">anokhee jandhyala</a>
-            <div class="float-right">
-                <!-- <a href="../index.html">About Me</a> -->
-                <!-- <a href="#about">About</a></div> -->
-            </div>
-    </header>
-    <div class="paragraph-spacer"></div>
-    <main class="home">
-        <br>
-        <div class="filter-container">
-            <div class="filter-link-container active" data-toggle="all">All</div>
-            <div class="filter-link-container" data-toggle="ui-ux">UI/UX</div>
-            <div class="filter-link-container" data-toggle="art-code">Art + Code</div>
-            <div class="filter-link-container" data-toggle="misc">Misc</div>
-        </div>
-
-        <div class="gallery">
-            <div class="column-full project-img all art-code" onClick="window.open('./about/flowers.html', '_self')">
-                <img style="background-color: #efefef" src="imgs/flowers-icon.png">
-                <div class="overlay botanicals">
-                    <div style="display: block;">
-                        <p class="project-label">Botanicals (2020)</p>
-                        <h3 class="project-description">Creative Coding</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column-full project-img all art-code"
-                onClick="window.open('./about/mountain-palette-generator.html', '_self')">
-                <img style="background-color: #efefef" src="imgs/mountain-palettes-icon.png">
-                <div class="overlay landscape-palettes">
-                    <div style="display: block;">
-                        <p class="project-label">Mountain Palettes (2020)</p>
-                        <h3 class="project-description">Creative Coding</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column-full project-img all art-code"
-                onClick="window.open('./about/hideous-animals.html', '_self')">
-                <img style="background-color: #efefef" src="imgs/hideous-animals-icon.png">
-                <div class="overlay hideous-animals">
-                    <div style="display: block;">
-                        <p class="project-label">Hideous Animals (2020)</p>
-                        <h3 class="project-description">Creative Coding</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column-full project-img all art-code"
-                onClick="window.open('./about/vector-faces-tool.html', '_self')">
-                <img style="background-color: #efefef" src="imgs/faces-icon.png">
-                <div class="overlay faces-tool">
-                    <div style="display: block;">
-                        <p class="project-label">Beautiful Faces (2019)</p>
-                        <h3 class="project-description">Creative Coding</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column-full project-img all ui-ux"
-                onClick="window.open('./about/internship-at-rigor.html', '_self')">
-                <img style="background-color: #efefef" src="imgs/rigor-icon.png">
-                <div class="overlay rigor-internship">
-                    <div style="display: block;">
-                        <p class="project-label">Rigor: Analytics Redesign (2019)</p>
-                        <h3 class="project-description">UX Engineering Case Study</h3>
-                    </div>
-                </div>
-            </div>
-            <!-- 
-            <div class="column-full project-img all art-code misc"
-                onClick="window.open('./about/internship-at-rigor.html', '_self')">
-                <img style="background-color: #efefef" src="imgs/visual-synthesizer-icon.png">
-                <div class="overlay visual-synth">
-                    <div style="display: block;">
-                        <p class="project-label">Visual Synthesizer (2018)</p>
-                        <h3 class="project-description">Hardware Programming</h3>
-                    </div>
-                </div>
-            </div> -->
-
-            <div class="column-full project-img all ui-ux"
-                onClick="window.open('./about/ilearn-landing-page.html', '_self')">
-                <img style="background-color: #efefef" src="imgs/ilearn-icon.png">
-                <div class="overlay ilearn-landing">
-                    <div style="display: block;">
-                        <p class="project-label">iLearn Landing Page (2016)</p>
-                        <h3 class="project-description">Design Case Study</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column-full project-img all misc" onClick="window.open('./about/illustrations.html', '_self')">
-                <img style="background-color: #efefef" src="imgs/illustrations-icon.png">
-                <div class="overlay illustrations">
-                    <div style="display: block;">
-                        <p class="project-label">Illustrations</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- <div class="column-full project-img all ui-ux art-code"
-                onClick="window.open('https://coles.kennesaw.edu/econopp/economicfreedomdividend/', '_self')">
-                <img style="background-color: #efefef" src="imgs/icat-icon.png">
-                <div class="overlay icat-ksu">
-                    <div style="display: block;">
-                        <p class="project-label">Economic Freedom Simulator</p>
-                        <h3 class="project-description">Undergraduate Research Assistantship</h3>
-                    </div>
-                </div>
+    <div id="top-navigation">
+        <div style="width: 80%; margin: 0 auto;">
+            <a href="./">Anokhee Jandhyala</a>
+            <!-- <div class="float-right">
+                <a href="./all-works.html">All Works</a>
+                <a href="./about-me.html">About Me</a>
             </div> -->
         </div>
-
+    </div>
+    <div class="main homepage">
+        <div class="row" onClick="window.open('./works/avatar-maker.html', '_self')">
+            <img style="background-color: #efefef" src="./imgs/avatar-maker-ux/avatar-maker-icon.png">
         </div>
-    </main>
+        <div class="row" onClick="window.open('./works/landscape-palettes.html', '_self')">
+            <img style="background-color: #efefef" src="./imgs/landscape-palettes/landscape-palettes-icon.png">
+        </div>
+        <!-- <div class="row" onClick="window.open('./works/botanicals.html', '_self')">
+            <img style="background-color: #efefef" src="./imgs/botanicals/flowers-icon.png">
+        </div> -->
+        </main>
+    </div>
+    </div>
 </body>
 <script>
-    function makeModal(e) {
-        var modal = document.createElement("div");
-        modal.classList.add("modal");
-        var image = document.createElement("img");
-        image.src = e.src;
-        modal.appendChild(image);
-        modal.style.display = "block";
-        document.body.appendChild(modal);
-        modal.addEventListener("click", function () {
-            document.body.removeChild(modal);
-        });
-    };
+    var spy = new Gumshoe('#side-navigation a');
+    const mySiema = new Siema();
+    document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+    document.querySelector('.next').addEventListener('click', () => mySiema.next());
 
-    var filter = document.getElementsByClassName('filter-link-container');
-
-    for (f of filter) {
-        f.addEventListener('click', function () {
-            for (div of filter) {
-                div.classList.remove('active');
-            }
-
-            this.classList.add('active');
-
-            var filterName = this.getAttribute('data-toggle');
-            var all = document.getElementsByClassName('all');
-
-            for (i of all) {
-                i.style.display = 'none';
-            };
-
-            var filtered = document.getElementsByClassName(filterName);
-            for (o of filtered) {
-                o.style.transitionDuration = '1s';
-                o.style.display = 'block';
-
-            };
-        });
-
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("top-navigation").style.top = "0";
+        } else {
+            document.getElementById("top-navigation").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
     }
+</script>
 </script>
 
 </html>

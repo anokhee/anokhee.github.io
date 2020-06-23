@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anokhee Jandhyala | Portfolio: Landscape Palettes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Inter:wght@200;300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/gumshoe/dist/gumshoe.polyfills.min.js">
+    </script>
+    <script src="../assets/siema.min.js"></script>
+    <link rel="stylesheet" href="../assets/reset.css">
+    <link rel="stylesheet" href="../theme.css">
+</head>
+
+<body>
+    <div id="top-navigation">
+        <div style="width: 80%; margin: 0 auto;">
+            <a href="./../">Anokhee Jandhyala</a>
+            <!-- <div class="float-right">
+                <a href="../all-works.html">All Works</a>
+                <a href="../about-me.html">About Me</a>
+            </div> -->
+        </div>
+    </div>
+    <div class="hero-img">
+        <img src="../imgs/landscape-palettes/landscape-palettes-icon.png">
+    </div>
+    <div class="main">
+        <div class="section">
+            <h3>Web Development, Generative Graphics | 2020</h3>
+            <h1>Landscapes & Palettes</h1>
+        </div>
+        <div class="paragraph-spacer"></div>
+
+
+        <div class="section">
+            <div class="row">
+                <div class="col" style="width: 65%;">
+                    <h3 class="subheading">Generating mountainous landscapes & color palettes with code.</h3>
+                    <p>
+                        Using techniques from computational geometry, I developed a 2D vector landscapes
+                        generator. The code was written with p5.js, along with some HTML and CSS interfacing.
+                        The functionality is purposely minimal. I focused on the variety and visual appeal of
+                        the output versus on the flashiness of the application itself.
+                    </p>
+                </div>
+
+                <div class="col skills" style="width: 30%;">
+                    <h4>Skills & Tools</h4>
+                    <ul>
+                        <li>Web Development</li>
+                        <li>Computational Geometry</li>
+                        <li>Color Theory</li>
+                        <li>p5.js</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="paragraph-spacer"></div>
+        <h3 class="subheading">Gallery</h3>
+        <div class="row">
+            <div class="col" style="padding: 2.5px"><img src="../imgs/landscape-palettes/palettes-light.png"></div>
+            <div class="col" style="padding: 2.5px"><img src="../imgs/landscape-palettes/palettes-dark.png">
+            </div>
+        </div>
+
+        <div class="paragraph-spacer"></div>
+        <div class="section">
+            <h3 class="subheading">Appalachian romanticism.</h3>
+            <img src="../imgs/landscape-palettes/inspiration-2.png">
+            <div class="paragraph-spacer-sm"></div>
+            <p>In parts of Georgia bordering North Carolina, the Blue Ridge Mountains hug the horizon from every
+                conceivable angle. While driving through small towns dotted by pastures, warehouses, and gas stations,
+                the cozy adjacency to the mountains always makes me feel something. I wanted to express this outside of
+                photography somehow. As a programmer, I thought that an interesting way to go about it would be with
+                code.
+            </p>
+        </div>
+        <div class="paragraph-spacer"></div>
+        <div class="section" id="process">
+            <h2>Process</h2>
+            <div class="paragraph-spacer-sm"></div>
+            <h3 class="subheading">Minimal, but impactful.</h3>
+            <p> As mentioned in the introduction, my goal was to keep the scope of this project as small as
+                possible while focusing on creating
+                output pretty and unique enough to keep users entertained for a little while.
+            </p>
+            <div class="row">
+                <div class="col"><img src="../imgs/landscape-palettes/sketch-desktop.png"></div>
+                <div class="col"><img src="../imgs/landscape-palettes/sketch-mobile.png"></div>
+            </div>
+
+            <div class="paragraph-spacer"></div>
+            <h3 class="subheading">Mountains: Layers of 1D Perlin Noise</h3>
+            <p>By applying a Perlin noise function with varying levels of noise detail to vector coordinates across the
+                x and y axes, I was able to achieve output resembling a mountain range fading into the distance.
+            </p>
+            <p> p5.js's built-in noise() function is powerful, but requires significant tweaking to achieve a desired
+                look. I determined the "sweet spot" to base the mountains off to exist somewhere between images 4 and 7
+                (or 6 and 8 for mobile users).</p>
+            <div class="row">
+                <div class="col" style="padding:5px"><img src="../imgs/landscape-palettes/perlin-noise-1.png">
+                </div>
+                <div class="col" style="padding:5px"><img src="../imgs/landscape-palettes/perlin-noise-2.png">
+                </div>
+            </div>
+
+            <!-- <h4>Starry Skies</h4>
+            <h4>The Moon Phases</h4>
+            <h4>Color Palettes</h4> -->
+
+        </div>
+        <div class="paragraph-spacer"></div>
+        <div class="section" id="conclusion">
+            <h2>Concluding Notes</h2>
+            <p>A program like this could have reduced the hours the hours I spent drawing landscapes with Adobe
+                Illustrator's pen tool. It made me think:
+            </p>
+            <ul class="bulleted-list">
+                <li>What is the inherent value of an organic, procedurally-generated shape compared to an identical one
+                    drawn by hand?</li>
+                <li>How do you compare the complexity of a program capable of generating an infinite number of unique
+                    graphics to the talent of a graphic designer?</li>
+                <li> How special is uniqueness, really, when it's produced with an algorithm?</li>
+            </ul>
+            <p>I don't know.</p>
+        </div>
+        <p><a data-scroll href="#top">Back to the top</a></p>
+    </div>
+</body>
+<script>
+    var spy = new Gumshoe('#side-navigation a');
+
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("top-navigation").style.top = "0";
+        } else {
+            document.getElementById("top-navigation").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+</script>
+</script>
+
+</html>
