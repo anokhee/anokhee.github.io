@@ -10,10 +10,6 @@ body {
     line-height: 1.8em;
 }
 
-.inline {
-    text-decoration: underline #6d4161;
-}
-
 figure {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -53,7 +49,7 @@ h2 {
 .hero-img {
     margin: 0 auto;
     margin-top: 5em;
-width: 65%;
+    width: 65%;
 }
 
 h3 {
@@ -62,10 +58,10 @@ h3 {
     margin-bottom: 1.05em;
 }
 
-.subheading {
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
+.inline {
+    color: rgb(187, 29, 29);
+    font-weight: 800;
+    text-decoration-style: wavy;
 }
 
 img,
@@ -178,18 +174,6 @@ ol {
     width: 50%;
 }
 
-.skills {
-    font-size: .85em;
-    font-weight: bold;
-    margin-left: 70px;
-    padding-bottom: 20px;
-}
-
-.skills ul {
-    font-size: 1em;
-    font-weight: 300;
-}
-
 .paragraph-spacer {
     height: 4em;
 }
@@ -230,9 +214,27 @@ ol {
     color: #333;
 }
 
+.skills {
+    font-size: .85em;
+    font-weight: bold;
+    margin-left: 70px;
+    padding-bottom: 20px;
+}
+
+.skills ul {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.subheading {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
 #top-navigation {
-    background: #fefefe;
-    font-size: 16px;
+    background: #fff;
+    font-size: 1.25em;
     font-weight: 600;
     position: fixed;
     top: 0;
@@ -241,23 +243,18 @@ ol {
     z-index: 999;
 }
 
-#top-navigation .brand {
-    font-size: 1.25em;
-    font-weight: 600;
-}
-
 /* Style the navbar links */
 #top-navigation a {
     color: #111;
     float: left;
     display: block;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     text-decoration: none;
 }
 
 #top-navigation a:hover {
-    background-color: #ddd;
+    background-color: #efefef;
     color: black;
 }
 
@@ -285,11 +282,128 @@ th {
     text-align: left;
 }
 
-.game-name{
+.game-name {
     font-weight: 600;
 }
 
 .video-view-subtitle {
     color: #9a9a9a;
     font-weight: 600;
+}
+
+.project-icon {
+    cursor: pointer;
+    position: relative;
+    transition-duration: .5s;
+}
+
+
+.overlay {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    opacity: 0;
+    padding: 0px;
+    position: absolute;
+    top: 0;
+    transition: .75s ease;
+    width: 100%;
+}
+
+.overlay p {
+    color: black;
+    font-family: 'Noto Serif', serif;
+    font-size: 2.95rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.overlay h3 {
+    color: black;
+    font-family: 'Inconsolata', sans-serif;
+    font-size: 1.5em;
+    font-weight: 800;
+    text-align: center;
+}
+
+.project-icon:hover {
+    transform: translate(0px, -5px);
+    transition-duration: .5s;
+}
+
+.project-icon:hover .overlay {
+    opacity: 1;
+}
+
+#botanicals {
+    background-color: rgba(17, 17, 17, .95);
+}
+
+#botanicals p {
+    color: #eaeaea;
+}
+
+#botanicals h3 {
+    color: rgb(92, 92, 245);
+}
+
+#character-designer-ui {
+    background-color: rgba(255, 213, 0, .98);
+}
+
+#landscapes-palettes {
+    background-color: rgba(250, 236, 238, 0.98);
+}
+
+#landscapes-palettes p {
+    color: #111;
+}
+
+#landscapes-palettes h3 {
+    color: #8676e0;
+}
+
+
+
+#botanicals-process {
+    background: rgb(5, 18, 24);
+    font-size: 1.15rem;
+    line-height: 1.5em;
+    margin: 0 auto;
+    padding-left: 18%;
+    padding-right: 18%;
+}
+
+#botanicals-process h1,
+#botanicals-process h2,
+#botanicals-process h3,
+#botanicals-process h4 {
+    color: #fbabca;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#botanicals-process h3 {
+    color: #efefef;
+    font-family: 'Noto Serif', serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#botanicals-process p {
+    color: #dfdfdf;
+    font-family: 'Inconsolata', serif;
+    font-weight: 100;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#botanicals-process figcaption {
+    color: rgb(202, 48, 48);
+    font-family: 'Inconsolata';
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+    width: 80%;
 }
