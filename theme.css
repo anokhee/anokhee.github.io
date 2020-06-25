@@ -60,7 +60,7 @@ h3 {
 
 .hero-tagline {
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
 }
 
@@ -116,13 +116,9 @@ ul {
     margin-top: 2.5rem;
 }
 
-#hero-canvas {
-    width: 80%;
-}
-
 .homepage {
     margin-top: 1rem;
-    width: 75%;
+    width: 70%;
 }
 
 .bulleted-list,
@@ -244,7 +240,7 @@ ol {
 
 #top-navigation {
     background: #fff;
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: 600;
     position: fixed;
     top: 0;
