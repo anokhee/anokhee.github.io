@@ -13,6 +13,7 @@ var hoverLink = false;
 let rX, gX, bX, cR, cG, cB;
 let redPrimary, yellowPrimary, bluePrimary;
 let setPrimary;
+let capArray = ['butt', 'round', 'square'];
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) == false) {
     console.log("not mobile");
@@ -22,11 +23,14 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 function setup() {
     c.clearRect(0, 0, canvas.width, canvas.height);
     width = window.innerWidth;
-    height = '450';
+    height = window.innerHeight;
     canvas.width = width;
     canvas.height = height;
     setBackground(`rgba(255, 255, 255, 1)`);
     setPrimary = Math.random();
+    c.lineCap = `${capArray[Math.floor(Math.random() * (capArray.length))]}`;
+    c.lineJoin = "butt";
+    console.log();
 
     if (setPrimary >= 0 && setPrimary <= .2) {
         redPrimary = true;
@@ -37,19 +41,19 @@ function setup() {
     }
 
     if (redPrimary) {
-        rX = Math.random() * (255 - 240) + 240;
-        gX = Math.random() * (255 - 150) + 150;
+        rX = Math.random() * (255 - 200) + 200;
+        gX = Math.random() * (255 - 180) + 180;
         bX = Math.random() * (255 - 150) + 150;
         setBackground(`rgba(255, 255, 245)`);
     } else if (yellowPrimary) {
         rX = Math.random() * (255 - 250) + 250;
         gX = Math.random() * (255 - 250) + 250;
-        bX = Math.random() * (50 - 10) + 10;
+        bX = Math.random() * (100 - 0) + 0;
         setBackground(`rgba(225, 225, 255)`);
     } else if (bluePrimary) {
         rX = Math.random() * (255 - 100) + 100;
-        gX = Math.random() * (255 - 100) + 100;
-        bX = Math.random() * (255 - 240) + 240;
+        gX = Math.random() * (150 - 0) + 0;
+        bX = Math.random() * (150 - 0) + 0;
         setBackground(`rgba(255, 255, 255)`);
     }
 
@@ -65,10 +69,9 @@ function draw() {
     let r = rX - (mouseX + mouseY) / 5;
     let g = gX - (mouseX + mouseY) / 5;
     let b = bX - (mouseX + mouseY) / 10;
-    c.lineWidth = ((mouseX + mouseY)) / 40;
-    c.lineCap = "butt";
-    c.lineJoin = "round";
-    setBackground(`rgba(255, 255, 255, .05)`);
+    c.lineWidth = ((mouseX + mouseY)) * .025;
+    c.setLineDash([Math.random() * (10 - (10) + -10), Math.random() * 30])
+    setBackground(`rgba(255, 255, 255, .055)`);
     c.strokeStyle = `rgba(${r}, ${g}, ${b}, .80)`;
     c.beginPath();
     c.moveTo(pMouseX, pMouseY);
@@ -95,6 +98,7 @@ function draw() {
     c.closePath();
 
     c.strokeStyle = `rgba(${cR * rX}, ${cG * gX}, ${cB * bX}, 1)`;
+    c.lineWidth = ((mouseX + mouseY)) / 60;
 
     c.beginPath();
     c.moveTo(pMouseX / 2, pMouseY / 2);
@@ -119,8 +123,6 @@ function draw() {
     c.lineTo(mouseX / 2, height - mouseY / 2);
     c.stroke();
     c.closePath();
-
-
 
     setTimeout(draw, 10);
 };
@@ -162,21 +164,24 @@ function resetCanvas() {
     }
 
     if (redPrimary) {
-        rX = Math.random() * (255 - 240) + 240;
+        rX = Math.random() * (255 - 200) + 200;
         gX = Math.random() * (255 - 150) + 150;
         bX = Math.random() * (255 - 150) + 150;
         setBackground(`rgba(255, 255, 245)`);
     } else if (yellowPrimary) {
         rX = Math.random() * (255 - 250) + 250;
         gX = Math.random() * (255 - 250) + 250;
-        bX = Math.random() * (50 - 10) + 10;
+        bX = Math.random() * (100 - 0) + 0;
         setBackground(`rgba(225, 225, 255)`);
     } else if (bluePrimary) {
         rX = Math.random() * (255 - 100) + 100;
-        gX = Math.random() * (255 - 100) + 100;
-        bX = Math.random() * (255 - 240) + 240;
+        gX = Math.random() * (150 - 0) + 0;
+        bX = Math.random() * (150 - 0) + 0;
         setBackground(`rgba(255, 255, 255)`);
     }
+
+    c.lineCap = `${capArray[Math.floor(Math.random() * (capArray.length))]}`;
+    c.lineJoin = "butt";
 
     cR = Math.random() * 2;
     cG = Math.random() * 2;
