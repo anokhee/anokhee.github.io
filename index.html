@@ -14,32 +14,39 @@
 </head>
 
 <body>
-    <!-- <div id="top-navigation">
+    <div id="top-navigation">
         <div style="width: 80%; margin: 0 auto;">
             <a href="./">Anokhee Jandhyala</a>
-             <div class="float-right">
-                <a href="./all-works.html">All Works</a>
+            <div class="float-right">
+                <a href="./all-works.html">Projects</a>
                 <a href="./about-me.html">About Me</a>
-            </div> 
+            </div>
         </div>
-    </div> -->
+    </div>
     <div class="wrapper" onClick="resetCanvas()">
         <canvas id="myCanvas"></canvas>
         <div class="hero-overlay">
             <div
                 style="display: flex; align-items: center; width: 45%; background-color:  rgba(255, 255, 255, .96); padding: 50px;">
-                <div style="width: 70%; margin: 0 auto;">
+                <div style="width: 85%; margin: 0 auto;">
                     <h3>Hello, beautiful.</h3>
                     <h1 style="font-size: 2.5em;">I'm Anokhee.</h1>
-                    <h3 class="hero-tagline">I'm an interdisciplinary Designer & Developer with a passion for
+                    <h3 class="hero-tagline">An interdisciplinary <span class="bold">Designer & Developer</span>
+                        passionate about
                         making delightful experiences for
                         the Web.</h3>
                 </div>
+
             </div>
         </div>
+        <div><a href="#selectedWorks" id="scrollDown">&darr;</a></div>
     </div>
-    <div class="main homepage">
-        <h3 class="subheading">Selected Works &darr;</h3>
+
+
+    </div>
+    <div class="main homepage" id="selectedWorks">
+        <div class="paragraph-spacer"></div>
+        <h3 class="subheading mono">Selected Works &darr;</h3>
         <div class="row project-icon" onClick="window.open('./works/avatar-maker.html', '_self')">
             <img style="background-color: #efefef" src="./imgs/avatar-maker-ux/avatar-maker-icon.png">
             <div class="overlay" id="character-designer-ui">

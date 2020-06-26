@@ -13,6 +13,7 @@ var hoverLink = false;
 let rX, gX, bX, cR, cG, cB;
 let redPrimary, yellowPrimary, bluePrimary;
 let setPrimary;
+let coeff;
 let capArray = ['butt', 'round', 'square'];
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) == false) {
@@ -30,7 +31,7 @@ function setup() {
     setPrimary = Math.random();
     c.lineCap = `${capArray[Math.floor(Math.random() * (capArray.length))]}`;
     c.lineJoin = "butt";
-    console.log();
+    coeff = Math.random() * (.000075 - .000025) + .000025;
 
     if (setPrimary >= 0 && setPrimary <= .2) {
         redPrimary = true;
@@ -69,68 +70,44 @@ function draw() {
     let r = rX - (mouseX + mouseY) / 5;
     let g = gX - (mouseX + mouseY) / 5;
     let b = bX - (mouseX + mouseY) / 10;
-    c.lineWidth = ((mouseX + mouseY)) * .025;
-    c.setLineDash([Math.random() * (10 - (10) + -10), Math.random() * 30])
+   
     setBackground(`rgba(255, 255, 255, .055)`);
-    c.strokeStyle = `rgba(${r}, ${g}, ${b}, .80)`;
-    c.beginPath();
-    c.moveTo(pMouseX, pMouseY);
-    c.lineTo(mouseX, mouseY);
-    c.stroke();
-    c.closePath();
 
-    c.beginPath();
-    c.moveTo(width - pMouseX, pMouseY);
-    c.lineTo(width - mouseX, mouseY);
-    c.stroke();
-    c.closePath();
+    for (i = 1; i <= 2; i++) {
+        if (i != 1) {
+            c.strokeStyle = `rgba(${(cR * (i - 1)/2) * rX}, ${(cG * (i-1)/2) * gX}, ${(cB * (i-1)/2) * bX}`;
+        } else {
+            c.strokeStyle = `rgba(${r}, ${g}, ${b}, .80)`;
+        }
 
-    c.beginPath();
-    c.moveTo(width - pMouseX, height - pMouseY);
-    c.lineTo(width - mouseX, height - mouseY);
-    c.stroke();
-    c.closePath();
+        c.lineWidth = ((mouseX * mouseY)) * (i * coeff);
 
-    c.beginPath();
-    c.moveTo(pMouseX, height - pMouseY);
-    c.lineTo(mouseX, height - mouseY);
-    c.stroke();
-    c.closePath();
+        c.beginPath();
+        c.moveTo(pMouseX / i, pMouseY / i);
+        c.lineTo(mouseX / i, mouseY / i);
+        c.stroke();
+        c.closePath();
 
-    c.strokeStyle = `rgba(${cR * rX}, ${cG * gX}, ${cB * bX}, 1)`;
-    c.lineWidth = ((mouseX + mouseY)) / 60;
+        c.beginPath();
+        c.moveTo(width - pMouseX / i, pMouseY / i);
+        c.lineTo(width - mouseX / i, mouseY / i);
+        c.stroke();
+        c.closePath();
 
-    c.beginPath();
-    c.moveTo(pMouseX / 2, pMouseY / 2);
-    c.lineTo(mouseX / 2, mouseY / 2);
-    c.stroke();
-    c.closePath();
+        c.beginPath();
+        c.moveTo(width - pMouseX / i, height - pMouseY / i);
+        c.lineTo(width - mouseX / i, height - mouseY / i);
+        c.stroke();
+        c.closePath();
 
-    c.beginPath();
-    c.moveTo(width - (pMouseX) / 2, (pMouseY) / 2);
-    c.lineTo(width - (mouseX) / 2, (mouseY) / 2);
-    c.stroke();
-    c.closePath();
-
-    c.beginPath();
-    c.moveTo(width - (pMouseX) / 2, height - (pMouseY) / 2);
-    c.lineTo(width - (mouseX) / 2, height - (mouseY) / 2);
-    c.stroke();
-    c.closePath();
-
-    c.beginPath();
-    c.moveTo(pMouseX / 2, height - pMouseY / 2);
-    c.lineTo(mouseX / 2, height - mouseY / 2);
-    c.stroke();
-    c.closePath();
-
+        c.beginPath();
+        c.moveTo(pMouseX / i, height - pMouseY / i);
+        c.lineTo(mouseX / i, height - mouseY / i);
+        c.stroke();
+        c.closePath();
+    }
     setTimeout(draw, 10);
 };
-
-function setPrimaryColor() {
-    setBackground(`rgba(240, 245, 253, 1)`);
-    setPrimary = Math.random();
-}
 
 function setBackground(color) {
     c.beginPath();
@@ -151,6 +128,9 @@ document.onmousemove = function (e) {
 function resetCanvas() {
     console.log('hi')
     c.clearRect(0, 0, canvas.width, canvas.height);
+
+    c.lineCap = `${capArray[Math.floor(Math.random() * (capArray.length))]}`;
+    c.lineJoin = "butt";
 
     setPrimary = Math.random();
 
@@ -180,8 +160,7 @@ function resetCanvas() {
         setBackground(`rgba(255, 255, 255)`);
     }
 
-    c.lineCap = `${capArray[Math.floor(Math.random() * (capArray.length))]}`;
-    c.lineJoin = "butt";
+
 
     cR = Math.random() * 2;
     cG = Math.random() * 2;
