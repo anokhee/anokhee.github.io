@@ -37,6 +37,17 @@ h2 {
     margin-bottom: .5em;
 }
 
+.all-works-gallery {
+    margin: 0 auto;
+    margin-top: 5em;
+    width: 77%;
+
+}
+
+.all-works-gallery .row .col {
+    padding: 3.5px;
+}
+
 .tagline {
     font-family: 'Inter', sans-serif;
     color: #575757;
@@ -109,10 +120,9 @@ ul {
 }
 
 .main {
-    width: 55%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2.5rem;
 }
 
 .homepage {
@@ -197,6 +207,9 @@ ol {
 }
 
 #scrollDown {
+    align-items: center;
+    border: 2px solid #111;
+    border-radius: 50%;
     display: flex;
     font-size: 30px;
     justify-content: center;
@@ -205,8 +218,8 @@ ol {
     text-decoration: none;
     top: 525px;
     z-index: 999;
-    width: 10%;
-    height: 80px;
+    width: 40px;
+    height: 40px;
 }
 
 a#scrollDown {
@@ -248,10 +261,33 @@ a#scrollDown {
     font-weight: 300;
 }
 
+.social-submenu {
+    width: 100%; 
+}
+
+.social-submenu ul {
+    display: flex;
+    float: right;
+}
+
+.social-submenu ul li {
+    font-family: 'Inconsolata', monospace;
+    margin-left: 20px;
+}
+
+.social-submenu ul li a {
+    border-bottom: 8px solid hsl(221, 91%, 95%);
+    color: #2365f5;
+    text-decoration: none;
+}
 .subheading {
     font-family: 'Inter', sans-serif;
     font-size: 20px;
     font-weight: 600;
+}
+
+.thanks {
+    opacity: 20%;
 }
 
 #top-navigation {
@@ -261,9 +297,11 @@ a#scrollDown {
     position: fixed;
     top: 0;
     transition: top 0.5s;
-    width: 100%;
     z-index: 999;
+    width: 100%;
+    margin: 0 auto;
 }
+
 
 /* Style the navbar links */
 #top-navigation a {
@@ -305,8 +343,9 @@ th {
 }
 
 .mono {
-    color: #757575;
+    color: #2365f5;
     font-family: 'Inconsolata', monospace;
+    font-weight: 100;
 }
 
 .game-name {
@@ -356,7 +395,7 @@ th {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: rgba(255, 255, 255, .40);
+    background-color: rgba(255, 255, 255, .20);
 }
 
 .hero-overlay h1 {
@@ -398,15 +437,15 @@ th {
 }
 
 #botanicals {
-    background-image: linear-gradient(#9b3f3f, #7d487a);
+    background-image: linear-gradient(#701e30, #471f45);
 }
 
 #botanicals p {
-    color: #eaeaea;
+    color: #f5efef;
 }
 
 #botanicals h3 {
-    color: #F8F055;
+    color: #cac8a3;
 }
 
 #character-designer-ui {
@@ -433,6 +472,27 @@ th {
     color: #daf894;
 }
 
+#powf {
+    background-image: linear-gradient(#afa386, #89d46b);
+}
+
+
+#powf h3 {
+    color: #0f2b68;
+}
+
+
+#rigor-internship {
+    background-image: linear-gradient(#7a68bd, #4b5ca5);
+}
+
+#rigor-internship p {
+    color: #fcfcfc;
+}
+
+#rigor-internship h3 {
+    color: #b2e42a;
+}
 
 
 #botanicals-process {
@@ -476,6 +536,29 @@ th {
     width: 80%;
 }
 
+.view-demo-btn {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
+    border: 2px solid #111;
+    justify-content: center;
+    margin-top: 40px;
+    transition-duration: .25s;
+    width: 50%;
+}
+
+.view-demo-btn p {
+    padding-top: 15px;
+    height: 100%;
+}
+
+.view-demo-btn:hover {
+    opacity: 20%;
+    transition-duration: .25s;
+}
+
 
 @media only screen and (max-width: 800px) {
     canvas {
@@ -512,7 +595,8 @@ th {
         display: none;
     }
 
-    #top-navigation {
+    #top-navigation div {
         font-size: 16px;
+        width: 100% !important;
     }
 }

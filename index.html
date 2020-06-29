@@ -18,33 +18,40 @@
         <div style="width: 80%; margin: 0 auto;">
             <a href="./">Anokhee Jandhyala</a>
             <div class="float-right">
-                <a href="./all-works.html">Projects</a>
-                <a href="./about-me.html">About Me</a>
+                <!-- <a href="./all-works.html">All Projects</a> -->
+                <!-- <a href="./about-me.html">About Me</a> -->
             </div>
         </div>
     </div>
-    <div class="wrapper" onClick="resetCanvas()">
+    <div class="wrapper">
         <canvas id="myCanvas"></canvas>
-        <div class="hero-overlay">
+        <div class="hero-overlay" onClick="resetCanvas()">
             <div
                 style="display: flex; align-items: center; width: 45%; background-color:  rgba(255, 255, 255, .96); padding: 50px;">
                 <div style="width: 85%; margin: 0 auto;">
                     <h3>Hello, beautiful.</h3>
                     <h1 style="font-size: 2.5em;">I'm Anokhee.</h1>
-                    <h3 class="hero-tagline">An interdisciplinary <span class="bold">Designer & Developer</span>
+                    <h3 class="hero-tagline">An <span class="bold">interdisciplinary designer & creative coder</span>
                         passionate about
                         creating delightful experiences for
                         the Web.</h3>
+                    <div class="social-submenu">
+                        <ul>
+                            <li><a href="https://github.com/anokhee/" target="_blank">GitHub</a></li>
+                            <li><a href="https://linkedin.com/in/anokhee-jandhyala/" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://vimeo.com/user88356330" target="_blank">Vimeo</a></li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
         </div>
-        <div><a href="#selectedWorks" id="scrollDown">&darr;</a></div>
+        <div><a href="#selected-works" id="scrollDown">&darr;</a></div>
     </div>
 
 
     </div>
-    <div class="main homepage" id="selectedWorks">
+    <div class="main homepage" id="selected-works">
         <div class="paragraph-spacer"></div>
         <h3 class="subheading mono">Selected Works &darr;</h3>
         <div class="row project-icon" onClick="window.open('./works/avatar-maker.html', '_self')">
@@ -52,7 +59,7 @@
             <div class="overlay" id="character-designer-ui">
                 <div style="display: block;">
                     <p>Character Designer UI</p>
-                    <h3>Product Design (2020)</h3>
+                    <h3>Product & UI Design (2020)</h3>
                 </div>
             </div>
         </div>
@@ -74,25 +81,18 @@
                 </div>
             </div>
         </div>
+        <div class="row project-icon" onClick="window.open('./works/internship-at-rigor.html', '_self')">
+            <img style="background-color: #efefef" src="./imgs/rigor-internship/rigor-icon.png">
+            <div class="overlay" id="rigor-internship">
+                <div style="display: block;">
+                    <p>Analytics Redesign at Rigor</p>
+                    <h3>UX Engineering (2019)</h3>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="paragraph-spacer"></div>
 </body>
-<script>
-    var spy = new Gumshoe('#side-navigation a');
-    const mySiema = new Siema();
-    document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
-    document.querySelector('.next').addEventListener('click', () => mySiema.next());
-
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("top-navigation").style.top = "0";
-        } else {
-            document.getElementById("top-navigation").style.top = "-50px";
-        }
-        prevScrollpos = currentScrollPos;
-    }
-</script>
 <script src="assets/hero-canvas.js"></script>
 
 </html>

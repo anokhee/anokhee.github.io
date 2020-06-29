@@ -5,74 +5,34 @@ height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
 
-var mouseX;
-var mouseY;
-var pMouseX;
-var pMouseY;
-var hoverLink = false;
+var mouseX, mouseY, pMouseX, pMouseY;
 let rX, gX, bX, cR, cG, cB;
 let redPrimary, yellowPrimary, bluePrimary;
-let setPrimary;
-let coeff;
+let setPrimary, coeff, iterations;
 let capArray = ['butt', 'round', 'square'];
 
 setup();
+
 function setup() {
     c.clearRect(0, 0, canvas.width, canvas.height);
-    width = window.innerWidth;
-    height = window.innerHeight;
-    canvas.width = width;
-    canvas.height = height;
-    setPrimary = Math.random();
-    c.lineCap = `${capArray[Math.floor(Math.random() * (capArray.length))]}`;
-    c.lineJoin = "butt";
-    coeff = Math.random() * (.000065 - .000005) + .000005;
-
-    if (setPrimary >= 0 && setPrimary <= .2) {
-        redPrimary = true;
-    } else if (setPrimary >= .21 && setPrimary <= .40) {
-        yellowPrimary = true;
-    } else if (setPrimary >= .41 && setPrimary <= 1) {
-        bluePrimary = true;
-    }
-
-    if (redPrimary) {
-        rX = Math.random() * (255 - 200) + 200;
-        gX = Math.random() * (255 - 180) + 180;
-        bX = Math.random() * (255 - 150) + 150;
-    } else if (yellowPrimary) {
-        rX = Math.random() * (255 - 250) + 250;
-        gX = Math.random() * (255 - 250) + 250;
-        bX = Math.random() * (180 - 100) + 100;
-    } else if (bluePrimary) {
-        rX = Math.random() * (255 - 100) + 100;
-        gX = Math.random() * (150 - 0) + 0;
-        bX = Math.random() * (255 - 180) + 180;
-    }
-
-    cR = Math.random() * 2;
-    cG = Math.random() * 2;
-    cB = Math.random() * 2;
-
+    resetCanvas();
     draw();
 };
 
-
 function draw() {
-    let r = rX - (mouseX + mouseY) / 5;
-    let g = gX - (mouseX + mouseY) / 5;
-    let b = bX - (mouseX + mouseY) / 10;   
     setBackground(`rgba(255, 255, 255, .055)`);
 
-    for (i = 1; i <= 4; i++) {
+    let r = rX - (mouseX + mouseY) / 5;
+    let g = gX - (mouseX + mouseY) / 5;
+    let b = bX - (mouseX + mouseY) / 10;
+
+    for (i = 1; i <= iterations; i++) {
         if (i != 1) {
             c.lineWidth = ((mouseX * mouseY)) * (i * coeff);
             c.strokeStyle = `rgba(${(cR * (i - 1)/2) * rX}, ${(cG * (i-1)/2) * gX}, ${(cB * (i-1)/2) * bX}`;
         } else {
-            c.strokeStyle = `rgba(${r}, ${g}, ${b}, .80)`;
+            c.strokeStyle = `rgba(${r}, ${g}, ${b}, .75)`;
         }
-
-    
 
         c.beginPath();
         c.moveTo(pMouseX / i, pMouseY / i);
@@ -114,17 +74,15 @@ document.onmousemove = function (e) {
     pMouseY = mouseY;
     mouseX = e.clientX;
     mouseY = e.clientY;
-    setPrimary = Math.random();
 };
 
 function resetCanvas() {
-    console.log('hi')
     c.clearRect(0, 0, canvas.width, canvas.height);
-
     c.lineCap = `${capArray[Math.floor(Math.random() * (capArray.length))]}`;
-    c.lineJoin = "butt";
-    setPrimary = Math.random();
 
+    coeff = Math.random() * (.00015 - .000023) + .0000023;
+    iterations = Math.floor(Math.random() * (5 - 1) + 1);
+    setPrimary = Math.random();
 
     if (setPrimary >= 0 && setPrimary <= .33) {
         redPrimary = true;
@@ -134,7 +92,6 @@ function resetCanvas() {
         bluePrimary = true;
     }
 
-   
     if (redPrimary) {
         rX = Math.random() * (255 - 200) + 200;
         gX = Math.random() * (255 - 180) + 180;
@@ -148,7 +105,6 @@ function resetCanvas() {
         gX = Math.random() * (150 - 0) + 0;
         bX = Math.random() * (255 - 180) + 180;
     }
-
 
     cR = Math.random() * 2;
     cG = Math.random() * 2;
