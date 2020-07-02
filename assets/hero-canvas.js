@@ -21,7 +21,6 @@ function setup() {
 
 function draw() {
     setBackground(`rgba(255, 255, 255, .055)`);
-
     let r = rX - (mouseX + mouseY) / 5;
     let g = gX - (mouseX + mouseY) / 5;
     let b = bX - (mouseX + mouseY) / 10;
