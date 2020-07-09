@@ -25,6 +25,8 @@ function draw() {
     let g = gX - (mouseX + mouseY) / 5;
     let b = bX - (mouseX + mouseY) / 10;
 
+    makeGrid();
+
     for (i = 1; i <= iterations; i++) {
         if (i != 1) {
             c.lineWidth = ((mouseX * mouseY)) * (i * coeff);
@@ -60,6 +62,21 @@ function draw() {
     setTimeout(draw, 10);
 };
 
+function makeGrid(){
+    for(let i = 0; i < width/20; i++){
+        c.strokeStyle = 'rgba(200, 230, 240, .25)';
+        c.lineWidth = '0.25';
+        c.beginPath();
+        c.moveTo(i * 20, 0);
+        c.lineTo(i * 20, height);
+        c.stroke();
+        c.beginPath();
+        c.moveTo(0, i * 20);
+        c.lineTo(width, i * 20);
+        c.stroke();
+    }
+}
+
 function setBackground(color) {
     c.beginPath();
     c.rect(0, 0, width, height);
@@ -79,7 +96,7 @@ function resetCanvas() {
     c.clearRect(0, 0, canvas.width, canvas.height);
     c.lineCap = `${capArray[Math.floor(Math.random() * (capArray.length))]}`;
 
-    coeff = Math.random() * (.00015 - .000023) + .0000023;
+    coeff = Math.random() * (.00015 - .00005) + .000005;
     iterations = Math.floor(Math.random() * (5 - 1) + 1);
     setPrimary = Math.random();
 

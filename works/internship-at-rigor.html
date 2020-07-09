@@ -59,7 +59,7 @@
                         could be improved and design/develop a functional prototype to support it.
                     </p>
                     <p>
-                        At the end of the two weeks, I presented the idea to the engineering team. The goal was not to
+                        At the end of the two weeks, I presented the idea to the engineering team. The goal wasn't to
                         deliver a production-ready new feature, but to spark discussion about user needs while applying
                         modern web design paradigms to the existing app.</p>
 
@@ -67,10 +67,12 @@
                     <h2>Problem Space</h2>
                     <h3 class="subheading">Reimagining the analytics experience.</h3>
                     <p>
-                        After noticing several mentions in Rigor’s product Slack channel, I wanted to modernize the
-                        following analytics chart: 
-
-                        This chart appears on the Results page of one of Rigor’s most popular features. It displays
+                        After noticing several mentions in Rigor’s product-related Slack channel, I wanted to modernize
+                        the
+                        following analytics chart, appearing on the Results page of one of Rigor's most popular
+                        features.</p>
+                    <p>
+                        It displays
                         information about various performance metrics based on users' custom configurations, then
                         compares each metric with its results from the previous run.
                     </p>
@@ -80,17 +82,22 @@
                 <div class="section" id="research">
                     <h2>Research</h2>
                     <h3 class="subheading">Identifying pain points.</h3>
-                    <p>My first step was to identify the major pain points of the current implementation. Due to the 2-week time constraint, I wasn't able to conduct user interviews to understand the
-                    customers' mindsets. Luckily, I was able to rely on my supervisor, coworkers, and information
-                    gleaned from product tickets in JIRA for insight about user frustrations.</p>
+                    <p>My first step was to identify the major pain points of the current implementation. Due to the
+                        2-week time constraint, I wasn't able to conduct user interviews to understand the
+                        customers' mindsets, but with more time would have prioritized this. Luckily, I was able to rely
+                        on my supervisor, coworkers, and information
+                        gleaned from support tickets in JIRA for insight about user frustrations.</p>
 
-                    <p>Because I would program the prototype into Rigor's existing React application, the best way to plan
-                    this project was to break the current chart down into its most basic components while proposing
-                    guiding questions along the way.</p>
+                    <p>Because I would program the prototype into Rigor's existing React application, I figured the best
+                        way to
+                        plan
+                        this project was to break the current chart down into its most basic components while proposing
+                        guiding questions along the way.</p>
                     <img src="../imgs/rigor-internship/rigor-pain-points.png">
-                    
-                    <p>After doing this, I could construct a foundation for the information architecture. I listed handful
-                    of pain points that would serve as milestones while designing and developing this project:</p>
+
+                    <p>With this I laid the foundation for the information architecture. I listed
+                        handful
+                        of pain points to serve as milestones while designing and developing this project:</p>
                     <ul class="bulleted-list">
                         <li>Appearance of horizontal scrollbar when a user selects too many metrics
                         </li>
@@ -117,11 +124,11 @@
                     <h3 class="subheading">Charts that answer business questions.</h3>
                     <p>
                         My favorite part of this project was figuring out how charts can be used to answer business
-                        questions, rather than exist only for the sake of interactivity and visualization. Because bar
-                        charts are widely used and the data from this project could be plotted along an X and Y axis
-                        easily,
-                        I stuck with using them for this prototype.  With more time, I would have loved to have explored
-                        these questions further.
+                        questions, rather than exist only for the sake of interactivity and visualization on a page. Bar
+                        charts are ubiquitous and all this data could be plotted along an X and Y axis
+                        easily, so
+                        I stuck with using them for this prototype (versus pie charts, NIghtingale charts, and all the other types of charts I considered). With more time, I would have loved to have explored
+                        these business questions further.
                     </p>
                     <img src="../imgs/rigor-internship/rigor-charts-that-answer-questions.png">
                     <div class="paragraph-spacer-sm"></div>
@@ -153,7 +160,7 @@
                     <img src="../imgs/rigor-internship/rigor-alexa-data.png">
                     <div class="paragraph-spacer-sm"></div>
                     <p>After speaking with my supervisor, he suggested that the data might be more meaningful to users
-                        if it was converted into percentiles based on Amazon Web Services' Alexa Top Sites data.  To
+                        if it was converted into percentiles based on Amazon Web Services' Alexa Top Sites data.To
                         break down the percentile ranks from the 0th - 99th, we configured AWS to generate a JSON file
                         with discrete data.
                     </p>

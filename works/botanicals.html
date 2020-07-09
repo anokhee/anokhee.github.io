@@ -29,14 +29,16 @@
     </div>
     <div class="main">
         <div class="section">
+            <div class="paragraph-spacer"></div>
             <h3>Web Development, Generative Graphics | 2020</h3>
             <h1>Fictional Botanicals</h1>
-            <div class="view-demo-btn" onClick="window.open('https://anokhee.github.io/botanicals/', target='_blank')"><p>View Demo</p></div>
+            <div class="view-demo-btn" onClick="window.open('https://anokhee.github.io/botanicals/', target='_blank')">
+                <p>View Demo</p>
+            </div>
         </div>
-        <div class="paragraph-spacer"></div>
-
 
         <div class="section" id="overview">
+            <div class="paragraph-spacer"></div>
             <h2>Overview</h2>
             <div class="row">
                 <div class="col" style="width: 65%;">
@@ -83,7 +85,6 @@
                 </div>
             </div>
         </div>
-
         <div class="paragraph-spacer"></div>
         <div class="paragraph-spacer"></div>
         <div class="section" id="background">
@@ -108,13 +109,6 @@
         <h3>Basic Fractal Trees
         </h3>
         <figure><img src="../imgs/botanicals/version01-fractals.png">
-            <!-- <figcaption>Like many roller coaster rides and great romances, this project began with a
-                line...
-                <span style="font-size: .9em">and then another line,</span><span style="font-size: .8em"> and
-                    then
-                    another line, </span><span style="font-size: .7em">and then another line,</span>
-                <span style="font-size: .6em"> and then another, </span></p>
-            </figcaption> -->
         </figure>
         <p>
             These fractals look cute and plantlike, but they resemble trees more than they resemble
@@ -135,6 +129,7 @@
             is met, the ruleset is continuously, recursively applied to the original axiom. The result is a
             complex character string serving as an instruction set:
         </p>
+        <figure><img src="../imgs/botanicals/l-systems-graphic.png"></figure>
 
         <div class="paragraph-spacer"></div>
 
@@ -142,26 +137,21 @@
         <img src="../imgs/botanicals/version03-skeletons.png">
         <p>By adding a unique symbol to the end of an L-Systems rule, I was able to write configurations for
             a flower to appear at certain endpoints of the stem.
-            <br><br>
-            I found the best way to create a wide variety of flower shapes was to draw a continuous Bezier
-            curve looped x number of times around a central point. To figure out which randomization
-            parameters resulted in the nicest-looking flowers, I created a separate program.
         </p>
+        <!-- <div class="paragraph-spacer"></div>
+        <div class="row">
+            <div class="col" style="width: 45%;">
+                <h3 class="subheading">Flower Editor</h3>
+                <p>I found the best way to create a wide variety of flower shapes was to draw a continuous Bezier
+                    curve looped x number of times around a central point. To figure out which randomization
+                    parameters resulted in the nicest-looking flowers, I created a separate program.</p>
+            </div> -->
+        <!-- <div class="col" style="width: 55%;"><img src="../imgs/botanicals/flower-editor.png"></div> -->
         <div class="paragraph-spacer"></div>
         <div class="paragraph-spacer"></div>
     </div>
-    <!-- <div class="main">
-        <div class="paragraph-spacer"></div>
-        <div class="section" id="conclusion">
-            <h2>Concluding Notes</h2>
 
-            <h3>Object-oriented sketching.</h3>
-            <h3>The flower debugger.</h3>
-            <h3>Unnatural-looking flowers.</h3>
-        </div>
-        <p><a data-scroll href="#top">Back to the top</a></p>
-        </main>
-    </div> -->
+    </div>
 </body>
 <script>
     var spy = new Gumshoe('#side-navigation a');

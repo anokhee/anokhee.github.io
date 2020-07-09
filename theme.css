@@ -59,7 +59,7 @@ h2 {
 .hero-img {
     margin: 0 auto;
     margin-top: 5em;
-    width: 65%;
+    width: 75%;
 }
 
 h3 {
@@ -120,14 +120,14 @@ ul {
 }
 
 .main {
-    width: 60%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .homepage {
     margin-top: 50vh;
-    width: 70%;
+    width: 80%;
     z-index: 0;
 }
 
@@ -254,6 +254,7 @@ a#scrollDown {
     font-weight: bold;
     margin: 0 auto;
     width: 30%;
+    padding: 50px;
 }
 
 .skills ul {
@@ -262,7 +263,7 @@ a#scrollDown {
 }
 
 .social-submenu {
-    width: 100%; 
+    width: 100%;
 }
 
 .social-submenu ul {
@@ -280,6 +281,7 @@ a#scrollDown {
     color: #2365f5;
     text-decoration: none;
 }
+
 .subheading {
     font-family: 'Inter', sans-serif;
     font-size: 20px;
@@ -437,7 +439,7 @@ th {
 }
 
 #botanicals {
-    background-image: linear-gradient(#701e30, #471f45);
+    background-image: linear-gradient(#862e41, #471f45);
 }
 
 #botanicals p {
@@ -483,7 +485,7 @@ th {
 
 
 #rigor-internship {
-    background-image: linear-gradient(#7a68bd, #4b5ca5);
+    background-image: linear-gradient(#7a68bd, #989fc0);
 }
 
 #rigor-internship p {
@@ -494,9 +496,22 @@ th {
     color: #b2e42a;
 }
 
+#visual-synthesizer {
+    background-image: linear-gradient(#007575, #5844a0);
+}
+
+#visual-synthesizer p {
+    color: #fff;
+}
+
+
+#visual-synthesizer h3 {
+    color: #cff012;
+}
+
 
 #botanicals-process {
-    background: rgb(5, 18, 24);
+    background: rgb(14, 13, 14);
     font-size: 1.15rem;
     line-height: 1.5em;
     margin: 0 auto;
@@ -508,7 +523,7 @@ th {
 #botanicals-process h2,
 #botanicals-process h3,
 #botanicals-process h4 {
-    color: #fbabca;
+    color: #efefef;
     margin: 0 auto;
     text-align: center;
 }
@@ -521,8 +536,8 @@ th {
 }
 
 #botanicals-process p {
-    color: #dfdfdf;
-    font-family: 'Inconsolata', serif;
+    color: #efefef;
+    font-family: 'Noto Serif', serif;
     font-weight: 100;
     margin: 0 auto;
     width: 80%;
@@ -563,6 +578,11 @@ th {
 @media only screen and (max-width: 800px) {
     canvas {
         display: none;
+    }
+
+    .skills {
+        padding: 0px;
+        margin-top: 2.5rem;
     }
 
     .grid {

@@ -46,7 +46,10 @@
                         The functionality is purposely minimal. I focused on the variety and visual appeal of
                         the output versus on the flashiness of the application itself.
                     </p>
-                    <div class="view-demo-btn" onClick="window.open('https://anokhee.github.io/generative-landscapes/', target='_blank')"><p>View Demo</p></div>
+                    <div class="view-demo-btn"
+                        onClick="window.open('https://anokhee.github.io/generative-landscapes/', target='_blank')">
+                        <p>View Demo</p>
+                    </div>
                 </div>
 
                 <div class="col skills">
@@ -85,34 +88,42 @@
             <h2>Process</h2>
             <div class="paragraph-spacer-sm"></div>
             <h3 class="subheading">Minimal, but impactful.</h3>
-            <p> As mentioned in the introduction, my goal was to keep the scope of this project as small as
-                possible while focusing on creating
-                output pretty and unique enough to keep users entertained for a little while.
-            </p>
             <div class="row">
                 <div class="col"><img src="../imgs/landscape-palettes/sketch-desktop.png"></div>
                 <div class="col"><img src="../imgs/landscape-palettes/sketch-mobile.png"></div>
             </div>
 
+            <p>During sketching, I aimed to keep the scope of this project as small as
+                possible. I wanted to focus mostly on generating
+                output interesting and unique enough to keep users entertained for a little while.
+            </p>
+
             <div class="paragraph-spacer"></div>
             <h3 class="subheading">Mountains: Layers of 1D Perlin Noise</h3>
-            <p>By applying a Perlin noise function with varying levels of noise detail to vector coordinates across the
-                x and y axes, I was able to achieve output resembling a mountain range fading into the distance.
-            </p>
-            <p> p5.js's built-in noise() function is powerful, but requires significant tweaking to achieve a desired
-                look. I determined the "sweet spot" to base the mountains off to exist somewhere between images 4 and 7
-                (or 6 and 8 for mobile users).</p>
             <div class="row">
                 <div class="col" style="padding:5px"><img src="../imgs/landscape-palettes/perlin-noise-1.png">
                 </div>
                 <div class="col" style="padding:5px"><img src="../imgs/landscape-palettes/perlin-noise-2.png">
                 </div>
             </div>
+            <p>By applying a Perlin noise function with varying levels of noise detail to vector coordinates across the
+                x and y axes, I was able to achieve output resembling a mountain range fading into the distance.
+            </p>
+            <p> p5.js's built-in noise() function is powerful, but requires significant tweaking to achieve a desired
+                look. I determined the "sweet spot" to base the mountains off to exist somewhere between images 4 and 7
+                (or 6 and 8 for mobile users).</p>
 
-            <!-- <h4>Starry Skies</h4>
-            <h4>The Moon Phases</h4>
-            <h4>Color Palettes</h4> -->
+            <div class="paragraph-spacer"></div>
+            <h3 class="subheading">Color Palette Generation</h3>
+            <div class="row">
+                <img src="../imgs/landscape-palettes/color-palettes-graphic.png">
+            </div>
 
+            <div class="paragraph-spacer"></div>
+            <h3 class="subheading">Moon Phases: Two Circles</h3>
+            <div class="row">
+                <img src="../imgs/landscape-palettes/moon-phases.png">
+            </div>
         </div>
         <div class="paragraph-spacer"></div>
         <div class="section" id="conclusion">
@@ -127,8 +138,13 @@
                     graphics to the talent of a graphic designer?</li>
                 <li> How special is uniqueness, really, when it's produced with an algorithm?</li>
             </ul>
-            <p>I don't know.</p>
+            <div class="paragraph-spacer-sm"></div>
+            <p class="bold">I don't know!</p>
         </div>
+        <div class="paragraph-spacer"></div>
+        <h1 class="thanks">Thanks for reading! :)</h1>
+        <div class="paragraph-spacer"></div>
+
         <p><a data-scroll href="#top">Back to the top</a></p>
     </div>
 </body>

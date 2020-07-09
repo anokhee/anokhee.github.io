@@ -56,8 +56,8 @@
                     <h2>A bit of background.</h2>
                     <p>
                         “Dress up game” was a label once attached to most games intended for young girls. It encompassed
-                        everything from actual dress up games to home decoration games and RPGs with female
-                        protagonists. The fun I had playing dress up games as a kid had a huge impact on my interest in
+                        everything from actual dress up games to home decoration games to RPGs with female
+                        protagonists. The fun I had with these games as a kid had a huge impact on my interest in
                         art and coding. Sadly, the rise of mobile-first design paradigms and deprecation of Flash killed
                         the cultural relevance of dress up games in a web context.
                     </p>
@@ -78,7 +78,8 @@
                             out my open source repo on GitHub!</a>
                     </p>
                     <p>&rarr; Or, you can <a class="inline"
-                            href="https://anokhee.github.io/face-generator/web-demo">view the live demo here.</a>
+                            href="https://anokhee.github.io/face-generator/web-demo">play around with the live prototype
+                            here.</a>
                     </p>
 
                     <div class="paragraph-spacer"></div>
@@ -99,12 +100,12 @@
                     <p>Unfortunately, designing an alternative UI wasn’t so straightforward. There was a disappointing
                         lack
                         of character designers available to peruse on sites like Dribbble and Behance. To make
-                        matters worse, many of the popular dress up games on the App Store were either difficult to use,
+                        matters worse, many of the popular dress up games on the App Store were difficult to use,
                         unstable, or both.
                     </p>
                     <p>
-                        It was clear that web-based character designers, along with the .swf file extension and sexy
-                        glitter graphics, are just another relic of Web 2.0. <span class="bold">Without a
+                        It was clear that browser-based character designers, along with the .swf file extension and sexy
+                        glitter graphics, are just another forgotten relic of Web 2.0. <span class="bold">Without a
                             mobile-friendly standard for
                             character design UIs in 2020, I decided to make one myself.</span>
                     </p>
@@ -114,8 +115,9 @@
                     <h2>Research</h2>
                     <p>
                         While exploring popular character designers, I often felt as though the UI was tacked on as an
-                        afterthought, emphasizing graphics and artistry over the experience of users. I
-                        wanted to design according to my target audience’s preferences. Even if it meant continuously
+                        afterthought, emphasizing graphics and artistry over ease of use. To avoid falling into this
+                        trap, I
+                        aimed to design according to my target audience’s preferences... even if it meant continuously
                         reiterating on
                         favorable aesthetics or compromising on my own opinions about usability.
                     </p>
@@ -165,7 +167,8 @@
 
 
                     <div class="paragraph-spacer"></div>
-                    <h3 class="subheading">Analyzing Popular Character Designers</h3>
+                    <h3 class="subheading">Comparative analysis of popular avatar makers.</h3>
+                    <p></p>
 
                     <table>
                         <tr>
@@ -244,12 +247,15 @@
                         <div style="padding-left: 20px">
                             <p>
                                 <span style="font-size: 16px;">
-                                    It can be hard to gauge someone’s true sentiment based on a text post alone.
+                                    It's impossible to know who's behind the keyboard posting an anonymous comment, and
+                                    even more impossible to
+                                    understand their motivations for posting. It can be hard to gauge someone’s true
+                                    sentiment based on a text post alone, so I took most of them with a grain of salt.
                                 </span>
                             </p>
                         </div>
                     </p>
-
+                    <div class="paragraph-spacer-xs"></div>
                     <p>
                         <h4 style="padding-left: 20px; text-indent: -20px; ">&rarr; <span class="bold">Gamers are
                                 complex, picky people.</span></h4>
@@ -259,7 +265,8 @@
                                     Realizing the same could be said for film buffs, avid readers, and foodies, I
                                     believe it rings
                                     especially true for gamers. For example, even if someone believes an update was
-                                    an overall improvement, they may still strongly prefer the feature it replaced.
+                                    an overall improvement, they may strongly prefer the feature it replaced
+                                    nonetheless.
                                     Reasons may
                                     include
                                     nostalgia, preferable aesthetics, aversion to change, contrarian personality, etc.
@@ -267,7 +274,7 @@
                             </p>
                         </div>
                     </p>
-
+                    <div class="paragraph-spacer-xs"></div>
                     <p>
                         <h4 style="padding-left: 20px; text-indent: -20px; ">&rarr; <span class="bold">Someone’s overall
                                 impression of a game can bias their opinion of a single feature. </span></h4>
@@ -278,51 +285,66 @@
                                     I posted a thread on the Sims subreddit asking how they felt about range sliders in
                                     Sims 3 vs Sims 4. Many UI complaints related to factors unrelated to the inherent
                                     nature of the slider and more to their opinion of the game as a whole . When asked
-                                    specifically about UI sliders, one user said she preferred Sims 4 UI over Sims 3.
-                                    Her reason? Because there was a greater variety of body shapes available.
+                                    specifically about UI sliders, one user said she preferred Sims 4 UI over Sims 3,
+                                    her reason being
+                                    because there was a greater variety of body shapes available.
                                 </span>
                             </p>
                         </div>
-                    </p>
 
-                    <div class="paragraph-spacer"></div>
-                    <h3 class="subheading">Narrowing the target audience.</h3>
-                    <p>
-                        While conducting interviews and usability tests, I noticed generally consistent feedback. In
-                        fact,
-                        all but one person seemed satisfied with the final design after a few iterations.
-                    </p>
-                    <p>
-                        My goal was to take all feedback into consideration to create something that worked for
-                        everyone.
-                        But I couldn’t justify redesigning successful features to meet the adamance of one user.</p>
-                    <p>
-                        That’s when it hit me: his favorite game is Destiny, a first person shooter game with triple-A
-                        graphics. This user was outside of my target demographic. I had to rethink my original research
-                        criteria
-                    </p>
+                        <div class="paragraph-spacer"></div>
+                        <h3 class="subheading">Narrowing the target audience.</h3>
+                        <p>
+                            While conducting interviews and usability tests, I noticed generally consistent feedback. In
+                            fact,
+                            all but one person seemed satisfied with the final design after a few iterations.
+                        </p>
+                        <p>
+                            My goal was to take all feedback into consideration to create something that worked for
+                            everyone.
+                            But I couldn’t justify redesigning successful features to meet the adamance of one user.</p>
+                        <p>
+                            That’s when it hit me: his favorite game is Destiny, a first person shooter game with
+                            triple-A
+                            graphics. This user was outside of my target demographic. I had to rethink my original
+                            research
+                            criteria.
+                        </p>
+
+                        <!-- <div class="paragraph-spacer"></div>
+                        <h3 class="subheading">Quantic Foundry's gamer motivation model.</h3>
+
+                        <div class="paragraph-spacer"></div>
+                        <h3 class="subheading">Revised personas.</h3> -->
 
                 </div>
                 <div class="paragraph-spacer"></div>
                 <div class="section" id="ideation-testing">
                     <h2>Ideation</h2>
+                    <div class="paragraph-spacer-sm"></div>
+                    <h3 class="subheading">Sketches</h3>
+                    <p>After researching the target user base and developing personas to relflect it, I started
+                        sketching. I kind of had an idea of what I wanted the aesthetic and UI to look like overall, but
+                        I wasn't yet sure
+                        how everything would flow together as an experience.</p>
 
                     <img src="../imgs/avatar-maker-ux/sketches-1.png">
                     <img src="../imgs/avatar-maker-ux/sketches-2.png">
 
                     <div class="paragraph-spacer-sm"></div>
                     <h3 class="subheading">Feature Flow</h3>
+                    <p>When determining the user flow, I began by outlining the 5 main features and then detailing them
+                        one by one.
+                    </p>
                     <figure>
                         <img src="../imgs/avatar-maker-ux/user-flow.png">
                         <figcaption><span class="bold">Figure 03.</span> Full feature flow.</figcaption>
                     </figure>
-                    <p>When determining the user flow, I began by outlining the 5 main features.
-                    </p>
                     <p>
                         I wanted the character design process to be open-ended and flexible, but not without a sense of
                         order. The goal was to design the UI primarily around a linear happy path, leading users from
                         start to finish. Users should additionally have the option to freely navigate between the 5 main
-                        features and their sub-navigation menus from anywhere in the app.
+                        features and their sub-navigation menus from anywhere within the app.
                     </p>
                     <figure>
                         <img src="../imgs/avatar-maker-ux/happy-path.png">
@@ -334,8 +356,9 @@
                     <img src="../imgs/avatar-maker-ux/low-fi-hero-img.png">
                     <div class="paragraph-spacer-sm"></div>
                     <p>After several iterations of low-fidelity testing, participants said the design made sense
-                        overall. Users felt good about iconography "instructing" them through the character design
-                        process and the flexibility of the feature flow. However, there were a few features that
+                        overall. They felt good about iconography "instructing" them through the character design
+                        process and appreciatedthe flexibility of the feature flow. However, there were a few features
+                        that
                         received
                         mixed/negative feedback. </p>
 
@@ -346,26 +369,20 @@
                         familiar with them! With this in mind, I created two initial designs:
                     </p>
                     <div class="row">
-                        <div class="col" style="display: flex; align-items: center;">
+                        <div class="col" style="display: block; align-items: center; padding: 2px;">
                             <img src="../imgs/avatar-maker-ux/low-fi-slider-1.png">
-                        </div>
-                        <div class="col">
                             <p style="font-size: 15px; padding: 20px;"><span class="bold">-/+ Buttons only
                                 </span><br>When tapped, the value of the corresponding facial feature will increase or
                                 decrease by 1 unit. When held down, the value will increase or decrease until the user
                                 lets go.
                             </p>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col" style="display: flex; align-items: center;">
+                        <div class="col" style="display: block; align-items: center; padding: 2px;">
                             <img src="../imgs/avatar-maker-ux/low-fi-slider-2.png">
-                        </div>
-                        <div class="col">
                             <p style="font-size: .88em; padding: 20px;"><span class="bold">Sliders AND +/- buttons
-                                </span><br>Users use the range slider to select a value. For
-                                precision, they can tap the 'increase' and 'decrease' icons until they get the exact
-                                value they want. </p>
+                            </span><br>Users use the range slider to select a value. For
+                            precision, they can tap the 'increase' and 'decrease' icons until they get the exact
+                            value they want. </p>
                         </div>
                     </div>
 
@@ -373,7 +390,7 @@
                     <h4 style="margin-bottom: 10px;" class="bold"><span class="bold">Chosen Design: Slider Only</span>
                     </h4>
                     <p>Users preferred sliders over buttons. In fact, after showing users both designs, I realized they
-                        didn't like buttons requiring multiple clicks at all. When I mentioned that buttons might come
+                        didn't like the buttons at all. When I mentioned that buttons might come
                         in handy for precision’s sake, one user insisted: "I <span class="italics">really</span> don’t
                         think I'll need the button. I
                         use a smaller slider to play around with Instagram filters!”</p>
@@ -525,8 +542,7 @@
 
                     <div class="paragraph-spacer"></div>
                     <h3 class="subheading">Background Editor</h3>
-                    <p>After designing their character, users can pick the color scheme. They can choose from a
-                        preselected palette or choose a custom color using the color wheel.
+                    <p>Users can select from a preset list of patterns and edit each pattern's color scheme using the color picker.
                     </p>
                     <img src="../imgs/avatar-maker-ux/final-background.png">
 
@@ -558,6 +574,9 @@
                     </p>
                     <img src="../imgs/avatar-maker-ux/final-randomize.png">
                 </div>
+                <div class="paragraph-spacer"></div>
+                <h1 class="thanks">Thanks for reading! :)</h1>
+                <div class="paragraph-spacer"></div>
                 <p><a data-scroll href="#top">Back to the top</a></p>
             </main>
         </div>
