@@ -6,7 +6,7 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     font-size: 1.05rem;
-    line-height: 1.8em;
+    line-height: 1.65em;
 }
 
 figure {
@@ -24,14 +24,13 @@ figcaption {
 
 h1 {
     color: #131313;
-    font-family: 'Noto Serif', serif;
+    font-family: 'Inconsolata', monospace;
     font-size: 35px;
     font-weight: 600;
-    margin-bottom: .35em;
+    margin-bottom: 20px;
 }
 
 h2 {
-    font-family: 'Noto Serif', sans-serif;
     font-size: 25px;
     font-weight: 600;
     margin-bottom: .5em;
@@ -46,32 +45,33 @@ h2 {
 
 .all-works-gallery .row .col {
     padding: 3.5px;
+
 }
 
 .tagline {
     font-family: 'Inter', sans-serif;
     color: #575757;
-    font-size: 22px;
+    font-size: 16px;
     font-style: oblique;
-    font-weight: 300;
 }
 
 .hero-img {
     margin: 0 auto;
     margin-top: 5em;
-    width: 75%;
+    width: 85%;
 }
 
 h3 {
-    font-family: 'Inconsolata', monospace;
-    font-size: 18px;
-    margin-bottom: 1.05em;
+    font-size: 16px;
 }
 
 .hero-tagline {
+    color: #141414;
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 2.25rem;
+    margin-bottom: .7rem;
 }
 
 .inline {
@@ -90,7 +90,7 @@ video {
 p {
     color: #353535;
     font-weight: 300;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 ol,
@@ -188,6 +188,7 @@ ol {
 .col {
     align-items: center;
     width: 50%;
+    margin: 5px !important;
 }
 
 .paragraph-spacer {
@@ -277,8 +278,9 @@ a#scrollDown {
 }
 
 .social-submenu ul li a {
-    border-bottom: 8px solid hsl(221, 91%, 95%);
-    color: #2365f5;
+    font-size: 15px;
+    border-bottom: 6px solid rgb(192, 185, 255);
+    color: #9e6dd7;
     text-decoration: none;
 }
 
@@ -293,7 +295,7 @@ a#scrollDown {
 }
 
 #top-navigation {
-    background: #fff;
+    background: rgba(255, 255, 255, .9);
     font-size: 1em;
     font-weight: 600;
     position: fixed;
@@ -397,13 +399,12 @@ th {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: rgba(255, 255, 255, .20);
+    background-color: rgba(255, 255, 255, .8);
 }
 
 .hero-overlay h1 {
-    font-family: 'Noto Serif', serif;
-    font-size: 2.9rem;
-    line-height: 1em;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
     font-weight: 800;
 }
 
@@ -414,24 +415,24 @@ th {
 
 .overlay p {
     color: black;
-    font-family: 'Noto Serif', serif;
-    font-size: 2.95rem;
-    line-height: 3rem;
+    font-size: 22px;
     font-weight: 800;
     text-align: center;
 }
 
 .overlay h3 {
     color: black;
-    font-family: 'Inconsolata', sans-serif;
-    font-size: 1.5em;
+    font-size: 16px;
+    text-transform: uppercase;
     font-weight: 800;
+    letter-spacing: .075em;
+    font-family: 'Inconsolata';
     text-align: center;
 }
 
 .project-icon:hover {
-    transform: translate(0px, -5px);
-    transition-duration: .5s;
+    transform: translate(0px, -2.5px);
+    transition-duration: .25s;
 }
 
 .project-icon:hover .overlay {
@@ -439,19 +440,19 @@ th {
 }
 
 #botanicals {
-    background-image: linear-gradient(#862e41, #471f45);
+    background-image: linear-gradient(#f2eee6, #eaeca0);
 }
 
 #botanicals p {
-    color: #f5efef;
+    color: #9c539a;
 }
 
 #botanicals h3 {
-    color: #cac8a3;
+    color: #718e34;
 }
 
 #character-designer-ui {
-    background-image: linear-gradient(#F26D6D, #ffd500);
+    background-image: linear-gradient(#2f292f, #5d1073);
 }
 
 #character-designer-ui p {
@@ -459,53 +460,31 @@ th {
 }
 
 #character-designer-ui h3 {
-    color: #5c5cf5;
+    color: #ccf55c;
 }
 
-#landscapes-palettes {
-    background-image: linear-gradient(#63af68, #6c52d6);
+#generative-landscapes {
+    background-image: linear-gradient(#6f6fec, #c55c7c);
 }
 
-#landscapes-palettes p {
+#generative-landscapes p {
     color: #e6f5e7;
 }
 
-#landscapes-palettes h3 {
+#generative-landscapes h3 {
     color: #daf894;
 }
 
-#powf {
-    background-image: linear-gradient(#afa386, #89d46b);
+#misc {
+    background-image: linear-gradient(#7a68bd, #bfc098);
 }
 
-
-#powf h3 {
-    color: #0f2b68;
-}
-
-
-#rigor-internship {
-    background-image: linear-gradient(#7a68bd, #989fc0);
-}
-
-#rigor-internship p {
-    color: #fcfcfc;
-}
-
-#rigor-internship h3 {
-    color: #b2e42a;
-}
-
-#visual-synthesizer {
-    background-image: linear-gradient(#007575, #5844a0);
-}
-
-#visual-synthesizer p {
+#misc p {
     color: #fff;
 }
 
 
-#visual-synthesizer h3 {
+#misc h3 {
     color: #cff012;
 }
 
@@ -513,7 +492,6 @@ th {
 #botanicals-process {
     background: rgb(14, 13, 14);
     font-size: 1.15rem;
-    line-height: 1.5em;
     margin: 0 auto;
     padding-left: 18%;
     padding-right: 18%;
@@ -547,7 +525,6 @@ th {
     color: rgb(202, 48, 48);
     font-family: 'Inconsolata';
     font-size: 1.15rem;
-    line-height: 1.5rem;
     width: 80%;
 }
 
@@ -599,7 +576,7 @@ th {
     }
 
     .main {
-        width: 90%;
+        width: 60%;
     }
 
     .row {
@@ -620,3 +597,38 @@ th {
         width: 100% !important;
     }
 }
+
+
+
+
+.hero-overlay h1 {
+    font-size: 100px;
+    text-align: center;
+    color: #2B59C3;
+    background: rgba(255, 255, 255, 0);
+    font-family: 'Emilys Candy', cursive;
+    font-weight: 700;
+    letter-spacing: .1em;
+    line-height: 7rem;
+    text-shadow: 5px 5px 0px #253C78,
+        9px 9px 0px #D36582,
+        13px 13px 0px #FFEECF,
+        17px 17px 0px #C9A690,
+        21px 21px 0px #FDCA40,
+        25px 25px 0px #efefef,
+        29px 29px 0px #efefef
+}
+
+/* .hero-overlay p {
+    text-align: center;
+    font-family: "Helvetica";
+    font-size: 0.8rem;
+} */
+
+/* .hero-overlay a {
+    color: #d52e3f;
+    text-decoration: none;
+    font-family: 'Niconne', cursive;
+    font-size: 1.2rem;
+
+} */

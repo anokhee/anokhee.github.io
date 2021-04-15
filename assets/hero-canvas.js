@@ -20,7 +20,7 @@ function setup() {
 };
 
 function draw() {
-    setBackground(`rgba(255, 255, 255, .055)`);
+    setBackground(`rgba(255, 255, 255, .05)`);
     let r = rX - (mouseX + mouseY) / 5;
     let g = gX - (mouseX + mouseY) / 5;
     let b = bX - (mouseX + mouseY) / 10;
@@ -96,7 +96,7 @@ function resetCanvas() {
     c.clearRect(0, 0, canvas.width, canvas.height);
     c.lineCap = `${capArray[Math.floor(Math.random() * (capArray.length))]}`;
 
-    coeff = Math.random() * (.00015 - .00005) + .000005;
+    coeff = Math.random() * (.00025 - .00015) + .00015;
     iterations = Math.floor(Math.random() * (5 - 1) + 1);
     setPrimary = Math.random();
 
