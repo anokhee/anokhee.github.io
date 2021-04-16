@@ -4,12 +4,14 @@ width = window.innerWidth;
 height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
+canvas.style.backgroundColor = 'rgba(215, 77, 69)';
 
 var mouseX, mouseY, pMouseX, pMouseY;
 let rX, gX, bX, cR, cG, cB;
 let redPrimary, yellowPrimary, bluePrimary;
 let setPrimary, coeff, iterations;
-let capArray = ['butt', 'round', 'square'];
+let capArray = ['round', 'butt'];
+
 
 setup();
 
@@ -20,19 +22,17 @@ function setup() {
 };
 
 function draw() {
-    setBackground(`rgba(255, 255, 255, .05)`);
+    setBackground('rgba(215, 77, 69, .035)');
     let r = rX - (mouseX + mouseY) / 5;
     let g = gX - (mouseX + mouseY) / 5;
     let b = bX - (mouseX + mouseY) / 10;
 
-    makeGrid();
-
     for (i = 1; i <= iterations; i++) {
+        c.lineWidth = ((mouseX * mouseY)) * (i * coeff);
         if (i != 1) {
-            c.lineWidth = ((mouseX * mouseY)) * (i * coeff);
             c.strokeStyle = `rgba(${(cR * (i - 1)/2) * rX}, ${(cG * (i-1)/2) * gX}, ${(cB * (i-1)/2) * bX}`;
         } else {
-            c.strokeStyle = `rgba(${r}, ${g}, ${b}, .75)`;
+            c.strokeStyle = `rgba(${r}, ${g}, ${b})`;
         }
 
         c.beginPath();
@@ -62,8 +62,8 @@ function draw() {
     setTimeout(draw, 10);
 };
 
-function makeGrid(){
-    for(let i = 0; i < width/20; i++){
+function makeGrid() {
+    for (let i = 0; i < width / 20; i++) {
         c.strokeStyle = 'rgba(200, 230, 240, .25)';
         c.lineWidth = '0.25';
         c.beginPath();
@@ -96,7 +96,7 @@ function resetCanvas() {
     c.clearRect(0, 0, canvas.width, canvas.height);
     c.lineCap = `${capArray[Math.floor(Math.random() * (capArray.length))]}`;
 
-    coeff = Math.random() * (.00025 - .00015) + .00015;
+    coeff = Math.random() * (.00005 - .000005) + .000005;
     iterations = Math.floor(Math.random() * (5 - 1) + 1);
     setPrimary = Math.random();
 
@@ -108,17 +108,17 @@ function resetCanvas() {
         bluePrimary = true;
     }
 
-    if (redPrimary) {
+   if (redPrimary) {
         rX = Math.random() * (255 - 200) + 200;
-        gX = Math.random() * (255 - 180) + 180;
-        bX = Math.random() * (255 - 150) + 150;
+        gX = Math.random() * (225 - 180) + 180;
+        bX = Math.random() * (225 - 150) + 150;
     } else if (yellowPrimary) {
         rX = Math.random() * (255 - 250) + 250;
         gX = Math.random() * (255 - 250) + 250;
-        bX = Math.random() * (180 - 100) + 100;
+        bX = Math.random() * (180 - 150) + 150;
     } else if (bluePrimary) {
-        rX = Math.random() * (255 - 100) + 100;
-        gX = Math.random() * (150 - 0) + 0;
+        rX = Math.random() * (220 - 150) + 150;
+        gX = Math.random() * (220 - 150) + 150;
         bX = Math.random() * (255 - 180) + 180;
     }
 
