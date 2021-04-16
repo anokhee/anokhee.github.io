@@ -226,7 +226,7 @@ ol {
     left: 0;
     bottom: 0;
     right: 0;
-
+    transition-duration: .5s;
 }
 
 a#scrollDown {
@@ -234,7 +234,7 @@ a#scrollDown {
 }
 
 #scrollDown:hover {
-    transform: translate(0px, 10px);
+    transform: translate(0px, 20px);
     transition-duration: .5s;
 }
 
