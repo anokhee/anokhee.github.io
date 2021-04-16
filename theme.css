@@ -215,13 +215,18 @@ ol {
     font-size: 30px;
     justify-content: center;
     margin: 0 auto;
-    position: relative;
     text-decoration: none;
-    top: 525px;
-    transition-duration: .5s;
+    z-index: 999;
     width: 40px;
     height: 40px;
-    z-index: 999;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
 }
 
 a#scrollDown {
