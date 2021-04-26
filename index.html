@@ -15,16 +15,16 @@
 </head>
 
 <body>
-    <div id="top-navigation">
+    <div class="top-navigation h">
         <div style="width: 80%; margin: 0 auto;">
             <div class="float-right">
-                <a href="../index.html">All Works</a>
-                <a href="../about-me.html">About Me</a>
+                <a href="#selected-works">Projects</a>
+                <!-- <a href="../about-me.html">About Me</a> -->
             </div>
         </div>
     </div>
     <div class="wrapper">
-        <canvas id="myCanvas"></canvas>
+        <canvas id="myCanvas" style="background-color: rgba(215, 77, 69);"></canvas>
         <div class="hero-overlay" onClick="resetCanvas()">
             <div style="display: flex; align-items: center; width: 50%; padding: 20px;">
                 <div style="width: 80%; margin: 0 auto; padding-top: 50px;">
@@ -50,6 +50,26 @@
 
     </div>
     <div class="main homepage" id="selected-works">
+        <div class="row">
+            <div class="col project-icon" onClick="window.open('./works/roadsync-driver-experience.html', '_self')">
+                <img style="background-color: #efefef" src="./imgs/driver-experience-at-roadsync/driver-experience-at-rs-icon.png">
+                <div class="overlay " id="roadsync-trucker-experience">
+                    <div style="display: block;">
+                        <p>Improving RoadSync's<br>Trucker Experience</p>
+                        <h3>UX Case Study</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col project-icon" onClick="window.open('./works/2d-illustrations.html', '_self')">
+                <img style="background-color: #efefef" src="./imgs/vector-illustrations.png">
+                <div class="overlay " id="misc">
+                    <div style="display: block;">
+                        <p>Illustrations</p>
+                        <h3>Art</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col project-icon" onClick="window.open('https://anokhee.github.io/face-generator', '_self')">
                 <img style="background-color: #efefef" src="./imgs/face-maker/icon.png">
@@ -81,19 +101,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col project-icon" onClick="window.open('./works/2d-illustrations.html', '_self')">
-                <img style="background-color: #efefef" src="./imgs/vector-illustrations.png">
-                <div class="overlay " id="misc">
+            <div class="col project-icon" onClick="window.open('https://anokhee.github.io/works/internship-at-rigor.html', '_self')">
+                <img style="background-color: #efefef" src="./imgs/rigor-internship/rigor-icon.png">
+                <div class="overlay " id="internship-at-rigor">
                     <div style="display: block;">
-                        <p>Illustrations</p>
-                        <h3>Art</h3>
+                        <p>Internship at Rigor</p>
+                        <h3>UX Engineering</h3>
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="paragraph-spacer"></div>
 </body>
-<!-- <script src="assets/hero-canvas.js"></script> -->
+<script src="assets/hero-canvas.js"></script>
 
 </html>

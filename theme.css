@@ -24,13 +24,16 @@ figcaption {
 
 h1 {
     color: #131313;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Noto Serif', serif;
     font-size: 35px;
     font-weight: 600;
+    line-height: 1.25em;
     margin-bottom: 20px;
+    margin-top: 5px;
 }
 
 h2 {
+    font-family: 'Noto Serif', serif;
     font-size: 25px;
     font-weight: 600;
     margin-bottom: .5em;
@@ -58,11 +61,12 @@ h2 {
 .hero-img {
     margin: 0 auto;
     margin-top: 5em;
-    width: 85%;
+    width: 80%;
 }
 
 h3 {
     font-size: 16px;
+    margin-bottom: 1em;
 }
 
 .hero-tagline {
@@ -120,15 +124,19 @@ ul {
 }
 
 .main {
-    width: 70%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .homepage {
     margin-top: 50vh;
-    width: 80%;
+    width: 90%;
     z-index: 0;
+}
+
+.homepage .col {
+    padding: 5px;
 }
 
 .bulleted-list,
@@ -188,7 +196,18 @@ ol {
 .col {
     align-items: center;
     width: 50%;
-    margin: 5px !important;
+}
+
+.left {
+    padding-right: 20px;
+}
+
+.right {
+    padding-left: 20px;
+}
+
+.full-width {
+    width: 100%;
 }
 
 .paragraph-spacer {
@@ -197,6 +216,10 @@ ol {
 
 .paragraph-spacer-sm {
     height: 2em;
+}
+
+.paragraph-spacer-xs {
+    height: 1em;
 }
 
 #side-navigation {
@@ -284,13 +307,14 @@ a#scrollDown {
 }
 
 .social-submenu ul li {
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Inter', sans-serif;
     margin-left: 20px;
 }
 
 .social-submenu ul li a {
-    font-size: 15px;
-    border-bottom: 6px solid rgb(192, 185, 255);
+    font-size: 14px;
+    letter-spacing: .05em;
+    border-bottom: 6px solid #facc6f;
     color: #ffffff;
     text-decoration: none;
 }
@@ -299,14 +323,15 @@ a#scrollDown {
     font-family: 'Inter', sans-serif;
     font-size: 20px;
     font-weight: 600;
+    margin-bottom: .75em;
 }
 
 .thanks {
     opacity: 20%;
 }
 
-#top-navigation {
-    background: rgba(255, 255, 255, .2);
+.top-navigation {
+    background: rgba(255, 255, 255, .9);
     font-size: 1em;
     font-weight: 600;
     position: fixed;
@@ -319,8 +344,8 @@ a#scrollDown {
 
 
 /* Style the navbar links */
-#top-navigation a {
-    color: #ffffff;
+.top-navigation a {
+    color: #333333;
     float: left;
     display: block;
     text-align: center;
@@ -328,7 +353,15 @@ a#scrollDown {
     text-decoration: none;
 }
 
-#top-navigation a:hover {
+.h {
+    background: rgba(255, 255, 255, .2);
+}
+
+.h a {
+    color: #ffffff;
+}
+
+.top-navigation a:hover {
     background-color: #efefef;
     color: black;
 }
@@ -445,15 +478,27 @@ th {
 }
 
 #botanicals {
-    background-image: linear-gradient(#f2eee6, #eaeca0);
+    background-image: linear-gradient(#ffe9be, #d6da7b);
 }
 
 #botanicals p {
-    color: #9c539a;
+    color: #6e266c;
 }
 
 #botanicals h3 {
-    color: #718e34;
+    color: #6a764e;
+}
+
+#roadsync-trucker-experience {
+    background-image: linear-gradient(#62c4bd, #e7eccb);
+}
+
+#roadsync-trucker-experience p {
+    color: rgb(63, 57, 97);
+}
+
+#roadsync-trucker-experience h3 {
+    color: #7d5b50;
 }
 
 #character-designer-ui {
@@ -477,6 +522,18 @@ th {
 }
 
 #generative-landscapes h3 {
+    color: #daf894;
+}
+
+#internship-at-rigor {
+    background-image: linear-gradient(#242470, #5252a1);
+}
+
+#internship-at-rigor p {
+    color: #e6f5e7;
+}
+
+#internship-at-rigor h3 {
     color: #daf894;
 }
 
@@ -581,23 +638,25 @@ th {
     }
 
     .main {
-        width: 60%;
+        width: 90%;
     }
 
     .row {
         display: block !important;
         width: 100% !important;
+        padding: 0px !important;
     }
 
     .col {
         width: 100% !important;
+        padding: 0px !important;
     }
 
     #side-navigation {
         display: none;
     }
 
-    #top-navigation div {
+    .top-navigation div {
         font-size: 16px;
         width: 100% !important;
     }
