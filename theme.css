@@ -638,6 +638,11 @@ th {
         width: 100% !important;
     }
 
+    .hero-overlay h1 {
+        font-size: 65px !important;
+        line-height: 5rem !important;
+    }
+
     .main {
         width: 90%;
     }
