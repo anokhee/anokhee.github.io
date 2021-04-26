@@ -175,7 +175,7 @@ ol {
 }
 
 .float-right {
-    float: right;
+    float: right imp !important;
     font-size: 15px;
 }
 
@@ -345,6 +345,7 @@ a#scrollDown {
 
 /* Style the navbar links */
 .top-navigation a {
+    
     color: #333333;
     float: left;
     display: block;
@@ -615,8 +616,8 @@ th {
 
 
 @media only screen and (max-width: 800px) {
-    canvas {
-        display: none;
+    #myCanvas {
+        background-color: rgba(215, 77, 69);
     }
 
     .skills {
@@ -663,7 +664,7 @@ th {
 }
 
 .hero-overlay h1 {
-    font-size: 90px;
+    font-size: 76px;
     text-align: center;
     color: #facc6f;
     background: rgba(255, 255, 255, 0);
