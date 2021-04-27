@@ -211,7 +211,7 @@ ol {
 }
 
 .paragraph-spacer {
-    height: 4em;
+    height: 6em;
 }
 
 .paragraph-spacer-sm {
@@ -345,7 +345,7 @@ a#scrollDown {
 
 /* Style the navbar links */
 .top-navigation a {
-    
+
     color: #333333;
     float: left;
     display: block;
@@ -591,17 +591,31 @@ th {
     width: 80%;
 }
 
-.view-demo-btn {
+.btn-container {
+    margin-top: 20px;
+}
+
+button {
     align-items: center;
+    background-color: #27465c;
+    color: white;
     cursor: pointer;
+    font-family: 'Inter', sans-serif;
     display: flex;
-    font-family: 'Inconsolata', monospace;
-    font-size: 20px;
-    border: 2px solid #111;
+    font-size: 15px;
     justify-content: center;
-    margin-top: 40px;
     transition-duration: .25s;
     width: 50%;
+    border: none;
+    border-radius: 30px;
+    height: 45px;
+    max-width: 100%;
+    min-width: 50%;
+    margin-top: 10px;
+}
+
+.view-demo-btn {
+    background-color: #5b4bea;
 }
 
 .view-demo-btn p {
@@ -609,8 +623,8 @@ th {
     height: 100%;
 }
 
-.view-demo-btn:hover {
-    opacity: 20%;
+button:hover {
+    opacity: 60%;
     transition-duration: .25s;
 }
 
