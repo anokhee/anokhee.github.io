@@ -5,7 +5,7 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    font-size: 1.05rem;
+    font-size: .9rem;
     line-height: 1.65em;
 }
 
@@ -36,6 +36,7 @@ h2 {
     font-family: 'Noto Serif', serif;
     font-size: 25px;
     font-weight: 600;
+    line-height: 1.25em;
     margin-bottom: .5em;
 }
 
@@ -53,20 +54,20 @@ h2 {
 
 .tagline {
     font-family: 'Inter', sans-serif;
-    color: #575757;
-    font-size: 16px;
-    font-style: oblique;
+    font-size: 14px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+
 }
 
 .hero-img {
     margin: 0 auto;
     margin-top: 5em;
-    width: 80%;
+    width: 100%;
 }
 
 h3 {
     font-size: 16px;
-    margin-bottom: 1em;
 }
 
 .hero-tagline {
@@ -76,6 +77,11 @@ h3 {
     font-size: 20px;
     line-height: 2.25rem;
     margin-bottom: .7rem;
+}
+
+.example {
+    background: rgba(185, 185, 185, 0.05);
+    padding: 40px;
 }
 
 .inline {
@@ -124,7 +130,7 @@ ul {
 }
 
 .main {
-    width: 80%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -694,7 +700,7 @@ button:hover {
     text-shadow: 5px 5px 0px #E9724C,
         10px 10px 0px #C5283D,
         15px 15px 0px #481D24,
-        20px 20px 0px #255F85
+        20px 20px 0px #010e16
 }
 
 .hero-overlay h3 {
