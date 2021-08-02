@@ -4,7 +4,7 @@ width = window.innerWidth;
 height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
-canvas.style.backgroundColor = 'rgba(33, 33, 33)';
+canvas.style.backgroundColor = 'rgba(255, 255, 255)';
 
 var mouseX, mouseY, pMouseX, pMouseY;
 let rX, gX, bX, cR, cG, cB;
@@ -22,7 +22,7 @@ function setup() {
 };
 
 function draw() {
-    setBackground('rgba(33, 33, 33, .035)');
+    setBackground('rgba(255, 255, 255, .035)');
     let r = rX - (mouseX + mouseY) / 5;
     let g = gX - (mouseX + mouseY) / 5;
     let b = bX - (mouseX + mouseY) / 10;
