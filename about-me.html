@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anokhee Jandhyala | Portfolio</title>
+    <title>Anokhee Jandhyala | About Me</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Inter:wght@200;400;600&display=swap"
         rel="stylesheet">
@@ -12,118 +12,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="theme.css">
+    <link rel="icon" href="./imgs/personal-logo.svg">
 </head>
 
 <body>
-    <div id="top-navigation">
-        <div style="width: 80%; margin: 0 auto;">
+    <div class="top-navigation">
+        <div style="width: 92%; margin: 0 auto;">
+            <a href="./../"><img class="logo" style="width: 32px;" src="../imgs/personal-logo.svg"><span
+                    style="margin-left: 10px;">Anokhee Jandhyala</span></a>
             <div class="float-right">
-                <a href="#selected-works">Projects</a>
                 <a href="../about-me.html">About Me</a>
             </div>
         </div>
     </div>
-    <div class="wrapper">
-        <canvas id="myCanvas" style="background-color: rgba(215, 77, 69);"></canvas>
-        <div class="hero-overlay" onClick="resetCanvas()">
-            <div style="display: flex; align-items: center; width: 50%; padding: 20px;">
-                <div style="width: 80%; margin: 0 auto; padding-top: 50px;">
-                    <div style="margin: 0 auto; text-align: center;">
-                        <h3>product & visual designer
-                        </h3>
-                        <h1>anokhee jandhyala</h1>
-                    </div>
-                    <br>
-                    <div class="social-submenu">
-                        <ul>
-                            <li><a href="https://github.com/anokhee/" target="_blank">GitHub</a></li>
-                            <li><a href="https://linkedin.com/in/anokhee-jandhyala/" target="_blank">LinkedIn</a></li>
-                            <li><a href="https://vimeo.com/user88356330" target="_blank">Vimeo</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div><a href="#selected-works" id="scrollDown">&darr;</a></div>
     </div>
-
-    </div>
-    <div class="main homepage" id="selected-works">
-        <div class="row">
-            <div class="col project-icon" onClick="window.open('https://anokhee.github.io/works/', '_self')">
-                <img style="background-color: #efefef" src="./imgs/rigor-internship/rigor-icon.png">
-                <div class="overlay " id="botanicals">
-                    <div style="display: block;">
-                        <p>Botanicals</p>
-                        <h3>Creative Coding</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col project-icon" onClick="window.open('./works/2d-illustrations.html', '_self')">
-                <img style="background-color: #efefef" src="./imgs/vector-illustrations.png">
-                <div class="overlay " id="misc">
-                    <div style="display: block;">
-                        <p>Illustrations</p>
-                        <h3>Art</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col project-icon" onClick="window.open('https://anokhee.github.io/face-generator', '_self')">
-                <img style="background-color: #efefef" src="./imgs/face-maker/icon.png">
-                <div class="overlay " id="character-designer-ui">
-                    <div style="display: block;">
-                        <p>People of the World</p>
-                        <h3>Creative Coding, UI/UX Design</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col project-icon"
-                onClick="window.open('https://anokhee.github.io/generative-landscapes/p5js-version', '_self')">
-                <img style="background-color: #efefef" src="./imgs/landscape-palettes-icon.png">
-                <div class="overlay " id="generative-landscapes">
-                    <div style="display: block;">
-                        <p>Generative Landscapes</p>
-                        <h3>Creative Coding</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col project-icon" onClick="window.open('https://anokhee.github.io/botanicals', '_self')">
-                <img style="background-color: #efefef" src="./imgs/botanicals-icon.png">
-                <div class="overlay " id="botanicals">
-                    <div style="display: block;">
-                        <p>Botanicals</p>
-                        <h3>Creative Coding</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col project-icon" onClick="window.open('https://anokhee.github.io/works/internship-at-rigor.html', '_self')">
-                <img style="background-color: #efefef" src="./imgs/rigor-internship/rigor-icon.png">
-                <div class="overlay " id="internship-at-rigor">
-                    <div style="display: block;">
-                        <p>Internship at Rigor</p>
-                        <h3>UX Engineering</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col project-icon" onClick="window.open('./works/2d-illustrations.html', '_self')">
-                <img style="background-color: #efefef" src="./imgs/vector-illustrations.png">
-                <div class="overlay " id="misc">
-                    <div style="display: block;">
-                        <p>Illustrations</p>
-                        <h3>Art</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="main">
         <div class="paragraph-spacer"></div>
+        <div class="section">
+            <div class="row">
+                <div class="col left">
+                    <h3>About Me</h3>
+                    <h1>Hi, I'm Anokhee</h1>
+                    <p>I am a UX Designer living in Atlanta, but I was born in Botswana: a beautiful country in southern
+                        Africa with
+                        the 12th-worst internet connection in the world. And I've been obsessed with computers
+                        for as long as I can remember.<br><br>
+                        Growing up, I loved computers for the creative potential they afforded me. When printer paper
+                        seemed to be worth more to my dad than gold, I made endless drawings in MS Paint. I learned how
+                        to read and
+                        write by typing on the keyboard. I explored my love for music through a virus-infested MIDI sequencing
+                        software called Babya Logic that killed the family computer.<br><br>
+                        I am a "cynical optimist" when it comes to technology. I believe that the best technologies are
+                        those that can create opportunity and enhance our real lives rather than distract us from them. As a UX Designer I try to breathe this sentiment into everything I do.
+                    </p>
+                </div>
+                <div class="col right">
+                    <img src="../imgs/my-photo.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="paragraph-spacer"></div>
 </body>
-<!-- <script src="assets/hero-canvas.js"></script> -->
+<script src="assets/hero-canvas.js"></script>
 
 </html>

@@ -205,7 +205,8 @@ ol {
 }
 
 .float-right {
-    float: right imp !important;
+    align-items: center;
+    float: right !important;
     font-size: 15px;
 }
 
@@ -361,6 +362,8 @@ a#scrollDown {
 }
 
 .top-navigation {
+    display: flex;
+    align-items: center;
     background: rgba(255, 255, 255, .9);
     font-size: 1em;
     font-weight: 600;
