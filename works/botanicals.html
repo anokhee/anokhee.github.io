@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anokhee Jandhyala | Portfolio: Botanicals</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Inter:wght@200;300;400;600&display=swap"
+    <title>Anokhee Jandhyala | Botanicals</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Inter:wght@200;400;600&display=swap"
         rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/gumshoe/dist/gumshoe.polyfills.min.js"></script>
-    <script src="../assets/siema.min.js"></script>
-    <link rel="stylesheet" href="../assets/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="../theme.css">
+    <link rel="icon" href="./imgs/personal-logo.svg">
 </head>
 
 <body>
@@ -27,149 +28,223 @@
     <div class="hero-img">
         <img src="../imgs/botanicals/flowers-icon.png">
     </div>
+    <div class="paragraph-spacer"></div>
     <div class="main">
         <div class="section">
-            <div class="paragraph-spacer"></div>
-            <h3>Web Development, Generative Graphics | 2020</h3>
-            <h1>Fictional Botanicals</h1>
-            <div class="view-demo-btn" onClick="window.open('https://anokhee.github.io/botanicals/', target='_blank')">
-                <p>View Demo</p>
+            <div class="row">
+                <div class="col left">
+                    <h3>Creative Coding | 2020</h3>
+                    <h1>Botanicals</h1>
+                    <p>Creating an endless variety of fictional, two-dimensional flowers with code. Note: This project
+                        is ongoing, but produces some interesting results in its current state. Feel free to check out
+                        the demo or continue reading to learn more about the process.</p>
+                    <div class="btn-container">
+                        <button class="view-demo-btn"
+                            onClick="window.open('https://anokhee.github.io/botanicals', '_self')">View
+                            demo</button>
+                        <button class="view-repo-btn"
+                            onClick="window.open('https://github.com/anokhee/botanicals', '_self')">Check Out
+                            on
+                            GitHub</button>
+                    </div>
+                </div>
+                <div class="col right">
+                    <img src="../imgs/botanicals/flower-icon.png">
+                </div>
             </div>
         </div>
 
-        <div class="section" id="overview">
-            <div class="paragraph-spacer"></div>
-            <h2>Overview</h2>
+        <div class="paragraph-spacer"></div>
+        <div class="section">
             <div class="row">
-                <div class="col" style="width: 65%;">
-                    <h3 class="subheading">Generating nonexistent flower varieties with code.</h3>
+                <div class="col full-width">
+                    <div class="paragraph-spacer-sm"></div>
+                    <h3 class="subheading">Spring of 2020</h3>
                     <p>
-                        In this project, I wrote a program capable of outputting an endless variety of
-                        two-dimensional, fictional
-                        flowers. This project
-                        is
-                        ongoing, but
-                        produces some interesting results in its current state. Feel free to check out the demo
-                        or
-                        continue reading to learn more about the process.
+                        Unbeknownst to most people, the gloomy winter of late 2019 would precede the coronavirus
+                        pandemic and a
+                        prolonged period of anxiety and loneliness for many people around the world. So, when spring
+                        2020 arrived in Atlanta, the bright foliage and accompanying blooms felt especially interesting
+                        and beautiful.
+                        <br><br>
+                        During walks around my neighborhood, I collected leaves and flowers to press, dry, and hang up
+                        on the walls in my apartment. Around this time, I was also religiously watching The Coding
+                        Train’s p5.js tutorials on Youtube. Because of him, I could see fractals not only in the trees,
+                        but in the individual leaves and branches. I knew I had to replicate what I was seeing with
+                        code.
                     </p>
                 </div>
-
-                <div class="col skills">
-                    <h4>Skills & Tools</h4>
-                    <ul class="bulleted-list">
-                        <li>Web Development</li>
-                        <li>Computational Geometry</li>
-                        <li>p5.js</li>
-                    </ul>
-                </div>
             </div>
-
-            <div class="paragraph-spacer"></div>
-
-            <h3 class="subheading">A Tiny Flower Gallery</h3>
-            <div class="carousel-container">
-                <div class="siema">
-                    <img src="../imgs/botanicals/carousel/1.png">
-                    <img src="../imgs/botanicals/carousel/2.png">
-                    <img src="../imgs/botanicals/carousel/3.png">
-                    <img src="../imgs/botanicals/carousel/4.png">
-                    <img src="../imgs/botanicals/carousel/5.png">
-                    <img src="../imgs/botanicals/carousel/6.png">
-                    <img src="../imgs/botanicals/carousel/7.png">
-                </div>
-
-                <div class="buttons-container">
-                    <button class="prev">prev</button>
-                    <button class="next">next</button>
+            <div class="paragraph-spacer-sm"></div>
+            <div class="row">
+                <div class="col full-width">
+                    <img src="../imgs/botanicals/moodboard.png">
                 </div>
             </div>
         </div>
         <div class="paragraph-spacer"></div>
-        <div class="paragraph-spacer"></div>
-        <div class="section" id="background">
-            <h2>Background & Moodboard</h2>
-            <h3 class="subheading">The unusual onset of Spring 2020.</h3>
-            <p>In Atlanta, a gloomy winter preceded the start of a long period of loneliness and anxiety of social
-                distancing. By the time spring arrived, the bright foliage and accompanying blooms felt especially
-                interesting and beautiful.</p>
-            <p>
-                During walks around my neighborhood, I collected leaves and flowers to press and hang up on the walls in
-                my apartment. I felt so inspired by them, that I just had to replicate them with code.</p>
-            <img src="../imgs/botanicals/moodboard.png">
+
+        <h3 class="subheading">A Tiny Flower Gallery</h3>
+
+        <div class="paragraph-spacer-sm"></div>
+
+        <div class="row">
+            <div class="col left">
+                <img src="../imgs/botanicals/carousel/11.png">
+            </div>
+            <div class="col right">
+                <img src="../imgs/botanicals/carousel/12.png">
+            </div>
+        </div>
+
+        <div class="paragraph-spacer-xs"></div>
+        <div class="row">
+            <div class="col full-width">
+                <img src="../imgs/botanicals/carousel/1.png">
+                <img src="../imgs/botanicals/carousel/2.png">
+                <img src="../imgs/botanicals/carousel/3.png">
+            </div>
+        </div>
+
+        <div class="paragraph-spacer-xs"></div>
+        <div class="row">
+            <div class="col left">
+                <img src="../imgs/botanicals/carousel/8.png">
+            </div>
+            <div class="col right">
+                <img src="../imgs/botanicals/carousel/9.png">
+            </div>
+        </div>
+
+        <div class="paragraph-spacer-xs"></div>
+        <div class="row">
+            <div class="col full-width">
+                <img src="../imgs/botanicals/carousel/4.png">
+                <img src="../imgs/botanicals/carousel/6.png">
+                <img src="../imgs/botanicals/carousel/5.png">
+            </div>
+        </div>
+
+        <div class="paragraph-spacer-xs"></div>
+        <div class="row">
+            <div class="col left">
+                <img src="../imgs/botanicals/carousel/10.png">
+            </div>
+            <div class="col right">
+                <img src="../imgs/botanicals/carousel/11.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="paragraph-spacer"></div>
+    <div class="section">
+        <div class="dark" style="margin: 0 auto;">
+            <div class="row" style="margin: 0 auto; width: 60%;">
+                <div class="col full-width">
+                    <div class="paragraph-spacer-sm"></div>
+                    <h3 class="subheading">Process</h3>
+                    <h2>01. Basic Fractals</h2>
+                    <p>
+                        Basic fractal trees look plantlike, but they resemble tree structures more than they resemble
+                        flowers. While I liked the results of this method, I wanted to explore a more natural and
+                        flowery-looking approach.
+                    </p>
+                    <br>
+
+                    <div class="row">
+                        <div class="col full-width">
+                            <img src="../imgs/botanicals/version01-fractals.png">
+                        </div>
+                    </div>
+
+                    <div class="paragraph-spacer"></div>
+                    <h2>02. Fancypants Grammar for Fancy Plants</h2>
+                    <p>L-Systems are a type of computational grammar used to generate complex, self-similar fractals.
+                        They can model natural phenomena, such as plant growth and animal morphology.
+                        <br><br>
+                        <div class="row">
+                            <div class="col full-width">
+                                <img src="../imgs/botanicals/version02-lsystems.png">
+                            </div>
+                        </div>
+
+                        <div class="paragraph-spacer-sm"></div>
+                        <h3 class="subheading">Note on L-Systems</h3>
+                        An L-System begins with a character string (called an axiom). Until the defined exit condition
+                        is met, the ruleset is continuously, recursively applied to the original axiom. The result is a
+                        complex character string serving as an instruction set for the flower's stem:
+                        <br><br>
+                        <div class="row">
+                            <div class="col full-width">
+                                <img src="../imgs/botanicals/l-systems-graphic.png">
+                            </div>
+                        </div>
+
+
+                        <div class="paragraph-spacer"></div>
+                        <h2>03. Adding a flower</h2>
+                        <p>Adding a unique symbol to the end of an L-Systems rule allowed for a flower to appear at certain endpoints of the stem. 
+                            <br><br>
+                            <div class="row">
+                                <div class="col full-width">
+                                    <img src="../imgs/botanicals/version03-skeletons.png">
+                                </div>
+                            </div>
+
+                            <div class="paragraph-spacer-sm"></div>
+                            <h3 class="subheading">No, I said what kind of flower are <span class="italics">you</span>?</h3>
+                            An L-System begins with a character string (called an axiom). Until the defined exit
+                            condition
+                            is met, the ruleset is continuously, recursively applied to the original axiom. The result
+                            is a
+                            complex character string serving as an instruction set for the flower's stem:
+                            <br><br>
+                            <div class="row">
+                                <div class="col full-width">
+                                    <img src="../imgs/botanicals/flowers-unnatural.png">
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="paragraph-spacer"></div>
+    <div class="section">
+        <div class="main">
+            <div class="row">
+                <div class="col full-width">
+                    <h3 class="subheading">Concluding thoughts</h3>
+                    <p>
+                        <ol>
+                            <li>
+                                If I could export the output of this program to SVG, how much would it reduce the hours
+                                the
+                                hours I spend drawing landscapes with Adobe
+                                Illustrator's pen tool?
+                            </li>
+                            <li>
+                                What is the inherent value of an organic, procedurally-generated shape compared to an
+                                identical
+                                one drawn by hand?
+                            </li>
+                            <li>
+                                How do you compare the complexity of a program capable of generating an infinite number
+                                of
+                                unique graphics to the talent of a graphic designer?
+                            </li>
+                            <li>How special is uniqueness, really, when it's produced with an algorithm?
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="paragraph-spacer"></div>
 
-    <div class="section" id="botanicals-process">
-        <div class="paragraph-spacer"></div>
-        <h1>Process</h1>
-        <div class="paragraph-spacer"></div>
-        <h3>Basic Fractal Trees
-        </h3>
-        <figure><img src="../imgs/botanicals/version01-fractals.png">
-        </figure>
-        <p>
-            These fractals look cute and plantlike, but they resemble trees more than they resemble
-            flowers. While I liked the results of this method, I wanted to explore a more natural and
-            flowery-looking approach.
-        </p>
 
-        <div class="paragraph-spacer"></div>
-        <div class="paragraph-spacer"></div>
-
-        <h3>L-Systems, or fancy pants grammar for fancy plants.</h3>
-
-        <figure><img src="../imgs/botanicals/version02-lsystems.png"></figure>
-        <p>L-Systems are a type of computational grammar used to generate complex, self-similar fractals.
-            They can be used to model natural phenomena, such as plant growth and animal morphology.
-            <br><br>
-            An L-System begins with a character string (called an axiom). Until the defined exit condition
-            is met, the ruleset is continuously, recursively applied to the original axiom. The result is a
-            complex character string serving as an instruction set:
-        </p>
-        <figure><img src="../imgs/botanicals/l-systems-graphic.png"></figure>
-
-        <div class="paragraph-spacer"></div>
-
-        <h3>What kind of flower is <span class="italic">that</span>?</h3>
-        <img src="../imgs/botanicals/version03-skeletons.png">
-        <p>By adding a unique symbol to the end of an L-Systems rule, I was able to write configurations for
-            a flower to appear at certain endpoints of the stem.
-        </p>
-        <!-- <div class="paragraph-spacer"></div>
-        <div class="row">
-            <div class="col" style="width: 45%;">
-                <h3 class="subheading">Flower Editor</h3>
-                <p>I found the best way to create a wide variety of flower shapes was to draw a continuous Bezier
-                    curve looped x number of times around a central point. To figure out which randomization
-                    parameters resulted in the nicest-looking flowers, I created a separate program.</p>
-            </div> -->
-        <!-- <div class="col" style="width: 55%;"><img src="../imgs/botanicals/flower-editor.png"></div> -->
-        <div class="paragraph-spacer"></div>
-        <div class="paragraph-spacer"></div>
-    </div>
-
-    </div>
 </body>
-<script>
-    var spy = new Gumshoe('#side-navigation a');
-    const mySiema = new Siema();
-    document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
-    document.querySelector('.next').addEventListener('click', () => mySiema.next());
-
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("top-navigation").style.top = "0";
-        } else {
-            document.getElementById("top-navigation").style.top = "-50px";
-        }
-        prevScrollpos = currentScrollPos;
-    }
-</script>
-</script>
 
 </html>

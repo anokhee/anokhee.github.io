@@ -56,8 +56,9 @@
                     <p>
                         As a kid, Flash game sites were my introduction to the endless creative potential existing
                         inside computers. Since then, mobile-first design paradigms and the deprecation of Flash killed
-                        both the cultural relevance of browser-based gaming (and my dreams of ever creating games
-                        featured on www.addictinggames.com. Luckily, existing web graphics frameworks enable us to
+                        both the cultural relevance of browser-based gaming (and my dreams of ever creating a game
+                        addicting enough to be featured on
+                        www.addictinggames.com). Luckily, existing web graphics frameworks enable us to
                         create pretty much anything and make it responsive.
                         <br><br>
                         As an exercise in creative coding, I developed a face generator inspired by avatar makers from
@@ -101,19 +102,22 @@
                         To familiarize myself with DIY hardware, I challenged
                         myself to design and develop a Visual
                         Synthesizer. The goal was to explore the potential for playfulness
-                        in an arguably logic-oriented world of computing and robotics. Like a MIDI synthesizer does with
-                        sound
-                        samples, the Visual Synthesizer allows users to
-                        twist knobs and push buttons to adjust the geometric proportions of the default face pictured in
-                        Fig
-                        01.
+                        in an arguably logic-oriented world of computing and robotics.
                     </p>
                 </div>
                 <div class="col right">
                     <img src='../imgs/people-of-the-world/workstation.png'>
                 </div>
             </div>
-            <br>
+            <div class="paragraph-spacer-sm"></div>
+            <p><span class="subheading">Before it was a web app, it was a hardware project...</span><br><br>I coded the faces
+                in <a href="https://openprocessing.org">Processing</a>, then used its built-in GPIO library to modify
+                the proportions of the face using rotary encoders and buttons hot glued onto a temporary
+                breadboard. Like a MIDI synthesizer does with
+                sound samples, the Visual Synthesizer allows users to
+                twist knobs and push buttons to adjust the geometric proportions of the default face pictured in
+                Fig
+                01.</p><br>
             <figure>
                 <img src="../imgs/people-of-the-world/raspberry-pi.png">
                 <figcaption></figcaption>
@@ -210,39 +214,56 @@
         </div>
 
         <div class="paragraph-spacer-sm"></div>
-        <div class="dark">
-            <div style="padding: 30px;">
+        <div>
+            <div>
                 <h3 class='subheading'>Comparing Nintendo's character designers</h3>
                 <p>Nintendo's Animal Crossing: Pocket Camp (mobile app) and Mii Studio Online (web app)
                     were good starting
                     points into my research for a few reasons.
-                    <ol class="emphasized-list">
+                    <ol>
                         <li>Nintendo is a well-funded company with dedicated UX Designers</li>
                         <li>These games are popular, so there is a lot of information available online to conduct
-                            preliminary
-                            research</li>
+                            preliminary research</li>
                     </ol>
                 </p>
             </div>
         </div>
         <br>
-        <div class="row">
-            <div class="col left">
-                <img src="../imgs/people-of-the-world/animal-crossing-pocket-camp-edit-character.png"><br><br>
-                <h4>Animal Crossing: Pocket Camp</h4><br>
-                <p>One of the big draws of Pocket Camp (and the franchise as a whole) is the
-                    slice-of-life feeling it evokes with vibrant graphics and a cutesy aesthetic.
-                    Unfortunately, Animal Crossing games don't focus much on character design, instead focusing on item
-                    collection. Creative freedom is not available out of the box, but curated by collecting a variety of
-                    items that appeal to individual players. Additionally, users must select features from preset
-                    options.</p><br>
+        <div class="grey">
+            <div class="row" style="align-items: center;">
+                <div class="col left">
+                    <h3 class="subheading">Animal Crossing: Pocket Camp</h3>
+                    <p>One of the big draws of Pocket Camp (and the franchise as a whole) is the
+                        slice-of-life feeling it evokes with vibrant graphics and a cutesy aesthetic.
+                        <br><br>Unfortunately for my purposes, <span class="bold">Animal Crossing games don't focus much
+                            on
+                            character design, but instead on
+                            item
+                            collection.</span>
+                        <br><br>Creative freedom is not available out of the box. Users must select features from preset
+                        options. Personalization is limited at the start of the game, but can be curated as individual
+                        players collect items that appeal to them. </p><br>
+                </div>
+                <div class="col right">
+                    <img src="../imgs/people-of-the-world/animal-crossing-pocket-camp-edit-character.png">
+                </div>
             </div>
-            <div class="col right">
-                <img src="../imgs/people-of-the-world/nintendo-mii-studio.jpeg"><br><br>
-                <h4>Nintendo Mii Studio Online</h4><br>
-                <p>Working within the constraints of Nintendo's Mii makers forces users to think creatively to create
-                    unique Miis. Videos and websites sites explaining how to create Miis resembling real people and
-                    fictional characters have thousands of views. </p>
+        </div>
+
+        <div class="paragraph-spacer-sm"></div>
+
+        <div class="grey">
+            <div class="row" style="align-items: center;">
+                <div class="col left">
+                    <h3 class="subheading">Nintendo Mii Studio Online</h3>
+                    <p>Working within the constraints of Nintendo's Mii makers forces users to think creatively to
+                        create
+                        unique Miis. Videos and websites sites explaining how to create Miis resembling real people and
+                        fictional characters have thousands of views. </p><br>
+                </div>
+                <div class="col right">
+                    <img src="../imgs/people-of-the-world/nintendo-mii-studio.jpeg"><br><br>
+                </div>
             </div>
         </div>
     </div>
@@ -296,17 +317,16 @@
         <div class="paragraph-spacer"></div>
         <div class="dark" style="padding: 30px;">
             <div class="row">
-                <div class="col left">
+                <div class="col full-width">
                     <h3 class="subheading">A cool note about iconography</h4>
                         <p>The iconography was pretty easy (and interesting) to create. I found a <a
                                 href="https://github.com/zenozeng/p5.js-svg">SVG runtime for p5js</a> enabling me to
                             open and edit my face creations in Adobe Illustrator.<br><br>This cut down the amount of
                             time it
-                            would take to hand-draw these icons considerably and why they appear so early in the
-                            mid-fidelity mockups.</p>
-                </div>
-                <div class="col right">
-                    <img src="../imgs/people-of-the-world/iconography.png">
+                            would take to hand-draw these icons considerably. I could take a face and deconstruct it to
+                            create individual icons.
+                        </p><br><br>
+                        <img src="../imgs/people-of-the-world/iconography.png">
                 </div>
             </div>
         </div>
@@ -407,7 +427,7 @@
         </div>
 
         <div class="paragraph-spacer-sm"></div>
-        <div class="dark" style="padding: 30px;">
+        <div class="dark" style="padding: 30px; align-items: center;">
             <div class="row">
                 <div class="col left">
                     <h3 class="subheading">A quick note about the HSB color model</h4>
@@ -417,7 +437,7 @@
                         darker skin tone, all you have to do is turn the brightness level down. Sunburn? Turn up the
                         saturation. Wanna make an alien? Change the hue to blue or green.
                 </div>
-                <div class="col right">
+                <div class="col-right">
                     <img src="../imgs/people-of-the-world/model-hsb-wheel.jpeg">
                 </div>
             </div>
@@ -425,26 +445,36 @@
 
         <div class="paragraph-spacer"></div>
         <h3 class="subheading">Mini Style Guide</h3>
-        <p>I wanted the UI to appeal to users motivated by creativity and whimsical aesthetics. Many of these users grew
-            up with technology. Generally, this user base seems to be prone to nostalgia, identifies closely with the
-            media they enjoyed in childhood, and derive pleasure from curating a personal identity online. I drew
+        <p>I wanted the UI to appeal to users motivated by creativity and whimsical aesthetics. My target users grew
+            up with technology playing a major role in their lives. These users, overwhelmingly, appear to:<br>
+            <ul class="emphasized-list">
+                <li>1. Be prone to nostalgia</li>
+                <li>2. Identify closely with the media they consume and enjoy</li>
+                <li>3. Derive pleasure from curating a personal identity or aesthetic online</li>
+            </ul>
+            <br>
+            I drew
             aesthetic inspiration from lighthearted video games and bullet journals. The style guide embodies a
-            minimal, flat aesthetic with quirky, colorful graphics and patterns.<br><br>
-            Regarding iconography, I found most users don't like wordy labels attached to sliders. It's also really hard
+            minimal, flat aesthetic with quirky, colorful graphics and patterns.
+
+            <div class="paragraph-spacer-sm"></div>
+
+            <div class="row">
+                <div class="col full-width">
+                    <img src="../imgs/people-of-the-world/style-guide.png">
+                </div>
+            </div>
+
+            <div class="paragraph-spacer-sm"></div>
+
+            <h3 class="subheading">Regarding Iconography</h3>
+            From poking around, I found most users don't like wordy labels attached to sliders. It's also really hard
             to name sliders in a user-friendly way. They preferred seeing straightforward visuals
             describing what they are doing. I wanted the iconography to be instructional and consistent without being
             distracting. These icons describe what each slider does by illustrating the minimum and maximum values of
             the
             range it represents.
-
-
         </p>
-
-        <div class="row">
-            <div class="col full-width">
-                <img src="../imgs/people-of-the-world/style-guide.png">
-            </div>
-        </div>
 
         <div class="paragraph-spacer"></div>
         <h1>Final Prototype</h1>
