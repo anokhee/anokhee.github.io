@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anokhee Jandhyala's Portfolio Site | Face Generator</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+    </style>
+    <link rel="stylesheet" href="assets/reset.css" />
+    <link rel="stylesheet" href="theme.css" />
+  </head>
+  <body>
+    <div class="container-main">
+      <div class="body-section">
+        <h1>Face Generator</h1>
+        <img src="./imgs/face-generator/hero-img.png" />
+        <br />
+        <br />
+        <div class="row">
+          <div class="col left">
+            <div class="button-container">
+              <div>
+                <button class="button-primary">Live Demo</button>
+                <button class="button-secondary">GitHub Repo</button>
+              </div>
+            </div>
+          </div>
+          <div class="col right">
+            <div>
+              <video controls>
+                <source
+                  src="./imgs/face-generator/final-prototype.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        <br />
+        <hr />
+        <br />
+
+        <div class="row">
+          <div class="narrow-textarea">
+            <h2>About this Project</h2>
+            <h4>
+              Designing & developing a responsive avatar maker<br />using
+              generative graphics.
+            </h4>
+            <h3>Background</h3>
+            <p>
+              As a kid, Flash games were my introduction to the endless creative
+              potential existing inside computers. Unfortunately, it's not 2006
+              anymore. The cultural relevance of browser-based gaming died along
+              with and my dreams of ever making it big on AddictingGames.com.
+              Luckily, existing web graphics libraries empower us to create
+              whatever we want and make it responsive. As an exercise in
+              creative coding, I wrote code for a face generator inspired by
+              Flash avatar makers. Manipulating only a handful of vector points
+              can generate endless unique faces, like these.
+            </p>
+          </div>
+        </div>
+
+        <div class="img-container">
+          <img src="./imgs/face-generator/linearts.png" />
+        </div>
+
+        <br />
+
+        <div class="row">
+          <div class="col left sm align-col-to-center">
+            <div>
+              <h3>Why I Built It</h3>
+              <p>
+                After posting my face generator on a creative coding subreddit,
+                I got some feedback that it was difficult to use. This is
+                because I implemented it with the convenient, but notoriously
+                ugly dat.GUI library. Although it's wonderful for testing web
+                graphics during development, it can be a bit finicky to play
+                with. Also, it doesn't carry over to a project with mobile
+                aspirations. Without a great solution available, I decided to
+                build one myself.
+              </p>
+            </div>
+          </div>
+
+          <div class="col right lg">
+            <div class="img-container">
+              <img src="./imgs/face-generator/prototype-dat-gui.gif" />
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+          <div class="col left sm align-col-to-center">
+            <div>
+              <h3>Generating random graphics with the HTML Canvas API</h3>
+              <p>
+                I started out with a base face, pictured in the GIF here. Using
+                functions of the HTML Canvas API, the base face is drawn using
+                some Bezier curves and ellipses. The red dots demarcate the
+                Bezier control points for the head shape.
+              </p>
+            </div>
+          </div>
+          <div class="col right lg">
+            <img
+              class="modal-target"
+              src="./imgs/face-generator/bezier-control-points.gif"
+            />
+          </div>
+        </div>
+        <br />
+        <h3>Planning the Shapes Out Beforehand</h3>
+        <div class="row">
+          <div class="col left">
+            <div class="img-container">
+              <img
+                class="modal-target"
+                src="./imgs/face-generator/math-sketch-1.png"
+              />
+            </div>
+          </div>
+          <div class="col right">
+            <div class="img-container">
+              <img
+                class="modal-target"
+                src="./imgs/face-generator/math-sketch-2.png"
+              />
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <hr />
+        <br />
+
+        <div class="row">
+          <div class="narrow-textarea">
+            <h2>The Process</h2>
+            <h4>It wasn't straightforward, but I'll try to explain...</h4>
+            <h3>Sketches</h3>
+            <p>
+              Because this was a personal project and there was no formal
+              process or deadline, these early sketches informed the final
+              designs in a big way. I had a rough idea of how I wanted the UI to
+              look and function, but I wasn't yet sure of how it'd all fit
+              together as an experience.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="img-container">
+              <img
+                class="modal-target"
+                src="./imgs/face-generator/ui-sketch-1.png"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="img-container">
+              <img
+                class="modal-target"
+                src="./imgs/face-generator/ui-sketch-2.png"
+              />
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+          <div>
+            <div class="narrow-textarea">
+              <h3>Interaction Design</h3>
+              <p>
+                I continued to sketch the beginnings of the interactions. First,
+                I outlined which actions should be the "primary" actions, then
+                broke them down from there. From there, I started exploring edge
+                cases. I wanted the user journey to be open-ended and flexible,
+                but with a clear happy path.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+          <div class="col left sm">
+            <div class="img-container">
+              <img
+                class="modal-target"
+                src="./imgs/face-generator/ui-sketch-3.png"
+              />
+            </div>
+          </div>
+          <div class="col right lg">
+            <div class="img-container">
+              <img
+                class="modal-target"
+                src="./imgs/face-generator/user-flow.png"
+              />
+            </div>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+          <div>
+            <div class="narrow-textarea">
+              <h3>Mid-Fidelity Mockups</h3>
+              <p>
+                After determining the user flow, I started designing making
+                screens one by one. I put together a few mid-fidelity mockups to
+                conduct initial user tests with 6 friends, all interested at
+                least a little bit in video games. After several iterations of
+                low-fidelity testing, participants said most of the design made
+                sense. But there were a few features that received
+                mixed/negative feedback.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="img-container">
+            <img
+              class="modal-target"
+              src="./imgs/face-generator/mid-fidelity-mockups.png"
+            />
+          </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+          <div>
+            <div class="narrow-textarea">
+              <h3>Mini Style Guide</h3>
+              <p>
+                I wanted the UI to appeal to people motivated by creativity and
+                whimsical aesthetics. I drew aesthetic inspiration from
+                lighthearted video games and bullet journals. The style guide
+                embodies a minimal, flat aesthetic with quirky, colorful
+                graphics and patterns.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="img-container">
+            <img
+              class="modal-target"
+              src="./imgs/face-generator/style-guide.png"
+            />
+          </div>
+        </div>
+
+        <br />
+
+        <div class="row concept">
+          <div>
+            <div class="narrow-textarea">
+              <h4>Other Bits and Bobs</h4>
+              <h3>Iconography</h3>
+              <p>
+                I found an SVG runtime for p5js which enabled me to export my
+                face creations, and edit them in Adobe Illustrator. This cut
+                down the amount of time it would take to hand-draw each icon
+                considerably. I could take a face and deconstruct it to create
+                individual icons.
+              </p>
+              <div class="img-container">
+                <img
+                  class="modal-target"
+                  src="./imgs/face-generator/iconography.png"
+                />
+              </div>
+            </div>
+
+            <br />
+
+            <div class="narrow-textarea">
+              <h3>Color Picker</h3>
+              <p>
+                Most users preferred a minimalist design at the expense of more
+                features. When I asked one user if she’d prefer preset color
+                swatches, she said: “I already have something in mind. I don’t
+                need your colors!” In the end, I made the color picker as simple
+                as possible. A horizontal slider for hue, a circular slider for
+                brightness and saturation, and indication of the current and new
+                colors.
+              </p>
+              <div class="img-container">
+                <img
+                  class="modal-target"
+                  src="./imgs/face-generator/low-fi-colors.png"
+                />
+              </div>
+            </div>
+
+            <br />
+
+            <div class="narrow-textarea">
+              <h3>HSB Color Model</h3>
+              <p>
+                I found that the HSB color model was be more useful than RGB for
+                choosing colors. It’s especially useful in selecting and
+                modifying skin tones. To give someone a darker skin tone, all
+                you have to do is turn the brightness level down. Or, for a
+                sunburn: turn up the saturation.
+              </p>
+
+              <div class="img-container">
+                <img src="./imgs/face-generator/model-hsb-wheel.jpeg" />
+              </div>
+            </div>
+
+            <br /><br />
+
+            <div class="narrow-textarea">
+              <h3>Background Pattern Generator</h3>
+              <p>
+                I felt a little stuck here. Feedback I got about this feature
+                was: "It’s obvious to me that you should click on the color
+                swatches to edit the colors, but it took me a second to get it.
+                I worry that it might not be obvious to everyone.” So I created
+                2 more designs. Five out of the six users preferred the original
+                design over my new iterations. Even though this solution wasn’t
+                perfect, it was learnable. If a user clicks on a color swatch
+                once, it becomes obvious what it will do each time.
+              </p>
+              <div class="row">
+                <div class="img-container">
+                  <img
+                    class="modal-target"
+                    src="./imgs/face-generator/low-fi-bg-palette.png"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal" class="modal">
+        <span id="modal-close" class="modal-close">&times;</span>
+        <img id="modal-content" class="modal-content" />
+        <div id="modal-caption" class="modal-caption"></div>
+      </div>
+    </div>
+    <script src="./modal.js"></script>
+  </body>
+</html>
