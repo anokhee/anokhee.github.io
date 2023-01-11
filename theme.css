@@ -93,8 +93,16 @@ hr:after {
 
 .project-card {
   height: auto;
-  margin: 12px 0px 12px 0px;
+  margin: 2rem 0px;
   width: 100%;
+}
+
+.project-card:hover {
+  cursor: pointer;
+}
+
+.project-card h4:hover {
+  opacity: 50%;
 }
 
 .horizontal-card {
