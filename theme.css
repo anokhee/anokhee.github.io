@@ -5,7 +5,6 @@ html {
 
 a {
   color: #07304b;
-  padding: 8px;
   text-decoration: none;
   font-weight: 600;
 }
@@ -23,38 +22,6 @@ body {
   line-height: 1.6rem;
 }
 
-.button-container {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-button {
-  border: none;
-  border-radius: 24px;
-  color: #ffffff;
-  font-weight: 600;
-  font-family: "Open Sans", sans-serif;
-  font-size: 0.85rem;
-  height: 42px;
-  margin: 4px 0px 4px 0px;
-  padding: 8px 16px 8px 16px;
-  width: 100%;
-}
-
-button:hover {
-  background: linear-gradient(0.25turn, #e06c9f, #eac878);
-}
-
-.button-primary {
-  background: #307888;
-}
-
-.button-secondary {
-  background-color: #e06c9f;
-}
-
 #home-header {
   width: 70%;
   margin: 0 auto;
@@ -64,7 +31,7 @@ button:hover {
 #projects-container {
   width: 70%;
   margin: 0 auto;
-  padding: 8rem 3%;
+  padding: 8rem;
 }
 
 .body-section {
@@ -151,13 +118,13 @@ h4 {
 h1 {
   color: #1f1f1f;
   font-size: 2rem;
-  font-weight: 400;
-  line-height: 2.2rem;
+  font-weight: 600;
+  line-height: 2.4rem;
   margin-bottom: 1.8rem;
 }
 
 h2 {
-  color: #737bd4;
+  color: #1f71ff;
   font-family: "Open Sans", sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
@@ -239,19 +206,11 @@ ul li {
 }
 
 .border-right {
-  border-right: 1px solid #737bd4;
+  border-right: 1px solid #1f71ff;
 }
 
 .header-image {
   width: 100px;
-}
-
-.outlined {
-  border: 1px solid black;
-  box-shadow: #000000 0px 0px 0px 0px, #fffbeb 4px 4px 0px -1px, black 4px 4px,
-    #fffbeb 8px 8px 0px -1px, black 8px 8px, #fffbeb 12px 12px 0px -1px,
-    black 1px 1px;
-  padding: 24px 2.5% 24px 2.5%;
 }
 
 .center-text {
@@ -355,14 +314,15 @@ ul li {
 .top-nav {
   align-items: center;
   background-color: #f7fcfc;
-  /* border-bottom: 1px solid #737bd4; */
   display: flex;
   justify-content: space-between;
+  height: 1rem;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1.5rem;
   position: fixed;
   top: 0;
   width: 100%;
+  border-bottom: 1px solid #1f71ff;
 }
 
 .top-nav .nav-left {
@@ -488,4 +448,54 @@ ul li {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* HOMEPAGE CANVAS */
+
+.checkbox {
+  margin-right: 0.5rem;
+}
+
+#home-header-container {
+  width: 100%;
+  height: 92vh;
+  display: flex;
+  margin-top: 60px;
+}
+
+.special-link {
+  color: #1f71ff;
+}
+
+#hero-canvas-controls {
+  height: 150px;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-left: 1px solid #1f71ff;
+}
+
+#hero-canvas-controls .hero-intro-container {
+  padding-top: 2rem;
+}
+
+#hero-canvas-controls .section-container {
+  border: 1px solid #1f71ff;
+  padding: 1rem;
+}
+
+.input-container {
+  display: flex;
+}
+
+.input-label {
+  width: 40%;
+}
+
+.range-slider {
+  width: 100%;
+  height: 25px;
+  background: #737bd4;
+  opacity: 0.7;
+  transition: opacity 0.2s;
 }

@@ -26,6 +26,21 @@
     </div>
   </div>
   <body>
+    <div id="home-header-container">
+      <canvas id="myCanvas">Not supported sorry</canvas>
+      <div id="hero-canvas-controls">
+        <div class="hero-intro-container">
+          <h1>
+            I'm a
+            <a class="special-link" href="./product-design">Product Designer</a>
+            &
+            <a class="special-link" href="./other-projects.html"
+              >Creative Developer</a
+            >.
+          </h1>
+        </div>
+      </div>
+    </div>
     <div id="projects-container">
       <div
         onclick="window.open('./terminal.html', '_self')"
@@ -83,30 +98,6 @@
       </div>
 
       <div
-        onclick="window.open('./face-generator.html', '_self')"
-        class="project-card horizontal-card"
-      >
-        <div
-          class="card-image"
-          style="background: url(./imgs/home/face-generator.png)"
-        ></div>
-        <div class="project-details">
-          <div>
-            <h2>
-              Passion Project
-              <span class="tag" style="background-color: #fde3d8"
-                >FE Development</span
-              >
-            </h2>
-            <h4>
-              Designing & developing a responsive avatar maker using generative
-              graphics.
-            </h4>
-          </div>
-        </div>
-      </div>
-
-      <div
         onclick="window.open('./rigor.html', '_self')"
         class="project-card horizontal-card"
       >
@@ -131,4 +122,6 @@
       <br />
     </div>
   </body>
+  <script src="./assets/canvas-gui.js"></script>
+  <script src="./assets/hero-canvas.js"></script>
 </html>

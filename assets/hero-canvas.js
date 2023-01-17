@@ -1,128 +1,281 @@
-var canvas = document.getElementById('myCanvas');
-var c = canvas.getContext("2d");
-width = window.innerWidth;
-height = window.innerHeight;
-canvas.width = width;
-canvas.height = height;
-canvas.style.backgroundColor = 'rgba(255, 255, 255)';
-
-var mouseX, mouseY, pMouseX, pMouseY;
-let rX, gX, bX, cR, cG, cB;
-let redPrimary, yellowPrimary, bluePrimary;
-let setPrimary, coeff, iterations;
-let capArray = ['round', 'butt'];
-
-
-setup();
-
-function setup() {
-    c.clearRect(0, 0, canvas.width, canvas.height);
-    resetCanvas();
-    draw();
+let params = {
+  isJoined: {
+    sectionLabel: "Shape Type",
+    inputType: "checkbox",
+  },
+  size: {
+    sectionLabel: "Cursor Size",
+    base: {
+      inputType: "range-slider",
+      label: "Size",
+      value: 5,
+      maxValue: 10,
+      minValue: 0,
+      step: 1,
+      hasBool: false,
+    },
+    randomSeed: {
+      inputType: "range-slider",
+      label: "Randomness",
+      value: 0,
+      maxValue: 10,
+      minValue: 0,
+      step: 1,
+      hasBool: true,
+    },
+  },
+  shape: {
+    sectionLabel: "Cursor Shape",
+    numDots: {
+      inputType: "range-slider",
+      label: "# of Points",
+      value: 5,
+      maxValue: 12,
+      minValue: 1,
+      step: 1,
+      hasBool: false,
+    },
+    roughness: {
+      inputType: "range-slider",
+      label: "Roughness",
+      value: 0,
+      maxValue: 10,
+      minValue: 0,
+      step: 1,
+      hasBool: true,
+    },
+  },
+  style: {
+    sectionLabel: "Pen Style",
+    alpha: {
+      inputType: "range-slider",
+      label: "Alpha",
+      value: 1,
+      maxValue: 100,
+      minValue: 0,
+      step: 1,
+      hasBool: false,
+    },
+    colors: {
+      red: {
+        r: 242,
+        g: 87,
+        b: 87,
+      },
+      orange: {
+        r: 242,
+        g: 205,
+        b: 96,
+      },
+      yellow: {
+        r: 242,
+        g: 232,
+        b: 99,
+      },
+      green: {
+        r: 141,
+        g: 159,
+        b: 127,
+      },
+      blue: {
+        r: 31,
+        g: 13,
+        b: 255,
+      },
+      purple: {
+        r: 252,
+        g: 18,
+        b: 189,
+      },
+      black: {
+        r: 38,
+        g: 39,
+        b: 48,
+      },
+      white: {
+        r: 255,
+        g: 255,
+        b: 255,
+      },
+    },
+  },
 };
 
-function draw() {
-    setBackground('rgba(255, 255, 255, .035)');
-    let r = rX - (mouseX + mouseY) / 5;
-    let g = gX - (mouseX + mouseY) / 5;
-    let b = bX - (mouseX + mouseY) / 10;
+const init = () => {
+  canvas = document.getElementById("myCanvas");
+  c = canvas.getContext("2d");
 
-    for (i = 1; i <= iterations; i++) {
-        c.lineWidth = ((mouseX * mouseY)) * (i * coeff);
-        if (i != 1) {
-            c.strokeStyle = `rgba(${(cR * (i - 1)/2) * rX}, ${(cG * (i-1)/2) * gX}, ${(cB * (i-1)/2) * bX}`;
-        } else {
-            c.strokeStyle = `rgba(${r}, ${g}, ${b})`;
-        }
+  class PaintSplatter {
+    constructor(x, y, size, numDots, color) {
+      this.x = x;
+      this.y = y;
 
-        c.beginPath();
-        c.moveTo(pMouseX / i, pMouseY / i);
-        c.lineTo(mouseX / i, mouseY / i);
-        c.stroke();
-        c.closePath();
+      this.randomSeed = params.size.randomSeed.value;
+      if (this.randomSeed != 0) {
+        this.size = size * Math.random() * params.size.randomSeed.value;
+      } else {
+        this.size = size;
+      }
 
-        c.beginPath();
-        c.moveTo(width - pMouseX / i, pMouseY / i);
-        c.lineTo(width - mouseX / i, mouseY / i);
-        c.stroke();
-        c.closePath();
-
-        c.beginPath();
-        c.moveTo(width - pMouseX / i, height - pMouseY / i);
-        c.lineTo(width - mouseX / i, height - mouseY / i);
-        c.stroke();
-        c.closePath();
-
-        c.beginPath();
-        c.moveTo(pMouseX / i, height - pMouseY / i);
-        c.lineTo(mouseX / i, height - mouseY / i);
-        c.stroke();
-        c.closePath();
+      this.color = color;
+      this.numDots = numDots;
+      this.roughness = params.shape.roughness.value;
+      this.alpha = params.style.alpha.value * 0.01;
     }
-    setTimeout(draw, 10);
-};
 
-function makeGrid() {
-    for (let i = 0; i < width / 20; i++) {
-        c.strokeStyle = 'rgba(200, 230, 240, .25)';
-        c.lineWidth = '0.25';
-        c.beginPath();
-        c.moveTo(i * 20, 0);
-        c.lineTo(i * 20, height);
-        c.stroke();
-        c.beginPath();
-        c.moveTo(0, i * 20);
-        c.lineTo(width, i * 20);
-        c.stroke();
+    make() {
+      let arc = (Math.PI * 2) / this.numDots;
+      let ang = 0;
+
+      c.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.alpha})`;
+      c.opacity = 0.5;
+
+      c.beginPath();
+      for (let i = 0; i < this.numDots; i++) {
+        let radius = this.size + Math.random() * this.roughness;
+        let x = radius * Math.cos(ang) + this.x / 2;
+        let y = radius * Math.sin(ang) + this.y / 2;
+
+        c.lineTo(x * 2, y * 2);
+
+        ang += arc;
+      }
+      c.closePath();
+      c.stroke();
+
+      c.strokeStyle = "rgba(0, 0, 255)";
+      c.fillStyle = "linear-gradient(#e66465, #9198e5);";
+      c.stroke();
+      c.fill();
     }
-}
+  }
 
-function setBackground(color) {
+  const setBackground = (color) => {
     c.beginPath();
-    c.rect(0, 0, width, height);
+    c.rect(0, 0, w, h);
     c.fillStyle = color;
     c.fill();
-    c.closePath();
-}
+  };
 
-document.onmousemove = function (e) {
-    pMouseX = mouseX;
-    pMouseY = mouseY;
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  const resize = () => {
+    canvas.width = w = window.innerWidth * 0.78;
+    canvas.height = h = window.innerHeight;
+    window.requestAnimationFrame(draw);
+
+    console.log(`screen resolution: ${w}px × ${h}px`);
+  };
+
+  const makeGUI = (parameters) => {
+    let params = parameters;
+    container = document.getElementById("hero-canvas-controls");
+
+    for (const section in params) {
+      let sectionContainer = document.createElement("DIV");
+      sectionContainer.className = "section-container";
+      let sectionLabel = document.createElement("H6");
+      sectionLabel.innerHTML = params[section].sectionLabel;
+
+      sectionContainer.appendChild(sectionLabel);
+      container.appendChild(sectionContainer);
+
+      for (const variable in params[section]) {
+        let inputValueExists = params[section][variable].value;
+        let inputType = params[section][variable].inputType;
+
+        // Creates a container to hold the label & input
+        let inputContainer = document.createElement("DIV");
+        inputContainer.className = "input-container";
+
+        // Creates a checkbox for each option
+        let checkbox = document.createElement("INPUT");
+        checkbox.className = "checkbox";
+        checkbox.setAttribute("type", "checkbox");
+
+        // Creates a label for each individual range slider
+        let inputLabel = document.createElement("LABEL");
+        inputLabel.className = "input-label";
+        inputLabel.innerHTML = params[section][variable].label;
+
+        if (inputType === "range-slider" && inputValueExists != undefined) {
+          // Creates a range slider for each parameter
+          let rangeSlider = document.createElement("INPUT");
+          rangeSlider.className = "range-slider";
+          rangeSlider.setAttribute("type", "range");
+          rangeSlider.defaultValue = params[section][variable].value;
+          rangeSlider.setAttribute("min", params[section][variable].minValue);
+          rangeSlider.setAttribute("max", params[section][variable].maxValue);
+
+          // Redraws the canvas when the input is changed
+          rangeSlider.addEventListener("input", function () {
+            draw();
+            params[section][variable].value = this.value;
+          });
+
+          // Appends the checkbox to the controllers panel if hasBool is true
+          if (params[section][variable].hasBool == true) {
+            if (inputType === "range-slider") {
+              rangeSlider.disabled = true;
+            }
+            inputContainer.appendChild(checkbox);
+            checkbox.checked = false;
+          }
+
+          // If the checkbox exists, this function controls what happens to the range slider
+          // when it is checked & unchecked
+          checkbox.addEventListener("input", function () {
+            if (checkbox.checked == true) {
+              rangeSlider.disabled = false;
+              params[section][variable].value = rangeSlider.value;
+            } else if (checkbox.checked == false) {
+              rangeSlider.disabled = true;
+              params[section][variable].value = 0;
+            }
+          });
+
+          inputContainer.appendChild(inputLabel);
+          inputContainer.appendChild(rangeSlider);
+          sectionContainer.appendChild(inputContainer);
+        } else if (inputType === "checkbox" && inputValueExists === undefined) {
+        }
+      }
+    }
+  };
+
+  const setup = () => {
+    console.log("setup completed");
+    makeGUI(params);
+  };
+
+  const draw = (t) => {
+    document.onmousemove = function getMouseXY(e) {
+      setBackground(`rgba(255, 255, 255, .01)`);
+      let current = new PaintSplatter(
+        e.clientX,
+        e.clientY,
+        params.size.base.value,
+        params.shape.numDots.value,
+        params.style.colors.green
+      );
+      current.make();
+    };
+
+    canvas.addEventListener("click", function () {
+      t = 0;
+      c.clearRect(0, 0, canvas.width, canvas.height);
+    });
+  };
+
+  let w,
+    h,
+    last,
+    i = 0,
+    start = 0;
+
+  window.requestAnimationFrame(draw, 1);
+  window.removeEventListener("load", init);
+  window.addEventListener("resize", resize);
+  resize();
+  setup();
 };
 
-function resetCanvas() {
-    c.clearRect(0, 0, canvas.width, canvas.height);
-    c.lineCap = `${capArray[Math.floor(Math.random() * (capArray.length))]}`;
-
-    coeff = Math.random() * (.00005 - .000005) + .000005;
-    iterations = Math.floor(Math.random() * (5 - 1) + 1);
-    setPrimary = Math.random();
-
-    if (setPrimary >= 0 && setPrimary <= .33) {
-        redPrimary = true;
-    } else if (setPrimary >= .34 && setPrimary <= .66) {
-        yellowPrimary = true;
-    } else if (setPrimary >= .67 && setPrimary <= 1) {
-        bluePrimary = true;
-    }
-
-   if (redPrimary) {
-        rX = Math.random() * (255 - 200) + 200;
-        gX = Math.random() * (225 - 180) + 180;
-        bX = Math.random() * (225 - 150) + 150;
-    } else if (yellowPrimary) {
-        rX = Math.random() * (255 - 250) + 250;
-        gX = Math.random() * (255 - 250) + 250;
-        bX = Math.random() * (180 - 150) + 150;
-    } else if (bluePrimary) {
-        rX = Math.random() * (220 - 150) + 150;
-        gX = Math.random() * (220 - 150) + 150;
-        bX = Math.random() * (255 - 180) + 180;
-    }
-
-    cR = Math.random() * 2;
-    cG = Math.random() * 2;
-    cB = Math.random() * 2;
-}
+window.addEventListener("load", init);
