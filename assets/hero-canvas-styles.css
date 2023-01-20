@@ -1,0 +1,146 @@
+#home-canvas-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+#home-canvas-container canvas {
+  cursor: crosshair;
+}
+
+#home-canvas-control-panel {
+  max-width: 100%;
+  height: 100%;
+  border-left: 1px solid #1f71ff;
+  padding: 1.25px 0px;
+}
+
+.hero-intro-container {
+  margin-top: 100px;
+  padding: 0px 1rem;
+}
+
+#all-cursor-styles-container {
+  display: flex;
+  align-items: center;
+}
+
+#main-panel {
+  margin: 0 auto;
+  width: 60%;
+  padding: 0px 1rem 0px 0px;
+}
+
+#side-panel {
+  background-color: #ffffff;
+  box-shadow: 0px 1px 24px rgb(11, 11, 11, 0.15);
+  width: 250px;
+  z-index: 999 !important;
+}
+
+.section-label-container {
+  background-color: #1f71ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 0.25rem 0.5rem;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.exit-button {
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.section-container {
+  padding: 1rem;
+  max-width: 100%;
+  position: relative;
+}
+
+#displayWindow {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid #1f71ff;
+}
+
+.cursor-shape-inputs-container {
+  display: none;
+  overflow: hidden;
+}
+
+.input-container {
+  width: auto;
+  padding: 0rem 0.5rem;
+  overflow: hidden;
+}
+
+.input-container:hover {
+  box-shadow: 0px 1px 4px rgb(11, 11, 11, 0.25);
+}
+
+.palette-container {
+  display: flex;
+}
+
+.color-swatch {
+  width: 42px;
+  height: 42px;
+  margin: 4px;
+  border-radius: 50px;
+  border: 1px solid #737bd4;
+  transition: 0.25s;
+}
+
+.color-swatch:hover {
+  transition: 0.25s;
+  opacity: 0.5;
+}
+
+/* Range Slider Input Type */
+.range-slider {
+  -webkit-appearance: none;
+  background: #fefefe;
+  border: 1px solid #737bd4;
+  border-radius: 4px;
+  height: 16px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 16px;
+  background: #ffffff;
+  border: 1px solid #737bd4;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: -400px 0 0 400px #c7ccff;
+}
+
+.range-slider:disabled {
+  opacity: 25%;
+}
+
+.input-label-container {
+  display: block;
+  align-items: center;
+}
+
+.input-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #737bd4;
+  letter-spacing: 0.08em;
+  margin-right: 8px;
+}
