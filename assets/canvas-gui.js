@@ -77,8 +77,8 @@ let params = {
     size: {
       inputType: "range-slider",
       label: "Size",
-      value: 12,
-      maxValue: 20,
+      value: 1,
+      maxValue: 50,
       minValue: 0,
       step: 1,
       hasBool: false,
@@ -95,7 +95,7 @@ let params = {
     numDots: {
       inputType: "range-slider",
       label: "Number of Points",
-      value: 15,
+      value: 4,
       maxValue: 20,
       minValue: 1,
       step: 1,
@@ -114,6 +114,8 @@ let params = {
   style: {
     sectionLabel: "Pen Style",
     hasDisplay: false,
+    selectedDrawMode: "fill",
+    selectedLineMode: "polygon",
     alpha: {
       inputType: "range-slider",
       label: "Alpha",
@@ -135,7 +137,7 @@ let params = {
     lineWidth: {
       inputType: "range-slider",
       label: "Enable Outline",
-      value: 0,
+      value: 1,
       maxValue: 10,
       minValue: 0,
       step: 1,

@@ -4,346 +4,417 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Anokhee Jandhyala's Portfolio Site | Product Design @ Terminal </title>
+    <title>
+      Anokhee Jandhyala's Portfolio Site | Product Design @ Terminal
+    </title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
     </style>
-    <link rel="stylesheet" href="assets/reset.css" />
-    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="../assets/reset.css" />
+    <link rel="stylesheet" href="../theme.css" />
   </head>
-  <body>
-    <div class="container-main">
-      <div class="header">
-        <div class="top-nav">
-          <div class="nav-left">
-            <div class="nav-home"><a href="./">Anokhee Jandhyala</a></div>
-          </div>
-          <div class="nav-right">
-            <div class="nav-link"><a href="./">Product Design</a></div>
-            <div class="nav-link">
-              <a href="./other-projects.html">Playground</a>
-            </div>
-            <div class="nav-link"><a href="./about-me.html">About Me</a></div>
-          </div>
-        </div>
+  <!-- Header with Top Navigation -->
+  <header>
+    <div class="top-nav">
+      <div class="nav-left">
+        <div class="nav-home"><a href="./">Anokhee Jandhyala</a></div>
       </div>
-        <div class="body-section">
-          <div class="img-container">
-            <img src="./imgs/terminal/hero-img.png">
-          </div>
-          <br>
-          <div class="concept">
-            <h1>Product Design at Terminal</h1>
-            <div class="row">
-              <div class="col left sm border-right">
-                <div>
-                  <h2>My Role</h2>
-                  <p>
-                    <span class="bold">My Role</span><br>Product Designer for B2B Products
-                  </p>
-                  <p>
-                    <span class="bold">Collaborators</span><br>Product, Design, Engineering, Business Development, Marketing
-                  </p>
-                  <p>
-                    <span class="bold">Timeline</span><br>April 2022 - November 2022
-                  </p>
-                </div>
-              </div>
-              <div class="col right lg">
-                <div>
-                  <h2>Key Contributions</h2>
-                  <ol>
-                    <li class="">Led design from early concept ideation to launch for a major 0 → 1 product initiative</li>
-                    <li class="">Rebranded & owned the design system for Terminal's B2B product</li>
-                    <li class="">Designed concepts around a broad vision to get stakeholder buy-in</li>
-                    <li class="">Collaborated with Product & Engineering to develop processes enabling us to ship new features, fast</li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br />
-          <hr>
-          <!-- Background & Overview -->
-          <div class="row">
-            <div class="col left">
-              <div class="row">
-                <div class="narrow-textarea">
-                  <h2>Overview</h2>
-                  <h4>Helping companies hire the right engineering talent for their remote teams.</h4>
-                  <p>Terminal helps companies build out their remote engineering teams. On the B2C side, Terminal sources qualified engineers from Canada, LatAm, and Europe and serves as their Employer of Record. On the B2B side is TalentHub, a talent platform which helps customers hire and manage these remote engineers. TalentHub users are people hiring for companies like Nextdoor, Gusto, and Chime.</p>
-                  <p>When I started at Terminal, TalentHub was a barebones MVP, and felt like a collection of pages with no clear purpose tying them all together. With remote hiring on the rise after the pandemic, Terminal saw opportunity for TalentHub to offer more to its users. I led design efforts to fulfill visions of TalentHub 2.0, from early concepts to its big release. This project was a significant cross-departmental effort, kicking off 4 months before its launch. </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr>
-          <br>
-          <!-- Converting Design System from Bootstrap to ChakraUI -->
-          <div class="row">
-            <div class="narrow-textarea">
-              <h2>Design System Setup</h2>
-              <div class="section-heading">
-                <h4>Standardizing styles across B2B & B2C products.</h4>
-                <div class="align-horizontally">
-                  <p>
-                    <span class="bold">Collaborators: </span>Front End Engineers & Designers
-                  </p>
-                </div>
-              </div>
-              <h3>The Challenge</h3>
-              <p> At the beginning, TalentHub used an off-brand color palette, lacked a clear content hierarchy, and the user journey was unclear. On top of that, its sister product, the B2C Candidate Portal, had recently undergone a major rebranding, making it even more apparent that there was little consistency across the two products. </p>
-              <br>
-              <h3>Bootstrap to ChakraUI</h3>
-              <p>One of the reasons TalentHub felt so disjointed from the Candidate Portal was because it was built using Bootstrap. For those unfamiliar with Bootstrap, it is easy to spot and its components are notoriously painful to customize.</p>
-              <p>As a first step, I proposed a one-to-one swap from Bootstrap to ChakraUI without changing any UI or content yet. This would make it easier to standardize branding across B2B and B2C products, and for developers to make larger UI changes going forward. The devs were happy to oblige and prioritizing this work now also gave me the bandwidth to focus on concepts and rebranding work in parallel.</p>
-            </div>
-          </div>
-          <br>
-          <div class="row">
+      <div class="nav-right">
+        <div class="nav-link">
+          <a href="../product-design">Product Design</a>
+        </div>
+        <div class="nav-link">
+          <a href="../playground">Playground</a>
+        </div>
+        <div class="nav-link"><a href="./about-me.html">About Me</a></div>
+      </div>
+    </div>
+  </header>
+  <!-- Body Content -->
+  <body>
+    <br /><br /><br /><br />
+    <div class="body-content-container">
+      <div class="hero-container">
+        <h1>Product Design at Terminal</h1>
+
+        <img class="hero-img" src="../imgs/terminal/hero-img.png" />
+        <div class="row">
+          <div class="col sm">
             <div>
-              <div class="img-container">
-                <img src="./imgs/terminal/step1.png">
-              </div>
-            </div>
-          </div>
-          <br>
-          <hr>
-          <br>
-          <div class="row">
-            <div class="narrow-textarea">
-              <h2>Ideation Process</h2>
-              <div class="section-heading">
-                <h4>Sketching, brainstorming, and interviewing.</h4>
-                <div class="align-horizontally">
-                  <p>
-                    <span class="bold">Collaborators: </span>Product Manager, Talent Acquisition, Customer Success
-                  </p>
-                </div>
-              </div>
-              <p>To supplement research, I interviewed internal Terminal members. Talent Acquisition provided important context because their role mirrored that of our users. I learned a lot about the recruiting process and potential pain points faced by all recruiters. Customer Support dealt with user issues in the existing app. The information gleaned from these interviews played an important role in the discovery process during a time where we didn't have many users to interview yet. Some of the concepts in the next session wouldn't have existed at all without them.</p>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div>
-              <div class="img-container">
-                <img src="./imgs/terminal/step2-sketching.png">
-              </div>
-            </div>
-          </div>
-          <hr>
-          <br>
-          <div class="row">
-            <div class="narrow-textarea">
-              <h2>Concept Designs</h2>
-              <div class="section-heading">
-                <h4>Getting stakeholder buy-in & generating hype around <br>the future of TalentHub. </h4>
-                <div class="align-horizontally">
-                  <p>
-                    <span class="bold">Collaborators: </span>Product Manager, Greater Product/Design Teams, Business Development
-                  </p>
-                </div>
-              </div>
-              <h3>Ideating on a Broad Vision</h3>
-              <p>With a timeline of less than 4 months, I needed to create several concepts for the potential future of TalentHub, and fast. The Product Manager on my team and I worked in tandem, both of us bouncing ideas off each other with each iteration. We hadn't narrowed in on a product direction yet, so the process felt experimental at times. Sometimes product brief informed the designs and other times the designs inspired the product briefs. </p>
-              <p>After we were given the green light, we used these same concepts in a company-wide presentation to get everyone excited about the future of TalentHub.</p>
-              <br>
-              <h3>Why It's Pink</h3>
-              <p>The concept designs were completed before the rebranding. I used them as an opportunity to weasel the color pink into Terminal’s branding. I was so hellbent on pink at the time was because it's such a friendly and inviting color. This got some traction initially, but we received feedback that our concepts looked a bit off-brand when presented. We had to double-down at the rebranding stage to ensure that everyone was on the same page. The pink agenda turned out to be a dud. </p>
-            </div>
-          </div>
-          <br>
-          <div>
-            <div class="row">
-              <div class="img-container">
-                <img class="modal-target" src="./imgs/terminal/step3-full-marketplace.png">
-              </div>
-            </div>
-            <br>
-            <div class="row">
-              <div class="img-container">
-                <img class="modal-target" src="./imgs/terminal/step3-onboarding-checklist.png">
-              </div>
-              <div class="img-container">
-                <img class="modal-target" src="./imgs/terminal/step3-candidate-profile.png">
-              </div>
-            </div>
-            <br>
-            <div class="row">
-              <div class="img-container">
-                <img class="modal-target" src="./imgs/terminal/step3-candidate-management.png">
-              </div>
-              <div class="img-container">
-                <img class="modal-target" src="./imgs/terminal/step3-job-creation.png">
-              </div>
-            </div>
-            <br>
-            <div class="row">
-              <div class="img-container">
-                <img class="modal-target" src="./imgs/terminal/step3-cost-calculator-final-concept.png">
-              </div>
-            </div>
-          </div>
-          <br>
-          <hr>
-          <br>
-          <div class="row">
-            <div class="narrow-textarea">
-              <h2>Rebranding</h2>
-              <h4>Creating a brand identity for TalentHub.</h4>
-              <p>As I mentioned before, TalentHub's branding needed a serious overhaul to match the Candidate Portal. I'm paraphrasing, but the general consensus around the vision for the branding was: <span class="bold">"We want it to feel light, airy, and inviting. Also, B2B doesn't have to be boring."</span>
+              <h3>About My Role</h3>
+              <p>
+                <span class="bold">My Role</span><br />Product Designer for B2B
+                Products
+              </p>
+              <p>
+                <span class="bold">Collaborators</span><br />Product, Design,
+                Engineering, Business Development, Marketing
+              </p>
+              <p>
+                <span class="bold">Timeline</span><br />April 2022 - November
+                2022
               </p>
             </div>
           </div>
-          <br>
-          <div class="narrow-textarea">
-            <h3>The Challenge</h3>
-            <p>Because the rebranding was happening in parallel with so many other things, it started to fall behind. Each week, I put together about 3-4 color palettes for the larger Product Team, hoping to get their approval. But I kept getting the same feedback. "It's hard to say yes or no with so few options," they said. The team grew more frustrated with each week that went by without considerable progress.</p>
-          </div>
-          <br>
-          <div class="narrow-textarea">
-            <h3>Endless Explorations</h3>
-            <p>The designer who rebranded the Candidate Portal suggested that I keep creating explorations. This meant filling the Figma file with variations on the same screens. In doing it this way, the idea was that at least one of them was bound to stick out as "the one" (or, at least close enough to start getting somewhere).</p>
-          </div>
-          <br>
-          <div>
+
+          <div class="col lg">
             <div>
-              <div class="img-container">
-                <img src="./imgs/terminal/step4-rapid-experimenting.png">
-              </div>
+              <h3>Key Contributions</h3>
+              <ul>
+                <li>
+                  Led design from early concept ideation to launch for a major 0
+                  → 1 product initiative
+                </li>
+                <li>
+                  Rebranded & owned the design system for Terminal's B2B product
+                </li>
+                <li>
+                  Designed concepts around a broad vision to get stakeholder
+                  buy-in
+                </li>
+                <li>
+                  Collaborated with Product & Engineering to develop processes
+                  enabling us to ship new features, fast
+                </li>
+              </ul>
             </div>
           </div>
-          <br>
-          <br>
-          <h3>Final Color Palette</h3>
-          <div>
-            <div class="img-container">
-              <img src="./imgs/terminal/step4-color-palette.png">
-            </div>
-          </div>
-          <br>
-          <div>
-            <div class="img-container">
-              <img src="./imgs/terminal/step4-color-palette-before.png">
-            </div>
-          </div>
-          <br>
-          <br>
-          <br>
-          <hr>
-          <br>
-          <div class="row">
-            <div class="narrow-textarea">
-              <h2>Final Designs</h2>
-            </div>
-          </div>
-          <div class="narrow-textarea">
-            <h4>Talent Marketplace</h4>
-            <h3>About this Feature</h3>
-            <p>Terminal's Customers could only review engineers after they applied. They had no way of using Terminal to seek out qualified talent on their own. The Talent Marketplace enables customers to browse through a curated pool of qualified talent. From here, a user can invite an engineer to an interview, favorite them, or share their profile with their team.</p>
-          </div>
-          <div class="row">
-            <div class="col left" style="width: 80%">
-              <div class="img-container">
-                <img class="modal-target" src="./imgs/terminal/step5-explore-candidates/1.png">
-              </div>
-            </div>
-            <div class="col right" style="width: 20%">
-              <div>
-                <div class="img-container">
-                  <img class="modal-target" src="./imgs/terminal/step5-explore-candidates/2.png">
-                </div>
-                <div class="img-container">
-                  <img class="modal-target" src="./imgs/terminal/step5-explore-candidates/3.png">
-                </div>
-                <div class="img-container">
-                  <img class="modal-target" src="./imgs/terminal/step5-explore-candidates/4.png">
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-          <br>
-          <div class="narrow-textarea">
-            <h4>Dashboard</h4>
-            <h3>About this Feature</h3>
-            <p>TalentHub's existing Job Creation form was long and confusing. So much so that we encouraged customers to use a Google form instead. While convenient, the form and all its details disappeared once a user hit "Submit". Users had no way to review what they'd submitted or checking on its status without reaching out to Terminal. The new Job Creation form is much shorter and provides instructions to help users write a good job posting. Users could track their job submission status in the app, and even review or edit their submissions.</p>
-          </div>
-          <div class="row">
-            <div class="col left" style="width: 80%">
-              <div class="img-container">
-                <img class="modal-target" src="./imgs/terminal/step5-dashboard/3.png">
-              </div>
-            </div>
-            <div class="col right" style="width: 20%">
-              <div>
-                <div class="img-container">
-                  <img class="modal-target" src="./imgs/terminal/step5-dashboard/1.png">
-                </div>
-                <div class="img-container">
-                  <img class="modal-target" src="./imgs/terminal/step5-dashboard/2.png">
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-          <br>
-          <div class="narrow-textarea">
-            <h4>Candidate Profile</h4>
-            <h3>About this Feature</h3>
-            <p>The existing Candidate Profiles needed some improvement. They didn't provide users with a clear picture of who each candidate is as a human being, or paint a credible picture of their quality. For users, it was difficult to know where the candidate was in the hiring process so they could take action. Additionally, these profiles lacked a seamless user experience. The new Candidate Profile provides users with a resume-like profile of each candidate. Salary expectations, start date, and remote readiness is clearly displayed with veritication.</p>
-          </div>
-          <div class="row">
-            <div class="img-container">
-              <img class="modal-target" src="./imgs/terminal/step5-etc/candidate-profile.png">
-            </div>
-          </div>
-          <br>
-          <br>
-          <div class="narrow-textarea">
-            <h4>Job Creation Form</h4>
-            <h3>About this Feature</h3>
-            <p>TalentHub's existing Job Creation form was long and confusing. So much so that we encouraged customers to use a Google form instead. While convenient, the form and all its details disappeared once a user hit "Submit". Users had no way to review what they'd submitted or checking on its status without reaching out to Terminal. The new Job Creation form is much shorter and provides instructions to help users write a good job posting. Users could track their job submission status in the app, and even review or edit their submissions.</p>
-          </div>
-          <div class="row">
-            <div class="col left" style="width: 80%">
-              <div class="img-container">
-                <img class="modal-target" src="./imgs/terminal/step5-job-creation/2.png">
-              </div>
-            </div>
-            <div class="col right" style="width: 20%">
-              <div>
-                <div class="img-container">
-                  <img class="modal-target" src="./imgs/terminal/step5-job-creation/1.png">
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-          <br>
-          <div class="narrow-textarea">
-            <h4>Cost Calculator</h4>
-            <h3>About this Feature</h3>
-            <p>After the launch, Terminal's Talent Marketplace would be a completely new feature. We feared that it would get overlooked without any context about what it is and how valuable it was. The Cost Calculator serves as both a reference tool and entry point into the Talent Marketplace. It helps customers understand the factors affecting the cost of hiring a remote engineer through Terminal. Based on input data from the users, the Cost Calculator suggests candidates in the Talent Marketplace who may be a good fit.</p>
-          </div>
-          <div class="row">
-            <div class="img-container">
-              <img class="modal-target" src="./imgs/terminal/step5-etc/concept.png">
-            </div>
-          </div>
-          <br>
-          <br>
         </div>
-      <div id="modal" class="modal">
-        <span id="modal-close" class="modal-close">&times;</span>
-        <img id="modal-content" class="modal-content">
-        <div id="modal-caption" class="modal-caption"></div>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <div class="narrow-textarea">
+        <h3>Overview</h3>
+        <h2>Designing TalentHub 2.0</h2>
+        <p>
+          Terminal helps companies build out their remote teams by sourcing
+          qualified engineers from around the world and serving as their
+          Employer of Record. Terminal's B2B platform, TalentHub, helps
+          customers hire and manage these remote engineers.
+        </p>
+        <p>
+          With the rise of remote work after the pandemic, there was opportunity
+          for TalentHub to offer more to its users, who were hiring for
+          companies like Calendly, Gusto, and Chime. I led design efforts to
+          fulfill visions of the improved TalentHub, from early concepts to
+          release.
+        </p>
       </div>
     </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <div class="case-study-divider">
+      <div class="narrow-textarea">
+        <h3>Problem Space</h3>
+        <h2>
+          How can TalentHub help companies hire the
+          <span class="accent">right engineering talent</span> for their remote
+          teams?
+        </h2>
+        <p>
+          <span class="bold"
+            >Candidates were sending applications in, but it was hard for
+            customers to find the right fit for their company.</span
+          >
+          Users had no idea what it meant for Terminal to have a database
+          "qualified" engineering talent applying to their open roles. Who are
+          these people, and why has Terminal deemed them "qualified"?
+        </p>
+        <p>
+          <span class="bold">
+            TalentHub felt like a collection of pages with no clear purpose
+            tying them all together. </span
+          >TalentHub used an off-brand color palette, lacked a clear content
+          hierarchy, and the user journey was unclear. The B2C Candidate Portal
+          recently underwent major rebranding, making the inconsistency between
+          the two products more apparent.
+        </p>
+      </div>
     </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <div class="body-content-container">
+      <div class="case-study-title-section">
+        <p>. . .</p>
+        <h3>First 4 Weeks</h3>
+        <h1>
+          Digging deeper into the problem space & setting up the design system
+        </h1>
+        <p>
+          <span class="bold">Collaborators: </span>Product Manager, Front End
+          Engineers,<br />Talent Acquisition, Customer Success
+        </p>
+        <p>...</p>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+      <div class="row">
+        <div class="col sm">
+          <div>
+            <h3>Interviewing & Brainstorming</h3>
+            <p>
+              During the early days of my role at Terminal, I had little context
+              on the day-to-day of a recruiter. So, to get clarity around
+              problems with TalentHub, I interviewed several internal Terminal
+              members.
+            </p>
+
+            <p>
+              Talent Acquisition provided important insight because their role
+              mirrored that of our users. I learned a lot about the recruiting
+              process and potential pain points faced by all recruiters.
+              Customer Support dealt with user issues in the existing app. These
+              interviews played important role in the discovery process during a
+              time where we didn't have many end users to interview yet.
+            </p>
+          </div>
+        </div>
+        <div class="col lg">
+          <div class="img-container">
+            <img src="../imgs/terminal/step2-sketching.png" />
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <div class="row">
+        <div class="col sm">
+          <div>
+            <h3>Standardizing B2B & B2C Design Systems</h3>
+            <p>
+              TalentHub was built using Bootstrap, a frontend library with
+              components notoriously painful to customize.
+            </p>
+            <p>
+              I proposed a one-to-one swap from Bootstrap to ChakraUI (used by
+              the Candidate Portal) without changing any UI or content yet. This
+              would make it easier to standardize branding across B2B and B2C
+              products, and for developers to make larger UI changes going
+              forward. The devs were happy to oblige and prioritizing this work
+              now also gave me the bandwidth to focus on concepts and rebranding
+              work in parallel.
+            </p>
+          </div>
+        </div>
+        <div class="col lg">
+          <div class="img-container">
+            <img src="../imgs/terminal/step1.png" />
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <div class="case-study-title-section">
+        <p>. . .</p>
+        <h3>The Following 3 Weeks</h3>
+        <h1>Designing concepts to gain stakeholder buy-in & generate hype</h1>
+        <p>
+          <span class="bold">Collaborators: </span>Product Manager, Greater
+          Product/Design Teams, Business Development
+        </p>
+        <p>. . .</p>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <div class="row">
+        <div class="col sm">
+          <div>
+            <h3>Ideating on a Broad Vision</h3>
+            <p>
+              While creating concepts, my Product Manager and I worked in
+              tandem, both of us bouncing ideas off each other with each
+              iteration. We hadn't narrowed in on a product direction yet, so
+              the process felt experimental at times. Sometimes product brief
+              informed the designs and other times the designs inspired the
+              product briefs. Once we got the green light, we used these
+              concepts in a company-wide presentation to get everyone excited
+              about the future of TalentHub.
+            </p>
+
+            <br />
+
+            <h3>A Note About the Pink</h3>
+            <p>
+              The concept designs were completed before the rebranding. I used
+              them as an opportunity to weasel the color pink into Terminal’s
+              branding. I was so hellbent on pink at the time was because it's
+              such a friendly and inviting color. This got some traction
+              initially, but we received feedback that our concepts looked a bit
+              off-brand when presented. We had to double-down at the rebranding
+              stage to ensure that everyone was on the same page. The pink
+              agenda turned out to be a dud.
+            </p>
+          </div>
+        </div>
+        <div class="col lg">
+          <div>
+            <div class="img-container">
+              <img src="../imgs/terminal/step3-full-marketplace.png" />
+            </div>
+            <div class="row">
+              <div class="col img-container">
+                <img src="../imgs/terminal/step3-candidate-profile.png" />
+              </div>
+              <div class="col img-container">
+                <img
+                  src="../imgs/terminal/step3-cost-calculator-final-concept.png"
+                />
+              </div>
+              <div class="col img-container">
+                <img src="../imgs/terminal/step3-onboarding-checklist.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <div class="narrow-textarea">
+        <h1>Creating a new brand identity for TalentHub</h1>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <div class="narrow-textarea">
+        <h3>Visual Rebranding</h3>
+        <p>
+          As I mentioned before, TalentHub's branding needed a serious overhaul
+          to match the Candidate Portal. I'm paraphrasing, but the general
+          consensus around the vision for the branding was: "We want it to feel
+          light, airy, and inviting." and "B2B doesn't have to be boring!"
+        </p>
+      </div>
+      <br />
+      <div class="img-container">
+        <img src="../imgs/terminal/before-the-rebrand.png" />
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <div class="row">
+        <div class="col sm">
+          <div>
+            <h3>Endless Explorations</h3>
+            <p>
+              Because the rebranding was happening in parallel with the concept
+              work, it started falling behind. Each week, I put together a few
+              options, but I got the same feedback: "It's hard to say yes or no
+              with so few options".
+            </p>
+            <p>
+              The team grew more frustrated with each week that went by. The
+              designer who rebranded the Candidate Portal suggested that I keep
+              creating explorations. This meant filling the Figma file with
+              variations on the same screens. In doing it this way, the idea was
+              that at least one of them was bound to stick out as "the one" (or,
+              at least close enough to start getting somewhere).
+            </p>
+          </div>
+        </div>
+        <div class="col lg">
+          <div class="img-container">
+            <img src="../imgs/terminal/step4-rapid-experimenting.png" />
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <div class="img-container">
+        <img src="../imgs/terminal/before-after-rebrand.png" />
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <div class="narrow-textarea">
+        <h1>Final Designs</h1>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <div class="img-container">
+        <img src="../imgs/terminal/step5-explore-candidates/1.png" />
+      </div>
+
+      <br />
+
+      <div class="img-container">
+        <img src="../imgs/terminal/step5-dashboard/3.png" />
+      </div>
+
+      <br /><br />
+
+      <div class="narrow-textarea">
+        <h3>Job Creation Form</h3>
+        <p>
+          TalentHub's existing Job Creation form was long and confusing. So much
+          so that we encouraged customers to use a Google form instead. While
+          convenient, the form and all its details disappeared once a user hit
+          "Submit". Users had no way to review what they'd submitted or checking
+          on its status without reaching out to Terminal. The new Job Creation
+          form is much shorter and provides instructions to help users write a
+          good job posting. Users could track their job submission status in the
+          app, and even review or edit their submissions.
+        </p>
+      </div>
+      <br />
+      <div class="img-container">
+        <img src="../imgs/terminal/step5-job-creation/2.png" />
+      </div>
+
+      <br /><br />
+      <div class="narrow-textarea">
+        <div>
+          <h3>Cost Calculator</h3>
+          <p>
+            After the launch, Terminal's Talent Marketplace would be a
+            completely new feature. We feared that it would get overlooked
+            without any context about what it is and how valuable it was. The
+            Cost Calculator serves as both a reference tool and entry point into
+            the Talent Marketplace. It helps customers understand the factors
+            affecting the cost of hiring a remote engineer through Terminal.
+            Based on input data from the users, the Cost Calculator suggests
+            candidates in the Talent Marketplace who may be a good fit.
+          </p>
+        </div>
+      </div>
+      <br />
+      <div class="img-container">
+        <img src="../imgs/terminal/step5-etc/concept.png" />
+      </div>
     </div>
-    </div>
-    <script src="./modal.js"></script>
   </body>
 </html>
