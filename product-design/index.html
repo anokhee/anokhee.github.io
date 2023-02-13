@@ -15,7 +15,7 @@
   <div class="header">
     <div class="top-nav">
       <div class="nav-left">
-        <a href="./">Anokhee Jandhyala</a>
+        <a href="../index.html">Anokhee Jandhyala</a>
       </div>
       <div class="nav-right">
         <a href="./">Product Design</a>
@@ -25,87 +25,140 @@
     </div>
   </div>
   <body>
-    <div id="projects-container">
-      <div
-        onclick="window.open('./terminal.html', '_self')"
-        class="project-card horizontal-card"
-      >
-        <div
-          class="card-image"
-          style="background: url(./imgs/home/terminal.png)"
-        ></div>
-        <div class="project-details">
-          <div>
-            <h2>Terminal<span class="tag">Product Design</span></h2>
-            <h4>
-              Helping companies hire the right talent for their remote teams.
-            </h4>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+          Anokhee Jandhyala's Portfolio Site | Product Design @ Terminal
+        </title>
+        <style>
+          @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+        </style>
+        <link rel="stylesheet" href="../assets/reset.css" />
+        <link rel="stylesheet" href="../theme.css" />
+      </head>
+      <!-- Header with Top Navigation -->
+      <header>
+        <div class="top-nav">
+          <div class="nav-left">
+            <div class="nav-home"><a href="../">Anokhee Jandhyala</a></div>
+          </div>
+          <div class="nav-right">
+            <div class="nav-link">
+              <a href="../product-design">Product Design</a>
+            </div>
+            <div class="nav-link">
+              <a href="../playground">Playground</a>
+            </div>
+            <div class="nav-link"><a href="./about-me.html">About Me</a></div>
           </div>
         </div>
-      </div>
+      </header>
+      <!-- Body Content -->
+      <body>
+        <div class="top-spacer"></div>
+        <div class="top-spacer"></div>
 
-      <div
-        onclick="window.open('./tourial.html', '_self')"
-        class="project-card horizontal-card"
-      >
-        <div
-          class="card-image"
-          style="background: url(./imgs/home/tourial.png)"
-        ></div>
-        <div class="project-details">
-          <div>
-            <h2>Tourial <span class="tag">Product Design</span></h2>
-            <h4>
-              Designing early concepts, MVPs, & dashboards for a growing
-              startup.
-            </h4>
+        <div class="body-content-container">
+          <div
+            class="row project-card"
+            onclick="window.open(`./terminal.html`, `_self`)"
+          >
+            <div class="col lg">
+              <div class="img-container">
+                <img src="../imgs/home/terminal.png" />
+              </div>
+            </div>
+            <div class="col sm">
+              <div>
+                <div class="tagged-title-container">
+                  <h3>Terminal</h3>
+                  <span class="tag product-design">Product Design</span>
+                </div>
+                <h2>
+                  Helping companies hire the right engineering talent for their
+                  remote teams.
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <br />
+
+          <div
+            class="row project-card"
+            onclick="window.open(`./tourial.html`, `_self`)"
+          >
+            <div class="col lg">
+              <div class="img-container">
+                <img src="../imgs/home/tourial.png" />
+              </div>
+            </div>
+            <div class="col sm">
+              <div>
+                <div class="tagged-title-container">
+                  <h3>Tourial</h3>
+                  <span class="tag product-design">Product Design</span>
+                </div>
+                <h2>My experience designing for an early-stage startup.</h2>
+              </div>
+            </div>
+          </div>
+
+          <br />
+
+          <div
+            class="row project-card"
+            onclick="window.open(`./roadsync.html`, `_self`)"
+          >
+            <div class="col lg">
+              <div class="img-container">
+                <img src="../imgs/home/roadsync.png" />
+              </div>
+            </div>
+            <div class="col sm">
+              <div>
+                <div class="tagged-title-container">
+                  <h3>RoadSync</h3>
+                  <span class="tag product-design">Product Design</span>
+                </div>
+                <h2>
+                  Facilitating touchless payments & invoices for the trucking
+                  industry.
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <br />
+
+          <div
+            class="row project-card"
+            onclick="window.open(`./rigor.html`, `_self`)"
+          >
+            <div class="col lg">
+              <div class="img-container">
+                <img src="../imgs/home/rigor.png" />
+              </div>
+            </div>
+            <div class="col sm">
+              <div>
+                <div class="tagged-title-container">
+                  <h3>Rigor</h3>
+                  <span class="tag fe-development">FE Development</span>
+                </div>
+                <h2>Mini Hackathon: Improving Rigor's Benchmark Test</h2>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div
-        onclick="window.open('./roadsync.html', '_self')"
-        class="project-card horizontal-card"
-      >
-        <div
-          class="card-image"
-          style="background: url(./imgs/home/roadsync.png)"
-        ></div>
-        <div class="project-details">
-          <div>
-            <h2>RoadSync <span class="tag">Product Design</span></h2>
-            <h4>
-              Facilitating mobile payments & invoices for the trucking industry.
-            </h4>
-          </div>
-        </div>
-      </div>
-
-      <div
-        onclick="window.open('./rigor.html', '_self')"
-        class="project-card horizontal-card"
-      >
-        <div
-          class="card-image"
-          style="background: url(./imgs/home/rigor.png)"
-        ></div>
-        <div class="project-details">
-          <div>
-            <h2>
-              Rigor
-              <span class="tag" style="background-color: #fde3d8"
-                >FE Development</span
-              >
-            </h2>
-            <h4>Mini Hackathon: Improving the Benchmark Test</h4>
-          </div>
-        </div>
-      </div>
-
-      <hr />
-      <br />
-    </div>
+      </body>
+      <script src="./assets/params.js"></script>
+      <script src="./assets/canvas-gui.js"></script>
+      <script src="./assets/hero-canvas.js"></script>
+    </html>
   </body>
-  <script src="./assets/canvas-gui.js"></script>
-  <script src="./assets/hero-canvas.js"></script>
 </html>

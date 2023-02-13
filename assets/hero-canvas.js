@@ -64,6 +64,9 @@ const init = () => {
       this.roughness = params.shape.roughness.value;
       this.lineMode = lineMode;
 
+      c.lineCap = "round";
+      c.lineJoin = "round";
+
       this.lineWidth = lineWidth;
       if (this.lineWidth != 0) {
         c.strokeStyle = `rgba(${params.style.selectedColor.r - 100},
@@ -86,50 +89,39 @@ const init = () => {
     }
 
     make() {
+      setBackground(`rgba(255, 255, 255, .00025)`);
+
       let arc = (Math.PI * 2) / this.numDots;
       let ang = 0;
 
       c.lineWidth = this.lineWidth;
       c.fillStyle = this.color;
 
-      if (this.lineMode === "polygon") {
-        c.beginPath();
-        for (let i = 0; i < this.numDots; i++) {
-          let radius = this.size + Math.random() * this.roughness;
-          let x = radius * Math.cos(ang) + this.x;
-          let y = radius * Math.sin(ang) + this.y;
-          c.lineTo(x, y);
-          ang += arc;
-        }
-        c.fill();
-        c.closePath();
-      }
-
-      if (this.lineMode === "dots") {
-        for (let i = 0; i < this.numDots; i++) {
-          let radius = this.size + Math.random() * this.roughness;
-          let x = radius * Math.cos(ang) + this.x;
-          let y = radius * Math.sin(ang) + this.y;
+      if (params.style.selectedDrawMode != "fill") {
+        if (this.lineMode === "polygon") {
           c.beginPath();
-          c.rect(x, y, 2, 2, 5);
-          c.stroke();
-          ang += arc;
+          for (let i = 0; i < this.numDots; i++) {
+            let radius = this.size + Math.random() * this.roughness;
+            let x = radius * Math.cos(ang) + this.x;
+            let y = radius * Math.sin(ang) + this.y;
+            c.lineTo(x, y);
+            ang += arc;
+          }
+          c.fill();
+          c.closePath();
+        } else if (this.lineMode === "dots") {
+          for (let i = 0; i < this.numDots; i++) {
+            let radius = this.size + Math.random() * this.roughness;
+            let x = radius * Math.cos(ang) + this.x;
+            let y = radius * Math.sin(ang) + this.y;
+            c.beginPath();
+            c.arc(x, y, this.size, 0, 10);
+            c.stroke();
+            c.fill();
+            ang += arc;
+          }
         }
       }
-
-      if (this.lineMode === "dots") {
-        for (let i = 0; i < this.numDots; i++) {
-          let radius = this.size + Math.random() * this.roughness;
-          let x = radius * Math.cos(ang) + this.x;
-          let y = radius * Math.sin(ang) + this.y;
-          c.beginPath();
-          c.rect(x, y, 5, 5);
-          ang += arc;
-        }
-      }
-      c.stroke();
-
-      console.log(this.lineMode);
     }
   }
 
@@ -176,7 +168,6 @@ const init = () => {
   const draw = (t) => {
     canvas.style.background = "#fff";
     document.onmousemove = function getMouseXY(e) {
-      setBackground(`rgba(255, 255, 255, .0005)`);
       let current = new PaintSplatter(
         e.clientX,
         e.clientY,
@@ -189,9 +180,16 @@ const init = () => {
         params.style.selectedLineMode
       );
       if (e.which == 1) {
-        current.make();
         pathsArr.push([e.clientX, e.clientY]);
+        current.make();
 
+        if (params.style.selectedDrawMode === "fill") {
+          c.beginPath();
+          for (let i = 0; i < pathsArr.length; i++) {
+            c.lineTo(pathsArr[i][0], pathsArr[i][1]);
+          }
+          c.stroke();
+        }
         if (
           params.style.selectedDrawMode === "fill" &&
           params.style.selectedDrawMode != "paintbrush"
@@ -205,9 +203,6 @@ const init = () => {
       }
     };
     pathsArr = [];
-
-    t++;
-
     document.addEventListener("keydown", function (e) {
       if (e.keyCode === 32) {
         t = 0;

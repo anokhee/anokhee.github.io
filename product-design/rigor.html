@@ -4,184 +4,310 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Anokhee Jandhyala's Portfolio Site | Mini Hackathon @ Rigor </title>
+    <title>Anokhee Jandhyala | UX Engineering @ Rigor</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
     </style>
-    <link rel="stylesheet" href="assets/reset.css" />
-    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="../assets/reset.css" />
+    <link rel="stylesheet" href="../theme.css" />
   </head>
+  <!-- Header with Top Navigation -->
+  <header>
+    <div class="top-nav">
+      <div class="nav-left">
+        <div class="nav-home"><a href="../">Anokhee Jandhyala</a></div>
+      </div>
+      <div class="nav-right">
+        <div class="nav-link">
+          <a href="../product-design">Product Design</a>
+        </div>
+        <div class="nav-link">
+          <a href="../playground">Playground</a>
+        </div>
+        <div class="nav-link"><a href="./about-me.html">About Me</a></div>
+      </div>
+    </div>
+  </header>
+  <!-- Body Content -->
   <body>
-    <header>
-      <div class="header">
-        <div class="top-nav">
-          <div class="nav-left">
-            <div class="nav-home"><a href="./">Anokhee Jandhyala</a></div>
-          </div>
-          <div class="nav-right">
-            <div class="nav-link"><a href="./">Product Design</a></div>
-            <div class="nav-link">
-              <a href="./other-projects.html">Playground</a>
+    <div class="top-spacer"></div>
+    <img class="hero-img" src="../imgs/rigor/hero-img.png" /><br />
+    <div class="body-content-container">
+      <div class="hero-container">
+        <div>
+          <h1>UX Engineering at Rigor</h1>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col xs">
+            <div>
+              <h3>About My Role</h3>
+              <p>
+                <span class="bold">My Role</span><br />UX Engineering Intern
+              </p>
+              <p>
+                <span class="bold">Collaborators</span><br />Engineering Team
+              </p>
+              <p>
+                <span class="bold">Timeline</span><br />February 2019 - May 2019
+              </p>
             </div>
-            <div class="nav-link"><a href="./about-me.html">About Me</a></div>
+          </div>
+
+          <div class="col xl">
+            <div>
+              <h3>About Rigor</h3>
+              <p>
+                Rigor (acquired by Splunk) provided powerful tools to optimize
+                and track websites' performance. Users could get insight about
+                API calls or uptime, or benchmark their performance against
+                competitors. Some users used Rigor to diagnose and repair
+                technical issues or answer business questions.
+              </p>
+              <p>
+                During the concluding weeks of my internship, I participated in
+                a mini-hackathon. I was to design/develop a functional prototype
+                to improve upon an existing feature. My goal wasn't to deliver a
+                production-ready new feature, but to bring attention to areas in
+                need of UX improvements. The reason for this was because there
+                were no design or product people. The front end developers were
+                the ones creating the UIs. At the end of the two weeks, I
+                pitched the idea to the engineering team.
+              </p>
+
+              <br />
+
+              <h3>Overview of What I Did</h3>
+              <ul>
+                <li>
+                  Pushed code to Rigor's production application, building
+                  primarily in Ruby on Rails and ReactJS
+                </li>
+                <li>
+                  Designed and implemented two new features: the Executive
+                  Dashboard and Benchmark Test
+                </li>
+                <li>
+                  Ran automated tests in Cucumber and manually QA'd the product
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>
+
+    <br />
+
+    <div class="case-study-divider">
+      <div class="container">
+        <div class="narrow-textarea">
+          <h3 class="center-text">Mini Hackathon Overview</h3>
+          <h2 class="center-text">Improving Rigor's Benchmark Test</h2>
+        </div>
+
+        <br />
+
+        <div class="row">
+          <div class="col">
+            <p>
+              I noticed that several users wrote into ProductBoard about Rigor's
+              Benchmark Test. Because it was one of Rigor's most important and
+              popular features, I wanted to improve upon the way it displayed
+              data. The report pictured here shows information about various
+              performance metrics. Users can enter custom configurations, then
+              the test compares each metric with its results from the previous
+              run:
+            </p>
+          </div>
+          <div class="col">
+            <div class="img-container">
+              <img
+                class="modal-target"
+                src="../imgs/rigor/rigor-before-redesign.png"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </header>
-    <div class="container-main">
-      <div class="header">
-        <div class="body-section">
-          <h1>Mini Hackathon: Improving Rigor's Benchmark Test</h1>
-          <img src="./imgs/rigor/hero-img.png">
-          <br />
-          <br />
-          <!-- Section with my role & timeframe of work -->
-        
-          <br>
-          <!-- Background & Overview -->
-          <div class="row">
-            <div class="narrow-textarea">
-              <h2>Overview</h2>
-              <h4>Improving upon Rigor's most popular feature</h4>
-              <p>Rigor (acquired by Splunk) provided powerful tools to optimize and track websites' performance. Users could get insight about API calls or uptime, or benchmark their performance against competitors. Some users used Rigor to diagnose and repair technical issues or answer business questions.</p>
-              <p>During the concluding weeks of my internship, I participated in a mini-hackathon. I was to design/develop a functional prototype to improve upon an existing feature. My goal wasn't to deliver a production-ready new feature, but to bring attention to areas in need of UX improvements. The reason for this was because there were no design or product people. The front end developers were the ones creating the UIs. At the end of the two weeks, I pitched the idea to the engineering team.</p>
-            </div>
-          </div>
-          <br>
-          <div class="row concept">
-            <div class="col left align-col-to-center">
-              <div class="narrow-textarea">
-                <h3>The Benchmark Test</h3>
-                <p>I noticed that several users wrote into ProductBoard about Rigor's Benchmark Test. Because it was one of Rigor's most important and popular features, I wanted to improve upon the way it displayed data. The report pictured here shows information about various performance metrics. Users can enter custom configurations, then the test compares each metric with its results from the previous run:</p>
-              </div>
-            </div>
-            <div class="col right">
-              <div class="img-container">
-                <img src="./imgs/rigor/rigor-before-redesign.png">
-              </div>
-            </div>
-          </div>
-          <br>
-          <hr>
-          <br>
-          <div class="row">
-            <div class="narrow-textarea">
-              <h2>Research & Design</h2>
-              <h4>Understanding Rigor's highly-technical user base, and designing a solution for their needs</h4>
-              <h3>Creating Personas</h3>
-              <p>Pulling from cross-departmental meetings and product boards, I created two personas. These personas are reflective of Rigor's primary user base. I emphasized technical experience, and personality traits.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="img-container">
-              <img src="./imgs/rigor/rigor-user-personas.png">
-            </div>
-          </div>
-          <br>
-          <br>
-          <div class="row">
-            <div class="narrow-textarea">
-              <h3>Identifying Pain Points</h3>
-              <p>My first step was to identify the major pain points of the current implementation. I didn't have the time or resources at hand to conduct user interviews to understand their mindsets and needs. Luckily, I was able to rely on my coworkers and ProductBoard for insight about user frustrations.</p>
-              <p>Because I was programming this in React, I broke the Benchmark Test down into its most basic components. This helped me analyze each pain point while planning out how it'd figure into the existing codebase. </p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="img-container">
-              <img src="./imgs/rigor/rigor-pain-points.png">
-            </div>
-          </div>
-          <br>
-          <br>
-          <div class="row">
-            <div class="narrow-textarea">
-              <h3>Creating charts that answer business questions</h3>
-              <p>Pulling from cross-departmental meetings and product boards, I created two personas. These personas are reflective of Rigor's primary user base. I emphasized technical experience, and personality traits.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="img-container">
-              <img src="./imgs/rigor/rigor-charts-that-answer-questions.png">
-            </div>
-          </div>
-          <br>
-          <br>
-          <div class="row">
-            <div class="narrow-textarea">
-              <div>
-                <h3>Mid-fidelity Mockups</h3>
-                <ul>
-                  <li>Horizontal scrolling when users select too many metrics. Although most, if not all users, were desktop users, the horizontal scrolling was disruptive of a good user experience. Finding a way to remove this would be good for users like Priya who like displaying metrics on giant screens in their office buildings.</li>
-                  <li>Poor information hierarchy makes it difficult for users to derive meaningful information from the page at a glance.</li>
-                  <li>Unnecessary UI components like tooltips, linkouts, and misleading iconography clutter the page. They also distract from the “story” the data should be telling about the performance metrics.</li>
-                  <li>Crowded layout with small text may be inaccessible to users with poor vision.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="img-container">
-              <img src="./imgs/rigor/rigor-low-fidelity-mockup.png">
-            </div>
-          </div>
-          <br>
-          <hr>
-          <br>
-          <div class="row">
-            <div>
-                <div>
-                    <h2>Final Prototype</h2>
-                    <div class="img-container">
-                        <img src="./imgs/rigor/rigor-final-result.png">
-                    </div>
-                </div>
-            </div>
-            <div class="img-container">
-              <img src="./imgs/rigor/">
-              </div>
-            </div>
+    </div>
 
-            <br><br>
+    <div class="body-content-container">
+      <br />
+      <div class="vertical-rule"></div>
+      <div class="case-study-title-section">
+        <h3>Research, Design, & Implementation</h3>
+        <h1>
+          Understanding Rigor's highly-technical user base, and designing a
+          solution for their needs
+        </h1>
+        <p>
+          <span class="bold">Collaborators: </span>Other Engineers, Customer
+          Success
+        </p>
+      </div>
+      <div class="vertical-rule"></div>
+      <br />
 
-            <div class="row">
-              <div class="col left align-col-to-center">
-                <div>
-                  <h3>D3.js and React's toxic relationship</h3>
-                  <p>D3 and React manipulate the DOM differently. This meant I had to brute-force some arguably disgusting code to build the interactivity and styling of the charts. With more time, I would have researched alternative libraries or methods of integrating the two libraries.</p>
-                  <br>
-                  <h3>Normalizing Data</h3>
-                  <p>At the beginning, I had some difficulty visualizing the data in a way that was meaningful at a glance. This data was stored in wildly incompatible units like bytes, seconds, and something called "counts". So what might've been fast in seconds translated to an impossible byte size. These values would not be helpful if displayed on the same graph, and there wasn't a great way to normalize them.</p>
-                  <p>A coworker suggested that the data might be more meaningful if consolidated into percentiles, then compared to AWS Top Sites data. To break down the percentile ranks from the 0th - 99th, we configured AWS to generate a JSON file with discrete data. I ended up with 3,860 unique percentiles, normalized those values and mapped them to a D3 chart.</p>
-                </div>
-              </div>
-              <div class="col right">
-                <div class="img-container">
-                  <img src="./imgs/rigor/rigor-alexa-data.png">
-                </div>
-              </div>
-            </div>
+      <div class="narrow-textarea">
+        <h3 class="center-text">Creating Personas</h3>
+        <p class="center-text">
+          Pulling from cross-departmental meetings and product boards, I created
+          two personas. These personas are reflective of Rigor's primary user
+          base. I emphasized technical experience, and personality traits.
+        </p>
+      </div>
+      <br />
+      <div class="img-container">
+        <img class="modal-target" src="../imgs/rigor/rigor-user-personas.png" />
+      </div>
 
-            <br><br>
+      <br /><br />
 
-            <div class="row">
-              <div class="narrow-textarea">
-                <h3>Concluding Thoughts</h3>
-                <p>I learned how important collaboration and planning can be at the early stages 
-                  of software development. Also, it's important to remember who your users are – 
-                  all the time. Working on a product for developers was especially interesting. 
-                  I noticed that technical users didn't mind ugly UI. In fact, they liked seeing 
-                  a lot of data and having the option to configure lots of settings to their 
-                  liking. With more time, it would have been interesting to conduct user 
-                  interviews or tests before creating future iterations.</p>
-                  <p>I'd also have experimented with ways to effectively display data visualizations on 
-                    mobile devices. Bar charts, pie charts, and line graphs are ubiquitous, but extra 
-                    care must taken to ensure that they don't exist only as a visual component. They need 
-                    to tell meaningful stories about the data too.</p>
-              </div>
-            </div>
+      <div class="narrow-textarea">
+        <h3 class="center-text">Identifying Pain Points</h3>
+        <p class="center-text">
+          My first step was to identify the major pain points of the current
+          implementation. I didn't have the time or resources at hand to conduct
+          user interviews to understand their mindsets and needs. Luckily, I was
+          able to rely on my coworkers and ProductBoard for insight about user
+          frustrations.
+        </p>
+        <p class="center-text">
+          Because I was programming this in React, I broke the Benchmark Test
+          down into its most basic components. This helped me analyze each pain
+          point while planning out how it'd figure into the existing codebase.
+        </p>
+      </div>
+      <br />
+      <div class="img-container">
+        <img class="modal-target" src="../imgs/rigor/rigor-pain-points.png" />
+      </div>
+      <br />
+      <div class="narrow-textarea">
+        <ul>
+          <li>
+            <span class="bold">Horizontal scrolling </span>when users select too
+            many metrics. Although most, if not all users, were desktop users,
+            the horizontal scrolling was disruptive of a good user experience.
+            Finding a way to remove this would be good for users like Priya who
+            like displaying metrics on giant screens in their office buildings.
+          </li>
+          <li>
+            <span class="bold">Poor information hierarchy </span>making it
+            difficult for users to derive meaningful information from the page
+            at a glance.
+          </li>
+          <li>
+            <span class="bold">Unnecessary UI components </span>like tooltips,
+            linkouts, and misleading iconography clutter the page. They also
+            distract from the “story” the data should be telling about the
+            performance metrics.
+          </li>
+          <li>
+            Crowded layout with small text may be
+            <span class="bold">inaccessible</span> to users with poor vision.
+          </li>
+        </ul>
+      </div>
+
+      <br /><br />
+
+      <div class="narrow-textarea">
+        <h3 class="center-text">Charts that Answer Business Questions</h3>
+        <p class="center-text">
+          Pulling from cross-departmental meetings and product boards, I created
+          two personas. These personas are reflective of Rigor's primary user
+          base. I emphasized technical experience, and personality traits.
+        </p>
+      </div>
+      <br />
+      <div class="img-container">
+        <img
+          class="modal-target"
+          src="../imgs/rigor/rigor-charts-that-answer-questions.png"
+        />
+      </div>
+
+      <br /><br />
+
+      <div class="narrow-textarea">
+        <h3 class="center-text">Mid-fidelity Mockups</h3>
+      </div>
+      <br />
+      <div class="img-container">
+        <img
+          class="modal-target"
+          src="../imgs/rigor/rigor-low-fidelity-mockup.png"
+        />
+      </div>
+
+      <br />
+      <div class="vertical-rule"></div>
+      <div class="case-study-title-section">
+        <h3>Conclusion</h3>
+        <h1>
+          Implementation & Final Thoughts
+        </h1>
+        <p>
+          <span class="bold">Collaborators: </span>Other Engineers
+        </p>
+      </div>
+      <div class="vertical-rule"></div>
+      <br />
+
+      <div class="row">
+        <div class="col">
+          <div>
+            <h3>D3.js & React's Toxic Relationship</h3>
+            <p>D3 and React manipulate the DOM differently. This meant I had to brute-force some arguably disgusting code to build the interactivity and styling of the charts. With more time, I would have researched alternative libraries or methods of integrating the two libraries.
+            </p>
+            <br>
+            <h3>Normalizing Data</h3>
+            <p>At the beginning, I had some difficulty visualizing the data in a way that was meaningful at a glance. This data was stored in wildly incompatible units like bytes, seconds, and something called "counts". So what might've been fast in seconds translated to an impossible byte size. These values would not be helpful if displayed on the same graph, and there wasn't a great way to normalize them.</p>
+            <p>A coworker suggested that the data might be more meaningful if consolidated into percentiles, then compared to AWS Top Sites data. To break down the percentile ranks from the 0th - 99th, we configured AWS to generate a JSON file with discrete data. I ended up with 3,860 unique percentiles, normalized those values and mapped them to a D3 chart.</p>
           </div>
         </div>
-        <script src="./modal.js"></script>
+        <div class="col">
+          <div class="img-container">
+            <img class="modal-target" src="../imgs/rigor/rigor-alexa-data.png">
+          </div>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="narrow-textarea">
+        <h3 class="center-text">Final Prototype</h3>
+      </div>
+      <br />
+      <div class="img-container">
+        <img
+          class="modal-target"
+          src="../imgs/rigor/rigor-final-result.png"
+        />
+      </div>
+
+      <br><br>
+
+      <div class="narrow-textarea">
+        <h3 class="center-text">Final Thoughts</h3>
+        <p>I learned how important collaboration and planning can be at the early stages of software development. Also, it's important to remember who your users are – all the time. Working on a product for developers was especially interesting. I noticed that technical users didn't mind ugly UI. In fact, they liked seeing a lot of data and having the option to configure lots of settings to their liking. With more time, it would have been interesting to conduct user interviews or tests before creating future iterations.
+        </p>
+        <p>
+          I'd also have experimented with ways to effectively display data visualizations on mobile devices. Bar charts, pie charts, and line graphs are ubiquitous, but extra care must taken to ensure that they don't exist only as a visual component. They need to tell meaningful stories about the data too.
+        </p>
+      </div>
+
+
+      </div>
+      <div id="modal" class="modal">
+        <span id="modal-close" class="modal-close">&times;</span>
+        <img id="modal-content" class="modal-content" />
+        <div id="modal-caption" class="modal-caption"></div>
+      </div>
+    </div>
+    <script src="../assets/modal.js"></script>
   </body>
 </html>
