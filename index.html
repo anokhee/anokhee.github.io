@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anokhee Jandhyala's Portfolio Site</title>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
     </style>
-    <link rel="stylesheet" href="assets/reset.css" />
-    <!-- <link rel="stylesheet" href="assets/hero-canvas-styles.css" /> -->
+    <link rel="stylesheet" href="../assets/reset.css" />
     <link rel="stylesheet" href="../theme.css" />
   </head>
   <body>
@@ -32,14 +31,19 @@
       <header>
         <div class="top-nav">
           <div class="nav-left">
-            <div class="nav-home"><a href="../">Anokhee Jandhyala</a></div>
+            <div class="nav-home">
+              <img src="./imgs/logo.svg" />
+            </div>
           </div>
           <div class="nav-right">
             <div class="nav-link">
               <a href="../product-design">Product Design</a>
             </div>
             <div class="nav-link">
-              <a href="../playground">Coding for Fun</a>
+              <a href="../playground">Art & Code</a>
+            </div>
+            <div class="nav-link">
+              <a href="./about-me.html">About Me</a>
             </div>
           </div>
         </div>
@@ -49,21 +53,22 @@
         <div class="top-spacer"></div>
         <div class="top-spacer"></div>
 
+        <!-- <div class="homepage-hero-container"></div> -->
+
         <div class="body-content-container">
           <div
             class="row project-card"
             onclick="window.open(`./product-design/terminal.html`, `_self`)"
           >
-            <div class="col lg">
+            <div class="col lg left">
               <div class="img-container">
                 <img src="../imgs/home/terminal.png" />
               </div>
             </div>
-            <div class="col sm">
+            <div class="col sm right">
               <div>
                 <div class="tagged-title-container">
                   <h3>Terminal</h3>
-                  <span class="tag product-design">Product Design</span>
                 </div>
                 <h2>
                   Helping companies hire the right engineering talent for their
@@ -79,18 +84,20 @@
             class="row project-card"
             onclick="window.open(`./product-design/tourial.html`, `_self`)"
           >
-            <div class="col lg">
+            <div class="col lg left">
               <div class="img-container">
                 <img src="../imgs/home/tourial.png" />
               </div>
             </div>
-            <div class="col sm">
+            <div class="col sm right">
               <div>
                 <div class="tagged-title-container">
                   <h3>Tourial</h3>
-                  <span class="tag product-design">Product Design</span>
                 </div>
-                <h2>My experience designing for an early-stage startup.</h2>
+                <h2>
+                  Designing an Insights Dashboard, Form Builder, and exploring
+                  potential product direction at an early-stage startup.
+                </h2>
               </div>
             </div>
           </div>
