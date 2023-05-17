@@ -11,7 +11,6 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 140%;
-  margin-bottom: 5rem;
 }
 
 button {
@@ -64,6 +63,10 @@ hr {
   width: 100%;
 }
 
+.narrow-80 {
+  width: 80% !important;
+  margin: 0 auto;
+}
 .narrow {
   width: 70% !important;
   margin: 0 auto;
@@ -230,6 +233,12 @@ p {
   font-size: 0.88rem;
 }
 
+.caption-text {
+  font-weight: 300;
+  opacity: 80%;
+  font-size: 0.8rem;
+}
+
 h1 {
   font-size: 2em;
   font-family: "Domine", serif;
@@ -242,6 +251,7 @@ h2 {
   font-size: 1.5em;
   font-weight: 600;
   line-height: 135%;
+  margin-bottom: 0.25rem;
 }
 
 h3 {
@@ -255,8 +265,10 @@ h3 {
 
 h4 {
   color: #e47e11;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
 }
 
 h5 {
@@ -266,12 +278,24 @@ h5 {
   padding-bottom: 0.5rem;
 }
 
+h6 {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
 .bold {
   font-weight: 600;
 }
 
 .center-text {
-  text-align: center !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 /* Textareas */
@@ -346,8 +370,7 @@ h5 {
   margin-bottom: 1rem;
 }
 
-.img-container,
-.icon-container {
+.img-container .icon-container {
   align-items: center;
   display: flex;
   justify-content: flex-start;
@@ -358,6 +381,17 @@ h5 {
   width: 100%;
 }
 
+.img-container {
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.img-container p {
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+}
 .icon-container img {
   width: 56px;
   height: 56px;
@@ -372,12 +406,12 @@ h5 {
 
 ul {
   list-style-type: disc;
-  margin-left: 1rem;
+  margin: 0 auto;
 }
 
 ul li {
   margin-bottom: 0.75rem;
-  font-size: 0.88;
+  font-size: 0.88rem;
 }
 
 /* Responsive Sizing */
