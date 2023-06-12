@@ -2,73 +2,79 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=`, initial-scale=1.0" />
-    <title>TalentHub @ Terminal | Anokhee Jandhyala</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Creative, empathetic, and growth-oriented Product Designer, bringing 4+ years of experience in human-centered design. Proficient in Figma, HTML/CSS/JavaScript, and design thinking, with a track record of delivering delightful end-to-end products while pushing design culture forward."
+    />
+    <title>Anokhee Jandhyala | Tourial</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="../assets/reset.css" />
     <link rel="stylesheet" href="../theme.css" />
+    <link rel="stylesheet" href="./art/art-themes.css" />
   </head>
-  <!-- START Top Navigation -->
-  <header>
-    <div class="top-nav">
-      <div class="nav-left">
-        <div class="nav-home">
-          <img src="../imgs/logo.svg" />
-          <a href="../">Anokhee Jandhyala</a>
+  <body class="fade">
+    <!-- Top Navigation -->
+    <header>
+      <div class="nav">
+        <div class="nav-left">
+          <div id="logo"></div>
+          <div class="nav-home">
+            <div class="nav-link">
+              <a href="../">Anokhee Jandhyala</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-right">
+          <div class="nav-link">
+            <a href="../product-design">Product Design</a>
+          </div>
+          <div class="nav-link">
+            <a href="../about-me.html">About Me</a>
+          </div>
         </div>
       </div>
-      <div class="nav-right">
-        <div class="nav-link">
-          <a href="../product-design">Product Design</a>
-        </div>
-        <div class="nav-link">
-          <a href="../playground">Art & Code</a>
-        </div>
-        <div class="nav-link">
-          <a href="../about-me.html">About Me</a>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- END Top Navigation -->
-  <body>
+    </header>
+    <!-- Hero Image -->
+    <div class="top-spacer"></div>
     <div class="top-spacer"></div>
     <img class="hero-img" src="../imgs/tourial/hero-img.png" />
-    <br />
-    <!-- START hero container with case study overview -->
-    <div class="hero-container">
-      <div class="container">
-        <h1>Early Product Design at Tourial</h1>
+    <!-- Start of Body Content Container -->
+    <div class="body-content-container">
+      <!-- Start of Hero Container -->
+      <div class="hero-container">
+        <h3>Product Design at Tourial</h3>
+        <h2>Helping remote companies hire the right engineering talent.</h2>
         <br />
         <div class="row">
           <div class="col xs">
-            <div>
-              <h3>My Role</h3>
-              <p class="smaller-text">First In-House Design Hire</p>
-              <h3>Collaborators</h3>
-              <p class="smaller-text">Product & Engineering</p>
-              <h3>Timeframe</h3>
-              <p class="smaller-text">November 2021 - April 2022</p>
+            <div class="my-role">
+              <div>
+                <h5>My Role</h5>
+                <p class="smaller-text">First In-House Designer</p>
+              </div>
+              <div>
+                <h5>Collaborators</h5>
+                <p class="smaller-text">Product & Engineering</p>
+              </div>
+              <div>
+                <h5>Timeline</h5>
+                <p class="smaller-text">Nov 2021 - Apr 2022</p>
+              </div>
             </div>
           </div>
           <div class="col xl">
             <div>
+              <h3>Overview</h3>
               <p>
                 Tourial provides users with the ability to create and share
                 interactive product tours to their marketing sites. I worked
                 with product managers, engineers, and the company founders to
-                deliver an
-                <span class="bold"
-                  >insights dashboard, improved form builder, chrome
-                  extension</span
-                >
-                and <span class="bold">integrations page.</span>
+                deliver an insights dashboard, improved form builder, chrome
+                extension and integrations page.
               </p>
               <p>
                 As the first in-house design hire, I had opportunity to
@@ -76,44 +82,29 @@
                 including setting up a design system in Figma and determining
                 future branding.
               </p>
-
-              <br />
             </div>
           </div>
         </div>
       </div>
+      <!-- End of Hero Container -->
     </div>
-    <!-- END hero container with case study overview -->
+    <!-- End of Body Content Container -->
     <div class="case-study-divider">
       <div class="container">
-        <h3>Case Study: Insights Dashboard</h3>
-        <div class="vertical-rule"></div>
-
-        <div class="row narrow">
-          <div class="col xs">
-            <div>
-              <h2>01.</h2>
-              <h3>The Problem</h3>
-            </div>
-          </div>
-          <div class="xl border-left">
-            <p>
-              Users didn't understand how their product tours were performing,
-              or what steps they could take to optimize their effectiveness.
-            </p>
-            <p>
-              Users wanted to know
-              <span class="bold"
-                >where visitors were getting lost or losing interest in their
-                product tours, so that they could improve lead conversion</span
-              >.
-            </p>
-          </div>
+        <div class="narrow-textarea">
+          <h1>Insights Dashboard</h1>
         </div>
-        <br /><br />
+
+        <div class="vertical-spacing-sm"></div>
 
         <div class="narrow-textarea">
-          <h5>Assessing the Current Dashboard</h5>
+          <h3>Problem</h3>
+          <p>
+            Users didn't understand how their product tours were performing, or
+            what steps they could take to optimize their effectiveness. Users
+            wanted to know where visitors were getting lost or losing interest
+            in their product tours, so that they could improve lead conversion.
+          </p>
           <p>
             While Tourial's existing insights dashboard enabled users to track
             the number of visitors who clicked through their product tour, they
@@ -121,38 +112,20 @@
             amount of data provided.
           </p>
         </div>
-        <br /><br />
+        <br />
         <div class="img-container">
-          <img
-            style="box-shadow: 12px 0px 24px #ccc"
-            src="../imgs/tourial/insights-db-before.png"
-          />
+          <img src="../imgs/tourial/insights-db-before.png" />
         </div>
 
-        <div class="vertical-rule"></div>
-        <div class="vertical-rule"></div>
-        <div class="row narrow">
-          <div class="col xs">
-            <div>
-              <h2>02.</h2>
-              <h3>Discovery</h3>
-            </div>
-          </div>
-          <div class="col xl border-left">
-            <div>
-              <p>
-                In order to better understand what our users expected out of
-                Tourial's built-in analytics, we requested
-                <span class="bold">discovery interviews</span> from our power
-                users and performed
-                <span class="bold">competitive analysis</span>.
-              </p>
-            </div>
-          </div>
-        </div>
-        <br /><br />
+        <div class="vertical-spacing-sm"></div>
+
         <div class="narrow-textarea">
-          <h5>Discovery Calls with Power Users</h5>
+          <h3>Discovery</h3>
+          <p>
+            In order to better understand what our users expected out of
+            Tourial's built-in analytics, we requested discovery interviews from
+            our power users and performed competitive analysis.
+          </p>
           <p>
             The interviews were rather open-ended and exploratory. We asked
             questions to learn more about each user's role at their company, how
@@ -167,28 +140,21 @@
           <img src="../imgs/tourial/interviews.png" />
         </div>
 
-        <div class="vertical-rule"></div>
-        <div class="vertical-rule"></div>
-        <div class="row narrow">
-          <div class="col xs">
-            <div>
-              <h2>03.</h2>
-              <h3>Prototyping</h3>
-            </div>
-          </div>
-          <div class="col xl border-left">
-            <p>
-              The prototyping phase consisted of several build-measure-learn
-              loops lasting. We presented prototypes, iterated on them, and then
-              presented them again to the same set of users. User feedback
-              uncovered opportunities for improvement and helped us decide which
-              concepts to discard or explore further.
-            </p>
-          </div>
-        </div>
-        <div class="vertical-rule"></div>
+        <div class="vertical-spacing-sm"></div>
+
         <div class="narrow-textarea">
-          <h5>First Iteration</h5>
+          <h3>Prototyping</h3>
+          <p>
+            The prototyping phase consisted of several build-measure-learn
+            loops. We presented prototypes, iterated on them, and then presented
+            them again to the same set of users. User feedback uncovered
+            opportunities for improvement and helped us decide which concepts to
+            discard or explore further.
+          </p>
+        </div>
+        <br />
+        <div class="narrow-textarea">
+          <h4>First Iteration</h4>
           <p>
             Based on our initial discovery sessions, I created several dashboard
             mockups displaying the metrics users considered most important, with
@@ -196,14 +162,11 @@
             granularity.
           </p>
           <p>
-            <span class="bold"
-              >The feedback we received helped us narrow our scope and
-              understand which representations of data resonated with
-              users.</span
-            >
-            Funnel charts were unpopular, for example, because they emphasized
-            conversion numbers without providing meaningful insights into the
-            underlying reasons.
+            The feedback we received helped us narrow our scope and understand
+            which representations of data resonated with users. Funnel charts
+            were unpopular, for example, because they emphasized conversion
+            numbers without providing meaningful insights into the underlying
+            reasons.
           </p>
         </div>
         <br />
@@ -211,15 +174,13 @@
           <img src="../imgs/tourial/dashboard-iteration-1.png" />
         </div>
 
-        <div class="vertical-rule"></div>
+        <div class="vertical-spacing-sm"></div>
+
         <div class="narrow-textarea">
-          <h5>Nonlinear Product Tours</h5>
+          <h4>Nonlinear Product Tours</h4>
           <p>
-            During our discovery sessions,
-            <span class="bold"
-              >we realized that we didn't consider how data might display for
-              nonlinear tours</span
-            >.
+            During our discovery sessions, we realized that we didn't consider
+            how data might display for nonlinear tours.
           </p>
           <p>
             Interestingly, we learned that this issue was more of a concern
@@ -230,14 +191,14 @@
             accordingly.
           </p>
         </div>
-        <br /><br />
         <div class="img-container">
           <img src="../imgs/tourial/dashboard-tourial-types.png" />
         </div>
 
-        <div class="vertical-rule"></div>
+        <div class="vertical-spacing-sm"></div>
+
         <div class="narrow-textarea">
-          <h5>Second Iteration</h5>
+          <h4>Second Iteration</h4>
           <p>
             In early interviews, users expressed a desire to see more granular
             interaction data, down to how many times a visitor hovered a link.
@@ -253,135 +214,105 @@
             asking "How might we help users convert more visitors into leads?"
           </p>
         </div>
-        <br /><br />
+        <br />
+
         <div class="img-container">
           <img src="../imgs/tourial/dashboard-iteration-2.png" />
         </div>
 
-        <div class="vertical-rule"></div>
-        <div class="vertical-rule"></div>
+        <div class="vertical-spacing"></div>
+
         <div class="narrow-textarea">
-          <h5>Pivoting to Forms</h5>
+          <h2>Pivoting to Forms</h2>
+          <p>
+            In early interviews, users expressed a desire to see more granular
+            interaction data, down to how many times a visitor hovered a link.
+            But when presented with mockups providing that level of detail,
+            users struggled to envision how they could use that data to convert
+            a visitor into a lead.
+          </p>
+          <br />
+          <h4>New Form Creation Flow</h4>
+          <p>
+            We realized that we may have assumed too much. Instead of focusing
+            on our two user problems, – "Users don't understand how their
+            product tours are performing" and "Users don't know what steps they
+            can take to optimize their effectiveness" – we should have been
+            asking "How might we help users convert more visitors into leads?"
+          </p>
         </div>
-        <br /><br />
+        <br />
         <div class="row">
-          <div class="col">
+          <div class="row xs left">
             <div class="img-container">
               <img src="../imgs/tourial/insights-db-sketches.png" />
             </div>
           </div>
-          <div class="col right">
+          <div class="row xl right">
             <div class="img-container">
               <img src="../imgs/tourial/forms-new-ux.png" />
             </div>
           </div>
         </div>
 
-        <div class="vertical-rule"></div>
-        <div class="vertical-rule"></div>
+        <div class="vertical-spacing-sm"></div>
+
         <div class="narrow-textarea">
-          <h5>Designer-Developer Collaboration</h5>
+          <h4>Handoff</h4>
           <p>
-            Based on feedback from our discover sessions with users, I created
-            dashboard mockups displaying visualizations of views per page, CTA
-            clicks, and form data. In this iteration, I explored different chart
-            options, including funnel, pie, line, and bar charts, to display
-            granular information about user engagement. Although users responded
-            well to a few of these designs and their feedback provided us with a
-            good starting point,
-            <span class="bold"
-              >we realized that we didn't account for nonlinear tours or form
-              data</span
-            >.
+            We realized that we may have assumed too much. Instead of focusing
+            on our two user problems, – "Users don't understand how their
+            product tours are performing" and "Users don't know what steps they
+            can take to optimize their effectiveness" – we should have been
+            asking "How might we help users convert more visitors into leads?"
           </p>
         </div>
-        <br /><br />
+        <br />
         <div class="img-container">
-          <img src="../imgs/tourial/dashboard-iteration-3.png" />
+          <img src="../imgs/tourial/handoff.png" />
         </div>
 
-        <div class="vertical-rule"></div>
-        <div class="vertical-rule"></div>
-        <div class="row narrow">
-          <div class="col xs">
-            <div>
-              <h2>05.</h2>
-              <h3>Conclusion</h3>
-            </div>
-          </div>
-          <div class="col xl border-left">
-            <div>
-              <h5>Final Designs</h5>
-              <p>
-                Based on feedback from our discover sessions with users, I
-                created dashboard mockups displaying visualizations of views per
-                page, CTA clicks, and form data. In this iteration, I explored
-                different chart options, including funnel, pie, line, and bar
-                charts, to display granular information about user engagement.
-                Although users responded well to a few of these designs and
-                their feedback provided us with a good starting point,
-                <span class="bold"
-                  >we realized that we didn't account for nonlinear tours or
-                  form data</span
-                >.
-              </p>
-            </div>
-          </div>
+        <div class="vertical-spacing"></div>
+
+        <div class="narrow-textarea">
+          <h2>Simple Dashboard</h2>
+          <p>
+            We realized that we may have assumed too much. Instead of focusing
+            on our two user problems, – "Users don't understand how their
+            product tours are performing" and "Users don't know what steps they
+            can take to optimize their effectiveness" – we should have been
+            asking "How might we help users convert more visitors into leads?"
+          </p>
         </div>
-        <br /><br />
-        <div class="row"">
-        <div class="col xl left">
-          <div class="img-container">
-            <img
-              class="modal-target"
-              src="../imgs/tourial/dashboard-final/1.png"
-            />
-          </div>
-        </div>
-        <div class="col xs">
-          <div>
+        <br />
+        <div class="row">
+          <div class="col xl left">
             <div class="img-container">
-              <img
-                class="modal-target"
-                src="../imgs/tourial/dashboard-final/2.png"
-              />
+              <img src="../imgs/tourial/dashboard-final/1.png" />
             </div>
-            <br />
-            <div class="img-container">
-              <img
-                class="modal-target"
-                src="../imgs/tourial/dashboard-final/3.png"
-              />
+          </div>
+          <div class="col xs right">
+            <div>
+              <div class="img-container">
+                <img src="../imgs/tourial/dashboard-final/2.png" />
+              </div>
+              <br />
+              <div class="img-container">
+                <img src="../imgs/tourial/dashboard-final/2.png" />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <!-- <div class="body-content-container">
-        <div class="vertical-rule"></div>
-        <h3>My Process</h3>
-        <h2>As the first in-house designer, I balanced several features concurrently.</h2>
+      <div class="container">
+        <div class="narrow-textarea">
+          <h1>Other Design Work</h1>
+        </div>
+      </div>
+    </div> -->
 
-        <div class="vertical-rule"></div>
-        <h5>Chrome Extension</h5>
-        <div class="img-container">
-            <img src="../imgs/tourial/chrome-extension-wireframes.png">
-        </div>
-
-        <div class="vertical-rule"></div>
-        <h5>Form Creation Tool</h5>
-        <div class="img-container">
-            <img src="../imgs/tourial/chrome-extension-wireframes.png">
-        </div>
-
-        <div class="vertical-rule"></div>
-        <h5>Future Design Concepts</h5>
-        <div class="img-container">
-            <img src="../imgs/tourial/chrome-extension-wireframes.png">
-        </div>
-        </div>
-        
- -->
+    <script src="../assets/modal.js"></script>
   </body>
 </html>
