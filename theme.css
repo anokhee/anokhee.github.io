@@ -48,6 +48,7 @@ ul li {
 
 .nav,
 .nav-link a:visited {
+  padding: 0.5rem 0px;
   align-items: center;
   color: #111;
   display: flex;
@@ -117,7 +118,7 @@ ul li {
 }
 
 .homepage-links-container {
-  background-color: rgba(235, 233, 237, 1);
+  background-color: rgb(250, 250, 250);
   border: 1px solid black;
   display: flex;
   padding: 12px 24px;
@@ -148,7 +149,7 @@ ul li {
 }
 
 .narrow-textarea {
-  width: 60%;
+  width: 54%;
   margin: 0 auto;
 }
 
@@ -181,18 +182,7 @@ ul li {
 .col {
   display: flex;
   width: 100%;
-}
-
-.left {
-  padding-right: 0.25rem;
-}
-
-.right {
-  padding-left: 0.25rem;
-}
-
-.middle {
-  padding: 0 1rem;
+  margin: 0px 0.5rem;
 }
 
 .row .xxxl {

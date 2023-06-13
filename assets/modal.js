@@ -26,6 +26,7 @@ document.addEventListener("click", function (e) {
     var modalImg = document.getElementById("modal-content");
     var captionText = document.getElementById("modal-caption");
     modal.style.display = "block";
+    modal.style.zIndex = 999;
     modalImg.src = img.src;
     captionText.innerHTML = img.alt;
   }
