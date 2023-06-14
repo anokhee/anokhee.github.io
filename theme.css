@@ -1,16 +1,16 @@
 html {
   overflow-y: auto;
   scroll-behavior: smooth;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 body {
-  background-color: #f5f4f6;
+  background-color: #f9f7fa;
   color: #111;
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.75rem;
 }
 
 hr {
@@ -19,8 +19,8 @@ hr {
 }
 
 ol {
-  padding: 0rem 3rem 1rem 3rem;
   font-size: 0.88rem;
+  margin-left: 1rem;
 }
 
 ul {
@@ -36,19 +36,18 @@ ul li {
 /* Spacers */
 
 .top-spacer {
-  height: 3rem;
+  height: 2.5rem;
 }
 
 /* Top Navigation */
 
 .nav {
-  background-color: #f5f4f6;
+  background-color: #f9f7fa;
   border-bottom: 1px solid rgba(0, 0, 0, 15);
 }
 
 .nav,
 .nav-link a:visited {
-  padding: 0.5rem 0px;
   align-items: center;
   color: #111;
   display: flex;
@@ -122,7 +121,7 @@ ul li {
   border: 1px solid black;
   display: flex;
   padding: 12px 24px;
-  width: 90;
+  width: 90%;
   margin: 0 auto;
   margin: 1rem 0px;
 }
@@ -144,12 +143,12 @@ ul li {
 .body-content-container,
 .case-study-divider .container {
   padding: 4rem 0;
-  width: 58%;
+  width: 72%;
   margin: 0 auto;
 }
 
 .narrow-textarea {
-  width: 54%;
+  width: 48%;
   margin: 0 auto;
 }
 
@@ -173,6 +172,10 @@ ul li {
   width: 100%;
 }
 
+.hideable {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 12px;
+}
 .narrow-80,
 .narrow {
   width: 70% !important;
@@ -182,7 +185,14 @@ ul li {
 .col {
   display: flex;
   width: 100%;
-  margin: 0px 0.5rem;
+}
+
+.left {
+  margin-right: 1rem;
+}
+
+.right {
+  margin-left: 1rem;
 }
 
 .row .xxxl {
@@ -222,23 +232,12 @@ ul li {
   margin-right: 24px;
 }
 
-/* Headings & Text Styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  line-height: 150%;
-}
-
 p {
   margin-bottom: 1rem;
 }
 
 .smaller-text {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
 }
 
 .caption-text {
@@ -247,43 +246,50 @@ p {
   font-size: 0.8rem;
 }
 
+h1,
+h2 {
+  margin-bottom: 1rem;
+}
+
+h4,
+h5,
+h6 {
+  margin-bottom: 0.15rem;
+}
+
 h1 {
   font-size: 2em;
   font-family: "Domine", serif;
   font-weight: 600;
-  line-height: 125%;
 }
 
 h2 {
   font-family: "Domine", serif;
-  font-size: 1.35em;
+  font-size: 1.5em;
   font-weight: 600;
-  line-height: 135%;
-  margin-bottom: 0.5rem;
 }
 
 h3 {
-  color: #555353;
-  font-size: 0.85rem;
+  color: #555454;
+  font-size: 0.9rem;
   font-weight: 300;
-  letter-spacing: 0.0075rem;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 h4 {
   font-weight: 500;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
 }
 
 h5 {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
 h6 {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
 }
 
 .bold {
@@ -318,6 +324,11 @@ a:hover {
   width: 100%;
   height: auto;
   margin-bottom: 1rem;
+}
+
+.hero-container {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .img-container {
