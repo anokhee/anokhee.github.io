@@ -200,3 +200,15 @@ svg {
   width: 100%;
   height: 100%;
 }
+
+@media screen and (max-width: 600px) {
+  #generative-art {
+    width: 400px;
+    height: 400px;
+    margin-top: 200px;
+  }
+
+  #controllersContainer {
+    display: none;
+  }
+}

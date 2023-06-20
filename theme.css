@@ -258,6 +258,7 @@ h1 {
   font-size: 2em;
   font-family: "Domine", serif;
   font-weight: 600;
+  line-height: 1.15em;
 }
 
 h2 {
@@ -322,6 +323,10 @@ a:hover {
   width: 100%;
   height: auto;
   margin-bottom: 1rem;
+}
+
+.mobile-alt-img {
+  display: none;
 }
 
 .hero-container {
@@ -409,13 +414,75 @@ a:hover {
   opacity: 50%;
 }
 
-#logo {
-  width: 48px;
-  height: 48px;
-  border: 1px solid black;
-  margin-left: 2rem;
-}
-
 video {
   width: 80%;
+}
+
+@media screen and (max-width: 600px) {
+  .top-spacer {
+    margin: 0px;
+    padding: 0px;
+    height: 0px;
+  }
+  .body-content-container,
+  .case-study-divider .container,
+  .container,
+  .hideable {
+    width: 100%;
+  }
+
+  .mobile-alt-img {
+    display: block;
+  }
+
+  .left,
+  .right,
+  .narrow-textarea {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+  }
+
+  .hero-img {
+    display: none;
+  }
+
+  .my-role {
+    align-items: center;
+    display: flex;
+    padding: 1rem 0px;
+    margin: 0px;
+    margin-bottom: 2rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .my-role div {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .row {
+    display: block;
+  }
+
+  .col {
+    width: 100% !important;
+  }
+
+  .narrow-textarea {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .img-container {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 1rem;
+  }
+
+  .homepage-links-container {
+    width: 100%;
+    box-shadow: 8px 8px rgba(0, 0, 0, 0.15);
+  }
 }
