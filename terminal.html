@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Minimal Painterly UX Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="theme2.css" />
+  </head>
+  <body>
+    <header class="wrap">
+      <div>
+        <h2>Anokhee Jandhyala</h2>
+      </div>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#art-site">Art Site</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <img src="./imgs/terminal/hero-img.png" />
+    </section>
+
+    <main class="case-study wrap">
+      <h1>Product Design at Terminal</h1>
+
+      <section>
+        <h3>Problem Space</h3>
+        <p>
+          As an Employer of Record, Terminal enables businesses to outsource
+          full-time software engineering talent without setting up a local
+          entity. Through its convenient recruiting platform, the top 7% of
+          candidates are vetted and onboarded for customers to hire.
+        </p>
+        <p>
+          In a jobseekers’ market like that of 2022, companies with the
+          smoothest, fastest hiring process usually land the best hires. For
+          this reason, customers churned when their times-to-fill with Terminal
+          were longer than expected.
+        </p>
+      </section>
+
+      <section>
+        <h3>Discovery</h3>
+        <p>
+          Although an MVP technically existed, it was little more than a
+          placeholder UI surfacing ATS data. I was encouraged to ignore it and
+          design from first principles.
+        </p>
+        <p>
+          Discovery was grounded in user research, competitive analysis, and
+          journey mapping. I mapped the recruiting journey from awareness to
+          retention (Terminal typically entered at the Selection stage). I also
+          did a deep dive into Terminal’s “Recruiter” persona, who I learned was
+          usually not a recruiter at all. Many of Terminal’s customers were
+          startups, so hiring might fall to a founder, manager, or another
+          employee wearing multiple hats. To round this out, I researched other
+          Employers of Record to understand industry standards.
+        </p>
+        <p>
+          Customers didn’t have a self-serve platform like candidates did. Most
+          interactions with Terminal occurred over phone and email, so
+          communication lag time could add up to delay hiring by days or longer.
+        </p>
+      </section>
+    </main>
+
+    <script>
+      // Optional: reduce motion if user prefers
+      try {
+        if (
+          window.matchMedia &&
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ) {
+          document.querySelectorAll(".card").forEach(function (c) {
+            c.style.transition = "none";
+          });
+        }
+      } catch (e) {}
+    </script>
+  </body>
+</html>

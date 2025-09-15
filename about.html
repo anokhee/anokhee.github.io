@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anokhee Jandhyala | About Me</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../theme2.css" />
+  </head>
+  <body>
+    <header class="wrap">
+      <div>
+        <a class="nav-name" href="../index.html">Anokhee Jandhyala</a>
+      </div>
+      <nav>
+        <a href="../index.html#work">Design Work</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </header>
+
+    <div class="page-layout">
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
+          <h1>Hello, I'm Anokhee 🫶🏽</h1>
+          <h2>I've been designing professionally since 2020.</h2>
+          <p>
+            I’m currently working at Grayscale, designing for AI-powered high
+            volume hiring and scaling its UX to support Enterprise customers.
+          </p>
+          <h2>My Design Philosophy</h2>
+          <p>
+            I know that well-executed design can elevate a product's reputation
+            and drive better business outcomes. As a designer, I make sure a
+            product’s user experience is an extension of its overarching
+            narrative, always.
+          </p>
+          <ol>
+            <li>
+              <p>
+                <span class="strong">Listen for the Story.</span> When I learn
+                about a design problem, my instinct is to uncover the story
+                beneath it. I’m highly invested in finding the narrative a
+                product hopes will reach its customers through its user
+                experience.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="strong"
+                  >Learn Where I Can Deliver the Most Value.
+                </span>
+                At the end of the day, design is one part of a bigger system. I
+                focus on figuring out where design can make the biggest impact,
+                even if I have to change my methods to accommodate it.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="strong"
+                  >Balance Creativity with Constraints.
+                </span>
+                I make solutions practical by balancing creativity with business
+                goals and technical realities.
+              </p>
+            </li>
+          </ol>
+          <h2>A Little More About Me</h2>
+          <p>
+            Outside of work, I live in Atlanta with my husband and our three
+            cats. I’m an artist at heart so pottery gives me an outlet to play
+            and “touch grass”, which keeps me sane and energized for designing
+            on screens.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.05,
+      }
+    );
+
+    document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
+      observer.observe(el);
+    });
+
+    const sideNav = document.querySelector(".side-nav");
+    const blockers = document.querySelectorAll(".hide-side-nav");
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".side-link");
+
+    window.addEventListener("scroll", () => {
+      let current = null;
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 150 && rect.bottom > 150) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    window.addEventListener("scroll", () => {
+      let shouldHide = false;
+
+      blockers.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          shouldHide = true;
+        }
+      });
+
+      sideNav.style.visibility = shouldHide ? "hidden" : "visible";
+    });
+  </script>
+</html>

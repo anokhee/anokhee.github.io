@@ -1,6 +1,0 @@
-TO DO:
-  - Make dropdowns for the Random/Roughen
-  - Visualize the cursor size & shape
-  - Fix the color palette container
-  - Add keypress to change colors
-  - Add gradient fills

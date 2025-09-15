@@ -1,179 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Creative, empathetic, and growth-oriented Product Designer, bringing 4+ years of experience in human-centered design. Proficient in Figma, HTML/CSS/JavaScript, and design thinking, with a track record of delivering delightful end-to-end products while pushing design culture forward."
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Minimal Painterly UX Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap"
+      rel="stylesheet"
     />
-    <title>Anokhee Jandhyala | Product Designer Portfolio</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-    </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="../assets/reset.css" />
-    <link rel="stylesheet" href="../theme.css" />
-    <link rel="stylesheet" href="./art/art-themes.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="theme2.css" />
   </head>
   <body>
-    <!-- Top Navigation -->
-    <header>
-      <div class="nav">
-        <div class="nav-left">
-          <div id="logo"></div>
-          <div class="nav-home">
-            <div class="nav-link">
-              <a href="./index.html">Anokhee Jandhyala</a>
-            </div>
-          </div>
-        </div>
-        <div class="nav-right">
-          <div class="nav-link">
-            <a class="selected" href="./index.html#caseStudies">Product Design</a>
-          </div>
-          <div class="nav-link">
-            <!-- <a href="./about-me.html">About Me</a> -->
-          </div>
-        </div>
+    <header class="wrap">
+      <div>
+        <a class="nav-name" href="../index.html">Anokhee Jandhyala</p>
       </div>
+      <nav>
+        <a href="#work">Design Work</a>
+        <a href="./about.html">About</a>
+        <!-- <a href="#art-site">Artist Portfolio</a> -->
+      </nav>
     </header>
-
-    <div class="homepage-hero-container">
-      <div class="container">
-        <div class="row">
-          <div class="col left">
-            <div>
-              <div id="generative-art"></div>
+    <section class="wrap hero">
+      <div>
+        <div class="fade-in-on-scroll" id="deco"></div>
+      </div>
+      <div class="tagline">
+        <div class="fade-in-on-scroll">
+          <h4>Welcome to my Design Portfolio</4>
+          <h1>
+            I design thoughtful, human-centered experiences for Enterprise &
+            AI-driven products.
+          </h1>
+        </div>
+      </div>
+    </section>
+    <main id="work" class="wrap fade-in-on-scroll">
+      <div class="grid">
+        <a class="card" id="grayscale-eeoc" href="./work/grayscale-eeoc.html">
+          <div class="thumbnail" aria-hidden="true">
+            <h2 class="card-title">
+              Secure EEOC Widget for Grayscale's AI Chat
+            </h2>
+          </div>
+          <div class="content">
+            <div class="tags">
+              <span class="tag">Enterprise & B2B</span>
+              <span class="tag">Product Thinking</span>
             </div>
           </div>
-          <div class="col right">
-            <div>
-              <div class="homepage-links-container">
-                <div>
-                  <p>
-                    Hi, I'm <span class="bold">Anokhee</span> — a Product Designer & Developer delivering delightful end-to-end experiences.
-                  </p>
-                  <hr>
-                  <div class="row" style="align-items: flex-start;">
-                    <div class="col xs"><h5>My Work</h5></div>
-                    <div class="col xl"> <ul style="list-style-type: none">
-                      <li class="smaller-text">
-                        <a href="index.html#caseStudies">-> Product Design Case Studies</a>
-                      </li>
-                      <li class="smaller-text"><a href="https://github.com/anokhee">-> Code on GitHub</a></li>
-                      <li class="smaller-text">
-                        -> Egg Bun Studios (Coming Soon)
-                      </li></div>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-  
-              <div id="controllersContainer"></div>
+        </a>
+
+        <a
+          class="card"
+          id="grayscale-enterprise"
+          href="./work/grayscale-enterprise.html"
+        >
+          <div class="thumbnail" aria-hidden="true">
+            <h2 class="card-title">Scaling for Enterprise at Graycale</h2>
+          </div>
+          <div class="content">
+            <div class="tags">
+              <span class="tag">Enterprise & B2B</span>
+              <span class="tag">Product Thinking</span>
             </div>
           </div>
-        </div>
+        </a>
+
+        <a class="card" id="terminal" href="./work/terminal.html">
+          <div class="thumbnail">
+            <h2 class="card-title">Talent Marketplace at Terminal</h2>
+          </div>
+          <div class="content">
+            <div class="tags">
+              <span class="tag">Enterprise & B2B</span>
+              <span class="tag">Brand Design</span>
+            </div>
+          </div>
+        </a>
       </div>
+    </main>
 
-    </div>    
-    <div class="vertical-rule"></div>
-
-    <!-- Body Content -->
-    <div class="body-content-container" id="caseStudies">
-      <div class="top-spacer"></div>
-      <div class="top-spacer"></div>
-      <div
-        class="row project-card"
-        onclick="window.open(`./product-design/terminal.html`, `_self`)"
-      >
-        <div class="col lg left">
-          <div class="img-container">
-            <img src="../imgs/home/terminal.png" />
-          </div>
-        </div>
-        <div class="col sm right">
-          <div>
-            <h3>Terminal</h3>
-            <h2>Helping remote companies hire the right engineering talent.</h2>
-            <p class="smaller-text">
-              This case study describes my end-to-end design process for
-              Terminal's B2B platform, TalentHub.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <br />
-
-      <div
-        class="row project-card"
-        onclick="window.open(`./product-design/tourial.html`, `_self`)"
-      >
-        <div class="col lg left">
-          <div class="img-container">
-            <img src="../imgs/home/tourial.png" />
-          </div>
-        </div>
-        <div class="col sm right">
-          <div>
-            <h3>Tourial</h3>
-            <h2>How a dashboard redesign led to a new form builder.</h2>
-            <p class="smaller-text">
-              And other experiences as the first in-house designer at an
-              early-stage startup.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <br />
-
-      <div
-        class="row project-card"
-        onclick="window.open(`./product-design/face-generator.html`, `_self`)"
-      >
-        <div class="col lg left">
-          <div class="img-container">
-            <img src="../imgs/home/face-generator.png" />
-          </div>
-        </div>
-        <div class="col sm right">
-          <div>
-            <h3>Passion Project</h3>
-            <h2>Designing & developing a face generator for the resposive web.</h2>
-       
-          </div>
-        </div>
-      </div>
-
-      <br />
-
-      <div
-        class="row project-card"
-        onclick="window.open(`./product-design/roadsync.html`, `_self`)"
-      >
-        <div class="col lg left">
-          <div class="img-container">
-            <img src="../imgs/home/roadsync.png" />
-          </div>
-        </div>
-        <div class="col sm right">
-          <div>
-            <h3>RoadSync</h3>
-            <h2>Facilitating touchless payments for the trucking industry.</h2>
-       
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="top-spacer"></div>
-    <div class="top-spacer"></div>
-
-    <script src="./art/params.js"></script>
-    <script src="./art/gui.js"></script>
-    <script src="./art/Shapes.js"></script>
-    <script src="./art/flower-sketch.js"></script>
+    <footer id="contact" class="wrap">
+      <h2>Like what you see? Let’s work together!</h2>
+      <p>
+        Feel free to shoot me an
+        <a href="mailto:jandhyala.anokhee@gmail.com">email</a> or reach out on
+        <a href="https://www.linkedin.com/in/anokhee-jandhyala-2488aa340/">LinkedIn</a> for anything design-related.
+      </p>
+    </footer>
+    <script src="./dandelion.js"></script>
   </body>
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.05,
+      }
+    );
+
+    document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
+      observer.observe(el);
+    });
+
+    const sideNav = document.querySelector(".side-nav");
+    const blockers = document.querySelectorAll(".hide-side-nav");
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".side-link");
+
+    window.addEventListener("scroll", () => {
+      let current = null;
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 150 && rect.bottom > 150) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    window.addEventListener("scroll", () => {
+      let shouldHide = false;
+
+      blockers.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          shouldHide = true;
+        }
+      });
+
+      sideNav.style.visibility = shouldHide ? "hidden" : "visible";
+    });
+
+    // Carousel modal logic
+    const modal = document.getElementById("carousel-modal");
+    const modalImg = document.getElementById("carousel-modal-img");
+    document.querySelectorAll(".carousel-slide img").forEach((img) => {
+      img.style.cursor = "zoom-in";
+      img.addEventListener("click", function (e) {
+        modalImg.src = this.src;
+        modal.removeAttribute("hidden");
+      });
+    });
+    modal.addEventListener("click", function () {
+      modal.setAttribute("hidden", "");
+      modalImg.src = "";
+    });
+  </script>
 </html>

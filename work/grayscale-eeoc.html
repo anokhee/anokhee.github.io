@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Minimal Painterly UX Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../theme2.css" />
+  </head>
+  <body>
+    <header class="wrap">
+      <div>
+        <a class="nav-name" href="../index.html">Anokhee Jandhyala</p>
+      </div>
+      <nav>
+        <a href="../index.html#work">Design Work</a>
+        <a href="../about.html">About</a>
+        <!-- <a href="#art-site">Artist Portfolio</a> -->
+      </nav>
+    </header>
+
+    <div class="page-layout">
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
+          <h1>Designing a Secure EEOC Widget for Grayscale's AI Chatbot</h1>
+          <h2>Context</h2>
+          <p>
+            Grayscale is a B2B hiring platform that integrates with customers’
+            ATS to automate high-volume recruiting tasks. At its heart lives an
+            AI Assistant named Gracie.
+          </p>
+          <p>
+            When I joined, Gracie was an informational chatbot customers could
+            embed on their careers sites. Over time, she grew into a robust
+            hiring assistant – guiding prospective candidates through
+            applications, texting them on their preferred channel, and even
+            acting as their main point of contact through complex recruiting
+            flows at enterprise scale.
+          </p>
+          <p>
+            As the sole UX Designer, I worked with the PM, VP of
+            Product/Engineering, CTO, and developers to translate Grayscale's
+            rapidly evolving AI-powered capabilities into intuitive interfaces.
+          </p>
+        </div>
+      </section>
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
+          <h2>Problem</h2>
+          <p>
+            U.S. job applications are required to collect voluntary demographic
+            data using a protected EEOC questionnaire. In order for Grayscale to
+            maintain compliance, this questionnaire has to appear at some point
+            during Gracie's application process.
+          </p>
+          <h3>High-Level Design Challenges</h3>
+          <ol>
+            <li>
+              Gracie needs to present the questionnaire to applicants, then pass
+              the answers into customers’ systems without storing them in
+              Grayscale.
+            </li>
+            <li>
+              Many candidates interact with Gracie via SMS and WhatsApp
+              channels, so the EEOC questionnaire needs to be delivered
+              consistently across desktop and mobile web.
+            </li>
+            <li>
+              I was constrained by time and did not have access to end users to
+              conduct research.
+            </li>
+          </ol>
+          <!-- Add image of a sketch here -->
+        </div>
+      </section>
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
+          <h2>Discovery</h2>
+          <div class="img-container">
+            <p>
+              Although I had some access to B2B users, I didn’t have direct
+              insights from candidates using Gracie. Still, I wanted to ground
+              my design decisions in research before diving in.
+            </p>
+            <h3>What I Knew</h3>
+            <p>
+              As with any new technology, AI raises a lot of suspicion. Given
+              the novelty of a chatbot-driven job application process, I wanted
+              to tread lightly to avoid alienating users who might already feel
+              uneasy.
+            </p>
+            <p>
+              It’s well-documented that minorities sometimes alter their names
+              on résumés to appear “less foreign” and reduce the chance of
+              discrimination. This led me to hypothesize that marginalized
+              candidates might be especially cautious — even distrustful enough
+              of demographic surveys to abandon their applications.
+            </p>
+            <p>
+              To validate my hypotheses, I relied on secondary research methods:
+              exploring job-hunting forums, reviewing candidate discussions, and
+              conducting competitive analysis. I examined how well-known
+              companies integrated surveys, secure uploads, and compliance
+              widgets into their chatbot flows.
+            </p>
+          </div>
+          <h3>Findings</h3>
+          <!-- Organize these as pretty stickies -->
+          <h4>1. Few Established Patterns</h4>
+          <p>
+            AI chat–driven applications are still relatively new, with few
+            well-established UX patterns to lean on while designing.
+          </p>
+          <h4>2. Linkouts Interrupt the Flow of Conversation</h4>
+          <p>
+            Some chatbots opened surveys or questionnaires in a separate modal,
+            tab, or new window. EEOC surveys usually appear at the end of an
+            application, so I wanted to avoid confusion or drop-off by keeping
+            applicants inside the chat window until the application was
+            submitted.
+          </p>
+          <h4>3. EEOC Content Feels Unapproachable</h4>
+          <p>
+            Questionnaires contain a lot of intimidating legal jargon. To keep
+            engagement high toward end of the application, the design needed to
+            make the experience feel approachable so that they didn't dropoff at
+            the last minute.
+          </p>
+          <h4>4. Not Everyone Has Their Own Computer</h4>
+          <p>
+            Many people apply to frontline roles from public computers, such as
+            at libraries, where pop-up blockers are enabled as a security
+            measure and usually can’t be disabled. Inserting a questionnaire
+            into a popup could lock prospective applicants out of completing
+            their applications, narrowing the hiring pool unnecessarily.
+          </p>
+          <h4>5. Everyone Worries About Discrimination</h4>
+          <p>
+            Many applicants incorrectly assume that their EEOC responses will
+            influence the outcome of their application. This, paired with
+            questions around how AI will handle their sensitive demographic
+            information, could make even legally-protected EEOC surveys feel
+            suspect, contributing to drop-off.
+          </p>
+          <img src="../imgs/grayscale/peak-privilege.png" alt="FIX" />
+          <p class="caption-text">
+            Interestingly, fear of discrimination is quite common among users
+            who identify as white males on Reddit. If even the self-proclaimed
+            “peak privelleged” among us doesn’t trust EEOC questionnaires,
+            that’s a UX problem!
+          </p>
+        </div>
+      </section>
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
+          <h2>Solution</h2>
+          <ul>
+            <li>
+              <p>
+                <span class="strong">Continuity of Flow:</span>
+                For web applicants, the EEOC survey was embedded directly inside
+                the chat as a widget, so candidates never felt pulled out of the
+                conversation. For SMS and WhatsApp users, a link opened in the
+                default mobile browser and mimicked the chat widget experience.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="strong">Stepped Form:</span>
+                Rather than overwhelming candidates with a wall of dense legal
+                text, the survey followed a stepper format. Each step contained
+                only one or two questions, keeping the interaction lightweight
+                and providing a sense of progress.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="strong">Signals of Trust:</span> Before opening the
+                survey, Gracie reassured candidates in plain language that
+                responses were voluntary and had no impact on hiring outcomes.
+                Inside the flow, an official EEOC disclaimer and shield icon
+                reinforced privacy and compliance. Informational copy linked out
+                to EEOC documentation for candidates who wanted more detail.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="strong">Tone Shift for Security</span> Once the
+                EEOC widget opened, Gracie’s conversational voice paused and
+                shifted to a more formal, secure tone. This contrast underscored
+                that demographic answers were confidential and treated
+                differently than general chatbot interactions.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="img-container">
+        <img src="../imgs/grayscale/eeo-web.png" />
+        <p class="caption-text">Solution Embedded in Chatbot</p>
+      </div>
+      <br />
+      <div class="img-container">
+        <img src="../imgs/grayscale/eeo-sms.png" />
+        <p class="caption-text">Mobile Browser Solution for SMS</p>
+      </div>
+
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
+          <h2>Impact</h2>
+          <p>
+            My design allowed candidates to complete EEOC surveys securely
+            across all channels, while preserving conversational flow and
+            strengthening trust in Gracie. This work helped Grayscale to
+            maintain compliance at enterprise a scale of up to hundreds of
+            millions of applications processed through the platform, and
+            contributed to improved completion rates, averaging around 25% from
+            application start to finish.
+          </p>
+        </div>
+      </section>
+      <!-- Nav to next case study -->
+    </div>
+  </body>
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.05,
+      }
+    );
+
+    document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
+      observer.observe(el);
+    });
+
+    const sideNav = document.querySelector(".side-nav");
+    const blockers = document.querySelectorAll(".hide-side-nav");
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".side-link");
+
+    window.addEventListener("scroll", () => {
+      let current = null;
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 150 && rect.bottom > 150) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    window.addEventListener("scroll", () => {
+      let shouldHide = false;
+
+      blockers.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          shouldHide = true;
+        }
+      });
+
+      sideNav.style.visibility = shouldHide ? "hidden" : "visible";
+    });
+  </script>
+</html>

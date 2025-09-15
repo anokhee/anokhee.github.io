@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Minimal Painterly UX Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../theme2.css" />
+  </head>
+  <body>
+    <header class="wrap">
+      <div>
+        <a class="nav-name" href="../index.html">Anokhee Jandhyala</p>
+      </div>
+      <nav>
+        <a href="../index.html#work">Design Work</a>
+        <a href="../about.html">About</a>
+        <!-- <a href="#art-site">Artist Portfolio</a> -->
+      </nav>
+    </header>
+
+    <div class="page-layout">
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
+          <h1>Scaling Grayscale’s UX for Enterprise Personas</h1>
+          <h2>Context</h2>
+          <p>
+            Grayscale is a B2B hiring platform that integrates with customers’
+            ATS to automate messaging workflows for high-volume recruiting. As a
+            designer, I supported Grayscale’s move upmarket by scaling the UX to
+            serve large, data-heavy customers with multilevel org structures. As
+            the sole designer, I actively pushed against working in a silo by
+            anchoring my decisions in:
+          </p>
+          <ul>
+            <li>Product strategy for each quarter</li>
+            <li>Cross-functional insight</li>
+            <li>How different enterprise personas use Grayscale</li>
+          </ul>
+          <h3>Balancing UX for Enterprise & MDM Customers</h3>
+          <p>
+            Even though Grayscale was scaling for enterprise adoption, I
+            couldn’t let mid-market or SMB customers fall by the wayside. I had
+            to develop a deep understanding of their nuanced use cases and
+            needs.
+          </p>
+          <h4>Grayscale's Personas</h4>
+          <table>
+            <tr>
+              <th>Persona</th>
+              <th>Behavior</th>
+              <th>UX Implication</th>
+              <th>Case Study</th>
+            </tr>
+            <tr>
+              <td>Candidate</td>
+              <td>Apply to jobs through AI Chat, WhatsApp, or SMS.</td>
+              <td>
+                Interfaces must preserve conversational flow. In-chat UI or
+                lightweight mobile web tasks prevent context-switching.
+              </td>
+              <td>Secure EEOC Widget</td>
+            </tr>
+            <tr>
+              <td>End User</td>
+              <td>
+                Use Grayscale alongside their ATS to complete hiring tasks.
+              </td>
+              <td>
+                Clean, explainable UI for quick task completion with minimal
+                training.
+              </td>
+              <td>
+                Automations Setup (Case Study Will Become Available After GA)
+              </td>
+            </tr>
+            <tr>
+              <td>Enterprise Admin</td>
+              <td>
+                Own and maintain the system for end users; often in close
+                contact with Support.
+              </td>
+              <td>
+                Configuration-heavy flows prioritize efficiency over simplicity.
+                Admins are heavily trained and expect dense, flexible controls.
+              </td>
+              <td>Self-Service AI Assistant Configuration</td>
+            </tr>
+          </table>
+          <h4>Scaling UX Across Org Sizes</h4>
+          <table>
+            <tr>
+              <th></th>
+              <th>Enterprise</th>
+              <th>SMB/MDM</th>
+              <th>UX Balance</th>
+            </tr>
+            <tr>
+              <td>Data Volume</td>
+              <td>
+                Tables may contain tens of thousands of records across multiple
+                brands
+              </td>
+              <td>Typically dozens to hundreds</td>
+              <td>
+                Tables support large datasets (filtering, segmentation, and
+                configurable columns)
+              </td>
+            </tr>
+            <tr>
+              <td>Filtering Needs</td>
+              <td>Require dynamic, multi-select filters and saved segments</td>
+              <td>
+                Static filters with single-select options are often sufficient
+              </td>
+              <td>
+                Filters must be powerful, yet easily manageable. They must have
+                intuitive logic and give users control over saved views (like
+                segments)
+              </td>
+            </tr>
+            <tr>
+              <td>Permissions & Visibility</td>
+              <td>Strict role-based access and data visibility controls</td>
+              <td>Access is often shared across roles</td>
+              <td>
+                Clearly differentiate user roles in the UI and make ownership
+                (private vs. shared) visually obvious
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="text-block">
+          <h3>The Challenge</h3>
+          <p>
+            The challenge was ensuring that UX patterns scaled gracefully across
+            both SMB and enterprise organizations. The so-called "enterprise
+            user" wasn’t a single persona but a mix of candidates, recruiters,
+            and admins who all had very different needs. I needed to balance
+            simplicity for some users with power and flexibility for others,
+            while preserving a holistic brand experience.
+          </p>
+        </div>
+      </section>
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
+          <h4>Feature #1</h4>
+          <h2>Talent Pool</h2>
+          <p>
+            <span class="strong">Target User Personas:</span> End Users &
+            Enterprise Admins
+          </p>
+          <h3>Problem</h3>
+          <p>
+            Customers wanted a centralized database of every lead. This not only
+            included past applicants, but anyone who interacted with their
+            chatbot or marked a job as interesting. Since many customers were
+            hiring for high-volume roles, the number of entries in this database
+            was likely to be astronomical, making discoverability critical.
+          </p>
+          <p>
+            For end users, Grayscale functioned primarily as a messaging add-on
+            to their ATS, not a replacement for it. Recruiters needed to dip
+            into the Talent Pool to find the right candidates without breaking
+            their flow in core ATS tasks. Meanwhile, enterprise admins expected
+            more advanced functionality: configuration, segmentation, and
+            permissions that respected the complexity of large org structures.
+          </p>
+          <p>
+            Design Goal: Create a Talent Pool that scaled to enterprise data
+            volume while still feeling lightweight and usable for recruiters in
+            the flow of daily work.
+          </p>
+          <h3>Before</h3>
+          <ul>
+            <li>
+              Tables crammed multiple data points into single cells, making them
+              difficult to scan or export cleanly.
+            </li>
+            <li>
+              There was no search or sorting capability, so recruiters had to
+              either use CTRL+F or look for Talent Pool entries nestled inside
+              paginated data.
+            </li>
+            <li>
+              Filtering used an unusual, nonstandard pattern to build complex
+              queries, but it wasn’t filtering on fields users would find
+              useful.
+            </li>
+            <li>
+              Candidates could be added to lists for easier organization, but
+              the list feature was inaccessible from anywhere else in the
+              application.
+            </li>
+          </ul>
+          <h3>After</h3>
+          <ul>
+            <li>
+              <p>
+                <span class="strong">Structured, export-friendly tables: </span
+                >Each data point was separated into its own cell, improving
+                readability and enabling clean CSV exports that matched what
+                users saw in Grayscale.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="strong">Configurable data columns:</span> Users
+                could choose which fields mattered most to them and hide the
+                rest. This reduced overwhelm and gave different personas the
+                power to surface only the fields they found most important
+                without us having to design for edge cases based on persona or
+                org size.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="strong">Instant searchability:</span> A dedicated
+                search bar allowed recruiters to find candidates by name, email,
+                or keyword in seconds.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="strong">Advanced filtering:</span> Searchable,
+                multi-select filters with include/exclude logic and intuitive
+                presentation replaced the old filters, making it easy to refine
+                thousands of candidates into relevant subsets.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="strong">Segmentation & tagging tools:</span>
+                Recruiters could now save groups, apply dynamic tags, and build
+                lists to power automations such as outreach campaigns.
+              </p>
+            </li>
+          </ul>
+          <h3>Impact</h3>
+          <p>
+            Whether they were searching for a single candidate or building a
+            segment of targeted candidates to run automations against,
+            recruiters could find them within seconds using their Talent Pool.
+          </p>
+        </div>
+      </section>
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
+          <h4>Feature #2</h4>
+          <h2>Self-Service AI Assistant Configuration</h2>
+          <p>
+            <span class="strong">Target User Personas:</span> Enterprise Admins
+          </p>
+          <h3>Context</h3>
+          <p>
+            For context, Gracie is the AI personification of Grayscale’s
+            automated messaging product.
+          </p>
+          <p>
+            Enterprise admins relied on customer support for simple updates to
+            their instance of Gracie, like changing their name, adjusting brand
+            colors, updating FAQs, or tweaking tone. This request was escalated
+            to engineers, pulling them and the support team away from their
+            daily tasks. This revealed an opportunity to reduce the support
+            tickets by giving admins more power over their AI Assistants.
+          </p>
+          <h3>Problem</h3>
+          <ul>
+            <li>
+              Admins shouldn’t have to wait for quick, low-risk changes to their
+              AI Assistant.
+            </li>
+            <li>
+              Support’s time is better spent on strategic guidance, such as
+              onboarding and solving complex challenges.
+            </li>
+            <li>
+              Engineering should be protected to focus on shipping new features
+              rather than small customer requests.
+            </li>
+          </ul>
+          <h3>Design Considerations</h3>
+          <ul>
+            <li>
+              <p>
+                <span class="strong">Clear Navigation: </span>Each data point
+                was separated into its own cell, improving readability and
+                enabling clean CSV exports that matched what users saw in
+                Grayscale.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="strong">Guided UX Copy:</span> Since there were so
+                many setup configurations, it would be easy for even the most
+                knowledgeable admin to get lost in a long form. These settings
+                required a clear menu that mapped each step to a part of
+                Gracie’s behavior or appearance, so users could quickly find
+                what they needed.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="strong">Familiar Flow:</span> Inline explanations
+                clarified what each option controlled and the downstream effect
+                of a change, reducing uncertainty.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="strong">Available Tech:</span> A preview → save →
+                deploy pattern mirrored common enterprise tools, lowering the
+                learning curve for busy recruiters.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="strong">Segmentation & tagging tools:</span>
+                It wasn’t difficult for engineers to set permissions in such a
+                way that admin level users could preview and publish changes and
+                admins could act in minutes instead of waiting days.
+              </p>
+            </li>
+          </ul>
+          <h3>Solution</h3>
+          <p>
+            I designed a self-service configuration flow that was easy to
+            navigate and gave customers direct control over Gracie’s everyday
+            settings while preserving white-glove support for complex needs. My
+            guiding principle was to empower admins while maintaining
+            Grayscale’s white-glove support model.
+          </p>
+          <h3>Impact</h3>
+          <ul>
+            <li>
+              Reduced repetitive support tickets, enabling Support to focus on
+              onboarding, optimization, and troubleshooting complex workflows.
+            </li>
+            <li>
+              Allowed engineering to reclaim time from manual updates and invest
+              it in building new product capabilities.
+            </li>
+            <li>
+              Strengthened customer confidence by giving admins quick,
+              transparent control while keeping Grayscale’s support team
+              available for higher-touch needs.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.05,
+      }
+    );
+
+    document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
+      observer.observe(el);
+    });
+
+    const sideNav = document.querySelector(".side-nav");
+    const blockers = document.querySelectorAll(".hide-side-nav");
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".side-link");
+
+    window.addEventListener("scroll", () => {
+      let current = null;
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 150 && rect.bottom > 150) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    window.addEventListener("scroll", () => {
+      let shouldHide = false;
+
+      blockers.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          shouldHide = true;
+        }
+      });
+
+      sideNav.style.visibility = shouldHide ? "hidden" : "visible";
+    });
+  </script>
+</html>
