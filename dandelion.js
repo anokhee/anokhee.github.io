@@ -2,7 +2,7 @@
 const angularSpeed = 0.005;
 let dandelions = [];
 let particles = [];
-let paletteIndex = 1;
+let paletteIndex = 0;
 
 // Active palette (mutated by applyPalette)
 const PALETTE = {
@@ -16,20 +16,12 @@ const PALETTE = {
 // Palettes + matching flower presets
 const PALETTES = [
   {
-    name: "Mauve",
-    bg: ["#B333D7", "#D13987"],
-    petalLight: "#5CD6FF",
-    petalDark: "#6FA3EB",
-    glow: "#EAC435",
-    dots: "#EAC435",
-  },
-  {
     name: "Tropical Dawn",
-    bg: ["#F7F1F8", "#D8BBDD"],
-    petalLight: "#E2C878",
-    petalDark: "#6FA3EB",
-    glow: "#E2C878",
-    dots: "#B7D1F5",
+    bg: ["#FFFDFB", "#E2725B"],
+    petalLight: "#E2725B",
+    petalDark: "#352E5F",
+    glow: "#9A7AA0",
+    dots: "#EEDC9A",
   },
   {
     name: "Mango Lassi Night",
@@ -79,17 +71,148 @@ const PALETTES = [
     glow: "#F8FFE5",
     dots: "#BFEDEF",
   },
+  {
+    name: "Mauve",
+    bg: ["#5780C7", "#F0F3FA"],
+    petalLight: "#D499FF",
+    petalDark: "#AA33FF",
+    glow: "#EAC435",
+    dots: "#D2CAE2",
+  },
 ];
 
 const FLOWER_PRESETS = [
-  { petals: 12, length: 100, center: 30, widthK: 0.4, tip: 0.4, base: 0 },
-  { petals: 5, length: 80, center: 20, widthK: 0.55, tip: 0.4, base: 0.18 },
-  { petals: 20, length: 120, center: 50, widthK: 0.8, tip: 0.1, base: 0.1 },
-  { petals: 3, length: 50, center: 30, widthK: 1.0, tip: 0.2, base: 0.2 },
-  { petals: 14, length: 75, center: 65, widthK: 0.52, tip: 0.44, base: 0.18 },
-  { petals: 8, length: 83, center: 10, widthK: 0.5, tip: 0.5, base: 0.1 },
-  { petals: 16, length: 90, center: 20, widthK: 0.47, tip: 0.4, base: 0.18 },
-  { petals: 20, length: 44, center: 20, widthK: 0.4, tip: 0.36, base: 0.15 },
+  // Daisy-ish: simple, airy
+  {
+    name: "Daisy",
+    petals: 12,
+    length: 90,
+    center: 35,
+    widthK: 0.42,
+    tip: 0.55,
+    base: 0.12,
+  },
+
+  // Cosmos: long slender petals with soft points
+  {
+    name: "Cosmos",
+    petals: 8,
+    length: 110,
+    center: 26,
+    widthK: 0.34,
+    tip: 0.62,
+    base: 0.1,
+  },
+
+  // Sunflower: many short petals around a bigger center
+  {
+    name: "Sunflower",
+    petals: 24,
+    length: 70,
+    center: 42,
+    widthK: 0.48,
+    tip: 0.35,
+    base: 0.16,
+  },
+
+  // Lotus: broad petals, rounded tips
+  {
+    name: "Lotus",
+    petals: 14,
+    length: 100,
+    center: 28,
+    widthK: 0.66,
+    tip: 0.22,
+    base: 0.22,
+  },
+
+  // Tulip-esque rosette: fewer chunky petals, round base
+  {
+    name: "Tulip Rosette",
+    petals: 6,
+    length: 95,
+    center: 18,
+    widthK: 0.72,
+    tip: 0.18,
+    base: 0.28,
+  },
+
+  // Cherry blossom: short, wide petals with rounded ends
+  {
+    name: "Sakura",
+    petals: 5,
+    length: 75,
+    center: 24,
+    widthK: 0.78,
+    tip: 0.16,
+    base: 0.2,
+  },
+
+  // Dahlia: dense ring, slightly pointy tips
+  {
+    name: "Dahlia",
+    petals: 32,
+    length: 85,
+    center: 30,
+    widthK: 0.54,
+    tip: 0.38,
+    base: 0.14,
+  },
+
+  // Marigold: many small, rounded petals
+  {
+    name: "Marigold",
+    petals: 28,
+    length: 60,
+    center: 36,
+    widthK: 0.68,
+    tip: 0.1,
+    base: 0.26,
+  },
+
+  // Waterlily: wide petals, soft taper
+  {
+    name: "Waterlily",
+    petals: 10,
+    length: 120,
+    center: 25,
+    widthK: 0.62,
+    tip: 0.2,
+    base: 0.18,
+  },
+
+  // Aster: lots of thin, pointy petals
+  {
+    name: "Aster",
+    petals: 40,
+    length: 90,
+    center: 20,
+    widthK: 0.28,
+    tip: 0.7,
+    base: 0.08,
+  },
+
+  // Anemone: medium count, oval-ish petals, bigger center
+  {
+    name: "Anemone",
+    petals: 12,
+    length: 80,
+    center: 34,
+    widthK: 0.58,
+    tip: 0.18,
+    base: 0.22,
+  },
+
+  // Protea-lite: chunky teardrops with sharper tips
+  {
+    name: "Protea Lite",
+    petals: 16,
+    length: 105,
+    center: 22,
+    widthK: 0.46,
+    tip: 0.48,
+    base: 0.12,
+  },
 ];
 
 // ---------------------- p5: SETUP / DRAW ----------------------
@@ -268,10 +391,13 @@ class Dandelion {
       this.drawPetalSet(nB, baseAngle, frac, true);
     }
 
-    fill(123, 1, 23, 100);
     noStroke();
+
+    fill("#5F3A53" + 10);
     circle(0, 0, this.centerDiameter);
+    fill("#894546");
     circle(0, 0, this.centerDiameter * 0.66);
+    fill("#DD5B2C");
     circle(0, 0, this.centerDiameter * 0.33);
 
     pop();
@@ -319,7 +445,7 @@ class Dandelion {
 
       // gradient fill
       noStroke();
-      const petalAlpha = 205 * alphaMul;
+      const petalAlpha = 230 * alphaMul;
       setPetalGradient(
         base.x,
         base.y,

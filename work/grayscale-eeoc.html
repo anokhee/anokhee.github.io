@@ -76,7 +76,10 @@
               conduct research.
             </li>
           </ol>
-          <!-- Add image of a sketch here -->
+          <div class="img-container">
+            <img src="../imgs/grayscale/sketch.png" alt="FIX" />
+            <p class="caption-text"></p>
+          </div>
         </div>
       </section>
       <section class="fade-in-on-scroll">
@@ -111,65 +114,57 @@
             </p>
           </div>
           <h3>Findings</h3>
-          <!-- Organize these as pretty stickies -->
-          <h4>1. Few Established Patterns</h4>
+        </div>
+      </section>
+      <section class="stickies" id="stickies">
+        <article class="note">
+          <h3>Few Established Patterns</h3>
+          <p>Novel AI chat–driven applications lack established UX norms.</p>
+        </article>
+        <article class="note">
+          <h3>Linkouts Interrupt the Flow of Conversation</h3>
           <p>
-            AI chat–driven applications are still relatively new, with few
-            well-established UX patterns to lean on while designing.
+            Opening surveys in pop-ups or tabs causes confusion and drop-off.
           </p>
-          <h4>2. Linkouts Interrupt the Flow of Conversation</h4>
+        </article>
+        <article class="note">
+          <h3>EEOC Content Feels Unapproachable</h3>
           <p>
-            Some chatbots opened surveys or questionnaires in a separate modal,
-            tab, or new window. EEOC surveys usually appear at the end of an
-            application, so I wanted to avoid confusion or drop-off by keeping
-            applicants inside the chat window until the application was
-            submitted.
+            Dense EEOC jargon might feel overly formal and spook candidates at
+            the end of their applications.
           </p>
-          <h4>3. EEOC Content Feels Unapproachable</h4>
+        </article>
+        <article class="note">
+          <h3>Not Everyone Has Their Own Computer</h3>
           <p>
-            Questionnaires contain a lot of intimidating legal jargon. To keep
-            engagement high toward end of the application, the design needed to
-            make the experience feel approachable so that they didn't dropoff at
-            the last minute.
+            Pop-ups often blocked on public computers, making this process
+            exclusionary to applicants who may not own their own computer.
           </p>
-          <h4>4. Not Everyone Has Their Own Computer</h4>
+        </article>
+        <article class="note">
+          <h3>Everyone Worries About Discrimination</h3>
           <p>
-            Many people apply to frontline roles from public computers, such as
-            at libraries, where pop-up blockers are enabled as a security
-            measure and usually can’t be disabled. Inserting a questionnaire
-            into a popup could lock prospective applicants out of completing
-            their applications, narrowing the hiring pool unnecessarily.
+            Candidates of all backgrounds fear their answers to demographic data
+            questions will affect hiring outcomes.
           </p>
-          <h4>5. Everyone Worries About Discrimination</h4>
-          <p>
-            Many applicants incorrectly assume that their EEOC responses will
-            influence the outcome of their application. This, paired with
-            questions around how AI will handle their sensitive demographic
-            information, could make even legally-protected EEOC surveys feel
-            suspect, contributing to drop-off.
-          </p>
+        </article>
+      </section>
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
           <img src="../imgs/grayscale/peak-privilege.png" alt="FIX" />
           <p class="caption-text">
-            Interestingly, fear of discrimination is quite common among users
-            who identify as white males on Reddit. If even the self-proclaimed
-            “peak privelleged” among us doesn’t trust EEOC questionnaires,
-            that’s a UX problem!
+            While trying to confirm my hypothesis, I learned that fear of job
+            discrimination is quite common among Reddit users who identify as
+            white males. If even the self-proclaimed “peak privelleged” among us
+            doesn’t trust EEOC questionnaires, that’s a UX problem!
           </p>
         </div>
       </section>
+
       <section class="fade-in-on-scroll">
         <div class="text-block">
           <h2>Solution</h2>
           <ul>
-            <li>
-              <p>
-                <span class="strong">Continuity of Flow:</span>
-                For web applicants, the EEOC survey was embedded directly inside
-                the chat as a widget, so candidates never felt pulled out of the
-                conversation. For SMS and WhatsApp users, a link opened in the
-                default mobile browser and mimicked the chat widget experience.
-              </p>
-            </li>
             <li>
               <p>
                 <span class="strong">Stepped Form:</span>
@@ -202,14 +197,22 @@
         </div>
       </section>
 
+      <h3 class="caption-text-lg">
+        For web applicants, the EEOC survey was embedded directly inside the
+        chat as a widget, so candidates never felt pulled out of the
+        conversation.
+      </h3>
       <div class="img-container">
         <img src="../imgs/grayscale/eeo-web.png" />
-        <p class="caption-text">Solution Embedded in Chatbot</p>
       </div>
-      <br />
+
+      <h3 class="caption-text-lg">
+        For SMS and WhatsApp users, a link opened in the default mobile browser
+        and mimicked the chat widget experience.
+      </h3>
+
       <div class="img-container">
         <img src="../imgs/grayscale/eeo-sms.png" />
-        <p class="caption-text">Mobile Browser Solution for SMS</p>
       </div>
 
       <section class="fade-in-on-scroll">
