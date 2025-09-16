@@ -48,8 +48,8 @@ section {
 h1 {
   font-family: var(--font-accent);
   font-weight: 300;
-  font-size: 1.8rem;
-  line-height: 2.2rem;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
   margin: 0px;
 }
 
@@ -65,15 +65,13 @@ h3 {
   font-family: var(--font-primary);
   font-weight: 500;
   font-size: 1.35rem;
-  line-height: 1rem;
-  margin: 1.5rem 0rem;
 }
 
 h4 {
   font-size: 1rem;
   line-height: 1rem;
   font-weight: 600;
-  margin: 1.5rem 0rem 0.5rem 0rem;
+  margin: 2rem 0rem 1rem 0rem;
   padding: 0rem;
 }
 
@@ -243,6 +241,7 @@ footer {
 
 img {
   width: 100%;
+  margin: 0 auto;
 }
 /* responsive tweaks */
 @media (max-width: 720px) {
@@ -297,10 +296,17 @@ img {
   display: block;
   width: 100%;
   align-items: center;
+  margin: 0 auto;
 }
 
 .img-container img {
   width: 100%;
+  margin: 0 auto;
+}
+
+.img-container img .small {
+  width: 80% !important;
+  margin: 0 auto;
 }
 
 .hero-img-container {
@@ -344,18 +350,27 @@ img {
   margin: 1rem 0px;
 }
 
-th {
-  text-align: left;
-  padding: 1rem;
-}
-
+th,
 td {
-  padding: 0px 1rem 1rem 1rem;
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 table {
-  border: 1px solid black;
-  margin: 1rem 0rem;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+th {
+  background: #003d52;
+  color: #fff;
+  font-weight: 600;
+}
+
+tr:nth-child(even) td {
+  background: #f9fdfd;
 }
 
 p {
@@ -363,7 +378,7 @@ p {
 }
 
 li {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .strong {
