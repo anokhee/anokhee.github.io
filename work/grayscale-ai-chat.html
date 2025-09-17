@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anokhee Jandhyala | EEOC Widget at Grayscale</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../theme2.css" />
+  </head>
+  <body>
+    <header class="wrap">
+      <nav>
+        <div>
+          <a class="nav-name" href="../index.html">Anokhee Jandhyala</a>
+        </div>
+        <div>
+          <a href="#work">Design Work</a>
+          <a href="./about.html">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="page-layout">
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
+          <h1>
+            Designing Secure Job Application Widgets for Grayscale's AI Chatbot
+          </h1>
+        </div>
+      </section>
+      <div class="img-container-80p">
+        <img src="../imgs/grayscale/gracie-featured-img.png" alt="FIX" />
+      </div>
+      <section>
+        <div class="text-block">
+          <h2>Context</h2>
+          <p>
+            Grayscale is a B2B hiring platform that integrates with customers’
+            ATS to automate high-volume recruiting tasks. At its heart lives an
+            AI Assistant named Gracie.
+          </p>
+          <p>
+            When I joined, Gracie lived on customers' career sites to help
+            prospective candidates identify which jobs they were qualified for.
+            Over time, she grew into a robust hiring assistant who could guide
+            them through applications, text them on their preferred channel, and
+            even act as their main point of contact through the full application
+            process.
+          </p>
+          <p>
+            As the sole UX Designer, I worked with the PM, VP of
+            Product/Engineering, CTO, and developers to translate Grayscale's
+            rapidly evolving AI-powered capabilities into intuitive interfaces.
+          </p>
+        </div>
+      </section>
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
+          <h2>High-Level Challenges</h2>
+        </div>
+      </section>
+      <section class="stickies three-col">
+        <article class="note">
+          <h3>1. Resume Uploads</h3>
+          <p>
+            Candidates couldn't upload their resume directly into Gracie's chat
+            window. They had to follow a link to the job application, which
+            broke the conversational flow.
+          </p>
+        </article>
+        <article class="note">
+          <h3>2. EEOC Questionnaires</h3>
+          <p>
+            In order for Gracie to be a compliant job application, a demographic
+            questionnaire needed to appear at some point during the chat
+            experience.
+          </p>
+        </article>
+        <article class="note">
+          <h3>3. Platform Parity</h3>
+          <p>
+            Many candidates interact with Gracie via SMS and WhatsApp channels,
+            so both these experienced needed to be delivered consistently across
+            desktop and mobile web.
+          </p>
+        </article>
+      </section>
+      <section>
+        <div class="text-block">
+          <div class="img-container">
+            <img src="../imgs/grayscale/sketch.png" alt="FIX" />
+            <p class="caption-text">
+              With no established UX norms for AI jobseeking, this design space
+              was quite open.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
+          <h2>Discovery</h2>
+          <div class="img-container">
+            <p>
+              Without direct access to candidates using Gracie, I turned to
+              secondary research: job-hunting forums, candidate discussions, and
+              competitive analysis for a window into how job seekers perceived
+              AI in the application process.
+            </p>
+            <p>
+              Most candidates interacting with Gracie were applying to frontline
+              roles. For many, especially minorities, trust in the job-seeking
+              process is fragile. It’s well-documented that applicants sometimes
+              alter their names on résumés to appear “less foreign.” I worried
+              that if Gracie’s flow felt too opaque, candidates might assume she
+              was just another biased gatekeeper and abandon their applications
+              altogether.
+            </p>
+            <img src="../imgs/grayscale/peak-privilege.png" alt="FIX" />
+            <p class="caption-text">
+              Interestingly, I learned that fear of discrimination is common
+              amongst Reddit users who identify as white males. If the
+              self-proclaimed “peak privelleged” doesn’t trust EEOC
+              questionnaires, that’s a UX problem!
+            </p>
+          </div>
+          <h3>Findings</h3>
+        </div>
+      </section>
+      <section class="stickies four-col" id="stickies">
+        <article class="note">
+          <h3>Few Established Patterns</h3>
+          <p>
+            AI chat–driven applications are novel and lack established UX norms.
+          </p>
+          <p class="tag">Usability Issue</p>
+        </article>
+        <article class="note">
+          <h3>Old Computers</h3>
+          <p>
+            Gracie only supported .PDF and .DOCX uploads, which could exclude
+            candidates who are not computer-savvy or running very old versions
+            of Windows.
+          </p>
+          <p class="tag">Tech Accessibility Issue</p>
+        </article>
+        <article class="note">
+          <h3>Linkouts Interrupt Flow</h3>
+          <p>
+            Opening surveys in pop-ups or tabs causes confusion and drop-off.
+          </p>
+          <p class="tag">Usability Issue</p>
+        </article>
+        <article class="note">
+          <h3>Literacy Barriers</h3>
+          <p>
+            Candidates with limited English proficiency or lower digital
+            literacy often apply to frontline roles. Even with clear UX, this
+            process may feel intimidating or inaccessible.
+          </p>
+          <p class="tag">Bias Issue</p>
+        </article>
+        <article class="note">
+          <h3>Density & Formality of EEOC Content</h3>
+          <p>
+            Dense EEOC jargon might feel overly formal and spook candidates at
+            the end of their applications.
+          </p>
+          <p class="tag">Trust Issue</p>
+        </article>
+        <article class="note">
+          <h3>Access to a Personal Computer</h3>
+          <p>
+            Pop-ups often blocked on public computers, making this process
+            exclusionary to applicants who may not own their own computer.
+          </p>
+          <p class="tag">Tech Accessibility Issue</p>
+        </article>
+        <article class="note">
+          <h3>Mobile-First Experience</h3>
+          <p>
+            Most frontline workers are applying from their phones. Small screens
+            amplify pain points like jargon density, modal pop-ups, and
+            non-mobile-friendly flows.
+          </p>
+          <p class="tag">Tech Accessibility Issue</p>
+        </article>
+        <article class="note">
+          <h3>Fear of Discrimination</h3>
+          <p>
+            Candidates of all backgrounds fear their answers to demographic data
+            questions will affect hiring outcomes.
+          </p>
+          <p class="tag">Bias Issue</p>
+        </article>
+      </section>
+
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
+          <h2>Solution</h2>
+          <ul>
+            <li>
+              <p>
+                <span class="strong">Stepped Form:</span>
+                Rather than overwhelming candidates with a wall of dense legal
+                text, the survey followed a stepper format. Each step contained
+                only one or two questions, keeping the interaction lightweight
+                and providing a sense of progress.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="strong">Signals of Trust:</span> Before opening the
+                survey, Gracie reassured candidates in plain language that
+                responses were voluntary and had no impact on hiring outcomes.
+                Inside the flow, an official EEOC disclaimer and shield icon
+                reinforced privacy and compliance. Informational copy linked out
+                to EEOC documentation for candidates who wanted more detail.
+              </p>
+            </li>
+            <li>
+              <p>
+                <span class="strong">Tone Shift for Security</span> Once the
+                EEOC widget opened, Gracie’s conversational voice paused and
+                shifted to a more formal, secure tone. This contrast underscored
+                that demographic answers were confidential and treated
+                differently than general chatbot interactions.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="img-container">
+        <img src="../imgs/grayscale/desktop-chat-experience.png" />
+      </div>
+
+      <div class="img-container">
+        <img src="../imgs/grayscale/mobile-experience.png" />
+      </div>
+
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
+          <h2>Impact</h2>
+          <p>
+            My design allowed candidates to complete EEOC surveys securely
+            across all channels, while preserving conversational flow and
+            strengthening trust in Gracie. This work helped Grayscale to
+            maintain compliance at a massive scale, and contributed to improved
+            completion rates.
+          </p>
+        </div>
+      </section>
+      <!-- <footer>
+        <h3>See More</h3>
+        <div class="footer-nav">
+          <a class="card" id="grayscale-eeoc" href="./work/grayscale-eeoc.html">
+            <div class="thumbnail" aria-hidden="true">
+              <h2 class="card-title">Secure AI Chat Widget at Grayscale</h2>
+            </div>
+            <div class="content">
+              <div class="tags">
+                <span class="tag">Enterprise & B2B</span>
+                <span class="tag">Product Thinking</span>
+              </div>
+            </div>
+          </a>
+          <a class="card" id="grayscale-eeoc" href="./work/grayscale-eeoc.html">
+            <div class="thumbnail" aria-hidden="true">
+              <h2 class="card-title">Secure AI Chat Widget at Grayscale</h2>
+            </div>
+            <div class="content">
+              <div class="tags">
+                <span class="tag">Enterprise & B2B</span>
+                <span class="tag">Product Thinking</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </footer> -->
+    </div>
+  </body>
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.05,
+      }
+    );
+
+    document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
+      observer.observe(el);
+    });
+
+    const sideNav = document.querySelector(".side-nav");
+    const blockers = document.querySelectorAll(".hide-side-nav");
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".side-link");
+
+    window.addEventListener("scroll", () => {
+      let current = null;
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 150 && rect.bottom > 150) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    window.addEventListener("scroll", () => {
+      let shouldHide = false;
+
+      blockers.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          shouldHide = true;
+        }
+      });
+
+      sideNav.style.visibility = shouldHide ? "hidden" : "visible";
+    });
+  </script>
+</html>

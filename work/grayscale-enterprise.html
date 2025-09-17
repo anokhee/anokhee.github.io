@@ -31,17 +31,19 @@
           <h1>Scaling Grayscale’s User Experience for Enterprise Personas</h1>
         </div>
       </section>
+
       <div class="img-container-80p">
         <img src="../imgs/grayscale/enterprise-featured-img.png" />
       </div>
+
       <section>
         <div class="text-block">
           <h2>Context</h2>
           <p>
             Grayscale integrates with customers’ ATS to automate messaging
             workflows for high-volume recruiting. As a designer, I supported
-            Grayscale's move upmarket by scaling its UX to serve large,
-            data-heavy customers with multilevel org structures.
+            Grayscale's move upmarket by scaling several features to serve
+            large, data-heavy customers with multilevel org structures.
           </p>
           <h3>Balancing UX for Enterprise & MDM Customers</h3>
           <p>
@@ -65,7 +67,7 @@
                 Interfaces must preserve conversational flow. In-chat UI or
                 lightweight mobile web tasks prevent context-switching.
               </td>
-              <td>Secure EEOC Widget</td>
+              <td><a href=..work/grayscale-ai-chat">AI Chat Widgets</a></td>
             </tr>
             <tr>
               <td>End User</td>
@@ -77,7 +79,7 @@
                 training.
               </td>
               <td>
-                Automations Setup (Case Study Will Become Available After GA)
+                Automations Setup (Case Study Not Available – Product Still in Beta)
               </td>
             </tr>
             <tr>
@@ -90,9 +92,10 @@
                 Configuration-heavy flows prioritize efficiency over simplicity.
                 Admins are heavily trained and expect dense, flexible controls.
               </td>
-              <td>Self-Service AI Assistant Configuration</td>
+              <td><a href=..work/grayscale-enterprise">AI Assistant Configuration</a></td>
             </tr>
           </table>
+
           <h4>Scaling UX Across Org Sizes</h4>
           <table>
             <tr>
@@ -137,6 +140,7 @@
           </table>
         </div>
       </section>
+
       <section class="fade-in-on-scroll">
         <div class="text-block">
           <h2>Feature 1: Talent Pool</h2>
@@ -147,8 +151,7 @@
           <h3>Problem</h3>
           <p>
             Customers wanted a centralized database of every lead, including not
-            only past applicants, but anyone who interacted with their chatbot
-            or marked a job as interesting. Since many customers were hiring for
+            only past applicants, but anyone who expressed interest in one of their jobs. Since many customers were hiring for
             high-volume roles, the number of entries in this database was likely
             to be astronomical, making discoverability critical.
           </p>
@@ -162,41 +165,62 @@
           </p>
           <h3>Design Goal</h3>
           <p>
-            Create a Talent Pool that scaled to enterprise data volume while
-            still feeling lightweight and usable for recruiters in the flow of
+            Create a Talent Pool that made high-volume data discoverable while
+            still feeling lightweight and usable for recruiters to use to supplement the flow of
             daily work.
           </p>
-          <!-- Add balsamiq here -->
           <h3>Before</h3>
-          <ul>
-            <li>
-              Tables crammed multiple data points into single cells, making them
-              difficult to scan or export cleanly.
-            </li>
-            <li>
-              There was no search or sorting capability, so recruiters had to
-              either use CTRL+F or look for Talent Pool entries nestled inside
-              paginated data.
-            </li>
-            <li>
-              Filtering used an unusual, nonstandard pattern to build complex
-              queries, but it wasn’t filtering on fields users would find
-              useful.
-            </li>
-            <li>
-              Candidates could be added to lists for easier organization, but
-              the list feature was inaccessible from anywhere else in the
-              application.
-            </li>
-          </ul>
-          <!-- Add "BEFORE" img here -->
+        </div>
+      </section>
+      <section class="stickies four-col">
+        <article class="note">
+          <h3>Users couldn't easily find who they were looking for.</h3>
+          <p>
+            There was no search or sorting capability, so recruiters had to
+            either use CTRL+F or look for Talent Pool entries nestled inside
+            paginated data.
+          </p>
+        </article>
+        <article class="note">
+          <h3>Table cells were not organized for scannability.</h3>
+          <p>
+            Tables crammed multiple data points into single cells, making them
+            difficult to scan or export cleanly.
+          </p>
+        </article>
+        <article class="note">
+          <h3>Current filtering system offered no value to users.</h3>
+          <p>
+            Not only did filtering use an unusual, nonstandard pattern to build
+            complex queries, it wasn’t filtering on fields users would find
+            useful.
+          </p>
+        </article>
+        <article class="note">
+          <h3>
+            It was possible to create lists, but users couldn't access them from
+            anywhere.
+          </h3>
+          <p>
+            Candidates could be added to lists for easier organization, but the
+            list feature was inaccessible from anywhere else in the application.
+          </p>
+        </article>
+      </section>
+      <br />
+      <div class="img-container-80p">
+        <img src="../imgs/grayscale/old-talent-pool.gif" />
+        <p class="caption-text">The old filtering system allowed for duplicate filters.</p>
+      </div>
 
+      <section class="fade-in-on-scroll">
+        <div class="text-block">
           <h3>After</h3>
           <ul>
             <li>
               <p>
-                <span class="strong">Structured, export-friendly tables: </span
-                >Each data point was separated into its own cell, improving
+                <span class="strong">Structured, export-friendly tables: </span>
+                Each data point was separated into its own cell, improving
                 readability and enabling clean CSV exports that matched what
                 users saw in Grayscale.
               </p>
@@ -234,6 +258,7 @@
               </p>
             </li>
           </ul>
+          <p><i>Note that the new Talent Pool is still in beta. To avoid violating my confidentiality agreement, I won't post a screenshot of it until after GA release.</i></p>
           <h3>Impact</h3>
           <p>
             Whether they were searching for a single candidate or building a
@@ -242,8 +267,11 @@
           </p>
         </div>
       </section>
-       <div class="img-containerp">
+
+      <!-- <div class="img-containerp">
         <img src="../imgs/grayscale/talent-pool.png" alt="FIX" />
+      </div> -->
+
       <section class="fade-in-on-scroll">
         <div class="text-block">
           <h4>Feature #2</h4>
@@ -257,11 +285,9 @@
             automated messaging product.
           </p>
           <p>
-            Enterprise admins relied on customer support for simple updates to
-            their instance of Gracie, like changing their name, adjusting brand
-            colors, updating FAQs, or tweaking tone. This request was escalated
-            to engineers, pulling them and the support team away from their
-            daily tasks. This revealed an opportunity to reduce the support
+            Enterprise admins relied on support and engineering for simple updates to
+            their instance of Gracie, like changing its name, adjusting brand
+            colors, updating FAQs, or tweaking tone. This revealed an opportunity to reduce the support
             tickets by giving admins more power over their AI Assistants.
           </p>
           <h3>Problem</h3>
@@ -281,14 +307,7 @@
           </ul>
           <h3>Design Considerations</h3>
           <ul>
-            <li>
-              <p>
-                <span class="strong">Clear Navigation: </span>Each data point
-                was separated into its own cell, improving readability and
-                enabling clean CSV exports that matched what users saw in
-                Grayscale.
-              </p>
-            </li>
+            
             <li>
               <p>
                 <span class="strong">Guided UX Copy:</span> Since there were so
@@ -316,9 +335,7 @@
             <li>
               <p>
                 <span class="strong">Segmentation & tagging tools:</span>
-                It wasn’t difficult for engineers to set permissions in such a
-                way that admin level users could preview and publish changes and
-                admins could act in minutes instead of waiting days.
+               Permissions were structured to ensure that admins could preview and publish changes quickly, reducing turnaround time from days to minutes.
               </p>
             </li>
           </ul>
@@ -330,9 +347,13 @@
             guiding principle was to empower admins while maintaining
             Grayscale’s white-glove support model.
           </p>
-          <div class="img-container">
-            <img src="../imgs/grayscale/config/page1.png" />
+        </div>
+        </section>
+          <div class="img-container-80p">
+            <img src="../imgs/grayscale/new-gracie-config.gif" />
           </div>
+        <div class="section">
+          <div class="text-block">
           <h3>Impact</h3>
           <ul>
             <li>
@@ -352,59 +373,60 @@
         </div>
       </section>
     </div>
-  </body>
-  <script>
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.05,
+        }
+      );
+
+      document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
+        observer.observe(el);
+      });
+
+      const sideNav = document.querySelector(".side-nav");
+      const blockers = document.querySelectorAll(".hide-side-nav");
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".side-link");
+
+      window.addEventListener("scroll", () => {
+        let current = null;
+
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom > 150) {
+            current = section.getAttribute("id");
           }
         });
-      },
-      {
-        threshold: 0.05,
-      }
-    );
 
-    document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
-      observer.observe(el);
-    });
-
-    const sideNav = document.querySelector(".side-nav");
-    const blockers = document.querySelectorAll(".hide-side-nav");
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll(".side-link");
-
-    window.addEventListener("scroll", () => {
-      let current = null;
-
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= 150 && rect.bottom > 150) {
-          current = section.getAttribute("id");
-        }
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
       });
 
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) {
-          link.classList.add("active");
-        }
+      window.addEventListener("scroll", () => {
+        let shouldHide = false;
+
+        blockers.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            shouldHide = true;
+          }
+        });
+
+        sideNav.style.visibility = shouldHide ? "hidden" : "visible";
       });
-    });
-
-    window.addEventListener("scroll", () => {
-      let shouldHide = false;
-
-      blockers.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          shouldHide = true;
-        }
-      });
-
-      sideNav.style.visibility = shouldHide ? "hidden" : "visible";
-    });
-  </script>
+    </script>
+  </body>
 </html>
