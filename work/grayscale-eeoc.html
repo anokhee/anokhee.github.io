@@ -28,7 +28,14 @@
     <div class="page-layout">
       <section class="fade-in-on-scroll">
         <div class="text-block">
-          <h1>Designing a Secure EEOC Widget for Grayscale's AI Chatbot</h1>
+          <h1>Designing Secure Widgets for Grayscale's AI Chatbot</h1>
+        </div>
+      </section>
+      <div class="img-container-80p">
+        <img src="../imgs/grayscale/gracie-featured-img.png" alt="FIX" />
+      </div>
+      <section>
+        <div class="text-block">
           <h2>Context</h2>
           <p>
             Grayscale is a B2B hiring platform that integrates with customers’
@@ -36,12 +43,12 @@
             AI Assistant named Gracie.
           </p>
           <p>
-            When I joined, Gracie was an informational chatbot customers could
-            embed on their careers sites. Over time, she grew into a robust
-            hiring assistant – guiding prospective candidates through
-            applications, texting them on their preferred channel, and even
-            acting as their main point of contact through complex recruiting
-            flows at enterprise scale.
+            When I joined, Gracie lived on customers' career sites to help
+            prospective candidates identify which jobs they were qualified for.
+            Over time, she grew into a robust hiring assistant who could guide
+            them through applications, text them on their preferred channel, and
+            even act as their main point of contact through the full application
+            process.
           </p>
           <p>
             As the sole UX Designer, I worked with the PM, VP of
@@ -52,33 +59,43 @@
       </section>
       <section class="fade-in-on-scroll">
         <div class="text-block">
-          <h2>Problem</h2>
+          <h2>High-Level Challenges</h2>
+        </div>
+      </section>
+      <section class="stickies three-col">
+        <article class="note">
+          <h3>1. Resume Uploads</h3>
           <p>
-            U.S. job applications are required to collect voluntary demographic
-            data using a protected EEOC questionnaire. In order for Grayscale to
-            maintain compliance, this questionnaire has to appear at some point
-            during Gracie's application process.
+            Candidates couldn't upload their resume directly into Gracie's chat
+            window. They had to follow a link to the job application, which
+            broke the conversational flow.
           </p>
-          <h3>High-Level Design Challenges</h3>
-          <ol>
-            <li>
-              Gracie needs to present the questionnaire to applicants, then pass
-              the answers into customers’ systems without storing them in
-              Grayscale.
-            </li>
-            <li>
-              Many candidates interact with Gracie via SMS and WhatsApp
-              channels, so the EEOC questionnaire needs to be delivered
-              consistently across desktop and mobile web.
-            </li>
-            <li>
-              I was constrained by time and did not have access to end users to
-              conduct research.
-            </li>
-          </ol>
+        </article>
+        <article class="note">
+          <h3>2. EEOC Questionnaires</h3>
+          <p>
+            In order for Gracie to be a compliant job application, a demographic
+            questionnaire needed to appear at some point during the chat
+            experience.
+          </p>
+        </article>
+        <article class="note">
+          <h3>3. Platform Parity</h3>
+          <p>
+            Many candidates interact with Gracie via SMS and WhatsApp channels,
+            so both these experienced needed to be delivered consistently across
+            desktop and mobile web.
+          </p>
+        </article>
+      </section>
+      <section>
+        <div class="text-block">
           <div class="img-container">
             <img src="../imgs/grayscale/sketch.png" alt="FIX" />
-            <p class="caption-text"></p>
+            <p class="caption-text">
+              With no established UX norms for AI jobseeking, this design space
+              was quite open.
+            </p>
           </div>
         </div>
       </section>
@@ -87,78 +104,97 @@
           <h2>Discovery</h2>
           <div class="img-container">
             <p>
-              Although I had some access to B2B users, I didn’t have direct
-              insights from candidates using Gracie. Still, I wanted to ground
-              my design decisions in research before diving in.
-            </p>
-            <h3>What I Knew</h3>
-            <p>
-              As with any new technology, AI raises a lot of suspicion. Given
-              the novelty of a chatbot-driven job application process, I wanted
-              to tread lightly to avoid alienating users who might already feel
-              uneasy.
+              Without direct access to candidates using Gracie, I turned to
+              secondary research: job-hunting forums, candidate discussions, and
+              competitive analysis for a window into how job seekers perceived
+              AI in the application process.
             </p>
             <p>
-              It’s well-documented that minorities sometimes alter their names
-              on résumés to appear “less foreign” and reduce the chance of
-              discrimination. This led me to hypothesize that marginalized
-              candidates might be especially cautious — even distrustful enough
-              of demographic surveys to abandon their applications.
+              Most candidates interacting with Gracie were applying to frontline
+              roles. For many, especially minorities, trust in the job-seeking
+              process is fragile. It’s well-documented that applicants sometimes
+              alter their names on résumés to appear “less foreign.” I worried
+              that if Gracie’s flow felt too opaque, candidates might assume she
+              was just another biased gatekeeper and abandon their applications
+              altogether.
             </p>
-            <p>
-              To validate my hypotheses, I relied on secondary research methods:
-              exploring job-hunting forums, reviewing candidate discussions, and
-              conducting competitive analysis. I examined how well-known
-              companies integrated surveys, secure uploads, and compliance
-              widgets into their chatbot flows.
+            <img src="../imgs/grayscale/peak-privilege.png" alt="FIX" />
+            <p class="caption-text">
+              Interestingly, I learned that fear of discrimination is common
+              amongst Reddit users who identify as white males. If the
+              self-proclaimed “peak privelleged” doesn’t trust EEOC
+              questionnaires, that’s a UX problem!
             </p>
           </div>
           <h3>Findings</h3>
         </div>
       </section>
-      <section class="stickies" id="stickies">
+      <section class="stickies four-col" id="stickies">
         <article class="note">
           <h3>Few Established Patterns</h3>
-          <p>Novel AI chat–driven applications lack established UX norms.</p>
+          <p>
+            AI chat–driven applications are novel and lack established UX norms.
+          </p>
+          <p class="tag">Usability Issue</p>
         </article>
         <article class="note">
-          <h3>Linkouts Interrupt the Flow of Conversation</h3>
+          <h3>Old Computers</h3>
+          <p>
+            Gracie only supported .PDF and .DOCX uploads, which could exclude
+            candidates who are not computer-savvy or running very old versions
+            of Windows.
+          </p>
+          <p class="tag">Tech Accessibility Issue</p>
+        </article>
+        <article class="note">
+          <h3>Linkouts Interrupt Flow</h3>
           <p>
             Opening surveys in pop-ups or tabs causes confusion and drop-off.
           </p>
+          <p class="tag">Usability Issue</p>
         </article>
         <article class="note">
-          <h3>EEOC Content Feels Unapproachable</h3>
+          <h3>Literacy Barriers</h3>
+          <p>
+            Candidates with limited English proficiency or lower digital
+            literacy often apply to frontline roles. Even with clear UX, this
+            process may feel intimidating or inaccessible.
+          </p>
+          <p class="tag">Bias Issue</p>
+        </article>
+        <article class="note">
+          <h3>Density & Formality of EEOC Content</h3>
           <p>
             Dense EEOC jargon might feel overly formal and spook candidates at
             the end of their applications.
           </p>
+          <p class="tag">Trust Issue</p>
         </article>
         <article class="note">
-          <h3>Not Everyone Has Their Own Computer</h3>
+          <h3>Access to a Personal Computer</h3>
           <p>
             Pop-ups often blocked on public computers, making this process
             exclusionary to applicants who may not own their own computer.
           </p>
+          <p class="tag">Tech Accessibility Issue</p>
         </article>
         <article class="note">
-          <h3>Everyone Worries About Discrimination</h3>
+          <h3>Mobile-First Experience</h3>
+          <p>
+            Most frontline workers are applying from their phones. Small screens
+            amplify pain points like jargon density, modal pop-ups, and
+            non-mobile-friendly flows.
+          </p>
+          <p class="tag">Tech Accessibility Issue</p>
+        </article>
+        <article class="note">
+          <h3>Fear of Discrimination</h3>
           <p>
             Candidates of all backgrounds fear their answers to demographic data
             questions will affect hiring outcomes.
           </p>
+          <p class="tag">Bias Issue</p>
         </article>
-      </section>
-      <section class="fade-in-on-scroll">
-        <div class="text-block">
-          <img src="../imgs/grayscale/peak-privilege.png" alt="FIX" />
-          <p class="caption-text">
-            While trying to confirm my hypothesis, I learned that fear of job
-            discrimination is quite common among Reddit users who identify as
-            white males. If even the self-proclaimed “peak privelleged” among us
-            doesn’t trust EEOC questionnaires, that’s a UX problem!
-          </p>
-        </div>
       </section>
 
       <section class="fade-in-on-scroll">
@@ -197,22 +233,12 @@
         </div>
       </section>
 
-      <h3 class="caption-text-lg">
-        For web applicants, the EEOC survey was embedded directly inside the
-        chat as a widget, so candidates never felt pulled out of the
-        conversation.
-      </h3>
       <div class="img-container">
-        <img src="../imgs/grayscale/eeo-web.png" />
+        <img src="../imgs/grayscale/desktop-chat-experience.png" />
       </div>
 
-      <h3 class="caption-text-lg">
-        For SMS and WhatsApp users, a link opened in the default mobile browser
-        and mimicked the chat widget experience.
-      </h3>
-
       <div class="img-container">
-        <img src="../imgs/grayscale/eeo-sms.png" />
+        <img src="../imgs/grayscale/mobile-experience.png" />
       </div>
 
       <section class="fade-in-on-scroll">
