@@ -324,6 +324,7 @@ img {
   width: auto;
   font-size: 16px;
   line-height: 1.6rem;
+  text-align: center;
 }
 
 .caption-text-lg {
@@ -403,23 +404,24 @@ li {
   background-repeat: repeat;
 }
 
+.thumbnail h2 {
+  color: #fff;
+}
+
 #terminal .thumbnail {
   background-color: #4c4f94;
   background-image: url(./imgs/textures/circuit-pattern.svg);
   background-size: 200px 200px;
-  color: #fff;
 }
 
 #grayscale-enterprise .thumbnail {
   background-color: #003d52;
   background-image: url(./imgs/textures/temple.svg);
-  color: #fff;
 }
 
 #grayscale-eeoc .thumbnail {
   background-color: #c9582c;
   background-image: url(./imgs/textures/rounded-plus-connected.svg);
-  color: #fbf7ef;
 }
 
 /* --- Sticky Grid --- */
@@ -536,7 +538,7 @@ li {
   width: auto;
   margin: 0rem;
   margin-top: 3rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 2rem;
 }
 
 .center-text p {
