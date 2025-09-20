@@ -28,7 +28,7 @@
     <div class="page-layout">
       <section class="fade-in-on-scroll">
         <div class="text-block">
-          <h1>AI Chatbot for High-Volume Hiring at Grayscale</h1>
+          <h1>Conversational High-Volume Hiring at Grayscale</h1>
         </div>
       </section>
       <div class="img-container-80p">
@@ -38,23 +38,26 @@
         <div class="text-block">
           <h2>Context</h2>
           <p>
-            Grayscale is a B2B hiring platform that integrates with customers’
-            ATS to automate high-volume recruiting tasks. At its heart lives an
-            AI Assistant named Gracie.
+            Grayscale is a hiring platform that integrates with customers’ ATS
+            to automate high-volume recruiting tasks. At its heart lives an AI
+            Assistant named Gracie.
           </p>
           <p>
-            Gracie began as an embeddable chatbot that answered prospective
-            applicants' questions and suggested relevant roles. As her
-            capabilities expanded to support the full application process, I
-            collaborated with Product & Engineering to translate these rapidly
-            evolving features into human-friendly, scalable interfaces.
+            From keeping candidates warm by texting them directly, Gracie
+            quickly expanded to support the full application process through
+            SMS, WhatsApp, and web. I collaborated with Product & Engineering to
+            <span class="strong"
+              >deliver her rapidly evolving capabilities to end users as quickly
+              as possible.</span
+            >
           </p>
           <h3>My Role & Impact</h3>
           <p>
-            As Grayscale's sole designer, I was responsible for
-            <span class="strong">all the design work</span> required to ship new
-            features for AI Assistant, which drove measurable outcomes reported
-            by customers.
+            As Grayscale's sole designer,
+            <span class="strong"
+              >I was responsible for all the design work required to ship new
+              features for Gracie</span
+            >, which drove measurable outcomes reported by customers.
           </p>
         </div>
       </section>
@@ -78,37 +81,34 @@
           </p>
         </div>
       </div>
-      <div class="center-text">
-        <h2>High-Level Challenges</h2>
-      </div>
-
-      <section class="stickies three-col">
-        <article class="note">
-          <h3>Resume Uploads</h3>
-          <p>
-            Candidates couldn't upload their resume directly into Gracie's chat
-            window. They had to follow a link to the job application, which
-            broke the conversational flow.
-          </p>
-        </article>
-        <article class="note">
-          <h3>EEOC Questionnaires</h3>
-          <p>
-            In order for Gracie to maintain compliance as a job application, an
-            EEOC questionnaire needed to appear at some point during the chat
-            experience.
-          </p>
-        </article>
-        <article class="note">
-          <h3>Platform Parity</h3>
-          <p>
-            Many candidates interact with Gracie via SMS and WhatsApp channels,
-            so both these experienced needed to be delivered consistently across
-            desktop and mobile web.
-          </p>
-        </article>
-      </section>
-      <section>
+      <section class="fade-in-on-scroll">
+        <h2 class="center-text">High-Level Challenges</h2>
+        <div class="stickies three-col">
+          <article class="note">
+            <h3>Document Uploads</h3>
+            <p>
+              Candidates couldn’t upload documents like resumes directly to
+              Gracie. Redirecting them to external links interrupted the
+              conversation & increased the risk of dropoff.
+            </p>
+          </article>
+          <article class="note">
+            <h3>EEOC Questionnaires</h3>
+            <p>
+              To comply with federal hiring regulations, Gracie needed to
+              present an EEOC questionnaire during the conversational
+              application flow.
+            </p>
+          </article>
+          <article class="note">
+            <h3>Platform Parity</h3>
+            <p>
+              Most frontline candidates engaged with Gracie through SMS and
+              WhatsApp, so features needed to be delivered consistently across
+              both desktop and mobile web.
+            </p>
+          </article>
+        </div>
         <div class="text-block">
           <div class="img-container">
             <img src="../imgs/grayscale/sketch.png" alt="FIX" />
@@ -119,30 +119,36 @@
           </div>
         </div>
       </section>
+
       <section class="fade-in-on-scroll">
         <div class="text-block">
           <h2>Discovery</h2>
-          <div class="img-container">
+          <div>
             <p>
-              Without direct access to candidates, I turned to job-hunting
-              forums, articles, and competitive analysis to understand how
-              jobseekers perceived AI in their application process. I learned
-              that many candidates are mistrustful, fearing it may block their
-              applications from ever reaching a real recruiter.
+              Because Grayscale prioritized rapid shipping, my
+              <span class="strong"
+                >capacity to conduct formal research was limited.</span
+              >
+              I turned to job-hunting forums, articles, and competitive analysis
+              to gauge how candidates perceived AI-driven hiring processes.
             </p>
             <p>
-              To counter this, I spent some time thinking about how Gracie’s
-              flow could be designed to feel transparent and legitimate,
-              reassuring candidates that their applications weren't just being
-              sent into the ether.
+              I learned that many candidates were mistrustful of AI, fearing
+              their applications might never reach a human recruiter. To address
+              this, I designed Gracie’s UI and chat prompt to
+              <span class="strong"
+                >reassure candidates that their applications would be seen by a
+                human and considered fairly.</span
+              >
             </p>
           </div>
         </div>
       </section>
-      <table>
+      <!-- <table>
         <tr>
-          <th></th>
+          <th>Pain Point</th>
           <th>Impact on Candidates</th>
+          <th>Category</th>
         </tr>
         <tr>
           <td>
@@ -152,6 +158,7 @@
             Uncertainty for both designers and users navigating new interaction
             models.
           </td>
+          <td><p class="tag">Fear of Bias</p></td>
         </tr>
         <tr>
           <td>
@@ -162,14 +169,17 @@
             Barriers for less tech-savvy candidates, especially on outdated
             systems.
           </td>
+          <td><p class="tag">Fear of Bias</p></td>
         </tr>
         <tr>
           <td>Pop-up survey linkouts interrupt the flow.</td>
           <td>Application process feels intimidating or inaccessible.</td>
+          <td><p class="tag">Fear of Bias</p></td>
         </tr>
         <tr>
           <td>Dense EEOC jargon feels overly formal.</td>
           <td>Candidates feel spooked, leading to lower completion rates.</td>
+          <td><p class="tag">Fear of Bias</p></td>
         </tr>
         <tr>
           <td>
@@ -179,52 +189,23 @@
             Small screens amplify pain points like jargon, modals, and
             unfriendly flows.
           </td>
+          <td><p class="tag">Fear of Bias</p></td>
         </tr>
         <tr>
           <td>Fear of discrimination when sharing demographic data.</td>
           <td>Candidates worry their responses will impact hiring outcomes.</td>
+          <td><p class="tag">Fear of Bias</p></td>
         </tr>
-      </table>
+      </table> -->
 
       <section class="fade-in-on-scroll">
         <div class="text-block">
           <h2>Solution</h2>
-          <ul>
-            <li>
-              <p>
-                <span class="strong">Stepped Form:</span>
-                Rather than overwhelming candidates with a wall of dense legal
-                text, the survey followed a stepper format. Each step contained
-                only one or two questions, keeping the interaction lightweight
-                and providing a sense of progress.
-              </p>
-            </li>
-            <li>
-              <p>
-                <span class="strong">Signals of Trust:</span> Before opening the
-                survey, Gracie reassured candidates in plain language that
-                responses were voluntary and had no impact on hiring outcomes.
-                Inside the flow, an official EEOC disclaimer and shield icon
-                reinforced privacy and compliance. Informational copy linked out
-                to EEOC documentation for candidates who wanted more detail.
-              </p>
-            </li>
-            <li>
-              <p>
-                <span class="strong">Tone Shift for Security</span> Once the
-                EEOC widget opened, Gracie’s conversational voice paused and
-                shifted to a more formal, secure tone. This contrast underscored
-                that demographic answers were confidential and treated
-                differently than general chatbot interactions.
-              </p>
-            </li>
-          </ul>
+        </div>
+        <div class="img-container-80p">
+          <img src="../imgs/grayscale/desktop-chat-experience.png" />
         </div>
       </section>
-
-      <div class="img-container">
-        <img src="../imgs/grayscale/desktop-chat-experience.png" />
-      </div>
 
       <div class="img-container">
         <img src="../imgs/grayscale/mobile-experience.png" />

@@ -4,85 +4,33 @@ let dandelions = [];
 let particles = [];
 let paletteIndex = 0;
 
-// Active palette (mutated by applyPalette)
-const PALETTE = {
-  bg: ["#001F29", "#EE4266"], // [dark, accent]
-  petalLight: "#BEACEC",
-  petalDark: "#522AB7",
-  glow: "#FFFAEB",
-  dots: "#C1D0EC",
-};
-
 // Palettes + matching flower presets
 const PALETTES = [
   {
-    name: "Tropical Dawn",
+    name: "deep purple with orange glow",
     bg: ["#FFFDFB", "#E2725B"],
     petalLight: "#E2725B",
     petalDark: "#352E5F",
     glow: "#9A7AA0",
     dots: "#EEDC9A",
+    center1: "#5F3A53",
+    center2: "#894546",
+    center3: "#DD5B2C",
   },
   {
-    name: "Mango Lassi Night",
-    bg: ["#2B1510", "#FF9F1C"],
-    petalLight: "#FFD166",
-    petalDark: "#D35400",
-    glow: "#FFF4CC",
-    dots: "#FFE0B2",
-  },
-  {
-    name: "Solarpunk Meadow",
-    bg: ["#08251C", "#84FF00"],
-    petalLight: "#C4FCEF",
-    petalDark: "#0FA3B1",
-    glow: "#F2FFE6",
-    dots: "#B8EBD0",
-  },
-  {
-    name: "Cotton-Candy Carnival",
-    bg: ["#2A0E37", "#00D1FF"],
-    petalLight: "#FFD6F6",
-    petalDark: "#9B5DE5",
-    glow: "#FFF0F8",
-    dots: "#C0F5FF",
-  },
-  {
-    name: "Spicy Papaya",
-    bg: ["#2B1A0E", "#FF6F00"],
-    petalLight: "#FFB997",
-    petalDark: "#E63946",
-    glow: "#FFF2D5",
-    dots: "#FFD6A5",
-  },
-  {
-    name: "Berry Sherbet",
-    bg: ["#2D132C", "#FF9E00"],
-    petalLight: "#FDE2FF",
-    petalDark: "#7A1E76",
-    glow: "#FFF5E6",
-    dots: "#FFD8F0",
-  },
-  {
-    name: "Coral Reef",
-    bg: ["#112016", "#FF7F5C"],
-    petalLight: "#A7FDE8",
-    petalDark: "#1C7C54",
-    glow: "#F8FFE5",
-    dots: "#BFEDEF",
-  },
-  {
-    name: "Mauve",
-    bg: ["#5780C7", "#F0F3FA"],
-    petalLight: "#D499FF",
-    petalDark: "#AA33FF",
-    glow: "#EAC435",
-    dots: "#D2CAE2",
+    name: "black with orange glow",
+    bg: ["#FFFDFB", "#E2725B"],
+    petalLight: "#ffffff",
+    petalDark: "#010101",
+    glow: "#ffffff",
+    dots: "#ffffff",
+    center1: "#010101",
+    center2: "#ffffff",
+    center3: "#ffffff",
   },
 ];
 
 const FLOWER_PRESETS = [
-  // Daisy-ish: simple, airy
   {
     name: "Daisy",
     petals: 12,
@@ -92,172 +40,33 @@ const FLOWER_PRESETS = [
     tip: 0.55,
     base: 0.12,
   },
-
-  // Cosmos: long slender petals with soft points
   {
-    name: "Cosmos",
-    petals: 8,
-    length: 110,
-    center: 26,
-    widthK: 0.34,
-    tip: 0.62,
-    base: 0.1,
-  },
-
-  // Sunflower: many short petals around a bigger center
-  {
-    name: "Sunflower",
-    petals: 24,
-    length: 70,
-    center: 42,
-    widthK: 0.48,
-    tip: 0.35,
-    base: 0.16,
-  },
-
-  // Lotus: broad petals, rounded tips
-  {
-    name: "Lotus",
-    petals: 14,
-    length: 100,
-    center: 28,
-    widthK: 0.66,
-    tip: 0.22,
-    base: 0.22,
-  },
-
-  // Tulip-esque rosette: fewer chunky petals, round base
-  {
-    name: "Tulip Rosette",
+    name: "Pansy",
     petals: 6,
-    length: 95,
-    center: 18,
-    widthK: 0.72,
-    tip: 0.18,
-    base: 0.28,
-  },
-
-  // Cherry blossom: short, wide petals with rounded ends
-  {
-    name: "Sakura",
-    petals: 5,
-    length: 75,
-    center: 24,
-    widthK: 0.78,
-    tip: 0.16,
-    base: 0.2,
-  },
-
-  // Dahlia: dense ring, slightly pointy tips
-  {
-    name: "Dahlia",
-    petals: 32,
-    length: 85,
-    center: 30,
-    widthK: 0.54,
-    tip: 0.38,
-    base: 0.14,
-  },
-
-  // Marigold: many small, rounded petals
-  {
-    name: "Marigold",
-    petals: 28,
-    length: 60,
-    center: 36,
-    widthK: 0.68,
-    tip: 0.1,
-    base: 0.26,
-  },
-
-  // Waterlily: wide petals, soft taper
-  {
-    name: "Waterlily",
-    petals: 10,
-    length: 120,
-    center: 25,
-    widthK: 0.62,
-    tip: 0.2,
-    base: 0.18,
-  },
-
-  // Aster: lots of thin, pointy petals
-  {
-    name: "Aster",
-    petals: 40,
     length: 90,
-    center: 20,
-    widthK: 0.28,
-    tip: 0.7,
-    base: 0.08,
-  },
-
-  // Anemone: medium count, oval-ish petals, bigger center
-  {
-    name: "Anemone",
-    petals: 12,
-    length: 80,
-    center: 34,
-    widthK: 0.58,
-    tip: 0.18,
-    base: 0.22,
-  },
-
-  // Protea-lite: chunky teardrops with sharper tips
-  {
-    name: "Protea Lite",
-    petals: 16,
-    length: 105,
-    center: 22,
-    widthK: 0.46,
-    tip: 0.48,
+    center: 35,
+    widthK: 0.42,
+    tip: 0.55,
     base: 0.12,
   },
 ];
 
+let PALETTE = PALETTES[0];
+let PRESET = FLOWER_PRESETS[0];
+
 // ---------------------- p5: SETUP / DRAW ----------------------
 function setup() {
-  const cnv = createCanvas(280, 250);
-  // parent to #deco if it exists, otherwise leave in body
-  if (document.getElementById("deco")) cnv.parent("deco");
-
-  const start = FLOWER_PRESETS[0];
-  dandelions.push(new Dandelion(width / 2, height / 2, start));
-
+  const cnv = createCanvas(windowWidth / 2, windowHeight * 0.4);
+  cnv.parent("deco");
+  dandelions.push(new Dandelion(width / 2, height / 2, PRESET));
   applyPalette(paletteIndex);
 }
 
 function draw() {
   background(255, 254, 251, 180);
 
-  const cx = width / 2,
-    cy = height / 2;
-
-  // Pulsating background circles (tinted by palette)
-  const pulse1 = sin(frameCount * 0.02) * 10;
-  const pulse2 = sin(frameCount * 0.015 + PI / 3) * 20;
-  const pulse3 = sin(frameCount * 0.012 + PI / 5) * 30;
-
-  noStroke();
-  let dOuter = 200 + pulse3;
-  setRadialFill(cx, cy, dOuter / 2, PALETTE.bg[1], 110, 0);
-  circle(cx, cy, dOuter);
-
-  let dMid = 180 + pulse2;
-  setRadialFill(cx, cy, dMid / 2, PALETTE.bg[0], 140, 25);
-  circle(cx, cy, dMid);
-
-  let dInner = 140 + pulse1;
-  setRadialFill(cx, cy, dInner / 2, PALETTE.bg[0], 200, 60);
-  circle(cx, cy, dInner);
-
-  push();
-  blendMode(ADD);
-  setRadialFill(cx, cy, (dMid * 1.05) / 2, PALETTE.glow, 220, 0);
-  circle(cx, cy, dMid * 1.05);
-  setRadialFill(cx, cy, (dInner * 0.9) / 2, PALETTE.glow, 255, 0);
-  circle(cx, cy, dInner * 0.9);
-  pop();
+  const cx = windowWidth / 2,
+    cy = windowHeight / 2;
 
   // Flower
   for (let d of dandelions) {
@@ -273,10 +82,8 @@ function draw() {
   }
 }
 
-// Keep canvas fixed-size but recenter internals (optional)
 function windowResized() {
-  resizeCanvas(500, 300);
-  if (dandelions[0]) dandelions[0].pos.set(width / 2, height / 2);
+  resizeCanvas(width, height);
 }
 
 // Keyboard: shuffle palettes with P
@@ -293,7 +100,6 @@ function keyPressed() {
   }
 }
 
-// ---------------------- Helpers ----------------------
 function setRadialFill(cx, cy, radius, hex, alphaCenter, alphaEdge) {
   const ctx = drawingContext;
   const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, radius);
@@ -321,7 +127,6 @@ function easeInOutCubic(t) {
   return t < 0.5 ? 4 * t * t * t : 1 - pow(-2 * t + 2, 3) / 2;
 }
 
-// ---------------------- Flower classes ----------------------
 class Dandelion {
   constructor(x, y, preset) {
     this.pos = createVector(x, y);
@@ -334,7 +139,7 @@ class Dandelion {
 
     this.from = null;
     this.to = null;
-    this.t = 1;
+    this.t = 0;
     this.morphing = false;
   }
 
@@ -355,7 +160,7 @@ class Dandelion {
       base: preset.base,
       petals: preset.petals,
     };
-    this.t = 0;
+    this.t = 0.01;
     this.morphing = true;
   }
 
@@ -393,11 +198,11 @@ class Dandelion {
 
     noStroke();
 
-    fill("#5F3A53" + 10);
+    fill(PALETTE.center1 + 10);
     circle(0, 0, this.centerDiameter);
-    fill("#894546");
+    fill(PALETTE.center2);
     circle(0, 0, this.centerDiameter * 0.66);
-    fill("#DD5B2C");
+    fill(PALETTE.center3);
     circle(0, 0, this.centerDiameter * 0.33);
 
     pop();
