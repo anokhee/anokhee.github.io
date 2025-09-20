@@ -31,12 +31,17 @@
           <h1>Conversational High-Volume Hiring at Grayscale</h1>
         </div>
       </section>
+
       <div class="img-container-80p">
-        <img src="../imgs/grayscale/gracie-featured-img.png" alt="FIX" />
+        <img
+          src="../imgs/grayscale/gracie-featured-img.png"
+          alt="Gracie featured"
+        />
       </div>
+
       <section>
         <div class="text-block">
-          <h2>Context</h2>
+          <h2>Background</h2>
           <p>
             Grayscale is a hiring platform that integrates with customers’ ATS
             to automate high-volume recruiting tasks. At its heart lives an AI
@@ -44,28 +49,29 @@
           </p>
           <p>
             From keeping candidates warm by texting them directly, Gracie
-            quickly expanded to support the full application process through
-            SMS, WhatsApp, and web. I collaborated with Product & Engineering to
-            <span class="strong"
-              >deliver her rapidly evolving capabilities to end users as quickly
-              as possible.</span
-            >
+            quickly expanded to support the
+            <span class="strong">full application process</span> through SMS,
+            WhatsApp, and web.
           </p>
+
           <h3>My Role & Impact</h3>
           <p>
-            As Grayscale's sole designer,
+            As Grayscale’s sole designer,
             <span class="strong"
-              >I was responsible for all the design work required to ship new
-              features for Gracie</span
-            >, which drove measurable outcomes reported by customers.
+              >I delivered all the design work required to ship new features for
+              Gracie</span
+            >
+            in a company-wide effort that drove measurable impact as reported by
+            customers.
           </p>
         </div>
       </section>
+
       <div class="metrics-container">
         <div class="metric-card">
-          <p class="metric-text">89%</p>
+          <p class="metric-text">80-90%</p>
           <p class="metric-description">
-            High-volume candidate conversations automated for a major customer.
+            High-volume candidate conversations automated for major customers.
           </p>
         </div>
         <div class="metric-card">
@@ -81,11 +87,39 @@
           </p>
         </div>
       </div>
+
       <section class="fade-in-on-scroll">
-        <h2 class="center-text">High-Level Challenges</h2>
+        <div class="text-block">
+          <h2>Designing Swiftly in a Controversial Domain</h2>
+          <p>
+            Gracie excelled at engagement but couldn't yet guide prospective
+            candidates through the full application experience. This left
+            <span class="strong">recruiters chasing candidates down</span> to
+            collect resumes and other pre-screening information, which was
+            inefficient for both sides.
+          </p>
+          <p>
+            Solving this on the design side required contending with a number of
+            challenges.
+          </p>
+          <h3>1. Retrofitting Designs to Code</h3>
+          <p>
+            When I joined, the development team had already begun building
+            Gracie’s full application process without a designer. Many features
+            existed on the back end, but lacked a user interface.
+          </p>
+          <p>
+            As a result,
+            <span class="strong"
+              >the typical design-first process wasn’t possible</span
+            >. I needed to adapt my solutions to fit the existing codebase while
+            delivering a coherent user experience to the front end.
+          </p>
+        </div>
         <div class="stickies three-col">
           <article class="note">
-            <h3>Document Uploads</h3>
+            <h1>🚫📄</h1>
+            <h3>No Document Uploads</h3>
             <p>
               Candidates couldn’t upload documents like resumes directly to
               Gracie. Redirecting them to external links interrupted the
@@ -93,7 +127,8 @@
             </p>
           </article>
           <article class="note">
-            <h3>EEOC Questionnaires</h3>
+            <h1>🚫⚖️</h1>
+            <h3>No EEOC Questionnaires</h3>
             <p>
               To comply with federal hiring regulations, Gracie needed to
               present an EEOC questionnaire during the conversational
@@ -101,7 +136,8 @@
             </p>
           </article>
           <article class="note">
-            <h3>Platform Parity</h3>
+            <h1>🚫📱</h1>
+            <h3>No Platform Parity</h3>
             <p>
               Most frontline candidates engaged with Gracie through SMS and
               WhatsApp, so features needed to be delivered consistently across
@@ -111,105 +147,141 @@
         </div>
         <div class="text-block">
           <div class="img-container">
-            <img src="../imgs/grayscale/sketch.png" alt="FIX" />
+            <img src="../imgs/grayscale/sketch.png" alt="Early design sketch" />
             <p class="caption-text">
               With no established UX norms for AI jobseeking, this design space
               was quite open.
             </p>
           </div>
         </div>
-      </section>
 
-      <section class="fade-in-on-scroll">
         <div class="text-block">
-          <h2>Discovery</h2>
-          <div>
-            <p>
-              Because Grayscale prioritized rapid shipping, my
-              <span class="strong"
-                >capacity to conduct formal research was limited.</span
-              >
-              I turned to job-hunting forums, articles, and competitive analysis
-              to gauge how candidates perceived AI-driven hiring processes.
-            </p>
-            <p>
-              I learned that many candidates were mistrustful of AI, fearing
-              their applications might never reach a human recruiter. To address
-              this, I designed Gracie’s UI and chat prompt to
-              <span class="strong"
-                >reassure candidates that their applications would be seen by a
-                human and considered fairly.</span
-              >
+          <h3>2. Preventing User Alienation</h3>
+          <p>
+            Grayscale prioritized rapid shipping, so
+            <span class="strong"
+              >my capacity to conduct formal research was limited.</span
+            >
+            But, I knew chatbot-driven hiring risked alienating jobseekers if
+            designed poorly. To take extra care on the design side, I
+            intentionally sought out the most critical perspectives.
+          </p>
+
+          <div class="img-container">
+            <img src="../imgs/grayscale/controversial.png" />
+            <p class="caption-text">
+              Jobseekers' mistrust of AI hiring processes was usually rooted in
+              fear of AI bias gatekeeping certain applications from ever
+              reaching a human recruiter.
             </p>
           </div>
         </div>
+
+        <div class="text-block">
+          <h3>3. The Business Case for Accessibility</h3>
+          <p>
+            The truth was that Grayscale took real care to handle candidate
+            information securely. My focus was to make that commitment visible
+            to jobseekers by advocating internally for edge cases where
+            applicants risked exclusion and designing UI patterns that
+            <span class="strong"
+              >reassured jobseekers that every application would be considered
+              fairly.</span
+            >
+          </p>
+          <p>
+            The business case for accessible, secure chatbot designs is that in
+            high-volume hiring, customers need to keep their pipelines full.
+            Making applications clear and accessible to as many candidates as
+            possible directly serves that interest.
+          </p>
+        </div>
       </section>
-      <!-- <table>
+
+      <table>
         <tr>
-          <th>Pain Point</th>
-          <th>Impact on Candidates</th>
-          <th>Category</th>
+          <th>Problem</th>
+          <th>Candidate Fear</th>
+          <th>What I Advocated For</th>
         </tr>
         <tr>
+          <td>AI-driven hiring feels like a black box.</td>
           <td>
-            AI chat–driven applications are novel and lack established UX norms.
+            “What if hidden bias filters me out before a human ever sees my
+            application?”
           </td>
           <td>
-            Uncertainty for both designers and users navigating new interaction
-            models.
+            Designed UI copy to reassure candidates that every application would
+            be reviewed by a human.
           </td>
-          <td><p class="tag">Fear of Bias</p></td>
         </tr>
         <tr>
+          <td>Resume uploads limited to .PDF/.DOCX formats.</td>
           <td>
-            Limited to .PDF/.DOCX uploads; excludes candidates with old
-            computers or limited digital skills.
+            “If I don’t have the right file type or an updated computer, I’ll be
+            excluded.”
           </td>
           <td>
-            Barriers for less tech-savvy candidates, especially on outdated
-            systems.
+            Pushed internally for expanded file support to reduce barriers for
+            less tech-savvy candidates.
           </td>
-          <td><p class="tag">Fear of Bias</p></td>
         </tr>
         <tr>
           <td>Pop-up survey linkouts interrupt the flow.</td>
-          <td>Application process feels intimidating or inaccessible.</td>
-          <td><p class="tag">Fear of Bias</p></td>
-        </tr>
-        <tr>
-          <td>Dense EEOC jargon feels overly formal.</td>
-          <td>Candidates feel spooked, leading to lower completion rates.</td>
-          <td><p class="tag">Fear of Bias</p></td>
-        </tr>
-        <tr>
+          <td>“This process feels intimidating and I might not finish.”</td>
           <td>
-            Mobile-first context (most frontline workers apply on phones).
+            Advocated for in-line, lightweight flows that reduced friction
+            mid-application.
+          </td>
+        </tr>
+        <tr>
+          <td>Dense EEOC jargon and overly formal language.</td>
+          <td>“I don’t understand this legal text—am I being tricked?”</td>
+          <td>
+            Redesigned with plain-language microcopy to improve clarity and
+            completion rates.
+          </td>
+        </tr>
+        <tr>
+          <td>Mobile-first context for frontline workers.</td>
+          <td>
+            “On a small screen, jargon, modals, and unfriendly flows feel
+            overwhelming.”
           </td>
           <td>
-            Small screens amplify pain points like jargon, modals, and
-            unfriendly flows.
+            Advocated for mobile-first design principles to simplify flows on
+            phones.
           </td>
-          <td><p class="tag">Fear of Bias</p></td>
         </tr>
         <tr>
-          <td>Fear of discrimination when sharing demographic data.</td>
-          <td>Candidates worry their responses will impact hiring outcomes.</td>
-          <td><p class="tag">Fear of Bias</p></td>
+          <td>Demographic data collection feels unsafe.</td>
+          <td>“If I share this information, will it hurt my chances?”</td>
+          <td>
+            Designed disclosure language clarifying that data would not impact
+            hiring outcomes.
+          </td>
         </tr>
-      </table> -->
+      </table>
 
       <section class="fade-in-on-scroll">
         <div class="text-block">
           <h2>Solution</h2>
+          <p>
+            I designed conversational flows, mobile-first UI patterns, and
+            plain-language microcopy that reduced friction while reinforcing
+            trust. These interventions covered everything from document upload
+            to demographic disclosure. A good example of this work is the
+            redesigned EEOC survey experience, which worked consistently across
+            SMS, WhatsApp, and web.
+          </p>
         </div>
         <div class="img-container-80p">
-          <img src="../imgs/grayscale/desktop-chat-experience.png" />
+          <img
+            src="../imgs/grayscale/eeoc-solution.png"
+            alt="EEOC flow solution"
+          />
         </div>
       </section>
-
-      <div class="img-container">
-        <img src="../imgs/grayscale/mobile-experience.png" />
-      </div>
 
       <section class="fade-in-on-scroll">
         <div class="text-block">
@@ -223,87 +295,53 @@
           </p>
         </div>
       </section>
-      <!-- <footer>
-        <h3>See More</h3>
-        <div class="footer-nav">
-          <a class="card" id="grayscale-eeoc" href="./work/grayscale-eeoc.html">
-            <div class="thumbnail" aria-hidden="true">
-              <h2 class="card-title">Secure AI Chat Widget at Grayscale</h2>
-            </div>
-            <div class="content">
-              <div class="tags">
-                <span class="tag">Enterprise & B2B</span>
-                <span class="tag">Product Thinking</span>
-              </div>
-            </div>
-          </a>
-          <a class="card" id="grayscale-eeoc" href="./work/grayscale-eeoc.html">
-            <div class="thumbnail" aria-hidden="true">
-              <h2 class="card-title">Secure AI Chat Widget at Grayscale</h2>
-            </div>
-            <div class="content">
-              <div class="tags">
-                <span class="tag">Enterprise & B2B</span>
-                <span class="tag">Product Thinking</span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </footer> -->
     </div>
-  </body>
-  <script>
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
+
+    <script>
+      // Reveal-on-scroll
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.05 }
+      );
+      document
+        .querySelectorAll(".fade-in-on-scroll")
+        .forEach((el) => observer.observe(el));
+
+      // Section highlighting (safe if none exist)
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".side-link");
+      window.addEventListener("scroll", () => {
+        let current = null;
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 150 && rect.bottom > 150)
+            current = section.getAttribute("id");
         });
-      },
-      {
-        threshold: 0.05,
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`)
+            link.classList.add("active");
+        });
+      });
+
+      // Side nav visibility (guard against missing .side-nav)
+      const sideNav = document.querySelector(".side-nav");
+      const blockers = document.querySelectorAll(".hide-side-nav");
+      if (sideNav) {
+        window.addEventListener("scroll", () => {
+          let shouldHide = false;
+          blockers.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0)
+              shouldHide = true;
+          });
+          sideNav.style.visibility = shouldHide ? "hidden" : "visible";
+        });
       }
-    );
-
-    document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
-      observer.observe(el);
-    });
-
-    const sideNav = document.querySelector(".side-nav");
-    const blockers = document.querySelectorAll(".hide-side-nav");
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll(".side-link");
-
-    window.addEventListener("scroll", () => {
-      let current = null;
-
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= 150 && rect.bottom > 150) {
-          current = section.getAttribute("id");
-        }
-      });
-
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) {
-          link.classList.add("active");
-        }
-      });
-    });
-
-    window.addEventListener("scroll", () => {
-      let shouldHide = false;
-
-      blockers.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          shouldHide = true;
-        }
-      });
-
-      sideNav.style.visibility = shouldHide ? "hidden" : "visible";
-    });
-  </script>
+    </script>
+  </body>
 </html>
