@@ -48,8 +48,8 @@
           <p>
             As a designer, I knew all too well that our team’s work risked being
             dismissed as a facelift if we didn’t communicate the “why.” However,
-            we didn't have a way to equip customer-facing teams with the product
-            thinking behind the new UI.
+            we didn't have a platform to equip customer-facing teams with the
+            product thinking behind the new UI.
           </p>
           <p>
             To bridge this gap, I created and presented a framework that
@@ -391,60 +391,18 @@
     </div>
 
     <script>
+      // Reveal-on-scroll
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
+            if (entry.isIntersecting) entry.target.classList.add("visible");
           });
         },
         { threshold: 0.05 }
       );
-
-      document.querySelectorAll(".fade-in-on-scroll").forEach((el) => {
-        observer.observe(el);
-      });
-
-      const sideNav = document.querySelector(".side-nav");
-      const blockers = document.querySelectorAll(".hide-side-nav");
-      const sections = document.querySelectorAll("section[id]");
-      const navLinks = document.querySelectorAll(".side-link");
-
-      // Active section highlighting (safe even if no sections have IDs)
-      window.addEventListener("scroll", () => {
-        let current = null;
-
-        sections.forEach((section) => {
-          const rect = section.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom > 150) {
-            current = section.getAttribute("id");
-          }
-        });
-
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (current && link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-          }
-        });
-      });
-
-      // Guard this block so it doesn't throw when .side-nav isn't present
-      if (sideNav) {
-        window.addEventListener("scroll", () => {
-          let shouldHide = false;
-
-          blockers.forEach((el) => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-              shouldHide = true;
-            }
-          });
-
-          sideNav.style.visibility = shouldHide ? "hidden" : "visible";
-        });
-      }
+      document
+        .querySelectorAll(".fade-in-on-scroll")
+        .forEach((el) => observer.observe(el));
     </script>
   </body>
 </html>
